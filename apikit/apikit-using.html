@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Using APIkit // MuleSoft Documentation </title>
+  <title>APIkit Reference // MuleSoft Documentation </title>
   <link rel="shortcut icon" href="/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="/css/vendor.min.css?t=1498825733">
   <link rel="stylesheet" type="text/css" href="/css/mulesoft.min.css?t=1498825733">
@@ -15,8 +15,8 @@
   <script src="/js/scripts.js?t=1498825733"></script>
 
   <link rel="canonical" href="https://docs.mulesoft.com/apikit/apikit-using" />
-  <meta name="description" content="APIkit 3.8.1 supports RAML 1.0 and 0.8 versions as described in the release notes. APIkit projects can run onsite or use CloudHub runtimes. To get ..." />
-  <meta class="swiftype" name="title" data-type="string" content="Using APIkit" />
+  <meta name="description" content="APIkit supports RAML 1.0 and 0.8 versions as described in the release notes. APIkit projects can run onsite or on CloudHub. To get started using AP..." />
+  <meta class="swiftype" name="title" data-type="string" content="APIkit Reference" />
 </head>
 <body>
 <!-- START Swiftype -->
@@ -1088,11 +1088,11 @@
     <div class="article-content col-md-7">
       
       <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">APIkit</a>/<a href="apikit-using" class="breadcrumb-active-link">Using APIkit</a></div>
-      <h1>Using APIkit</h1>
+      <h1>APIkit Reference</h1>
       <div id="preamble"> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>APIkit 3.8.1 supports RAML 1.0 and 0.8 versions as described in the <a href="/release-notes/apikit-release-notes">release notes</a>. APIkit projects can run onsite or use CloudHub runtimes. To get started using APIkit in Anypoint Studio, do one of the following:</p> 
+   <p>APIkit supports RAML 1.0 and 0.8 versions as described in the <a href="/release-notes/apikit-release-notes">release notes</a>. APIkit projects can run onsite or on CloudHub. To get started using APIkit in Anypoint Studio, do one of the following:</p> 
   </div> 
   <div class="ulist"> 
    <ul> 
@@ -1147,7 +1147,7 @@
    </div> 
   </div> 
   <div class="paragraph"> 
-   <p>Included in the project are backend flows containing REST resource-action mappings or SOAP message templates. APIkit Console is included when you import a RAML, but not a WSDL. You need to use a SOAP testing tool, such as SoapUI. APIkit Console is similar to <a href="/api-manager/designing-your-api#api-console">API Console</a> for simulating calls to the API.</p> 
+   <p>Included in the project are backend flows containing REST resource-action mappings or SOAP message templates. You can simulate calls to the API using APIkit Console when you import a RAML, but not a WSDL. You need to use a SOAP testing tool, such as SoapUI.</p> 
   </div> 
   <div class="paragraph"> 
    <p>After simulating calls to a RAML-based API using APIkit Console, and improving or changing behavior, you alter the backend flows to act upon real resources with real data.</p> 
@@ -1158,7 +1158,7 @@
  <h2 id="configuring-the-path-for-deployment-on-cloudhub"><a class="anchor" href="#configuring-the-path-for-deployment-on-cloudhub"></a>Configuring the Path for Deployment on CloudHub</h2> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>CloudHub requires a <a href="/runtime-manager/deploying-to-cloudhub#creating-an-application-name">unique application name</a> regardless of the region where you deploy the API. You can, for example, add the region name to the application name to ensure uniqueness. For example:</p> 
+   <p>CloudHub requires a unique application name regardless of the region where you deploy the API. You can, for example, add the region name to the application name to ensure uniqueness. For example:</p> 
   </div> 
   <div class="paragraph"> 
    <p><code>test-customers-eu</code></p> 
@@ -1167,7 +1167,7 @@
    <p><code>test-customers-na</code></p> 
   </div> 
   <div class="paragraph"> 
-   <p>By default, APIKit adds a base path to each API, namely <code>/api</code>. Thus, the final URL of the APIs deployed on CloudHub is:</p> 
+   <p>By default, APIKit adds a base path to each API, namely <code>/api</code>. The final URL of the APIs deployed on CloudHub is:</p> 
   </div> 
   <div class="paragraph"> 
    <p><code>http://test-customers.eu.cloudhub.io/api/customers</code></p> 
@@ -1187,7 +1187,7 @@
     <p><code>test-customer-v2.eu.cloudhub.io</code></p> 
    </div> 
    <div class="paragraph"> 
-    <p>Thus, the final URL of the APIs deployed on CloudHub is:</p> 
+    <p>The final URL of the APIs deployed on CloudHub is:</p> 
    </div> 
    <div class="paragraph"> 
     <p><code>http://test-customers-v1.eu.cloudhub.io/api/customers</code></p> 
@@ -1214,7 +1214,7 @@
  <h2 id="configuring-the-path-for-deployment-on-premises"><a class="anchor" href="#configuring-the-path-for-deployment-on-premises"></a>Configuring the Path for Deployment On Premises</h2> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>By default, APIKit generates a listener having a base path of <code>/api</code>. A different application deployed on the same server will attempt to listen on the same context, for example <code>http://server:port/api/</code>, which causes a conflict.</p> 
+   <p>By default, APIKit generates a listener having a base path of <code>/api</code>. A different application deployed on the same server attempts to listen on the same context, for example <code>http://server:port/api/</code>, which causes a conflict.</p> 
   </div> 
   <div class="paragraph"> 
    <p>To avoid such a conflict, configure each Mule application using a different base path. For example:</p> 
@@ -1238,7 +1238,7 @@
    <p>Because each server belongs to a different environment, there is no need to include the environment, such as <code>/test</code> or <code>/dev</code>, in the base path.</p> 
   </div> 
   <div class="paragraph"> 
-   <p>Avoid hard-coding URLs in base path. <a href="/mule-user-guide/v/3.8/mule-application-deployment-descriptor#options">Use different property files</a> for different deployments:</p> 
+   <p>Avoid hard-coding URLs in base path. Use different property files for different deployments:</p> 
   </div> 
   <div class="imageblock"> 
    <div class="content"> 
@@ -1284,7 +1284,7 @@
    <p>In a RAML-based API, if you change or add exception strategies, you need to adjust <a href="/apikit/apikit-using#generate-backend-flows-and-reference-exception-strategies">references to exception strategies</a>.</p> 
   </div> 
   <div class="paragraph"> 
-   <p>Under the following conditions, you need to <a href="/apikit/apikit-using#map-resources-to-actions">customize the mapping</a> of RAML resources and actions:</p> 
+   <p>Under the following conditions, you need to customize the mapping of RAML resources and actions:</p> 
   </div> 
   <div class="ulist"> 
    <ul> 
@@ -1731,6 +1731,8 @@
    <ul> 
     <li> <p><a href="/apikit/apikit-tutorial">REST tutorial</a></p> </li> 
     <li> <p><a href="/apikit/apikit-for-soap">SOAP tutorial</a></p> </li> 
+    <li> <p><a href="/runtime-manager/deploying-to-cloudhub#creating-an-application-name">Unique application name</a></p> </li> 
+    <li> <p><a href="/mule-user-guide/v/3.8/mule-application-deployment-descriptor#options">Use different property files</a></p> </li> 
    </ul> 
   </div> 
  </div> 
