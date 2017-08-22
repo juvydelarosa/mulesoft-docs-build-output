@@ -1430,7 +1430,7 @@
       <td class="tableblock halign-left valign-top"> 
        <div> 
         <div class="paragraph"> 
-         <p>string - Data type: <code>string</code>, <code>boolean</code>, <code>int</code>, <code>ipaddress</code>, <code>expression</code> (in MEL)</p> 
+         <p>string - Data type: <code>string</code>, <code>boolean</code>, <code>int</code>, <code>ipaddress</code>, <code>expression</code> (in MEL), <code>keyvalues</code>, <code>rateLimits</code></p> 
         </div> 
        </div></td> 
      </tr> 
@@ -1530,6 +1530,7 @@
       <li> <p>Integer</p> </li> 
       <li> <p>Boolean</p> </li> 
       <li> <p>String</p> </li> 
+      <li> <p>Map</p> </li> 
      </ul> 
     </div> 
    </div> 
@@ -1629,6 +1630,38 @@
 <span class="error">&nbsp;&nbsp;&nbsp;optional</span>: <span class="error">true</span>
 <span class="error">&nbsp;&nbsp;&nbsp;sensitive</span>: <span class="error">false</span>
 <span class="error">&nbsp;&nbsp;&nbsp;allowMultiple</span>: <span class="error">false</span></pre></td> 
+          </tr> 
+         </tbody> 
+        </table></code></pre> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="sect3"> 
+    <h4 id="map"><a class="anchor" href="#map"></a>Map</h4> 
+    <div class="listingblock"> 
+     <div class="content"> 
+      <pre class="CodeRay highlight"><code data-lang="yaml">
+           
+        <table class="CodeRay"> 
+         <tbody> 
+          <tr> 
+           <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td> 
+           <td class="code"><pre><span class="key">configuration</span>:
+<span class="error">&nbsp;- propertyName: amap</span>
+<span class="error">&nbsp;&nbsp;&nbsp;name</span>: <span class="error">Test Key/Value Map</span>
+<span class="error">&nbsp;&nbsp;&nbsp;description</span>: <span class="error">Some Description</span>
+<span class="error">&nbsp;&nbsp;&nbsp;type</span>: <span class="error">keyvalue</span>
+<span class="error">&nbsp;&nbsp;&nbsp;optional</span>: <span class="error">true</span>
+<span class="error">&nbsp;&nbsp;&nbsp;sensitive</span>: <span class="error">false</span>
+<span class="error">&nbsp;&nbsp;&nbsp;allowMultiple</span>: <span class="error">true</span></pre></td> 
           </tr> 
          </tbody> 
         </table></code></pre> 
