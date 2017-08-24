@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>About Impaired Workers // MuleSoft Documentation </title>
+  <title>List All Applications // MuleSoft Documentation </title>
   <link rel="shortcut icon" href="/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="/css/vendor.min.css?t=1498825733">
   <link rel="stylesheet" type="text/css" href="/css/mulesoft.min.css?t=1498825733">
@@ -14,9 +14,9 @@
   <script src="/js/trafficSource.js"></script>
   <script src="/js/scripts.js?t=1498825733"></script>
 
-  <link rel="canonical" href="https://docs.mulesoft.com/runtime-manager/cloudhub-impaired-worker" />
-  <meta name="description" content="CloudHub performs constant health checks on the underlying virtual machines where Mule applications are running. When an instance is impaired, ther..." />
-  <meta class="swiftype" name="title" data-type="string" content="About Impaired Workers" />
+  <link rel="canonical" href="https://docs.mulesoft.com/runtime-manager/list-all-applications" />
+  <meta name="description" content=" The GET operation specified with the /api/applications resource returns a list of all applications for your account. The resulting JSON contains a..." />
+  <meta class="swiftype" name="title" data-type="string" content="List All Applications" />
 </head>
 <body>
 <!-- START Swiftype -->
@@ -160,7 +160,7 @@
         <a href="#" class="tree-icon glyphicon glyphicon-th-list"><span>Nav</span></a>
       </div>
       <div class="toolbar-dropdown edit-github">
-        <a href="https://github.com/mulesoft/mulesoft-docs/blob/master/runtime-manager/v/latest/cloudhub-impaired-worker.adoc" target="_blank"><span>Edit on GitHub</span></a>
+        <a href="https://github.com/mulesoft/mulesoft-docs/blob/master/runtime-manager/v/latest/list-all-applications.adoc" target="_blank"><span>Edit on GitHub</span></a>
       </div>
       <div class="toolbar-dropdown helpful">
         <div class="btn btn-default dropdown-toggle" id="dropdown-helpful">
@@ -670,7 +670,7 @@
 <li>
 <i></i>
 <a href="/runtime-manager/tutorials">Tutorials</a><ul>
-<li><i></i><a href="/runtime-manager/building-an-https-service">Building an HTTPS Service</a></li><li><i></i><a href="/runtime-manager/vpc-tutorial">Create a VPC using Runtime Manager</a></li><li><i></i><a href="/runtime-manager/create-vpc-cli">Create a VPC using Anypoint Platform CLI</a></li><li><i></i><a href="/runtime-manager/dedicated-load-balancer-tutorial">Create a Dedicated Load Balancer</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/building-an-https-service">Building an HTTPS Service</a></li><li><i></i><a href="/runtime-manager/vpc-tutorial">Create a VPC using Runtime Manager</a></li><li><i></i><a href="/runtime-manager/create-vpc-cli">Create a VPC using Anypoint Platform CLI</a></li></ul></li>
 <li>
 <i></i>
 <a href="/runtime-manager/deployment-strategies">Deployment Strategies</a><ul>
@@ -681,7 +681,7 @@
 <li>
 <i></i>
 <a href="/runtime-manager/managing-applications-on-cloudhub">Managing Applications on CloudHub</a><ul>
-<li><i></i><a href="/runtime-manager/managing-queues">Managing Queues</a></li><li><i></i><a href="/runtime-manager/managing-schedules">Managing Schedules</a></li><li><i></i><a href="/runtime-manager/secure-application-properties">Secure Application Properties</a></li><li><i></i><a href="/runtime-manager/managing-application-data-with-object-stores">Managing App Data using Object Stores</a></li><li><i></i><a href="/runtime-manager/virtual-private-cloud">Virtual Private Cloud</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li><li><i></i><a href="/runtime-manager/autoscaling-in-cloudhub">Autoscaling in CloudHub</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/managing-queues">Managing Queues</a></li><li><i></i><a href="/runtime-manager/managing-schedules">Managing Schedules</a></li><li><i></i><a href="/runtime-manager/secure-application-properties">Secure Application Properties</a></li><li><i></i><a href="/runtime-manager/managing-application-data-with-object-stores">Managing App Data using Object Stores</a></li><li><i></i><a href="/runtime-manager/virtual-private-cloud">Virtual Private Cloud</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li></ul></li>
 <li>
 <i></i>
 <a href="/runtime-manager/managing-applications-on-your-own-servers">Managing Applications on Your Own Servers</a><ul>
@@ -694,7 +694,7 @@
 <li>
 <i></i>
 <a href="/runtime-manager/monitoring">Monitoring</a><ul>
-<li><i></i><a href="/runtime-manager/alerts-on-runtime-manager">Alerts</a></li><li><i></i><a href="/runtime-manager/notifications-on-runtime-manager">Notifications</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li><li><i></i><a href="/runtime-manager/monitoring-dashboards">Dashboards</a></li><li><i></i><a href="/runtime-manager/flow-metrics">Flow Metrics</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/alerts-on-runtime-manager">Alerts</a></li><li><i></i><a href="/runtime-manager/notifications-on-runtime-manager">Notifications</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li><li><i></i><a href="/runtime-manager/monitoring-dashboards">Dashboards</a></li></ul></li>
 <li>
 <i></i>
 <a href="/runtime-manager/troubleshooting">Troubleshooting</a><ul>
@@ -705,12 +705,36 @@
 <li><i></i><a href="/runtime-manager/worker-monitoring">Worker Monitoring</a></li><li>
 <i></i>
 <a href="/runtime-manager/sending-data-from-arm-to-external-analytics-software">Sending data from Runtime Manager to External Analytics Software</a><ul>
-<li><i></i><a href="/runtime-manager/about-logging-of-payload-formats">About Logging of Payload Formats</a></li><li><i></i><a href="/runtime-manager/sending-api-analytics-from-arm-to-db">Sending API Analytics</a></li><li><i></i><a href="/runtime-manager/sending-event-data-from-arm-to-db">Sending Event Data</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/sending-api-analytics-from-arm-to-db">Sending API Analytics</a></li><li><i></i><a href="/runtime-manager/sending-event-data-from-arm-to-db">Sending Event Data</a></li></ul></li>
 </ul></li>
 <li class="expanded">
 <i></i>
 <a href="/runtime-manager/cloudhub">CloudHub</a><ul style="display: block;">
-<li><i></i><a href="/runtime-manager/cloudhub-faq">CloudHub FAQ</a></li><li><i></i><a href="/runtime-manager/developing-applications-for-cloudhub">Developing Applications for CloudHub</a></li><li><i></i><a href="/runtime-manager/cloudhub-architecture">CloudHub Architecture</a></li><li class="active"><i></i><a href="/runtime-manager/cloudhub-impaired-worker">About Impaired Workers</a></li><li><i></i><a href="/runtime-manager/cloudhub-fabric">CloudHub Fabric</a></li><li><i></i><a href="/runtime-manager/managing-cloudhub-specific-settings">Managing Cloudhub Settings</a></li><li><i></i><a href="/runtime-manager/cloudhub-networking-guide">CloudHub Networking Guide</a></li><li><i></i><a href="/runtime-manager/cloudhub-dedicated-load-balancer">Cloudhub Dedicated Load Balancer</a></li><li><i></i><a href="/runtime-manager/penetration-testing-policies">Penetration Testing Policies</a></li><li><i></i><a href="/runtime-manager/cloudhub-api">CloudHub API</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/cloudhub-faq">CloudHub FAQ</a></li><li><i></i><a href="/runtime-manager/developing-applications-for-cloudhub">Developing Applications for CloudHub</a></li><li><i></i><a href="/runtime-manager/cloudhub-architecture">CloudHub Architecture</a></li><li><i></i><a href="/runtime-manager/cloudhub-fabric">CloudHub Fabric</a></li><li><i></i><a href="/runtime-manager/managing-cloudhub-specific-settings">Managing Cloudhub Settings</a></li><li><i></i><a href="/runtime-manager/cloudhub-networking-guide">CloudHub Networking Guide</a></li><li><i></i><a href="/runtime-manager/penetration-testing-policies">Penetration Testing Policies</a></li><li class="expanded">
+<i></i>
+<a href="/runtime-manager/cloudhub-api">CloudHub API</a><ul style="display: block;">
+<li class="expanded">
+<i></i>
+<a href="/runtime-manager/working-with-applications">Working with Applications</a><ul style="display: block;">
+<li><i></i><a href="/runtime-manager/create-application">Create Application</a></li><li><i></i><a href="/runtime-manager/delete-application">Delete an Application</a></li><li><i></i><a href="/runtime-manager/deploy-application">Deploy Application</a></li><li><i></i><a href="/runtime-manager/get-application">Get an Application</a></li><li class="active"><i></i><a href="/runtime-manager/list-all-applications">List All Applications</a></li><li><i></i><a href="/runtime-manager/update-application-metadata">Update Application Metadata</a></li></ul></li>
+<li>
+<i></i>
+<a href="/runtime-manager/logs">Working with Logs</a><ul>
+<li><i></i><a href="/runtime-manager/list-all-logs">List Log Messages</a></li></ul></li>
+<li>
+<i></i>
+<a href="/runtime-manager/notifications">Working with Notifications</a><ul>
+<li><i></i><a href="/runtime-manager/create-notification">Create Notification</a></li><li><i></i><a href="/runtime-manager/list-notifications">List All Notifications</a></li><li><i></i><a href="/runtime-manager/update-all-notifications">Update All Notifications</a></li><li><i></i><a href="/runtime-manager/update-notification">Update Notification</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/working-with-alerts">Working with Alerts</a></li></ul></li>
+</ul></li>
+<li>
+<i></i>
+<a href="/runtime-manager/dedicated-load-balancer-tutorial">About Load Balancers (CloudHub)</a><ul>
+<li><i></i><a href="/runtime-manager/lb-architecture">About Load Balancer Architecture</a></li><li><i></i><a href="/runtime-manager/lb-create-arm">To Create a Load Balancer using Runtime Manager</a></li><li><i></i><a href="/runtime-manager/lb-create-cli">To Create a Load Balancer using the CLI</a></li><li><i></i><a href="/runtime-manager/lb-create-api">To Create a Load Balancer using the API</a></li><li>
+<i></i>
+<a href="/runtime-manager/lb-cert-endpoints">About Load Balancer SSL Endpoints and Certificates</a><ul>
+<li><i></i><a href="/runtime-manager/lb-cert-upload">About Uploading Certificates</a></li><li><i></i><a href="/runtime-manager/lb-cert-validation">About Certificate Validation</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/lb-mapping-rules">About Mapping Rules</a></li><li><i></i><a href="/runtime-manager/lb-whitelists">About Whitelists</a></li></ul></li>
 <li><i></i><a href="/runtime-manager/maintenance-and-upgrade-policy">Maintenance and Upgrade Policy</a></li><li>
 <i></i>
 <a href="/runtime-manager/runtime-manager-agent">Runtime Manager Agent</a><ul>
@@ -1087,20 +1111,153 @@
     <!-- START article content -->
     <div class="article-content col-md-7">
       
-      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Runtime Manager</a>/<a href="cloudhub">CloudHub</a>/<a href="cloudhub-impaired-worker" class="breadcrumb-active-link">About Impaired Workers</a></div>
-      <h1>About Impaired Workers</h1>
-      <div class="paragraph"> 
- <p>CloudHub performs constant health checks on the underlying virtual machines where Mule applications are running. When an instance is impaired, there is hardware or software failure that may negatively impact the running application deployed on the instance. Examples of hardware and software failures include network disconnection, memory issues, server hardware failures, file corruption, etc.</p> 
+      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Runtime Manager</a>/<a href="cloudhub">CloudHub</a>/<a href="cloudhub-api">CloudHub API</a>/<a href="working-with-applications">Working with Applications</a>/<a href="list-all-applications" class="breadcrumb-active-link">List All Applications</a></div>
+      <h1>List All Applications</h1>
+      <div id="preamble"> 
+ <div class="sectionbody"> 
+  <div class="paragraph"> 
+   <p><span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-cloud-active.png" alt="logo cloud active" title="CloudHub"></a></span> <span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-hybrid-disabled.png" alt="logo hybrid disabled" title="Hybrid Deployment"></a></span> <span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-server-disabled.png" alt="logo server disabled" title="Anypoint Platform Private Cloud Edition"></a></span> <span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-pcf-disabled.png" alt="logo pcf disabled" title="Pivotal Cloud Foundry"></a></span></p> 
+  </div> 
+  <div class="admonitionblock tip"> 
+   <table> 
+    <tbody> 
+     <tr> 
+      <td class="icon"> <i class="fa icon-tip" title="Tip"></i> </td> 
+      <td class="content"> This document deals with calling the <a href="/runtime-manager/cloudhub-api">CloudHub API</a>. For instructions on how to perform these same tasks more easily via the Runtime Manager UI, see <a href="/runtime-manager/cloudhub">CloudHub</a> and its child pages. </td> 
+     </tr> 
+    </tbody> 
+   </table> 
+  </div> 
+  <div class="paragraph"> 
+   <p>The GET operation specified with the <code>/api/applications</code> resource returns a list of all applications for your account. The resulting JSON contains a list of application objects.</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p><strong>Example Request:</strong></p> 
+  </div> 
+  <div class="listingblock"> 
+   <div class="content"> 
+    <pre class="CodeRay highlight"><code data-lang="json">
+         
+      <table class="CodeRay"> 
+       <tbody> 
+        <tr> 
+         <td class="line-numbers"><pre>1
+</pre></td> 
+         <td class="code"><pre><span class="error">G</span><span class="error">E</span><span class="error">T</span> <span class="error">h</span><span class="error">t</span><span class="error">t</span><span class="error">p</span><span class="error">s</span>:<span class="error">/</span><span class="error">/</span><span class="error">a</span><span class="error">n</span><span class="error">y</span><span class="error">p</span><span class="error">o</span><span class="error">i</span><span class="error">n</span><span class="error">t</span><span class="error">.</span><span class="error">m</span><span class="error">u</span><span class="error">l</span><span class="error">e</span><span class="error">s</span><span class="error">o</span><span class="error">f</span><span class="error">t</span><span class="error">.</span><span class="error">c</span><span class="error">o</span><span class="error">m</span><span class="error">/</span><span class="error">c</span><span class="error">l</span><span class="error">o</span><span class="error">u</span><span class="error">d</span><span class="error">h</span><span class="error">u</span><span class="error">b</span><span class="error">/</span><span class="error">a</span><span class="error">p</span><span class="error">i</span><span class="error">/</span><span class="error">a</span><span class="error">p</span><span class="error">p</span><span class="error">l</span><span class="error">i</span><span class="error">c</span><span class="error">a</span><span class="error">t</span><span class="error">i</span><span class="error">o</span><span class="error">n</span><span class="error">s</span></pre></td> 
+        </tr> 
+       </tbody> 
+      </table></code></pre> 
+   </div> 
+  </div> 
+  <div class="paragraph"> 
+   <p><strong>Example Response:</strong></p> 
+  </div> 
+  <div class="listingblock"> 
+   <div class="content"> 
+    <pre class="CodeRay highlight"><code data-lang="json">
+         
+      <table class="CodeRay"> 
+       <tbody> 
+        <tr> 
+         <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+</pre></td> 
+         <td class="code"><pre><span class="integer">200</span> <span class="error">O</span><span class="error">K</span>
+<span class="error">C</span><span class="error">o</span><span class="error">n</span><span class="error">t</span><span class="error">e</span><span class="error">n</span><span class="error">t</span><span class="error">-</span><span class="error">T</span><span class="error">y</span><span class="error">p</span><span class="error">e</span>: <span class="error">a</span><span class="error">p</span><span class="error">p</span><span class="error">l</span><span class="error">i</span><span class="error">c</span><span class="error">a</span><span class="error">t</span><span class="error">i</span><span class="error">o</span><span class="error">n</span><span class="error">/</span><span class="error">j</span><span class="error">s</span><span class="error">o</span><span class="error">n</span>
+<span class="error">S</span><span class="error">e</span><span class="error">r</span><span class="error">v</span><span class="error">e</span><span class="error">r</span>: <span class="error">A</span><span class="error">p</span><span class="error">a</span><span class="error">c</span><span class="error">h</span><span class="error">e</span><span class="error">-</span><span class="error">C</span><span class="error">o</span><span class="error">y</span><span class="error">o</span><span class="error">t</span><span class="error">e</span><span class="error">/</span><span class="float">1.1</span>
+<span class="error">D</span><span class="error">a</span><span class="error">t</span><span class="error">e</span>: <span class="error">S</span><span class="error">u</span><span class="error">n</span>, <span class="integer">18</span> <span class="error">J</span><span class="error">a</span><span class="error">n</span> <span class="integer">2015</span> <span class="integer">0</span><span class="integer">0</span>:<span class="integer">12</span>:<span class="integer">55</span> <span class="error">G</span><span class="error">M</span><span class="error">T</span>
+<span class="error">&nbsp;</span>
+{
+<span class="error">&nbsp;</span><span class="error">&nbsp;</span>{
+<span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="key"><span class="delimiter">"</span><span class="content">domain</span><span class="delimiter">"</span></span>:<span class="string"><span class="delimiter">"</span><span class="content">hello</span><span class="delimiter">"</span></span>,
+<span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="key"><span class="delimiter">"</span><span class="content">fullDomain</span><span class="delimiter">"</span></span>:<span class="string"><span class="delimiter">"</span><span class="content">hello.cloudhub.io</span><span class="delimiter">"</span></span>,
+<span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="key"><span class="delimiter">"</span><span class="content">workers</span><span class="delimiter">"</span></span>:<span class="integer">1</span>,
+<span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="key"><span class="delimiter">"</span><span class="content">hasFile</span><span class="delimiter">"</span></span>:<span class="value">false</span>,
+<span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="key"><span class="delimiter">"</span><span class="content">muleVersion</span><span class="delimiter">"</span></span>:<span class="string"><span class="delimiter">"</span><span class="content">3.6.0</span><span class="delimiter">"</span></span>,
+<span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="key"><span class="delimiter">"</span><span class="content">properties</span><span class="delimiter">"</span></span>: {
+<span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="key"><span class="delimiter">"</span><span class="content">foo</span><span class="delimiter">"</span></span>:<span class="string"><span class="delimiter">"</span><span class="content">bar</span><span class="delimiter">"</span></span>
+<span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span>},<span class="string"><span class="delimiter">"</span><span class="content"> &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="delimiter">"</span></span><span class="error">s</span><span class="error">t</span><span class="error">a</span><span class="error">t</span><span class="error">u</span><span class="error">s</span><span class="string"><span class="delimiter">"</span><span class="content">:</span><span class="delimiter">"</span></span><span class="error">S</span><span class="error">T</span><span class="error">A</span><span class="error">R</span><span class="error">T</span><span class="error">E</span><span class="error">D</span><span class="string"><span class="delimiter">"</span><span class="content">, &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="delimiter">"</span></span><span class="error">w</span><span class="error">o</span><span class="error">r</span><span class="error">k</span><span class="error">e</span><span class="error">r</span><span class="error">S</span><span class="error">t</span><span class="error">a</span><span class="error">t</span><span class="error">u</span><span class="error">s</span><span class="error">e</span><span class="error">s</span><span class="string"><span class="delimiter">"</span><span class="content">:[ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="delimiter">"</span></span><span class="error">i</span><span class="error">d</span><span class="string"><span class="delimiter">"</span><span class="content">:</span><span class="delimiter">"</span></span><span class="integer">123</span><span class="string"><span class="delimiter">"</span><span class="content">, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="delimiter">"</span></span><span class="error">h</span><span class="error">o</span><span class="error">s</span><span class="error">t</span><span class="string"><span class="delimiter">"</span><span class="content">:</span><span class="delimiter">"</span></span><span class="float">0.0</span><span class="error">.</span><span class="float">0.0</span><span class="string"><span class="delimiter">"</span><span class="content">, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="delimiter">"</span></span><span class="error">p</span><span class="error">o</span><span class="error">r</span><span class="error">t</span><span class="string"><span class="delimiter">"</span><span class="content">:8081, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="delimiter">"</span></span><span class="error">s</span><span class="error">t</span><span class="error">a</span><span class="error">t</span><span class="error">u</span><span class="error">s</span><span class="string"><span class="delimiter">"</span><span class="content">:</span><span class="delimiter">"</span></span><span class="error">S</span><span class="error">T</span><span class="error">A</span><span class="error">R</span><span class="error">T</span><span class="error">E</span><span class="error">D</span><span class="string"><span class="delimiter">"</span><span class="content"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;] &nbsp;&nbsp;}, &nbsp;&nbsp;{ &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="delimiter">"</span></span><span class="error">d</span><span class="error">o</span><span class="error">m</span><span class="error">a</span><span class="error">i</span><span class="error">n</span><span class="string"><span class="delimiter">"</span><span class="content">:</span><span class="delimiter">"</span></span><span class="error">w</span><span class="error">o</span><span class="error">r</span><span class="error">l</span><span class="error">d</span><span class="string"><span class="delimiter">"</span><span class="content">, &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="delimiter">"</span></span><span class="error">f</span><span class="error">u</span><span class="error">l</span><span class="error">l</span><span class="error">D</span><span class="error">o</span><span class="error">m</span><span class="error">a</span><span class="error">i</span><span class="error">n</span><span class="string"><span class="delimiter">"</span><span class="content">:</span><span class="delimiter">"</span></span><span class="error">w</span><span class="error">o</span><span class="error">r</span><span class="error">l</span><span class="error">d</span><span class="error">.</span><span class="error">c</span><span class="error">l</span><span class="error">o</span><span class="error">u</span><span class="error">d</span><span class="error">h</span><span class="error">u</span><span class="error">b</span><span class="error">.</span><span class="error">i</span><span class="error">o</span><span class="string"><span class="delimiter">"</span><span class="content">, &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="delimiter">"</span></span><span class="error">w</span><span class="error">o</span><span class="error">r</span><span class="error">k</span><span class="error">e</span><span class="error">r</span><span class="error">s</span><span class="string"><span class="delimiter">"</span><span class="content">:2, &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="delimiter">"</span></span><span class="error">h</span><span class="error">a</span><span class="error">s</span><span class="error">F</span><span class="error">i</span><span class="error">l</span><span class="error">e</span><span class="string"><span class="delimiter">"</span><span class="content">:false, &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="delimiter">"</span></span><span class="error">s</span><span class="error">t</span><span class="error">a</span><span class="error">t</span><span class="error">u</span><span class="error">s</span><span class="string"><span class="delimiter">"</span><span class="content">:</span><span class="delimiter">"</span></span><span class="error">S</span><span class="error">T</span><span class="error">A</span><span class="error">R</span><span class="error">T</span><span class="error">E</span><span class="error">D</span><span class="string"><span class="delimiter">"</span><span class="content">, &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="delimiter">"</span></span><span class="error">w</span><span class="error">o</span><span class="error">r</span><span class="error">k</span><span class="error">e</span><span class="error">r</span><span class="error">S</span><span class="error">t</span><span class="error">a</span><span class="error">t</span><span class="error">u</span><span class="error">s</span><span class="error">e</span><span class="error">s</span><span class="string"><span class="delimiter">"</span><span class="content">:[ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="delimiter">"</span></span><span class="error">i</span><span class="error">d</span><span class="string"><span class="delimiter">"</span><span class="content">:</span><span class="delimiter">"</span></span><span class="integer">456</span><span class="string"><span class="delimiter">"</span><span class="content">, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="delimiter">"</span></span><span class="error">h</span><span class="error">o</span><span class="error">s</span><span class="error">t</span><span class="string"><span class="delimiter">"</span><span class="content">:</span><span class="delimiter">"</span></span><span class="float">0.0</span><span class="error">.</span><span class="float">0.0</span><span class="string"><span class="delimiter">"</span><span class="content">, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="delimiter">"</span></span><span class="error">p</span><span class="error">o</span><span class="error">r</span><span class="error">t</span><span class="string"><span class="delimiter">"</span><span class="content">:8081, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="delimiter">"</span></span><span class="error">s</span><span class="error">t</span><span class="error">a</span><span class="error">t</span><span class="error">u</span><span class="error">s</span><span class="string"><span class="delimiter">"</span><span class="content">:</span><span class="delimiter">"</span></span><span class="error">S</span><span class="error">T</span><span class="error">A</span><span class="error">R</span><span class="error">T</span><span class="error">E</span><span class="error">D</span><span class="string"><span class="delimiter">"</span><span class="content"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;] &nbsp;&nbsp;} }</span></span></pre></td> 
+        </tr> 
+       </tbody> 
+      </table></code></pre> 
+   </div> 
+  </div> 
+  <div class="admonitionblock tip"> 
+   <table> 
+    <tbody> 
+     <tr> 
+      <td class="icon"> <i class="fa icon-tip" title="Tip"></i> </td> 
+      <td class="content"> 
+       <div class="paragraph"> 
+        <p>Check out the <a href="https://anypoint.mulesoft.com/apiplatform/anypoint-platform/#/portals">API Portal</a> of the CloudHub API to see an interactive reference of all the supported resources, methods, required properties and expected responses.</p> 
+       </div> 
+       <div class="paragraph"> 
+        <p>In the link above, search among other Mule APIs for the "CloudHub" API and click on its latest version.</p> 
+       </div> </td> 
+     </tr> 
+    </tbody> 
+   </table> 
+  </div> 
+ </div> 
 </div> 
-<div class="paragraph"> 
- <p>When an instance is impaired, CloudHub automatically attempts to restart the instance and relaunch the application. If a retry is successful, the underlying instance and the mule application are recovered, without requiring any further action from the user.</p> 
-</div> 
-<div class="paragraph"> 
- <p>However, if five retry attempts fail, an application’s status becomes Failed or Unrecoverable Runtime Error. In this situation, you must manually redeploy and restart the application.</p> 
+<div class="sect1"> 
+ <h2 id="see-also"><a class="anchor" href="#see-also"></a>See Also</h2> 
+ <div class="sectionbody"> 
+  <div class="ulist"> 
+   <ul> 
+    <li> <p><a href="/runtime-manager">Runtime Manager</a></p> </li> 
+    <li> <p><a href="/runtime-manager/cloudhub">CloudHub</a></p> </li> 
+    <li> <p><a href="/runtime-manager/managing-deployed-applications">Managing Deployed Applications</a></p> </li> 
+    <li> <p><a href="/runtime-manager/managing-applications-on-cloudhub">Managing Applications on CloudHub</a></p> </li> 
+    <li> <p><a href="/runtime-manager/monitoring">Monitoring Applications</a></p> </li> 
+   </ul> 
+  </div> 
+ </div> 
 </div>
     </div>
     <!-- END article-content -->
-    
+    <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
+                <h4>In this topic:</h4>
+                <ul><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->

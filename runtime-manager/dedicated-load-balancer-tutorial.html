@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Dedicated Load Balancer Tutorial // MuleSoft Documentation </title>
+  <title>About Load Balancers (CloudHub) // MuleSoft Documentation </title>
   <link rel="shortcut icon" href="/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="/css/vendor.min.css?t=1498825733">
   <link rel="stylesheet" type="text/css" href="/css/mulesoft.min.css?t=1498825733">
@@ -15,8 +15,8 @@
   <script src="/js/scripts.js?t=1498825733"></script>
 
   <link rel="canonical" href="https://docs.mulesoft.com/runtime-manager/dedicated-load-balancer-tutorial" />
-  <meta name="description" content=" This tutorial follows the configuration presented in the VPC Tutorial so it assumes that you either completed those instructions or created a VPC ..." />
-  <meta class="swiftype" name="title" data-type="string" content="Dedicated Load Balancer Tutorial" />
+  <meta name="description" content="This topic provides general information about load balancers in CloudHub. CloudHub provides a backend load-balancing service that automatically pro..." />
+  <meta class="swiftype" name="title" data-type="string" content="About Load Balancers (CloudHub)" />
 </head>
 <body>
 <!-- START Swiftype -->
@@ -667,10 +667,10 @@
 <li class="expanded">
 <i></i>
 <a href="/runtime-manager/">Runtime Manager</a><ul style="display: block;">
-<li class="expanded">
+<li>
 <i></i>
-<a href="/runtime-manager/tutorials">Tutorials</a><ul style="display: block;">
-<li><i></i><a href="/runtime-manager/building-an-https-service">Building an HTTPS Service</a></li><li><i></i><a href="/runtime-manager/vpc-tutorial">Create a VPC using Runtime Manager</a></li><li><i></i><a href="/runtime-manager/create-vpc-cli">Create a VPC using Anypoint Platform CLI</a></li><li class="active"><i></i><a href="/runtime-manager/dedicated-load-balancer-tutorial">Create a Dedicated Load Balancer</a></li></ul></li>
+<a href="/runtime-manager/tutorials">Tutorials</a><ul>
+<li><i></i><a href="/runtime-manager/building-an-https-service">Building an HTTPS Service</a></li><li><i></i><a href="/runtime-manager/vpc-tutorial">Create a VPC using Runtime Manager</a></li><li><i></i><a href="/runtime-manager/create-vpc-cli">Create a VPC using Anypoint Platform CLI</a></li></ul></li>
 <li>
 <i></i>
 <a href="/runtime-manager/deployment-strategies">Deployment Strategies</a><ul>
@@ -681,7 +681,7 @@
 <li>
 <i></i>
 <a href="/runtime-manager/managing-applications-on-cloudhub">Managing Applications on CloudHub</a><ul>
-<li><i></i><a href="/runtime-manager/managing-queues">Managing Queues</a></li><li><i></i><a href="/runtime-manager/managing-schedules">Managing Schedules</a></li><li><i></i><a href="/runtime-manager/secure-application-properties">Secure Application Properties</a></li><li><i></i><a href="/runtime-manager/managing-application-data-with-object-stores">Managing App Data using Object Stores</a></li><li><i></i><a href="/runtime-manager/virtual-private-cloud">Virtual Private Cloud</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li><li><i></i><a href="/runtime-manager/autoscaling-in-cloudhub">Autoscaling in CloudHub</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/managing-queues">Managing Queues</a></li><li><i></i><a href="/runtime-manager/managing-schedules">Managing Schedules</a></li><li><i></i><a href="/runtime-manager/secure-application-properties">Secure Application Properties</a></li><li><i></i><a href="/runtime-manager/managing-application-data-with-object-stores">Managing App Data using Object Stores</a></li><li><i></i><a href="/runtime-manager/virtual-private-cloud">Virtual Private Cloud</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li></ul></li>
 <li>
 <i></i>
 <a href="/runtime-manager/managing-applications-on-your-own-servers">Managing Applications on Your Own Servers</a><ul>
@@ -694,7 +694,7 @@
 <li>
 <i></i>
 <a href="/runtime-manager/monitoring">Monitoring</a><ul>
-<li><i></i><a href="/runtime-manager/alerts-on-runtime-manager">Alerts</a></li><li><i></i><a href="/runtime-manager/notifications-on-runtime-manager">Notifications</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li><li><i></i><a href="/runtime-manager/monitoring-dashboards">Dashboards</a></li><li><i></i><a href="/runtime-manager/flow-metrics">Flow Metrics</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/alerts-on-runtime-manager">Alerts</a></li><li><i></i><a href="/runtime-manager/notifications-on-runtime-manager">Notifications</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li><li><i></i><a href="/runtime-manager/monitoring-dashboards">Dashboards</a></li></ul></li>
 <li>
 <i></i>
 <a href="/runtime-manager/troubleshooting">Troubleshooting</a><ul>
@@ -705,12 +705,36 @@
 <li><i></i><a href="/runtime-manager/worker-monitoring">Worker Monitoring</a></li><li>
 <i></i>
 <a href="/runtime-manager/sending-data-from-arm-to-external-analytics-software">Sending data from Runtime Manager to External Analytics Software</a><ul>
-<li><i></i><a href="/runtime-manager/about-logging-of-payload-formats">About Logging of Payload Formats</a></li><li><i></i><a href="/runtime-manager/sending-api-analytics-from-arm-to-db">Sending API Analytics</a></li><li><i></i><a href="/runtime-manager/sending-event-data-from-arm-to-db">Sending Event Data</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/sending-api-analytics-from-arm-to-db">Sending API Analytics</a></li><li><i></i><a href="/runtime-manager/sending-event-data-from-arm-to-db">Sending Event Data</a></li></ul></li>
 </ul></li>
 <li>
 <i></i>
 <a href="/runtime-manager/cloudhub">CloudHub</a><ul>
-<li><i></i><a href="/runtime-manager/cloudhub-faq">CloudHub FAQ</a></li><li><i></i><a href="/runtime-manager/developing-applications-for-cloudhub">Developing Applications for CloudHub</a></li><li><i></i><a href="/runtime-manager/cloudhub-architecture">CloudHub Architecture</a></li><li><i></i><a href="/runtime-manager/cloudhub-impaired-worker">About Impaired Workers</a></li><li><i></i><a href="/runtime-manager/cloudhub-fabric">CloudHub Fabric</a></li><li><i></i><a href="/runtime-manager/managing-cloudhub-specific-settings">Managing Cloudhub Settings</a></li><li><i></i><a href="/runtime-manager/cloudhub-networking-guide">CloudHub Networking Guide</a></li><li><i></i><a href="/runtime-manager/cloudhub-dedicated-load-balancer">Cloudhub Dedicated Load Balancer</a></li><li><i></i><a href="/runtime-manager/penetration-testing-policies">Penetration Testing Policies</a></li><li><i></i><a href="/runtime-manager/cloudhub-api">CloudHub API</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/cloudhub-faq">CloudHub FAQ</a></li><li><i></i><a href="/runtime-manager/developing-applications-for-cloudhub">Developing Applications for CloudHub</a></li><li><i></i><a href="/runtime-manager/cloudhub-architecture">CloudHub Architecture</a></li><li><i></i><a href="/runtime-manager/cloudhub-fabric">CloudHub Fabric</a></li><li><i></i><a href="/runtime-manager/managing-cloudhub-specific-settings">Managing Cloudhub Settings</a></li><li><i></i><a href="/runtime-manager/cloudhub-networking-guide">CloudHub Networking Guide</a></li><li><i></i><a href="/runtime-manager/penetration-testing-policies">Penetration Testing Policies</a></li><li>
+<i></i>
+<a href="/runtime-manager/cloudhub-api">CloudHub API</a><ul>
+<li>
+<i></i>
+<a href="/runtime-manager/working-with-applications">Working with Applications</a><ul>
+<li><i></i><a href="/runtime-manager/create-application">Create Application</a></li><li><i></i><a href="/runtime-manager/delete-application">Delete an Application</a></li><li><i></i><a href="/runtime-manager/deploy-application">Deploy Application</a></li><li><i></i><a href="/runtime-manager/get-application">Get an Application</a></li><li><i></i><a href="/runtime-manager/list-all-applications">List All Applications</a></li><li><i></i><a href="/runtime-manager/update-application-metadata">Update Application Metadata</a></li></ul></li>
+<li>
+<i></i>
+<a href="/runtime-manager/logs">Working with Logs</a><ul>
+<li><i></i><a href="/runtime-manager/list-all-logs">List Log Messages</a></li></ul></li>
+<li>
+<i></i>
+<a href="/runtime-manager/notifications">Working with Notifications</a><ul>
+<li><i></i><a href="/runtime-manager/create-notification">Create Notification</a></li><li><i></i><a href="/runtime-manager/list-notifications">List All Notifications</a></li><li><i></i><a href="/runtime-manager/update-all-notifications">Update All Notifications</a></li><li><i></i><a href="/runtime-manager/update-notification">Update Notification</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/working-with-alerts">Working with Alerts</a></li></ul></li>
+</ul></li>
+<li class="active expanded">
+<i></i>
+<a href="/runtime-manager/dedicated-load-balancer-tutorial">About Load Balancers (CloudHub)</a><ul style="display: block;">
+<li><i></i><a href="/runtime-manager/lb-architecture">About Load Balancer Architecture</a></li><li><i></i><a href="/runtime-manager/lb-create-arm">To Create a Load Balancer using Runtime Manager</a></li><li><i></i><a href="/runtime-manager/lb-create-cli">To Create a Load Balancer using the CLI</a></li><li><i></i><a href="/runtime-manager/lb-create-api">To Create a Load Balancer using the API</a></li><li>
+<i></i>
+<a href="/runtime-manager/lb-cert-endpoints">About Load Balancer SSL Endpoints and Certificates</a><ul>
+<li><i></i><a href="/runtime-manager/lb-cert-upload">About Uploading Certificates</a></li><li><i></i><a href="/runtime-manager/lb-cert-validation">About Certificate Validation</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/lb-mapping-rules">About Mapping Rules</a></li><li><i></i><a href="/runtime-manager/lb-whitelists">About Whitelists</a></li></ul></li>
 <li><i></i><a href="/runtime-manager/maintenance-and-upgrade-policy">Maintenance and Upgrade Policy</a></li><li>
 <i></i>
 <a href="/runtime-manager/runtime-manager-agent">Runtime Manager Agent</a><ul>
@@ -1087,324 +1111,41 @@
     <!-- START article content -->
     <div class="article-content col-md-7">
       
-      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Runtime Manager</a>/<a href="tutorials">Tutorials</a>/<a href="dedicated-load-balancer-tutorial" class="breadcrumb-active-link">Create a Dedicated Load Balancer</a></div>
-      <h1>Dedicated Load Balancer Tutorial</h1>
+      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Runtime Manager</a>/<a href="dedicated-load-balancer-tutorial" class="breadcrumb-active-link">About Load Balancers (CloudHub)</a></div>
+      <h1>About Load Balancers (CloudHub)</h1>
       <div id="preamble"> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p><span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-cloud-active.png" alt="logo cloud active" title="CloudHub"></a></span> <span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-hybrid-disabled.png" alt="logo hybrid disabled" title="Hybrid Deployment"></a></span> <span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-server-disabled.png" alt="logo server disabled" title="Anypoint Platform Private Cloud Edition"></a></span> <span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-pcf-disabled.png" alt="logo pcf disabled" title="Pivotal Cloud Foundry"></a></span></p> 
+   <p>This topic provides general information about load balancers in CloudHub. CloudHub provides a backend load-balancing service that automatically provisions infrastructure components. You can use this service to deploy one or more custom load-balancers within a VPC.</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p>Load balancers enable you to:</p> 
+  </div> 
+  <div class="ulist"> 
+   <ul> 
+    <li> <p>Handle Load balancing among the different CloudHub workers that run your application.</p> </li> 
+    <li> <p>Define SSL configurations to provide custom certificates and optionally enforce two-way SSL client authentication.</p> </li> 
+    <li> <p>Configure proxy rules that map your applications to custom domains. This enables you to host your applications under a single domain.</p> </li> 
+   </ul> 
+  </div> 
+  <div class="paragraph"> 
+   <p>Load balancers are an optional component of Anypoint Platform. To user load balancers, you must be running an Anypoint Virtual Private Cloud (VPC). You can associate multiple environments to the same VPC. This enables you to use the same dedicated load balancer in different environments.</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p>You can view the load balancer and VPCS endpoints in your Anypoint Platform organization from the API Portal.</p> 
   </div> 
  </div> 
 </div> 
 <div class="sect1"> 
- <h2 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Prerequisites</h2> 
+ <h2 id="see-also"><a class="anchor" href="#see-also"></a>See Also</h2> 
  <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>This tutorial follows the configuration presented in the <a href="/runtime-manager/vpc-tutorial">VPC Tutorial</a> so it assumes that you either completed those instructions or created a VPC and configured it similarly to the example.<br> It is also recommended for you to be familiar with the <a href="/runtime-manager/cloudhub-architecture">CloudHub architecture</a>.</p> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="overview"><a class="anchor" href="#overview"></a>Overview</h2> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>This tutorial walks you through the creation of a <strong>dedicated load balancer</strong> configuring an SSL endpoint for 2-way SSL authentication and mapping lists.</p> 
-  </div> 
-  <div class="admonitionblock note"> 
-   <table> 
-    <tbody> 
-     <tr> 
-      <td class="icon"> <i class="fa icon-note" title="Note"></i> </td> 
-      <td class="content"> This feature will eventually be built into the Runtime Manager UI, however currently it’s only available as a service that can be used via the <a href="/runtime-manager/anypoint-platform-cli">Anypoint Command Line Interface</a>. </td> 
-     </tr> 
-    </tbody> 
-   </table> 
-  </div> 
-  <div class="paragraph"> 
-   <p>Each load balancer can be associated with one or more <strong>SSL endpoints</strong>. Such endpoints are identified by their certificate names.<br> Certificates are an important component of your dedicated load balancer. When creating a load balancer, at least one SSL endpoint needs to be configured, meaning that each load balancer needs to have <em>at least</em> one certificate associated to it.<br> Understanding how to <a href="/runtime-manager/cloudhub-dedicated-load-balancer#managing-certificates">manage certificates</a>, is therefore quite useful when managing dedicated load balancers.</p> 
-  </div> 
-  <div class="sect2"> 
-   <h3 id="provide-a-certificate"><a class="anchor" href="#provide-a-certificate"></a>Provide a Certificate</h3> 
-   <div class="paragraph"> 
-    <p>Create a custom self-signed certificate for the domain <code>lb-tutorial-cert</code>.<br></p> 
-   </div> 
-   <div class="admonitionblock note"> 
-    <table> 
-     <tbody> 
-      <tr> 
-       <td class="icon"> <i class="fa icon-note" title="Note"></i> </td> 
-       <td class="content"> 
-        <div class="paragraph"> 
-         <p>Keep in mind that self-signed certificates are usually set for testing purposes or specific internal usages. You should not use this self-signed certificate in production.</p> 
-        </div> 
-        <div class="paragraph"> 
-         <p>There are plenty of <a href="http://www.akadia.com/services/ssh_test_certificate.html">useful tutorials for creating a self-signed certificate</a>.</p> 
-        </div> 
-        <div class="paragraph"> 
-         <p>The following guide shows you how to create a self-signed certificate to use in this example.</p> 
-        </div> </td> 
-      </tr> 
-     </tbody> 
-    </table> 
-   </div> 
-   <div class="olist arabic"> 
-    <ol class="arabic"> 
-     <li> <p>In your terminal type, <code>cd</code> to your <code>Documents</code> folder:</p> 
-      <div class="listingblock"> 
-       <div class="content"> 
-        <pre class="CodeRay highlight"><code data-lang="Example">&gt; cd /Users/myuser/Documents/</code></pre> 
-       </div> 
-      </div> </li> 
-     <li> <p>Run an openssl request for a new self signed certificate, valid for 10 years:</p> 
-      <div class="listingblock"> 
-       <div class="content"> 
-        <pre class="CodeRay highlight"><code data-lang="Example">&gt; openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem</code></pre> 
-       </div> 
-      </div> </li> 
-     <li> <p>After hitting return, you’ll be prompted to complete a few details for your certificate. <br> As a guide, pass the following values:</p> 
-      <div class="listingblock"> 
-       <div class="content"> 
-        <pre class="CodeRay highlight"><code data-lang="Example">
-             
-          <table class="CodeRay"> 
-           <tbody> 
-            <tr> 
-             <td class="line-numbers"><pre>1
-2
-3
-4
-5
-6
-7
-</pre></td> 
-             <td class="code"><pre>Country Name (2 letter code) [AU]: US
-State or Province Name (full name) [Some-State]: California
-Locality Name (eg, city) []:San Francisco
-Organization Name (eg, company) [Internet Widgits Pty Ltd]:MuleSoft
-Organizational Unit Name (eg, section) []: VPC Tutorial
-Common Name (e.g. server FQDN or YOUR name) []: lb-tutorial-cert
-Email Address []:max@mule.com</pre></td> 
-            </tr> 
-           </tbody> 
-          </table></code></pre> 
-       </div> 
-      </div> </li> 
-    </ol> 
-   </div> 
-   <div class="paragraph"> 
-    <p>You created a certificate and private key pair, with a common name <code>lb-tutorial-cert</code>.</p> 
-   </div> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="create-a-load-balancer"><a class="anchor" href="#create-a-load-balancer"></a>Create a Load Balancer</h2> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>A load balancer can be created using the <a href="/runtime-manager/anypoint-platform-cli#cloudhub-load-balancer-create">load-balancer create</a> command.</p> 
-  </div> 
-  <div class="listingblock"> 
-   <div class="content"> 
-    <pre class="CodeRay highlight"><code data-lang="Example">cloudhub load-balancer create <i class="conum" data-value="1"></i><b>(1)</b>
-vpc-tutorial <i class="conum" data-value="2"></i><b>(2)</b>
-lb-tutorial  <i class="conum" data-value="3"></i><b>(3)</b>
-/Users/myuser/Documents/cert.pem /Users/myuser/Documents/key.pem  <i class="conum" data-value="4"></i><b>(4)</b>
---http on <i class="conum" data-value="5"></i><b>(5)</b>
---verificationMode on</code></pre> 
-   </div> 
-  </div> 
-  <div class="olist arabic"> 
-   <ol class="arabic"> 
-    <li> <p>Pass <code>vpc-tutorial</code> as the vpc name in which you want to create the load balancer.<br> In order to keep consistency among tutorials, we are using components created in the <a href="/runtime-manager/vpc-tutorial">VPC tutorial</a>.</p> </li> 
-    <li> <p>Name the load balancer <code>lb-tutorial</code>.<br> The load balancer’s name must be unique.<br> Each load balancer has an internal domain name: <code>internal-&lt;lb-name&gt;.lb.anypointdns.net</code> where <code>&lt;lb-name&gt;</code> is the name you set here.</p> </li> 
-    <li> <p>Pass the path to a <code>.pem</code> file certificate and its key<br> We are using the self-signed certificate created earlier, along with its private key: <code>cert.pem</code> and <code>key.pem</code>.<br> The certificate that you upload to the Load Balancer must be contained in one <strong><em>pem</em> encoded</strong> and <strong>unencrypted</strong> file.<br> Your private key file needs to be <strong>passphraseless</strong>.</p> </li> 
-    <li> <p>Set the option for the http method to <code>on</code>.<br> This sets the load balancer to accept all http requests and forwards it to your default SSL endpoint. In this case, the only ssl endpoint configured is <code>lb-tutorial-cert</code></p> </li> 
-    <li> <p>Set the option for the verificationMode to <code>on</code><br> This instructs the SSL endpoint to always verify the certificate</p> </li> 
-   </ol> 
-  </div> 
-  <div class="paragraph"> 
-   <p>When the operation succeeds, the CLI returns an acknowledgement similar to the following:</p> 
-  </div> 
-  <div class="listingblock"> 
-   <div class="content"> 
-    <pre class="CodeRay highlight"><code data-lang="Example">Created Load balancer lb-tutorial with Common Name lb-tutorial-cert</code></pre> 
-   </div> 
-  </div> 
-  <div class="paragraph"> 
-   <p>In order to display the details of the newly created load balancer, use the load-balancer describe command:</p> 
-  </div> 
-  <div class="listingblock"> 
-   <div class="content"> 
-    <pre class="CodeRay highlight"><code data-lang="Example">cloudhub load-balancer describe lb-tutorial</code></pre> 
-   </div> 
-  </div> 
-  <div class="paragraph"> 
-   <p>The output gives you the load balancer details:</p> 
-  </div> 
-  <div class="listingblock"> 
-   <div class="content"> 
-    <pre class="CodeRay highlight"><code data-lang="Example">
-         
-      <table class="CodeRay"> 
-       <tbody> 
-        <tr> 
-         <td class="line-numbers"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-</pre></td> 
-         <td class="code"><pre>┌──────────────────────────────┬──────────────────────────────────┐
-│ Name                         │ lb-tutorial                      │
-├──────────────────────────────┼──────────────────────────────────┤
-│ Domain                       │ lb-qa.anypointdns.net            │
-├──────────────────────────────┼──────────────────────────────────┤
-│ State                        │ STARTED                          │
-├──────────────────────────────┼──────────────────────────────────┤
-│ VPC                          │ vpc-tutorial                     │
-├──────────────────────────────┼──────────────────────────────────┤
-│ IPs                          │ 52.44.115.136, 52.44.110.254     │
-├──────────────────────────────┼──────────────────────────────────┤
-│ Common Name                  │ lb-test                          │
-├──────────────────────────────┼──────────────────────────────────┤
-│ TLSv1                        │ Disabled                         │
-├──────────────────────────────┼──────────────────────────────────┤
-│ Proxy mappings               │                                  │
-├──────────────────────────────┼──────────────────────────────────┤
-│ Whitelisted IPs              │ 0.0.0.0/0                        │
-└──────────────────────────────┴──────────────────────────────────┘</pre></td> 
-        </tr> 
-       </tbody> 
-      </table></code></pre> 
-   </div> 
-  </div> 
-  <div class="paragraph"> 
-   <p>Now that your VPC has a dedicated load balancer, create a <a href="/runtime-manager/cloudhub-dedicated-load-balancer#url-mapping">URL mapping list</a> to redirect traffic from your load balancer, to your specific application domain name:</p> 
-  </div> 
-  <div class="listingblock"> 
-   <div class="content"> 
-    <pre class="CodeRay highlight"><code data-lang="Example">&gt; cloudhub load-balancer mappings add <i class="conum" data-value="1"></i><b>(1)</b>
-lb-tutorial <i class="conum" data-value="2"></i><b>(2)</b>
-0 <i class="conum" data-value="3"></i><b>(3)</b>
-/{app}/ <i class="conum" data-value="4"></i><b>(4)</b>
-{app} <i class="conum" data-value="5"></i><b>(5)</b>
-/</code></pre> 
-   </div> 
-  </div> 
-  <div class="olist arabic"> 
-   <ol class="arabic"> 
-    <li> <p>Set <code>lb-tutorial</code> as the target for this new mapping rule</p> </li> 
-    <li> <p>Set the index priority for this mapping rule to <code>0</code><br> This rule now has the first priority.</p> </li> 
-    <li> <p>Set the input URL as <code>/{app}/</code><br> This rule uses patterns so that every value passed as <code>{app}</code> in the load balancer’s domain name: <code>lb-tutorial.lb.anypointdns.net/{app}</code> gets mapped to the URL set as the output URL.</p> </li> 
-    <li> <p>Set the output URL to <code>{app}</code><br> So that the domain <code>lb-tutorial.lb.anypointdns.net/{app}</code> gets mapped to <code>{app}.cloudub.io/</code> using the pattern <code>{app}</code> to match your application’s name.</p> </li> 
-    <li> <p>Set the appURI to <code>/</code> to redirect to the initial path of your application.</p> </li> 
-   </ol> 
-  </div> 
-  <div class="admonitionblock caution"> 
-   <table> 
-    <tbody> 
-     <tr> 
-      <td class="icon"> <i class="fa icon-caution" title="Caution"></i> </td> 
-      <td class="content"> 
-       <div class="paragraph"> 
-        <p>By default your load balancer listens external requests on https and communicates with your workers internally through http.<br> If you configured your Mule application within the VPC to listen on https, make sure you set <code>upstreamProtocol</code> to https when creating the mapping list using the <a href="/runtime-manager/anypoint-platform-cli#cloudhub-load-balancer-mappings-add">load-balancer mappings add</a> command.</p> 
-       </div> </td> 
-     </tr> 
-    </tbody> 
-   </table> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="update-an-existing-load-balancer"><a class="anchor" href="#update-an-existing-load-balancer"></a>Update an Existing Load Balancer</h2> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>It is possible to edit the Whitelists, Mapping Rules and SSL Endpoints from the Anypoint Platform CLI.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>Remove the existing configuration using <code>load-balancer whitelist remove</code>, <code>load-balancer mappings remove</code> and <code>load-balancer ssl-endpoint remove</code> respectively and add the new configurations.</p> 
-  </div> 
-  <div class="sect2"> 
-   <h3 id="update-an-existing-load-balancer-using-the-cloudhub-api"><a class="anchor" href="#update-an-existing-load-balancer-using-the-cloudhub-api"></a>Update an Existing Load Balancer Using the CloudHub API</h3> 
-   <div class="paragraph"> 
-    <p>Although it is not possible to update certain load balancer values through the Anypoint Platform CLI, you can use the <a href="https://anypoint.mulesoft.com/apiplatform/anypoint-platform/#/portals/organizations/68ef9520-24e9-4cf2-b2f5-620025690913/apis/8617/versions/85955/pages/107964">Cloudhub API</a> to programmatically manage and update your load balancer:</p> 
-   </div> 
-   <div class="olist arabic"> 
-    <ol class="arabic"> 
-     <li> <p>Log in to the CloudHub services passing your credentials to <code>https://anypoint.mulesoft.com/#/signin</code>.</p> </li> 
-     <li> <p>Use the <code>organizations/{orgId}/vpcs/{vpcId}/loadbalancers/{lbId}</code> endpoint to update your load balancer.</p> </li> 
-    </ol> 
-   </div> 
-   <div class="admonitionblock note"> 
-    <table> 
-     <tbody> 
-      <tr> 
-       <td class="icon"> <i class="fa icon-note" title="Note"></i> </td> 
-       <td class="content"> You can use the <a href="https://anypoint.mulesoft.com/apiplatform/anypoint-platform/#/portals/organizations/68ef9520-24e9-4cf2-b2f5-620025690913/apis/8617/versions/85955/pages/107964">API Reference</a> to understand how to interact with the API’s resources. </td> 
-      </tr> 
-     </tbody> 
-    </table> 
-   </div> 
-   <div class="paragraph"> 
-    <p>For example, to update the <code>httpmode</code> of the load balancer, you need to send a <code>PATCH</code> request to the <code>anypoint.mulesoft.com/cloudhub/api/organizations/{orgId}/vpcs/{vpcId}/loadbalancers/{lbId}</code> endpoint with a JSON payload:</p> 
-   </div> 
-   <div class="admonitionblock tip"> 
-    <table> 
-     <tbody> 
-      <tr> 
-       <td class="icon"> <i class="fa icon-tip" title="Tip"></i> </td> 
-       <td class="content"> 
-        <div class="paragraph"> 
-         <p>You can query your <code>{orgId}</code> using the <a href="/runtime-manager/anypoint-platform-cli#account-business-group-list">account business-group describe</a> command.</p> 
-        </div> 
-        <div class="paragraph"> 
-         <p>Your <code>{vpcId}</code> and <code>{lbId}</code> values are listed by running a <a href="/runtime-manager/anypoint-platform-cli#cloudhub-vpc-describe-json">cloudhub vpc describe-json</a> and a <a href="/runtime-manager/anypoint-platform-cli#cloudhub-load-balancer-describe-json">cloudhub load balancer describe-json</a> command respectively.</p> 
-        </div> </td> 
-      </tr> 
-     </tbody> 
-    </table> 
-   </div> 
-   <div class="listingblock"> 
-    <div class="content"> 
-     <pre class="CodeRay highlight"><code data-lang="json">
-          
-       <table class="CodeRay"> 
-        <tbody> 
-         <tr> 
-          <td class="line-numbers"><pre>1
-2
-3
-4
-5
-6
-7
-</pre></td> 
-          <td class="code"><pre>[
-  {
-    <span class="key"><span class="delimiter">"</span><span class="content">op</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">replace</span><span class="delimiter">"</span></span>,
-    <span class="key"><span class="delimiter">"</span><span class="content">path</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">/httpMode</span><span class="delimiter">"</span></span>,
-    <span class="key"><span class="delimiter">"</span><span class="content">value</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">redirect</span><span class="delimiter">"</span></span>
-  }
-]</pre></td> 
-         </tr> 
-        </tbody> 
-       </table></code></pre> 
-    </div> 
-   </div> 
+  <div class="ulist"> 
+   <ul> 
+    <li> <p><a href="https://anypoint.mulesoft.com/apiplatform/anypoint-platform/#/portals">API Portal</a></p> </li> 
+    <li> <p><a href="/runtime-manager/cloudhub">CloudHub</a></p> </li> 
+    <li> <p><a href="/runtime-manager/virtual-private-cloud">Virtual Private Cloud</a></p> </li> 
+    <li> <p><a href="/runtime-manager/lb-architecture">About Load Balancer Architecture</a></p> </li> 
+   </ul> 
   </div> 
  </div> 
 </div>
@@ -1412,7 +1153,7 @@ lb-tutorial <i class="conum" data-value="2"></i><b>(2)</b>
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#prerequisites">Prerequisites</a></li><li><a class="scroll-menu-link" href="#overview">Overview</a></li><li><a class="scroll-menu-link" href="#create-a-load-balancer">Create a Load Balancer</a></li><li><a class="scroll-menu-link" href="#update-an-existing-load-balancer">Update an Existing Load Balancer</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->

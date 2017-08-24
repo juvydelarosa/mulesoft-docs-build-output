@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Cloudhub Dedicated Load Balancer // MuleSoft Documentation </title>
+  <title>Cloudhub Dedicated Load Balancer for VPCs // MuleSoft Documentation </title>
   <link rel="shortcut icon" href="/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="/css/vendor.min.css?t=1498825733">
   <link rel="stylesheet" type="text/css" href="/css/mulesoft.min.css?t=1498825733">
@@ -16,7 +16,7 @@
 
   <link rel="canonical" href="https://docs.mulesoft.com/runtime-manager/cloudhub-dedicated-load-balancer" />
   <meta name="description" content=" CloudHub features a backend load-balancing service designed to automate the provisioning of infrastructure components. You can use this service to..." />
-  <meta class="swiftype" name="title" data-type="string" content="Cloudhub Dedicated Load Balancer" />
+  <meta class="swiftype" name="title" data-type="string" content="Cloudhub Dedicated Load Balancer for VPCs" />
 </head>
 <body>
 <!-- START Swiftype -->
@@ -664,13 +664,13 @@
 <a href="/anypoint-exchange/ex2-create">To Create and Maintain Exchange Assets</a><ul>
 <li><i></i><a href="/anypoint-exchange/ex2-migrate">To Migrate Assets from Exchange 1 to Exchange 2</a></li><li><i></i><a href="/anypoint-exchange/ex2-explore">To Explore Exchange</a></li><li><i></i><a href="/anypoint-exchange/ex2-permissions">To Set Access Permissions for Exchange</a></li><li><i></i><a href="/anypoint-exchange/ex2-add-asset">To Add an Asset to Exchange</a></li><li><i></i><a href="/anypoint-exchange/ex2-editor">To Edit An Asset Description in Exchange</a></li><li><i></i><a href="/anypoint-exchange/ex2-publish-share">To Publish an Asset in Exchange</a></li><li><i></i><a href="/anypoint-exchange/ex2-maven">To Publish and Deploy Exchange Assets Using Maven</a></li><li><i></i><a href="/anypoint-exchange/ex2-rest-connect-faq">FAQ: REST Connect</a></li><li><i></i><a href="/anypoint-exchange/exchange1-faq">Exchange 1 FAQ</a></li></ul></li>
 </ul></li>
-<li class="expanded">
+<li>
 <i></i>
-<a href="/runtime-manager/">Runtime Manager</a><ul style="display: block;">
+<a href="/runtime-manager/">Runtime Manager</a><ul>
 <li>
 <i></i>
 <a href="/runtime-manager/tutorials">Tutorials</a><ul>
-<li><i></i><a href="/runtime-manager/building-an-https-service">Building an HTTPS Service</a></li><li><i></i><a href="/runtime-manager/vpc-tutorial">Create a VPC using Runtime Manager</a></li><li><i></i><a href="/runtime-manager/create-vpc-cli">Create a VPC using Anypoint Platform CLI</a></li><li><i></i><a href="/runtime-manager/dedicated-load-balancer-tutorial">Create a Dedicated Load Balancer</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/building-an-https-service">Building an HTTPS Service</a></li><li><i></i><a href="/runtime-manager/vpc-tutorial">Create a VPC using Runtime Manager</a></li><li><i></i><a href="/runtime-manager/create-vpc-cli">Create a VPC using Anypoint Platform CLI</a></li></ul></li>
 <li>
 <i></i>
 <a href="/runtime-manager/deployment-strategies">Deployment Strategies</a><ul>
@@ -681,7 +681,7 @@
 <li>
 <i></i>
 <a href="/runtime-manager/managing-applications-on-cloudhub">Managing Applications on CloudHub</a><ul>
-<li><i></i><a href="/runtime-manager/managing-queues">Managing Queues</a></li><li><i></i><a href="/runtime-manager/managing-schedules">Managing Schedules</a></li><li><i></i><a href="/runtime-manager/secure-application-properties">Secure Application Properties</a></li><li><i></i><a href="/runtime-manager/managing-application-data-with-object-stores">Managing App Data using Object Stores</a></li><li><i></i><a href="/runtime-manager/virtual-private-cloud">Virtual Private Cloud</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li><li><i></i><a href="/runtime-manager/autoscaling-in-cloudhub">Autoscaling in CloudHub</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/managing-queues">Managing Queues</a></li><li><i></i><a href="/runtime-manager/managing-schedules">Managing Schedules</a></li><li><i></i><a href="/runtime-manager/secure-application-properties">Secure Application Properties</a></li><li><i></i><a href="/runtime-manager/managing-application-data-with-object-stores">Managing App Data using Object Stores</a></li><li><i></i><a href="/runtime-manager/virtual-private-cloud">Virtual Private Cloud</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li></ul></li>
 <li>
 <i></i>
 <a href="/runtime-manager/managing-applications-on-your-own-servers">Managing Applications on Your Own Servers</a><ul>
@@ -694,7 +694,7 @@
 <li>
 <i></i>
 <a href="/runtime-manager/monitoring">Monitoring</a><ul>
-<li><i></i><a href="/runtime-manager/alerts-on-runtime-manager">Alerts</a></li><li><i></i><a href="/runtime-manager/notifications-on-runtime-manager">Notifications</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li><li><i></i><a href="/runtime-manager/monitoring-dashboards">Dashboards</a></li><li><i></i><a href="/runtime-manager/flow-metrics">Flow Metrics</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/alerts-on-runtime-manager">Alerts</a></li><li><i></i><a href="/runtime-manager/notifications-on-runtime-manager">Notifications</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li><li><i></i><a href="/runtime-manager/monitoring-dashboards">Dashboards</a></li></ul></li>
 <li>
 <i></i>
 <a href="/runtime-manager/troubleshooting">Troubleshooting</a><ul>
@@ -705,12 +705,36 @@
 <li><i></i><a href="/runtime-manager/worker-monitoring">Worker Monitoring</a></li><li>
 <i></i>
 <a href="/runtime-manager/sending-data-from-arm-to-external-analytics-software">Sending data from Runtime Manager to External Analytics Software</a><ul>
-<li><i></i><a href="/runtime-manager/about-logging-of-payload-formats">About Logging of Payload Formats</a></li><li><i></i><a href="/runtime-manager/sending-api-analytics-from-arm-to-db">Sending API Analytics</a></li><li><i></i><a href="/runtime-manager/sending-event-data-from-arm-to-db">Sending Event Data</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/sending-api-analytics-from-arm-to-db">Sending API Analytics</a></li><li><i></i><a href="/runtime-manager/sending-event-data-from-arm-to-db">Sending Event Data</a></li></ul></li>
 </ul></li>
-<li class="expanded">
+<li>
 <i></i>
-<a href="/runtime-manager/cloudhub">CloudHub</a><ul style="display: block;">
-<li><i></i><a href="/runtime-manager/cloudhub-faq">CloudHub FAQ</a></li><li><i></i><a href="/runtime-manager/developing-applications-for-cloudhub">Developing Applications for CloudHub</a></li><li><i></i><a href="/runtime-manager/cloudhub-architecture">CloudHub Architecture</a></li><li><i></i><a href="/runtime-manager/cloudhub-impaired-worker">About Impaired Workers</a></li><li><i></i><a href="/runtime-manager/cloudhub-fabric">CloudHub Fabric</a></li><li><i></i><a href="/runtime-manager/managing-cloudhub-specific-settings">Managing Cloudhub Settings</a></li><li><i></i><a href="/runtime-manager/cloudhub-networking-guide">CloudHub Networking Guide</a></li><li class="active"><i></i><a href="/runtime-manager/cloudhub-dedicated-load-balancer">Cloudhub Dedicated Load Balancer</a></li><li><i></i><a href="/runtime-manager/penetration-testing-policies">Penetration Testing Policies</a></li><li><i></i><a href="/runtime-manager/cloudhub-api">CloudHub API</a></li></ul></li>
+<a href="/runtime-manager/cloudhub">CloudHub</a><ul>
+<li><i></i><a href="/runtime-manager/cloudhub-faq">CloudHub FAQ</a></li><li><i></i><a href="/runtime-manager/developing-applications-for-cloudhub">Developing Applications for CloudHub</a></li><li><i></i><a href="/runtime-manager/cloudhub-architecture">CloudHub Architecture</a></li><li><i></i><a href="/runtime-manager/cloudhub-fabric">CloudHub Fabric</a></li><li><i></i><a href="/runtime-manager/managing-cloudhub-specific-settings">Managing Cloudhub Settings</a></li><li><i></i><a href="/runtime-manager/cloudhub-networking-guide">CloudHub Networking Guide</a></li><li><i></i><a href="/runtime-manager/penetration-testing-policies">Penetration Testing Policies</a></li><li>
+<i></i>
+<a href="/runtime-manager/cloudhub-api">CloudHub API</a><ul>
+<li>
+<i></i>
+<a href="/runtime-manager/working-with-applications">Working with Applications</a><ul>
+<li><i></i><a href="/runtime-manager/create-application">Create Application</a></li><li><i></i><a href="/runtime-manager/delete-application">Delete an Application</a></li><li><i></i><a href="/runtime-manager/deploy-application">Deploy Application</a></li><li><i></i><a href="/runtime-manager/get-application">Get an Application</a></li><li><i></i><a href="/runtime-manager/list-all-applications">List All Applications</a></li><li><i></i><a href="/runtime-manager/update-application-metadata">Update Application Metadata</a></li></ul></li>
+<li>
+<i></i>
+<a href="/runtime-manager/logs">Working with Logs</a><ul>
+<li><i></i><a href="/runtime-manager/list-all-logs">List Log Messages</a></li></ul></li>
+<li>
+<i></i>
+<a href="/runtime-manager/notifications">Working with Notifications</a><ul>
+<li><i></i><a href="/runtime-manager/create-notification">Create Notification</a></li><li><i></i><a href="/runtime-manager/list-notifications">List All Notifications</a></li><li><i></i><a href="/runtime-manager/update-all-notifications">Update All Notifications</a></li><li><i></i><a href="/runtime-manager/update-notification">Update Notification</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/working-with-alerts">Working with Alerts</a></li></ul></li>
+</ul></li>
+<li>
+<i></i>
+<a href="/runtime-manager/dedicated-load-balancer-tutorial">About Load Balancers (CloudHub)</a><ul>
+<li><i></i><a href="/runtime-manager/lb-architecture">About Load Balancer Architecture</a></li><li><i></i><a href="/runtime-manager/lb-create-arm">To Create a Load Balancer using Runtime Manager</a></li><li><i></i><a href="/runtime-manager/lb-create-cli">To Create a Load Balancer using the CLI</a></li><li><i></i><a href="/runtime-manager/lb-create-api">To Create a Load Balancer using the API</a></li><li>
+<i></i>
+<a href="/runtime-manager/lb-cert-endpoints">About Load Balancer SSL Endpoints and Certificates</a><ul>
+<li><i></i><a href="/runtime-manager/lb-cert-upload">About Uploading Certificates</a></li><li><i></i><a href="/runtime-manager/lb-cert-validation">About Certificate Validation</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/lb-mapping-rules">About Mapping Rules</a></li><li><i></i><a href="/runtime-manager/lb-whitelists">About Whitelists</a></li></ul></li>
 <li><i></i><a href="/runtime-manager/maintenance-and-upgrade-policy">Maintenance and Upgrade Policy</a></li><li>
 <i></i>
 <a href="/runtime-manager/runtime-manager-agent">Runtime Manager Agent</a><ul>
@@ -1087,8 +1111,8 @@
     <!-- START article content -->
     <div class="article-content col-md-7">
       
-      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Runtime Manager</a>/<a href="cloudhub">CloudHub</a>/<a href="cloudhub-dedicated-load-balancer" class="breadcrumb-active-link">Cloudhub Dedicated Load Balancer</a></div>
-      <h1>Cloudhub Dedicated Load Balancer</h1>
+      
+      <h1>Cloudhub Dedicated Load Balancer for VPCs</h1>
       <div id="preamble"> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
@@ -1134,10 +1158,10 @@
  <h2 id="load-balancer-architecture"><a class="anchor" href="#load-balancer-architecture"></a>Load Balancer Architecture</h2> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>Your CloudHub Dedicated Load Balancer has an internal domain name to be used by applications and clients within the VPC. The structure is <code>internal-&lt;lb-name&gt;.lb.anypointdns.net</code> where <code>&lt;lb-name&gt;</code> is the name you gave the load balancer when you created it. Additionally, your Dedicated Load Balancer exposes an external domain name resolving to 2 public IP addresses which can be reached from outside of your CloudHub VPC network: <code>&lt;lb-name&gt;.lb.anypointdns.net</code> where <code>&lt;lb-name&gt;</code> is the name you gave the load balancer when you created it.</p> 
+   <p>Your CloudHub dedicated Load Balancer has an internal domain name to be used by applications and clients within the VPC. The structure is <code>internal-&lt;lb-name&gt;.lb.anypointdns.net</code> where <code>&lt;lb-name&gt;</code> is the name you gave the load balancer when you created it. Additionally, your dedicated load balancer exposes an external domain name that you can be reached from outside your VPC network: <code>&lt;lb-name&gt;.lb.anypointdns.net</code> where <code>&lt;lb-name&gt;</code> is the name you gave the load balancer when you created it.</p> 
   </div> 
   <div class="paragraph"> 
-   <p>Each Dedicated Load Balancer has a DNS A Record <code>&lt;lb-name&gt;.lb.anypointdns.net</code> resolving to 2 Public IP addresses of its two instances.<br> Through your DNS provider, you can add a CNAME record pointing to this A record and use your own domain names to access.</p> 
+   <p>Each Dedicated Load Balancer has a DNS A Record pairing its external domain name (<code>&lt;lb-name&gt;.lb.anypointdns.net</code>) to the IP addresses of your workers.<br> Through your DNS provider, you can add this DNS A record to the DNS CNAME records of your DNS servers and use your own hostnames.</p> 
   </div> 
   <div class="paragraph"> 
    <p>If you want your load balancer to handle all connections to your application and you don’t want your default domain name for your application publicly exposed, then each application needs to be listening over HTTP on port <strong>8091</strong> or <strong>8092</strong>, or you can create a custom mapping policy to redirect outside requests from your load balancer to your specific application.</p> 
@@ -1373,12 +1397,15 @@ DHE-RSA-AES256-SHA256
 DHE-RSA-AES128-SHA256
 DHE-RSA-AES256-SHA
 DHE-RSA-AES128-SHA
+ECDHE-RSA-DES-CBC3-SHA
+EDH-RSA-DES-CBC3-SHA
 AES256-GCM-SHA384
 AES128-GCM-SHA256
 AES256-SHA256
 AES128-SHA256
 AES256-SHA
-AES128-SHA</pre> 
+AES128-SHA
+DES-CBC3-SHA</pre> 
     </div> 
    </div> 
    <div class="paragraph"> 
@@ -1446,15 +1473,8 @@ AES128-SHA</pre>
    <div class="paragraph"> 
     <p>Depending on your design, you can choose to leverage your internal redirects to your endpoints using patterns or simply literal mappings.</p> 
    </div> 
-   <div class="admonitionblock caution"> 
-    <table> 
-     <tbody> 
-      <tr> 
-       <td class="icon"> <i class="fa icon-caution" title="Caution"></i> </td> 
-       <td class="content"> Note that currently patterns in the application URI are not supported. </td> 
-      </tr> 
-     </tbody> 
-    </table> 
+   <div class="paragraph"> 
+    <p>Note that currently patterns in the application URI are not supported.</p> 
    </div> 
   </div> 
   <div class="sect2"> 

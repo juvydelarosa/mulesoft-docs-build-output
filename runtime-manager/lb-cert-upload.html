@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Flow Metrics // MuleSoft Documentation </title>
+  <title>About Uploading Certificates to a Load Balancer // MuleSoft Documentation </title>
   <link rel="shortcut icon" href="/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="/css/vendor.min.css?t=1498825733">
   <link rel="stylesheet" type="text/css" href="/css/mulesoft.min.css?t=1498825733">
@@ -14,9 +14,9 @@
   <script src="/js/trafficSource.js"></script>
   <script src="/js/scripts.js?t=1498825733"></script>
 
-  <link rel="canonical" href="https://docs.mulesoft.com/runtime-manager/flow-metrics" />
-  <meta name="description" content=" You can view the evolution of performance metrics for individual flows in your applications that are deployed to servers on premises.  If your app..." />
-  <meta class="swiftype" name="title" data-type="string" content="Flow Metrics" />
+  <link rel="canonical" href="https://docs.mulesoft.com/runtime-manager/lb-cert-upload" />
+  <meta name="description" content="The certificate that you upload to your Load Balancer must be contained in one pem encoded and unencrypted file. This file must contain the entire ..." />
+  <meta class="swiftype" name="title" data-type="string" content="About Uploading Certificates to a Load Balancer" />
 </head>
 <body>
 <!-- START Swiftype -->
@@ -160,7 +160,7 @@
         <a href="#" class="tree-icon glyphicon glyphicon-th-list"><span>Nav</span></a>
       </div>
       <div class="toolbar-dropdown edit-github">
-        <a href="https://github.com/mulesoft/mulesoft-docs/blob/master/runtime-manager/v/latest/flow-metrics.adoc" target="_blank"><span>Edit on GitHub</span></a>
+        <a href="https://github.com/mulesoft/mulesoft-docs/blob/master/runtime-manager/v/latest/lb-cert-upload.adoc" target="_blank"><span>Edit on GitHub</span></a>
       </div>
       <div class="toolbar-dropdown helpful">
         <div class="btn btn-default dropdown-toggle" id="dropdown-helpful">
@@ -670,7 +670,7 @@
 <li>
 <i></i>
 <a href="/runtime-manager/tutorials">Tutorials</a><ul>
-<li><i></i><a href="/runtime-manager/building-an-https-service">Building an HTTPS Service</a></li><li><i></i><a href="/runtime-manager/vpc-tutorial">Create a VPC using Runtime Manager</a></li><li><i></i><a href="/runtime-manager/create-vpc-cli">Create a VPC using Anypoint Platform CLI</a></li><li><i></i><a href="/runtime-manager/dedicated-load-balancer-tutorial">Create a Dedicated Load Balancer</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/building-an-https-service">Building an HTTPS Service</a></li><li><i></i><a href="/runtime-manager/vpc-tutorial">Create a VPC using Runtime Manager</a></li><li><i></i><a href="/runtime-manager/create-vpc-cli">Create a VPC using Anypoint Platform CLI</a></li></ul></li>
 <li>
 <i></i>
 <a href="/runtime-manager/deployment-strategies">Deployment Strategies</a><ul>
@@ -681,7 +681,7 @@
 <li>
 <i></i>
 <a href="/runtime-manager/managing-applications-on-cloudhub">Managing Applications on CloudHub</a><ul>
-<li><i></i><a href="/runtime-manager/managing-queues">Managing Queues</a></li><li><i></i><a href="/runtime-manager/managing-schedules">Managing Schedules</a></li><li><i></i><a href="/runtime-manager/secure-application-properties">Secure Application Properties</a></li><li><i></i><a href="/runtime-manager/managing-application-data-with-object-stores">Managing App Data using Object Stores</a></li><li><i></i><a href="/runtime-manager/virtual-private-cloud">Virtual Private Cloud</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li><li><i></i><a href="/runtime-manager/autoscaling-in-cloudhub">Autoscaling in CloudHub</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/managing-queues">Managing Queues</a></li><li><i></i><a href="/runtime-manager/managing-schedules">Managing Schedules</a></li><li><i></i><a href="/runtime-manager/secure-application-properties">Secure Application Properties</a></li><li><i></i><a href="/runtime-manager/managing-application-data-with-object-stores">Managing App Data using Object Stores</a></li><li><i></i><a href="/runtime-manager/virtual-private-cloud">Virtual Private Cloud</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li></ul></li>
 <li>
 <i></i>
 <a href="/runtime-manager/managing-applications-on-your-own-servers">Managing Applications on Your Own Servers</a><ul>
@@ -691,10 +691,10 @@
 <i></i>
 <a href="/runtime-manager/managing-servers">Managing Servers</a><ul>
 <li><i></i><a href="/runtime-manager/runtime-manager-api">Runtime Manager API</a></li></ul></li>
-<li class="expanded">
+<li>
 <i></i>
-<a href="/runtime-manager/monitoring">Monitoring</a><ul style="display: block;">
-<li><i></i><a href="/runtime-manager/alerts-on-runtime-manager">Alerts</a></li><li><i></i><a href="/runtime-manager/notifications-on-runtime-manager">Notifications</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li><li><i></i><a href="/runtime-manager/monitoring-dashboards">Dashboards</a></li><li class="active"><i></i><a href="/runtime-manager/flow-metrics">Flow Metrics</a></li></ul></li>
+<a href="/runtime-manager/monitoring">Monitoring</a><ul>
+<li><i></i><a href="/runtime-manager/alerts-on-runtime-manager">Alerts</a></li><li><i></i><a href="/runtime-manager/notifications-on-runtime-manager">Notifications</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li><li><i></i><a href="/runtime-manager/monitoring-dashboards">Dashboards</a></li></ul></li>
 <li>
 <i></i>
 <a href="/runtime-manager/troubleshooting">Troubleshooting</a><ul>
@@ -705,12 +705,36 @@
 <li><i></i><a href="/runtime-manager/worker-monitoring">Worker Monitoring</a></li><li>
 <i></i>
 <a href="/runtime-manager/sending-data-from-arm-to-external-analytics-software">Sending data from Runtime Manager to External Analytics Software</a><ul>
-<li><i></i><a href="/runtime-manager/about-logging-of-payload-formats">About Logging of Payload Formats</a></li><li><i></i><a href="/runtime-manager/sending-api-analytics-from-arm-to-db">Sending API Analytics</a></li><li><i></i><a href="/runtime-manager/sending-event-data-from-arm-to-db">Sending Event Data</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/sending-api-analytics-from-arm-to-db">Sending API Analytics</a></li><li><i></i><a href="/runtime-manager/sending-event-data-from-arm-to-db">Sending Event Data</a></li></ul></li>
 </ul></li>
 <li>
 <i></i>
 <a href="/runtime-manager/cloudhub">CloudHub</a><ul>
-<li><i></i><a href="/runtime-manager/cloudhub-faq">CloudHub FAQ</a></li><li><i></i><a href="/runtime-manager/developing-applications-for-cloudhub">Developing Applications for CloudHub</a></li><li><i></i><a href="/runtime-manager/cloudhub-architecture">CloudHub Architecture</a></li><li><i></i><a href="/runtime-manager/cloudhub-impaired-worker">About Impaired Workers</a></li><li><i></i><a href="/runtime-manager/cloudhub-fabric">CloudHub Fabric</a></li><li><i></i><a href="/runtime-manager/managing-cloudhub-specific-settings">Managing Cloudhub Settings</a></li><li><i></i><a href="/runtime-manager/cloudhub-networking-guide">CloudHub Networking Guide</a></li><li><i></i><a href="/runtime-manager/cloudhub-dedicated-load-balancer">Cloudhub Dedicated Load Balancer</a></li><li><i></i><a href="/runtime-manager/penetration-testing-policies">Penetration Testing Policies</a></li><li><i></i><a href="/runtime-manager/cloudhub-api">CloudHub API</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/cloudhub-faq">CloudHub FAQ</a></li><li><i></i><a href="/runtime-manager/developing-applications-for-cloudhub">Developing Applications for CloudHub</a></li><li><i></i><a href="/runtime-manager/cloudhub-architecture">CloudHub Architecture</a></li><li><i></i><a href="/runtime-manager/cloudhub-fabric">CloudHub Fabric</a></li><li><i></i><a href="/runtime-manager/managing-cloudhub-specific-settings">Managing Cloudhub Settings</a></li><li><i></i><a href="/runtime-manager/cloudhub-networking-guide">CloudHub Networking Guide</a></li><li><i></i><a href="/runtime-manager/penetration-testing-policies">Penetration Testing Policies</a></li><li>
+<i></i>
+<a href="/runtime-manager/cloudhub-api">CloudHub API</a><ul>
+<li>
+<i></i>
+<a href="/runtime-manager/working-with-applications">Working with Applications</a><ul>
+<li><i></i><a href="/runtime-manager/create-application">Create Application</a></li><li><i></i><a href="/runtime-manager/delete-application">Delete an Application</a></li><li><i></i><a href="/runtime-manager/deploy-application">Deploy Application</a></li><li><i></i><a href="/runtime-manager/get-application">Get an Application</a></li><li><i></i><a href="/runtime-manager/list-all-applications">List All Applications</a></li><li><i></i><a href="/runtime-manager/update-application-metadata">Update Application Metadata</a></li></ul></li>
+<li>
+<i></i>
+<a href="/runtime-manager/logs">Working with Logs</a><ul>
+<li><i></i><a href="/runtime-manager/list-all-logs">List Log Messages</a></li></ul></li>
+<li>
+<i></i>
+<a href="/runtime-manager/notifications">Working with Notifications</a><ul>
+<li><i></i><a href="/runtime-manager/create-notification">Create Notification</a></li><li><i></i><a href="/runtime-manager/list-notifications">List All Notifications</a></li><li><i></i><a href="/runtime-manager/update-all-notifications">Update All Notifications</a></li><li><i></i><a href="/runtime-manager/update-notification">Update Notification</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/working-with-alerts">Working with Alerts</a></li></ul></li>
+</ul></li>
+<li class="expanded">
+<i></i>
+<a href="/runtime-manager/dedicated-load-balancer-tutorial">About Load Balancers (CloudHub)</a><ul style="display: block;">
+<li><i></i><a href="/runtime-manager/lb-architecture">About Load Balancer Architecture</a></li><li><i></i><a href="/runtime-manager/lb-create-arm">To Create a Load Balancer using Runtime Manager</a></li><li><i></i><a href="/runtime-manager/lb-create-cli">To Create a Load Balancer using the CLI</a></li><li><i></i><a href="/runtime-manager/lb-create-api">To Create a Load Balancer using the API</a></li><li class="expanded">
+<i></i>
+<a href="/runtime-manager/lb-cert-endpoints">About Load Balancer SSL Endpoints and Certificates</a><ul style="display: block;">
+<li class="active"><i></i><a href="/runtime-manager/lb-cert-upload">About Uploading Certificates</a></li><li><i></i><a href="/runtime-manager/lb-cert-validation">About Certificate Validation</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/lb-mapping-rules">About Mapping Rules</a></li><li><i></i><a href="/runtime-manager/lb-whitelists">About Whitelists</a></li></ul></li>
 <li><i></i><a href="/runtime-manager/maintenance-and-upgrade-policy">Maintenance and Upgrade Policy</a></li><li>
 <i></i>
 <a href="/runtime-manager/runtime-manager-agent">Runtime Manager Agent</a><ul>
@@ -1087,119 +1111,63 @@
     <!-- START article content -->
     <div class="article-content col-md-7">
       
-      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Runtime Manager</a>/<a href="monitoring">Monitoring</a>/<a href="flow-metrics" class="breadcrumb-active-link">Flow Metrics</a></div>
-      <h1>Flow Metrics</h1>
+      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Runtime Manager</a>/<a href="dedicated-load-balancer-tutorial">About Load Balancers (CloudHub)</a>/<a href="lb-cert-endpoints">About Load Balancer SSL Endpoints and Certificates</a>/<a href="lb-cert-upload" class="breadcrumb-active-link">About Uploading Certificates</a></div>
+      <h1>About Uploading Certificates to a Load Balancer</h1>
       <div id="preamble"> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p><span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-cloud-disabled.png" alt="logo cloud disabled" title="CloudHub"></a></span> <span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-hybrid-active.png" alt="logo hybrid active" title="Hybrid Deployment"></a></span> <span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-server-disabled.png" alt="logo server disabled" title="Anypoint Platform Private Cloud Edition"></a></span> <span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-pcf-disabled.png" alt="logo pcf disabled" title="Pivotal Cloud Foundry"></a></span></p> 
+   <p>The certificate that you upload to your Load Balancer must be contained in one <em>pem</em> encoded and unencrypted file. This file must contain the entire certificate chain ordered sequentially, as shown in this example:</p> 
+  </div> 
+  <table class="tableblock frame-all grid-all spread"> 
+   <colgroup> 
+    <col style="width: 30%;"> 
+    <col style="width: 70%;"> 
+   </colgroup> 
+   <thead> 
+    <tr> 
+     <th class="tableblock halign-left valign-top">Certificate</th> 
+     <th class="tableblock halign-left valign-top">Example</th> 
+    </tr> 
+   </thead> 
+   <tbody> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"> 
+      <div> 
+       <div class="paragraph"> 
+        <p>The Primary Certificate</p> 
+       </div> 
+      </div></td> 
+     <td class="tableblock halign-left valign-top"> 
+      <div> 
+       <div class="paragraph"> 
+        <p>-----BEGIN CERTIFICATE-----<br> (Your Primary SSL certificate: your_domain_name.crt)<br> -----END CERTIFICATE-----</p> 
+       </div> 
+      </div></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"> 
+      <div> 
+       <div class="paragraph"> 
+        <p>The Intermediate Certificate</p> 
+       </div> 
+      </div></td> 
+     <td class="tableblock halign-left valign-top"> 
+      <div> 
+       <div class="paragraph"> 
+        <p>-----BEGIN CERTIFICATE-----<br> (Your Intermediate certificate: DigiCertCA.crt)<br> -----END CERTIFICATE-----</p> 
+       </div> 
+      </div></td> 
+    </tr> 
+   </tbody> 
+  </table> 
+  <div class="paragraph"> 
+   <p>It is not required to include the root certificate in the certificate chain. However, you must include the ASCII armor in each certificate.</p> 
   </div> 
   <div class="paragraph"> 
-   <p>You can view the evolution of performance metrics for individual flows in your applications that are deployed to servers on premises.</p> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="access-flow-metrics"><a class="anchor" href="#access-flow-metrics"></a>Access Flow Metrics</h2> 
- <div class="sectionbody"> 
-  <div class="admonitionblock note"> 
-   <table> 
-    <tbody> 
-     <tr> 
-      <td class="icon"> <i class="fa icon-note" title="Note"></i> </td> 
-      <td class="content"> To view flow metrics, your user must have <code>Read Application</code> permission for the desired applications. </td> 
-     </tr> 
-    </tbody> 
-   </table> 
-  </div> 
-  <div class="olist arabic"> 
-   <ol class="arabic"> 
-    <li> <p>Select the <strong>Applications</strong> tab in Runtime Manager</p> </li> 
-    <li> <p>Enter a running application’s settings (either by clicking the <strong>Manage Application</strong> button on the side panel, or the application name itself in the table).</p> </li> 
-    <li> <p>Select the <strong>Flows</strong> tab on the left side bar</p> </li> 
-    <li> <p>Select one or multiple flows</p> 
-     <div class="paragraph"> 
-      <p><span class="image"><img src="./_images/flow-metrics-c8f9d.png" alt="flow metrics c8f9d"></span></p> 
-     </div> </li> 
-   </ol> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="verify-the-status-of-servers"><a class="anchor" href="#verify-the-status-of-servers"></a>Verify the Status of Servers</h2> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>If your application is deployed to a Cluster or a Server Group, you can view the status of the flow on each server it runs in.</p> 
+   <p>When creating a load balancer, you can include an SSL Endpoint using Runtime Manager or using the <code>cloudhub load-balancer create</code> command from the CLI.</p> 
   </div> 
   <div class="paragraph"> 
-   <p><span class="image"><img src="./_images/flow-metrics-86a1a.png" alt="flow metrics 86a1a"></span></p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>This screen can help you rule out the possibility of a communication issue leading to inconsistent states throughout the servers.</p> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="view-flow-metrics"><a class="anchor" href="#view-flow-metrics"></a>View Flow Metrics</h2> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>Once you have selected one or multiple flows, you can view the <strong>Metrics</strong> tab.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p><span class="image"><img src="./_images/flow-metrics-e26c4.png" alt="flow metrics e26c4"></span></p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>This tab contains charts for the following three metrics:</p> 
-  </div> 
-  <div class="ulist"> 
-   <ul> 
-    <li> <p>Mule messages</p> </li> 
-    <li> <p>Errors</p> </li> 
-    <li> <p>Flow response time</p> </li> 
-   </ul> 
-  </div> 
-  <div class="paragraph"> 
-   <p>All metrics are displayed as an average relative to the selected time scale.</p> 
-  </div> 
-  <div class="admonitionblock note"> 
-   <table> 
-    <tbody> 
-     <tr> 
-      <td class="icon"> <i class="fa icon-note" title="Note"></i> </td> 
-      <td class="content"> The retention period for flow metrics is two weeks. </td> 
-     </tr> 
-    </tbody> 
-   </table> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="navigating-the-metrics"><a class="anchor" href="#navigating-the-metrics"></a>Navigating the Metrics</h2> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>All graphs can be viewed at different time scales by selecting the desired time interval on the top-right corner.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p><span class="image"><img src="./_images/flow-metrics-801cc.png" alt="flow metrics 801cc"></span></p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>If your application runs on a cluster or server group, the aggregated metrics of the entire set of servers included are charted as a single plot line.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>By hovering your mouse over a given point of a graph, an overlay displays numerical detail about activity on that instant.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p><span class="image"><img src="./_images/flow-metrics-c2b16.png" alt="flow metrics c2b16"></span></p> 
-  </div> 
-  <div class="admonitionblock tip"> 
-   <table> 
-    <tbody> 
-     <tr> 
-      <td class="icon"> <i class="fa icon-tip" title="Tip"></i> </td> 
-      <td class="content"> Set up <a href="/runtime-manager/alerts-on-runtime-manager">Alerts</a> to notify you automatically whenever any of these metrics hits a critical value for a sustained period of time. </td> 
-     </tr> 
-    </tbody> 
-   </table> 
+   <p>After creating a load balancer, you can upload an SSL Endpoint using Runtime Manager or using the <code>cloudhub load-balancer ssl-endpoint add</code> command from the CLI.</p> 
   </div> 
  </div> 
 </div> 
@@ -1208,10 +1176,9 @@
  <div class="sectionbody"> 
   <div class="ulist"> 
    <ul> 
-    <li> <p>Read about <a href="/runtime-manager/insight">Insight</a>, a tool for looking into transaction-level detail</p> </li> 
-    <li> <p>View server and app metrics <a href="/runtime-manager/insight">Insight</a>, a tool for looking into transaction-level detail</p> </li> 
-    <li> <p>Read about <a href="/runtime-manager/flow-management">Flow Management</a>, and how to start and stop specific flows</p> </li> 
-    <li> <p><a href="/runtime-manager/monitoring">Monitoring Applications</a></p> </li> 
+    <li> <p><a href="/runtime-manager/lb-create-arm">To Create a Load Balancer using Runtime Manager</a></p> </li> 
+    <li> <p><a href="/runtime-manager/anypoint-platform-cli#cloudhub-load-balancer-create">cloudhub load balancer create</a></p> </li> 
+    <li> <p><a href="/runtime-manager/anypoint-platform-cli#cloudhub-load-balancer-ssl-endpoint-add">cloudhub load-balancer ssl-endpoint add</a></p> </li> 
    </ul> 
   </div> 
  </div> 
@@ -1220,7 +1187,7 @@
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#access-flow-metrics">Access Flow Metrics</a></li><li><a class="scroll-menu-link" href="#verify-the-status-of-servers">Verify the Status of Servers</a></li><li><a class="scroll-menu-link" href="#view-flow-metrics">View Flow Metrics</a></li><li><a class="scroll-menu-link" href="#navigating-the-metrics">Navigating the Metrics</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->
