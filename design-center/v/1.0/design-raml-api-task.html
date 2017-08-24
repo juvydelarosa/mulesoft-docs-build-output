@@ -1121,7 +1121,7 @@
       </div> 
      </div> 
      <div class="paragraph"> 
-      <p>If you don’t see these options, click <span class="image"><img src="./_images/down-angle-bracket.png" alt="down angle bracket"></span>.</p> 
+      <p>If you don’t see these options, click CTRL+space.</p> 
      </div> </li> 
     <li> <p>At the root level, click Root &gt; baseUri from the list of options. Enter <code>http://jsonplaceholder.typicode.com</code>.</p> </li> 
     <li> <p>Go to the next line of code, and include a resource in the RAML. Indent the resource at the same level as the <code>baseUri</code>.</p> 
@@ -1135,7 +1135,21 @@ baseUri: http://jsonplaceholder.typicode.com
 /users:</pre> 
       </div> 
      </div> </li> 
-    <li> <p>Enter the GET method to retrieve the information defined in <code>http://jsonplaceholder.typicode.com</code>. Put the method name followed by a colon on the lines below the resource name, indented one level. Indent and add a description on of the method on the next line. For example:</p> 
+    <li> <p>Use auto-completion to enter the GET method to retrieve the information defined in <code>http://jsonplaceholder.typicode.com</code>.</p> 
+     <div class="ulist"> 
+      <ul> 
+       <li> <p>Put your mouse pointer on the line below /users.</p> </li> 
+       <li> <p>Indent one level.</p> </li> 
+       <li> <p>Enter Ctrl+Space.</p> 
+        <div class="imageblock"> 
+         <div class="content"> 
+          <img src="./_images/design-autocomplete.png" alt="get method" width="489" height="409"> 
+         </div> 
+        </div> </li> 
+       <li> <p>Select get.</p> </li> 
+      </ul> 
+     </div> </li> 
+    <li> <p>Add a description of the method on the next line. For example:</p> 
      <div class="listingblock"> 
       <div class="content"> 
        <pre>/users:
@@ -1167,20 +1181,14 @@ baseUri: http://jsonplaceholder.typicode.com
         body:</pre> 
       </div> 
      </div> </li> 
-    <li> <p>Download the <code>user-example.json</code> from the "Downloads" section of this document and create an include file of the JSON code:</p> 
+    <li> <p>Import a JSON example:</p> 
      <div class="ulist"> 
       <ul> 
-       <li> <p>Select Files &gt; <span class="image"><img src="./_images/dependencies-plus.png" alt="+"></span> &gt; New File.</p> </li> 
-       <li> <p>Select Other from the drop-down and name the file <strong>user-example.json</strong>. Click Submit.</p> 
+       <li> <p>Download the <code>user-example.json</code> from the "Downloads" section of this document and click Files &gt; Import.</p> 
         <div class="paragraph"> 
-         <p>The file at this point is empty.</p> 
+         <p><span class="image"><img src="./_images/files-import.png" alt="files import" width="295" height="97"></span></p> 
         </div> </li> 
-       <li> <p>Copy the contents of user-example.json and paste it into the editor:</p> 
-        <div class="imageblock"> 
-         <div class="content"> 
-          <img src="./_images/user-example-in-dc.png" alt="raml example" width="603" height="334"> 
-         </div> 
-        </div> </li> 
+       <li> <p>Choose RAML, and browse to and select a file in RAML, JSON, or ZIP format.</p> </li> 
        <li> <p>In the RAML editor, type add the following lines to the code:</p> 
         <div class="listingblock"> 
          <div class="content"> 
@@ -1215,7 +1223,7 @@ baseUri: http://jsonplaceholder.typicode.com
  </div> 
 </div> 
 <div class="sect1"> 
- <h2 id="download"><a class="anchor" href="#download"></a>Download</h2> 
+ <h2 id="downloads"><a class="anchor" href="#downloads"></a>Downloads</h2> 
  <div class="sectionbody"> 
   <div class="ulist"> 
    <ul> 
@@ -1239,7 +1247,7 @@ baseUri: http://jsonplaceholder.typicode.com
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#download">Download</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#downloads">Downloads</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->
