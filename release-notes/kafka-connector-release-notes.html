@@ -15,7 +15,7 @@
   <script src="/js/scripts.js?t=1498825733"></script>
 
   <link rel="canonical" href="https://docs.mulesoft.com/release-notes/kafka-connector-release-notes" />
-  <meta name="description" content="June 2017 The Anypoint Connector for Kafka allows you to connect to the Apache Kafka messaging system over the Mule runtime, enabling seamless inte..." />
+  <meta name="description" content="August 2017 The Anypoint Connector for Kafka allows you to connect to the Apache Kafka messaging system over the Mule runtime, enabling seamless in..." />
   <meta class="swiftype" name="title" data-type="string" content="Apache Kafka Connector Release Notes" />
 </head>
 <body>
@@ -1116,7 +1116,7 @@
       <div id="preamble"> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p><strong>June 2017</strong></p> 
+   <p><strong>August 2017</strong></p> 
   </div> 
   <div class="paragraph"> 
    <p>The Anypoint Connector for Kafka allows you to connect to the Apache Kafka messaging system over the Mule runtime, enabling seamless integration between your applications and an Apache Kafka cluster.</p> 
@@ -1127,14 +1127,14 @@
  </div> 
 </div> 
 <div class="sect1"> 
- <h2 id="apache-kafka-connector-2-0-0-june-30-2017"><a class="anchor" href="#apache-kafka-connector-2-0-0-june-30-2017"></a>Apache Kafka Connector 2.0.0 - June 30, 2017</h2> 
+ <h2 id="apache-kafka-connector-2-0-1-august-25-2017"><a class="anchor" href="#apache-kafka-connector-2-0-1-august-25-2017"></a>Apache Kafka Connector 2.0.1 - August 25, 2017</h2> 
  <div class="sectionbody"> 
   <div class="sect2"> 
-   <h3 id="version-2-0-0-compatibility"><a class="anchor" href="#version-2-0-0-compatibility"></a>Version 2.0.0 Compatibility</h3> 
+   <h3 id="version-2-0-1-compatibility"><a class="anchor" href="#version-2-0-1-compatibility"></a>Version 2.0.1 Compatibility</h3> 
    <table class="tableblock frame-all grid-all spread"> 
     <colgroup> 
-     <col style="width: 50%;"> 
-     <col style="width: 50%;"> 
+     <col> 
+     <col> 
     </colgroup> 
     <thead> 
      <tr> 
@@ -1144,32 +1144,52 @@
     </thead> 
     <tbody> 
      <tr> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>Mule Runtime</p> 
-        </div> 
-       </div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>Mule Runtime Enterprise Edition 3.7.0 and newer</p> 
-        </div> 
-       </div></td> 
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Mule Runtime</p></td> 
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Mule Runtime Enterprise Edition 3.7.0 and newer</p></td> 
      </tr> 
      <tr> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>Apache Kafka</p> 
-        </div> 
-       </div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>0.10.2.0</p> 
-        </div> 
-       </div></td> 
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Apache Kafka</p></td> 
+      <td class="tableblock halign-left valign-top"><p class="tableblock">0.10.2.0</p></td> 
+     </tr> 
+    </tbody> 
+   </table> 
+  </div> 
+  <div class="sect2"> 
+   <h3 id="version-2-0-1-fixed-in-this-release"><a class="anchor" href="#version-2-0-1-fixed-in-this-release"></a>Version 2.0.1 - Fixed in this Release</h3> 
+   <div class="ulist"> 
+    <ul> 
+     <li> <p><strong>Too many open files open Error</strong>. In previous versions when using an external property location for producer properties a "Too many files open" error showed up as soon if the same number of requests were sent as the file limit on the machine. Now, it works as expected.</p> </li> 
+     <li> <p><strong>Kafka client exceptions lost by Kafka consumer operation</strong>. In previous versions kafka client exceptions were lost and so the errors were not being reported back to the connector, not reporting a <em>not consumed message</em>. Now the connector reports the error as expected.</p> </li> 
+     <li> <p><strong>Unhandled exceptions when using Kafka Connector in a synchronous flow</strong>. When using the connector in synchornous flow , exceptions were not handled and the flow didn’t go into the <em>Exception Strategy</em>. Now the exceptions are handled and the flow goes to the <em>Exception Strategy</em> as expected.</p> </li> 
+    </ul> 
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<div class="sect1"> 
+ <h2 id="apache-kafka-connector-2-0-0-june-30-2017"><a class="anchor" href="#apache-kafka-connector-2-0-0-june-30-2017"></a>Apache Kafka Connector 2.0.0 - June 30, 2017</h2> 
+ <div class="sectionbody"> 
+  <div class="sect2"> 
+   <h3 id="version-2-0-0-compatibility"><a class="anchor" href="#version-2-0-0-compatibility"></a>Version 2.0.0 Compatibility</h3> 
+   <table class="tableblock frame-all grid-all spread"> 
+    <colgroup> 
+     <col> 
+     <col> 
+    </colgroup> 
+    <thead> 
+     <tr> 
+      <th class="tableblock halign-left valign-top">Software</th> 
+      <th class="tableblock halign-left valign-top">Version</th> 
+     </tr> 
+    </thead> 
+    <tbody> 
+     <tr> 
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Mule Runtime</p></td> 
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Mule Runtime Enterprise Edition 3.7.0 and newer</p></td> 
+     </tr> 
+     <tr> 
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Apache Kafka</p></td> 
+      <td class="tableblock halign-left valign-top"><p class="tableblock">0.10.2.0</p></td> 
      </tr> 
     </tbody> 
    </table> 
@@ -1192,8 +1212,8 @@
    <h3 id="version-1-0-2-compatibility"><a class="anchor" href="#version-1-0-2-compatibility"></a>Version 1.0.2 Compatibility</h3> 
    <table class="tableblock frame-all grid-all spread"> 
     <colgroup> 
-     <col style="width: 50%;"> 
-     <col style="width: 50%;"> 
+     <col> 
+     <col> 
     </colgroup> 
     <thead> 
      <tr> 
@@ -1203,32 +1223,12 @@
     </thead> 
     <tbody> 
      <tr> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>Mule Runtime</p> 
-        </div> 
-       </div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>Mule Runtime Enterprise Edition 3.7.0 and newer</p> 
-        </div> 
-       </div></td> 
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Mule Runtime</p></td> 
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Mule Runtime Enterprise Edition 3.7.0 and newer</p></td> 
      </tr> 
      <tr> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>Apache Kafka</p> 
-        </div> 
-       </div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>0.9.0.0</p> 
-        </div> 
-       </div></td> 
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Apache Kafka</p></td> 
+      <td class="tableblock halign-left valign-top"><p class="tableblock">0.9.0.0</p></td> 
      </tr> 
     </tbody> 
    </table> 
@@ -1327,8 +1327,8 @@
    <h3 id="version-1-0-0-compatibility"><a class="anchor" href="#version-1-0-0-compatibility"></a>Version 1.0.0 Compatibility</h3> 
    <table class="tableblock frame-all grid-all spread"> 
     <colgroup> 
-     <col style="width: 50%;"> 
-     <col style="width: 50%;"> 
+     <col> 
+     <col> 
     </colgroup> 
     <thead> 
      <tr> 
@@ -1338,32 +1338,12 @@
     </thead> 
     <tbody> 
      <tr> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>Mule Runtime</p> 
-        </div> 
-       </div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>Mule Runtime Enterprise Edition 3.7.0 and newer</p> 
-        </div> 
-       </div></td> 
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Mule Runtime</p></td> 
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Mule Runtime Enterprise Edition 3.7.0 and newer</p></td> 
      </tr> 
      <tr> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>Apache Kafka</p> 
-        </div> 
-       </div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>0.9.0.0</p> 
-        </div> 
-       </div></td> 
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Apache Kafka</p></td> 
+      <td class="tableblock halign-left valign-top"><p class="tableblock">0.9.0.0</p></td> 
      </tr> 
     </tbody> 
    </table> 
@@ -1409,7 +1389,7 @@
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#apache-kafka-connector-2-0-0-june-30-2017">Apache Kafka Connector 2.0.0 - June 30, 2017</a></li><li><a class="scroll-menu-link" href="#apache-kafka-connector-1-0-2-march-31-2017">Apache Kafka Connector 1.0.2 - March 31, 2017</a></li><li><a class="scroll-menu-link" href="#apache-kafka-connector-1-0-1-july-11-2016">Apache Kafka Connector 1.0.1 - July 11, 2016</a></li><li><a class="scroll-menu-link" href="#apache-kafka-connector-1-0-0-june-22-2016">Apache Kafka Connector 1.0.0 - June 22, 2016</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#apache-kafka-connector-2-0-1-august-25-2017">Apache Kafka Connector 2.0.1 - August 25, 2017</a></li><li><a class="scroll-menu-link" href="#apache-kafka-connector-2-0-0-june-30-2017">Apache Kafka Connector 2.0.0 - June 30, 2017</a></li><li><a class="scroll-menu-link" href="#apache-kafka-connector-1-0-2-march-31-2017">Apache Kafka Connector 1.0.2 - March 31, 2017</a></li><li><a class="scroll-menu-link" href="#apache-kafka-connector-1-0-1-july-11-2016">Apache Kafka Connector 1.0.1 - July 11, 2016</a></li><li><a class="scroll-menu-link" href="#apache-kafka-connector-1-0-0-june-22-2016">Apache Kafka Connector 1.0.0 - June 22, 2016</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->
