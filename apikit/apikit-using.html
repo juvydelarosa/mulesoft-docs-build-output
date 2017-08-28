@@ -1593,10 +1593,7 @@
   <div class="sect2"> 
    <h3 id="how-to-expose-api-console"><a class="anchor" href="#how-to-expose-api-console"></a>How to Expose API Console</h3> 
    <div class="paragraph"> 
-    <p>There are two ways to expose the APIkit Console.</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p>The recommended one is creating a flow dedicated to expose it, for example:</p> 
+    <p>There are two ways to expose the APIkit Console. The recommended way is to create a flow dedicated to exposing the console. For example:</p> 
    </div> 
    <div class="listingblock"> 
     <div class="content"> 
@@ -1619,10 +1616,10 @@
     </div> 
    </div> 
    <div class="paragraph"> 
-    <p>The console path, when using this configuration, is part of the api namespace, specified in the listener of the main flow. For example, if the api is configured in /api, the console is accessed by hitting /api/console. This causes problems when applying policies to the whole api, as the console is affected by them.</p> 
+    <p>The path of the console is not a part of the api namespace as console uses its own listener. Then you will be able to apply policies to your api without affecting the console.</p> 
    </div> 
    <div class="paragraph"> 
-    <p>In both cases, the <strong>Try It</strong> functionality will work, or not, depending on the policies applied to the API.</p> 
+    <p>The second way, now deprecated, is configuring the apikit:config in the following way:</p> 
    </div> 
    <div class="sect3"> 
     <h4 id="enabling-and-disabling-api-console"><a class="anchor" href="#enabling-and-disabling-api-console"></a>Enabling and Disabling API Console</h4> 
