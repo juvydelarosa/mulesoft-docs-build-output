@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Using APIkit Reference // MuleSoft Documentation </title>
+  <title>Naming the Application Reference // MuleSoft Documentation </title>
   <link rel="shortcut icon" href="/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="/css/vendor.min.css?t=1498825733">
   <link rel="stylesheet" type="text/css" href="/css/mulesoft.min.css?t=1498825733">
@@ -15,8 +15,8 @@
   <script src="/js/scripts.js?t=1498825733"></script>
 
   <link rel="canonical" href="https://docs.mulesoft.com/apikit/apikit-using" />
-  <meta name="description" content="APIkit supports RAML 1.0 and 0.8 versions as described in the release notes. APIkit projects can run onsite or on CloudHub. To get started using AP..." />
-  <meta class="swiftype" name="title" data-type="string" content="Using APIkit Reference" />
+  <meta name="description" content="CloudHub requires a unique application name regardless of the region where you deploy the API. You can, for example, add the region name to the app..." />
+  <meta class="swiftype" name="title" data-type="string" content="Naming the Application Reference" />
 </head>
 <body>
 <!-- START Swiftype -->
@@ -867,11 +867,15 @@
 <li class="expanded">
 <i></i>
 <a href="/apikit/">APIkit</a><ul style="display: block;">
-<li>
+<li><i></i><a href="/apikit/apikit-overview">APIkit Overview</a></li><li>
 <i></i>
 <a href="/apikit/apikit-tutorial">Workflow: Create, Deploy, and Govern an API</a><ul>
-<li><i></i><a href="/apikit/apikit-create">To Create a New Project</a></li><li><i></i><a href="/apikit/apikit-run-test">To Run and Test the Project</a></li><li><i></i><a href="/apikit/apikit-add-logic">To Add Logic to the Project</a></li><li><i></i><a href="/apikit/apikit-deploy">To Deploy the Project</a></li><li><i></i><a href="/apikit/apikit-apply-policy">To Apply a Policy</a></li><li><i></i><a href="/apikit/apikit-test-policy">To Test a Policy</a></li></ul></li>
-<li><i></i><a href="/apikit/apikit-tutorial-jsonplaceholder">To Consume a REST Service</a></li><li><i></i><a href="/apikit/apikit-for-soap">SOAP Tutorial</a></li><li class="active"><i></i><a href="/apikit/apikit-using">Using APIkit Reference</a></li><li><i></i><a href="/apikit/creating-an-odata-api-with-apikit">Creating an OData API</a></li><li><i></i><a href="/apikit/apikit-odata-extension-reference">APIkit OData Reference</a></li><li><i></i><a href="/apikit/creating-an-apikit-project-with-maven">Creating an APIkit Project with Maven</a></li><li><i></i><a href="/apikit/apikit-basic-anatomy">APIkit Anatomy</a></li><li><i></i><a href="/apikit/apikit-reference">APIkit Reference</a></li></ul></li>
+<li><i></i><a href="/apikit/apikit-create">To Create a New APIkit Project</a></li><li><i></i><a href="/apikit/apikit-run-test">To Run and Test the Project</a></li><li><i></i><a href="/apikit/apikit-add-logic">To Add Logic to the Project</a></li><li><i></i><a href="/apikit/apikit-deploy">To Deploy the Project</a></li><li><i></i><a href="/apikit/apikit-apply-policy">To Apply a Policy</a></li><li><i></i><a href="/apikit/apikit-test-policy">To Test a Policy</a></li></ul></li>
+<li><i></i><a href="/apikit/apikit-tutorial-jsonplaceholder">To Consume a REST Service</a></li><li>
+<i></i>
+<a href="/apikit/apikit-add-raml-workflow">Workflow: Add APIkit to an Existing RAML Design</a><ul>
+<li><i></i><a href="/apikit/apikit-define-raml-task">To Define the RAML</a></li><li><i></i><a href="/apikit/apikit-create-flows-task">To Create flows and Exception Strategies</a></li><li><i></i><a href="/apikit/apikit-map-resources-task">To Map RAML Resources to Actions</a></li></ul></li>
+<li><i></i><a href="/apikit/apikit-add-wsdl-task">To Add APIkit to an Existing WSDL Design</a></li><li><i></i><a href="/apikit/apikit-configure-show-console-task">To Configure API Console to Open Automatically</a></li><li><i></i><a href="/apikit/apikit-console-expose-recommend-task">To Expose API Console (Recommended)</a></li><li><i></i><a href="/apikit/apikit-console-expose-deprecate-task">To Expose, Enable, and Disable API Console (Deprecated)</a></li><li><i></i><a href="/apikit/apikit-add-console">To Host an Additional API Console</a></li><li><i></i><a href="/apikit/apikit-retrieve-raml-task">To Retrieve RAML Code</a></li><li><i></i><a href="/apikit/apikit-for-soap">SOAP Tutorial</a></li><li><i></i><a href="/apikit/creating-an-odata-api-with-apikit">Creating an OData API</a></li><li><i></i><a href="/apikit/creating-an-apikit-project-with-maven">Creating an APIkit Project with Maven</a></li><li><i></i><a href="/apikit/apikit-odata-extension-reference">APIkit OData Reference</a></li><li class="active"><i></i><a href="/apikit/apikit-using">Naming the Application Reference</a></li><li><i></i><a href="/apikit/apikit-basic-anatomy">APIkit Anatomy Reference</a></li><li><i></i><a href="/apikit/apikit-reference">APIkit XML Reference</a></li><li><i></i><a href="/apikit/apikit-console-concept">About API Console</a></li><li><i></i><a href="/apikit/apikit-limitations-concept">About APIkit and APIkit Console Limitations</a></li></ul></li>
 <li>
 <i></i>
 <a href="/healthcare-toolkit/v/3.0/">Healthcare Toolkit</a><ul>
@@ -1107,75 +1111,9 @@
     <!-- START article content -->
     <div class="article-content col-md-7">
       
-      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">APIkit</a>/<a href="apikit-using" class="breadcrumb-active-link">Using APIkit Reference</a></div>
-      <h1>Using APIkit Reference</h1>
+      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">APIkit</a>/<a href="apikit-using" class="breadcrumb-active-link">Naming the Application Reference</a></div>
+      <h1>Naming the Application Reference</h1>
       <div id="preamble"> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>APIkit supports RAML 1.0 and 0.8 versions as described in the <a href="/release-notes/apikit-release-notes">release notes</a>. APIkit projects can run onsite or on CloudHub. To get started using APIkit in Anypoint Studio, do one of the following:</p> 
-  </div> 
-  <div class="ulist"> 
-   <ul> 
-    <li> <p>From Project Wizard import a RAML or WSDL definition from one of the following sources:</p> 
-     <div class="ulist"> 
-      <ul> 
-       <li> <p>Local file system</p> </li> 
-       <li> <p>Anypoint Platform</p> </li> 
-       <li> <p>A remote location</p> </li> 
-      </ul> 
-     </div> </li> 
-    <li> <p>Create the RAML file within an existing Studio project (called a backend-first APIkit design).</p> </li> 
-   </ul> 
-  </div> 
-  <div class="paragraph"> 
-   <p>When you import an API from Anypoint Platform, APIkit includes any RAML dependencies in the Studio project. You can then keep the API in both locations <a href="/anypoint-studio/v/6/api-sync-reference">in sync</a> by pushing or pulling changes from one to the other.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>APIkit generates the following things when you import or reference a RAML or WSDL that declares a baseURI or namespace, respectively:</p> 
-  </div> 
-  <div class="ulist"> 
-   <ul> 
-    <li> <p>A main flow with an HTTP Listener</p> 
-     <div class="paragraph"> 
-      <p>After importation, you can replace the HTTP Listener with a Jetty endpoint.</p> 
-     </div> </li> 
-    <li> <p>An APIkit Router or SOAP Router, respectively</p> </li> 
-    <li> <p>A RAML-based exception strategy mapping or a SOAP fault response template, respectively:</p> </li> 
-   </ul> 
-  </div> 
-  <div class="listingblock"> 
-   <div class="content"> 
-    <pre class="CodeRay highlight"><code data-lang="xml">
-         
-      <table class="CodeRay"> 
-       <tbody> 
-        <tr> 
-         <td class="line-numbers"><pre>1
-2
-3
-4
-5
-</pre></td> 
-         <td class="code"><pre><span class="tag">&lt;flow</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">"</span><span class="content">api-main</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
-    <span class="tag">&lt;http:listener</span> <span class="attribute-name">config-ref</span>=<span class="string"><span class="delimiter">"</span><span class="content">api-httpListenerConfig</span><span class="delimiter">"</span></span> <span class="attribute-name">path</span>=<span class="string"><span class="delimiter">"</span><span class="delimiter">"</span></span> <span class="attribute-name">doc:name</span>=<span class="string"><span class="delimiter">"</span><span class="content">HTTP</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
-    <span class="tag">&lt;apikit:router</span> <span class="attribute-name">config-ref</span>=<span class="string"><span class="delimiter">"</span><span class="content">api-config</span><span class="delimiter">"</span></span> <span class="attribute-name">doc:name</span>=<span class="string"><span class="delimiter">"</span><span class="content">APIkit Router</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
-    <span class="tag">&lt;exception-strategy</span> <span class="attribute-name">ref</span>=<span class="string"><span class="delimiter">"</span><span class="content">api-apiKitGlobalExceptionMapping</span><span class="delimiter">"</span></span> <span class="attribute-name">doc:name</span>=<span class="string"><span class="delimiter">"</span><span class="content">Reference Exception Strategy</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
-<span class="tag">&lt;/flow&gt;</span></pre></td> 
-        </tr> 
-       </tbody> 
-      </table></code></pre> 
-   </div> 
-  </div> 
-  <div class="paragraph"> 
-   <p>Included in the project are backend flows containing REST resource-action mappings or SOAP message templates. You can simulate calls to the API using API Console when you import a RAML, but not a WSDL. You need to use a SOAP testing tool, such as SoapUI.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>After simulating calls to a RAML-based API using APIkit Console, and improving or changing behavior, you alter the backend flows to act upon real resources with real data.</p> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="configuring-the-path-for-deployment-on-cloudhub"><a class="anchor" href="#configuring-the-path-for-deployment-on-cloudhub"></a>Configuring the Path for Deployment on CloudHub</h2> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
    <p>CloudHub requires a unique application name regardless of the region where you deploy the API. You can, for example, add the region name to the application name to ensure uniqueness. For example:</p> 
@@ -1187,7 +1125,7 @@
    <p><code>test-customers-na</code></p> 
   </div> 
   <div class="paragraph"> 
-   <p>By default, APIKit adds a base path to each API, namely <code>/api</code>. The final URL of the APIs deployed on CloudHub is:</p> 
+   <p>By default, APIkit adds a base path to each API, namely <code>/api</code>. The final URL of the APIs deployed on CloudHub is:</p> 
   </div> 
   <div class="paragraph"> 
    <p><code>http://test-customers.eu.cloudhub.io/api/customers</code></p> 
@@ -1195,46 +1133,48 @@
   <div class="paragraph"> 
    <p><code>http://acceptance-customer.eu.cloudhub.io/api/customers</code></p> 
   </div> 
-  <div class="sect2"> 
-   <h3 id="running-multiple-versions-of-the-same-api"><a class="anchor" href="#running-multiple-versions-of-the-same-api"></a>Running Multiple Versions of the Same API</h3> 
-   <div class="paragraph"> 
-    <p>To run multiple versions of the same API simultaneously, deploy each API implementation using an unique name. For example, add the version number for uniqueness:</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p><code>test-customer-v1.eu.cloudhub.io</code></p> 
-   </div> 
-   <div class="paragraph"> 
-    <p><code>test-customer-v2.eu.cloudhub.io</code></p> 
-   </div> 
-   <div class="paragraph"> 
-    <p>The final URL of the APIs deployed on CloudHub is:</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p><code>http://test-customers-v1.eu.cloudhub.io/api/customers</code></p> 
-   </div> 
-   <div class="paragraph"> 
-    <p><code>http://acceptance-customers-v1.eu.cloudhub.io/api/customers</code></p> 
-   </div> 
-   <div class="paragraph"> 
-    <p>Dropping the environment prefix for production is a MuleSoft best practice. For example:</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p><code><a href="http://customers-v1.eu.cloudhub.io/api/customers" class="bare">http://customers-v1.eu.cloudhub.io/api/customers</a></code></p> 
-   </div> 
-   <div class="paragraph"> 
-    <p>You can setup desired URLs for each application on CloudHub by using a custom load balancer. For instance, you can configure <code><a href="http://api.yourcompany.com/customer/v1" class="bare">http://api.yourcompany.com/customer/v1</a></code> to point to this URL:</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p><a href="http://customers-v1.eu.cloudhub.io/api/customers" class="bare">http://customers-v1.eu.cloudhub.io/api/customers</a></p> 
-   </div> 
+ </div> 
+</div> 
+<div class="sect1"> 
+ <h2 id="running-multiple-versions-of-the-same-api"><a class="anchor" href="#running-multiple-versions-of-the-same-api"></a>Running Multiple Versions of the Same API</h2> 
+ <div class="sectionbody"> 
+  <div class="paragraph"> 
+   <p>To run multiple versions of the same API simultaneously, deploy each API implementation using an unique name. For example, add the version number for uniqueness:</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p><code>test-customer-v1.eu.cloudhub.io</code></p> 
+  </div> 
+  <div class="paragraph"> 
+   <p><code>test-customer-v2.eu.cloudhub.io</code></p> 
+  </div> 
+  <div class="paragraph"> 
+   <p>The final URL of the APIs deployed on CloudHub is:</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p><code>http://test-customers-v1.eu.cloudhub.io/api/customers</code></p> 
+  </div> 
+  <div class="paragraph"> 
+   <p><code>http://acceptance-customers-v1.eu.cloudhub.io/api/customers</code></p> 
+  </div> 
+  <div class="paragraph"> 
+   <p>Dropping the environment prefix for production is a MuleSoft best practice. For example:</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p><code><a href="http://customers-v1.eu.cloudhub.io/api/customers" class="bare">http://customers-v1.eu.cloudhub.io/api/customers</a></code></p> 
+  </div> 
+  <div class="paragraph"> 
+   <p>You can setup desired URLs for each application on CloudHub by using a custom load balancer. For instance, you can configure <code>http://api.yourcompany.com/customer/v1</code> to point to this URL:</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p><code>http://customers-v1.eu.cloudhub.io/api/customers</code></p> 
   </div> 
  </div> 
 </div> 
 <div class="sect1"> 
- <h2 id="configuring-the-path-for-deployment-on-premises"><a class="anchor" href="#configuring-the-path-for-deployment-on-premises"></a>Configuring the Path for Deployment On Premises</h2> 
+ <h2 id="configuring-the-path-for-deployment-onsite"><a class="anchor" href="#configuring-the-path-for-deployment-onsite"></a>Configuring the Path for Deployment Onsite</h2> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>By default, APIKit generates a listener having a base path of <code>/api</code>. A different application deployed on the same server attempts to listen on the same context, for example <code>http://server:port/api/</code>, which causes a conflict.</p> 
+   <p>By default, APIkit generates a listener having a base path of <code>/api</code>. A different application deployed on the same server attempts to listen on the same context, for example <code>http://server:port/api/</code>, which causes a conflict.</p> 
   </div> 
   <div class="paragraph"> 
    <p>To avoid such a conflict, configure each Mule application using a different base path. For example:</p> 
@@ -1271,473 +1211,13 @@
  </div> 
 </div> 
 <div class="sect1"> 
- <h2 id="configuring-an-http-request"><a class="anchor" href="#configuring-an-http-request"></a>Configuring an HTTP Request</h2> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>When configuring an HTTP request after deployment, if the API is accessible, not blocked by a policy for example, you can use an HTTP client, such as Postman, to obtain the RAML definition.</p> 
-  </div> 
-  <div class="olist arabic"> 
-   <ol class="arabic"> 
-    <li> <p>Set up a GET request.</p> </li> 
-    <li> <p>Use the following syntax to construct the URL:</p> 
-     <div class="paragraph"> 
-      <p><code>&lt;baseURL&gt;/console/api/?raml</code></p> 
-     </div> </li> 
-    <li> <p>Set a Headers key to Accept and the value to <code>application/raml+yaml</code>.</p> </li> 
-    <li> <p>Send the request.</p> 
-     <div class="paragraph"> 
-      <p>The RAML code for the API appears in the Body section.</p> 
-     </div> </li> 
-   </ol> 
-  </div> 
-  <div class="imageblock"> 
-   <div class="content"> 
-    <img src="./_images/apikit-using-adf02.png" alt="apikit-using-adf02" width="633" height="602"> 
-   </div> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="changing-apikit-elements"><a class="anchor" href="#changing-apikit-elements"></a>Changing APIkit Elements</h2> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>In a RAML-based API, if you change or add exception strategies, you need to adjust <a href="/apikit/apikit-using#generate-backend-flows-and-reference-exception-strategies">references to exception strategies</a>.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>Under the following conditions, you need to customize the mapping of RAML resources and actions:</p> 
-  </div> 
-  <div class="ulist"> 
-   <ul> 
-    <li> <p>You generated backend flows as part of the backend-first design process.</p> </li> 
-    <li> <p>You renamed a backend flow.</p> </li> 
-   </ul> 
-  </div> 
-  <div class="paragraph"> 
-   <p>In a SOAP-based API, if you change the WSDL, regenerate backend flows. Click <strong>Mule</strong> &gt; <strong>Generate SOAP Flows</strong>.</p> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="backend-first-design-process"><a class="anchor" href="#backend-first-design-process"></a>Backend-First Design Process</h2> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>If you create a new Studio project without specifying a RAML file, and you check the Add API Components checkbox, APIkit generates a skeletal RAML file and XML config that includes the following things:</p> 
-  </div> 
-  <div class="ulist"> 
-   <ul> 
-    <li> <p>HTTP Listener configuration</p> </li> 
-    <li> <p>APIkit Router component</p> </li> 
-    <li> <p>Exception strategies flows</p> </li> 
-   </ul> 
-  </div> 
-  <div class="paragraph"> 
-   <p>After adding the RAML content, you can use API Console to simulate the API.</p> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="adding-apikit-to-an-existing-design"><a class="anchor" href="#adding-apikit-to-an-existing-design"></a>Adding APIkit to an Existing Design</h2> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>You can add APIkit components to an existing design, for example a legacy project that you want to modernize using RAML and APIkit. Create the RAML or WSDL code within Studio as follows:</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p><strong>RAML-based API</strong></p> 
-  </div> 
-  <div class="ulist"> 
-   <ul> 
-    <li> <p>Define the RAML.</p> </li> 
-    <li> <p>Create a main flow, or use an existing one, that includes an <strong>HTTP Listener</strong> and <strong>APIkit Router</strong>.</p> </li> 
-    <li> <p><a href="/apikit/apikit-using#generating-backend-flows">Generate backend flows</a>.</p> </li> 
-    <li> <p>Add a <a href="/apikit/apikit-using#generate-backend-flows-and-reference-exception-strategies">reference to exception strategies</a> in the main flow.</p> </li> 
-    <li> <p>Add an <strong>APIkit Console</strong> component.</p> </li> 
-   </ul> 
-  </div> 
-  <div class="paragraph"> 
-   <p><strong>WSDL-based API</strong></p> 
-  </div> 
-  <div class="ulist"> 
-   <ul> 
-    <li> <p>Define the WSDL within Studio.</p> </li> 
-    <li> <p>Create a main flow, or use an existing one, that includes an <strong>HTTP Listener</strong> and <strong>SOAP Router</strong>.</p> </li> 
-    <li> <p><a href="/apikit/apikit-using#generating-backend-flows">Generate backend flows</a>.</p> </li> 
-    <li> <p>Using DataWeave, provide XML responses to the SOAP faults.</p> </li> 
-   </ul> 
-  </div> 
-  <div class="paragraph"> 
-   <p>The generated backend flows contain the core logic of the API, the REST resource-action pairing or SOAP message templates for handling faults.</p> 
-  </div> 
-  <div class="sect2"> 
-   <h3 id="define-the-raml-in-studio"><a class="anchor" href="#define-the-raml-in-studio"></a>Define the RAML in Studio</h3> 
-   <div class="paragraph"> 
-    <p>The following procedure describes how to define a RAML-based API in Studio.</p> 
-   </div> 
-   <div class="olist arabic"> 
-    <ol class="arabic"> 
-     <li> <p>In the <strong>Package Explorer</strong>, right-click the project name, then select <strong>New</strong> &gt; <strong>RAML API Definition</strong>.</p> 
-      <div class="paragraph"> 
-       <p>The <strong>New RAML API Definition</strong> dialog appears.</p> 
-      </div> </li> 
-     <li> <p>Accept the default location <code>src/main/api</code> and enter a name in <strong>File Name</strong>.</p> </li> 
-     <li> <p>Click <strong>Finish</strong>.</p> 
-      <div class="paragraph"> 
-       <p>Studio creates and opens a new file in the <code>src/main/api</code> folder in your project.</p> 
-      </div> 
-      <div class="paragraph"> 
-       <p><span class="image"><img src="./_images/new_raml.png" alt="new_raml"></span></p> 
-      </div> </li> 
-     <li> <p>Add the <a href="https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md">RAML</a>.</p> </li> 
-    </ol> 
-   </div> 
-   <div class="paragraph"> 
-    <p>Alternatively, you can use any text editor to create the API definition, and then drag the file into the <code>src/main/api</code> folder of the Studio project.</p> 
-   </div> 
-   <div class="sect3"> 
-    <h4 id="work-with-the-built-in-raml-editor"><a class="anchor" href="#work-with-the-built-in-raml-editor"></a>Work with the Built-In RAML Editor</h4> 
-    <div class="paragraph"> 
-     <p>Within the RAML Editor, you can use the following keyboard shortcuts:</p> 
-    </div> 
-    <div class="ulist"> 
-     <ul> 
-      <li> <p>CTRL +spacebar to&nbsp;auto-complete RAML entries</p> </li> 
-      <li> <p>Command+O (CTRL+O in Windows) to open an&nbsp;Outline View&nbsp;of the RAML Editor</p> 
-       <div class="paragraph"> 
-        <p>Arranged as a simplified tree-structure, you can scan the top-level contents of the API.&nbsp;</p> 
-       </div> 
-       <div class="paragraph"> 
-        <p><span class="image"><img src="./_images/apikit_outlineView.png" alt="apikit_outlineView"></span></p> 
-       </div> </li> 
-     </ul> 
-    </div> 
-    <div class="paragraph"> 
-     <p>Use the minus or plus icon next to the line number in the RAML Editor to&nbsp;expand or collapse code&nbsp;contained within a section of the document.</p> 
-    </div> 
-    <div class="paragraph"> 
-     <p><span class="image"><img src="./_images/apikit_hover.png" alt="apikit_hover"></span></p> 
-    </div> 
-    <div class="paragraph"> 
-     <p>To change the color scheme of the RAML Editor in Studio.</p> 
-    </div> 
-    <div class="olist arabic"> 
-     <ol class="arabic"> 
-      <li> <p>From the&nbsp;<strong>Anypoint Studio</strong>&nbsp;menu, select&nbsp;<strong>Preferences</strong>.&nbsp;</p> </li> 
-      <li> <p>Expand&nbsp;<strong>RAML Editor Preferences</strong>, then select&nbsp;<strong>Color Theme</strong>.</p> </li> 
-      <li> <p>Select a color theme and click&nbsp;<strong>OK</strong>.</p> </li> 
-     </ol> 
-    </div> 
-   </div> 
-  </div> 
-  <div class="sect2"> 
-   <h3 id="define-the-wsdl-in-studio"><a class="anchor" href="#define-the-wsdl-in-studio"></a>Define the WSDL in Studio</h3> 
-   <div class="paragraph"> 
-    <p>The following procedure describes how to define a RAML-based API in Studio.</p> 
-   </div> 
-   <div class="olist arabic"> 
-    <ol class="arabic"> 
-     <li> <p>In the <strong>Package Explorer</strong>, right-click the project name, then select <strong>New</strong> &gt; <strong>Untitled Text File</strong>.</p> </li> 
-     <li> <p>Type the WSDL definition.</p> </li> 
-     <li> <p>Save the file to <code>src/main/wsdl</code> and enter a name in <strong>File Name</strong>.</p> </li> 
-     <li> <p>Click <strong>OK</strong>.</p> </li> 
-    </ol> 
-   </div> 
-   <div class="paragraph"> 
-    <p>Alternatively, you can use any text editor to create the API definition, and then drag the file into the <code>src/main/wsdl</code> folder of the Studio project.</p> 
-   </div> 
-  </div> 
-  <div class="sect2"> 
-   <h3 id="generate-an-include"><a class="anchor" href="#generate-an-include"></a>Generate an&nbsp;!include</h3> 
-   <div class="paragraph"> 
-    <p>In RAML-based API designs, you can generate&nbsp;<a href="https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md/#includes">!includes</a>&nbsp;as follows:&nbsp;</p> 
-   </div> 
-   <div class="olist arabic"> 
-    <ol class="arabic"> 
-     <li> <p>In the RAML file, select the content to include.</p> </li> 
-     <li> <p>Right-click and select&nbsp;<strong>RAML API Editor&nbsp; &gt; Generate include from "&lt;your_content&gt;" value</strong>.</p> </li> 
-     <li> <p>Use the wizard to register a file name for the&nbsp;<code>!include</code>, then click&nbsp;<strong>Finish</strong>.</p> 
-      <div class="paragraph"> 
-       <p>Studio saves the&nbsp;<code>!include</code>&nbsp;file in your Studio project and automatically inserts the include into your RAML API Definition.</p> 
-      </div> </li> 
-    </ol> 
-   </div> 
-  </div> 
-  <div class="sect2"> 
-   <h3 id="create-a-main-flow"><a class="anchor" href="#create-a-main-flow"></a>Create a Main Flow</h3> 
-   <div class="paragraph"> 
-    <p>Within the APIkit project, build a flow. Drag the following components from the Mule palette:</p> 
-   </div> 
-   <div class="ulist"> 
-    <ul> 
-     <li> <p>An HTTP (or Jetty) Listener</p> </li> 
-     <li> <p>An APIkit Router or a SOAP Router</p> </li> 
-    </ul> 
-   </div> 
-   <div class="imageblock"> 
-    <div class="content"> 
-     <img src="./_images/apikit-using-ea7ad.png" alt="apikit-using-ea7ad"> 
-    </div> 
-   </div> 
-  </div> 
-  <div class="sect2"> 
-   <h3 id="generate-rest-backend-flows-and-reference-exception-strategies"><a class="anchor" href="#generate-rest-backend-flows-and-reference-exception-strategies"></a>Generate REST Backend Flows and Reference Exception Strategies</h3> 
-   <div class="paragraph"> 
-    <p>When you create a RAML or WSDL from within Studio, you have the option of generating backend flows, or not. Exception strategies are generated for a RAML-based API. You need to reference these strategies from the main flow. This procedure assumes you have already created a main flow.</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p>To generate backend flows, including reference exception strategies:&nbsp;</p> 
-   </div> 
-   <div class="olist arabic"> 
-    <ol class="arabic"> 
-     <li> <p>In the <strong>Package Explorer</strong>, right-click the project name.</p> </li> 
-     <li> <p>Select <strong>Mule</strong> &gt; <strong>Generate Flows from RAML</strong></p> 
-      <div class="paragraph"> 
-       <p>The backend flows appear below the main flow.</p> 
-      </div> 
-      <div class="imageblock"> 
-       <div class="content"> 
-        <img src="./_images/apikit-tutorial-ce60c.png" alt="apikit tutorial ce60c"> 
-       </div> 
-      </div> </li> 
-     <li> <p>Expand the <strong>Error handling</strong> section in the main flow.</p> </li> 
-     <li> <p>Drag a <strong>Reference Exception Strategy</strong> component from the Mule palette to the Error handling section.</p> </li> 
-     <li> <p>On the Configuration.xml tab, add <a href="/apikit/apikit-basic-anatomy#raml-based-exception-strategy-mappings">exception strategy mappings</a> to the project right after the last <code>&lt;/flow&gt;</code> tag.</p> </li> 
-    </ol> 
-   </div> 
-  </div> 
-  <div class="sect2"> 
-   <h3 id="generate-soap-backend-flows"><a class="anchor" href="#generate-soap-backend-flows"></a>Generate SOAP Backend Flows</h3> 
-   <div class="paragraph"> 
-    <p>To generate backend flows for a SOAP-based API, right click the project name. Select <strong>Mule</strong> &gt; <strong>Generate Flows from WSDL</strong></p> 
-   </div> 
-  </div> 
-  <div class="sect2"> 
-   <h3 id="map-raml-resources-to-actions"><a class="anchor" href="#map-raml-resources-to-actions"></a>Map RAML Resources to Actions</h3> 
-   <div class="paragraph"> 
-    <p>As part of the backend-first design process, you map RAML resources to actions as shown in the following procedure. This procedure assumes you have generated backend flows and referenced exception strategies.</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p>To map resources to actions:</p> 
-   </div> 
-   <div class="olist arabic"> 
-    <ol class="arabic"> 
-     <li> <p>Click the APIkit Router to open the <strong>Properties Editor</strong>.&nbsp;In <strong>Router configuration</strong>, click <span class="image"><img src="./_images/Add-16x16.png" alt="Add-16x16"></span>.</p> 
-      <div class="paragraph"> 
-       <p>The <strong>Global Element Properties</strong> wizard appears.</p> 
-      </div> 
-      <div class="imageblock"> 
-       <div class="content"> 
-        <img src="./_images/apikit-using-9bea1.png" alt="apikit-using-9bea1"> 
-       </div> 
-      </div> </li> 
-     <li> <p>Browse to the RAML file you created within Studio.</p> </li> 
-     <li> <p>In Mappings, click <span class="image"><img src="./_images/Add-16x16.png" alt="Add-16x16"></span> to create a new mapping.</p> 
-      <div class="paragraph"> 
-       <p>The <strong>New Mapping</strong> dialog appears.</p> 
-      </div> </li> 
-     <li> <p>Use the drop-down to map the resources to actions.</p> 
-      <div class="ulist"> 
-       <ul> 
-        <li> <p>In the Resource drop-down, select <code>/sales</code>.</p> </li> 
-        <li> <p>In the Action drop-down, select <code>Post</code>.</p> </li> 
-        <li> <p>In the Flow drop-down, select the flow that contains the post action:</p> 
-         <div class="paragraph"> 
-          <p><code>post:/sales:application/json:Router</code></p> 
-         </div> 
-         <div class="paragraph"> 
-          <p>Click <strong>OK</strong>.</p> 
-         </div> 
-         <div class="imageblock"> 
-          <div class="content"> 
-           <img src="./_images/apikit-using-ab251.png" alt="apikit-using-ab251"> 
-          </div> 
-         </div> </li> 
-       </ul> 
-      </div> </li> 
-     <li> <p>Repeat the previous step for each resource-action pairing in the API.</p> </li> 
-    </ol> 
-   </div> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="working-with-the-api-console"><a class="anchor" href="#working-with-the-api-console"></a>Working with the API Console</h2> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>By default, APIkit automatically opens an&nbsp;<strong>APIkit Console</strong>&nbsp;panel in Studio when you run a RAML-based APIkit project. API Console gives you&nbsp;access to the generated documentation for the API.&nbsp;</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p><span class="image"><img src="./_images/apiConsole.png" alt="apiConsole"></span></p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>To&nbsp;run the application&nbsp;<em>without</em>&nbsp;automatically opening the API Console:</p> 
-  </div> 
-  <div class="olist arabic"> 
-   <ol class="arabic"> 
-    <li> <p>Right-click the project, then select&nbsp;<strong>Run As</strong>&nbsp;&gt;<strong>&nbsp;Run Configurations…​</strong>.</p> </li> 
-    <li> <p>Uncheck&nbsp;<strong>Show APIkit console</strong>.</p> </li> 
-    <li> <p>Click&nbsp;<strong>Run</strong>.</p> </li> 
-   </ol> 
-  </div> 
-  <div class="paragraph"> 
-   <p>By default, the console is offered at the same host, port, and path as the routing flow listener, with the addition of the path <code>/console</code>. You can customize the path in the router global configuration.&nbsp;You can also disable the console completely.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p><span class="image"><img src="./_images/routerconfig-console.png" alt="routerconfig-console"></span></p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>To access the console in a browser, go to the full address of your project routing flow and append the console path, <code>/console</code> by default, to the end of the address. For example, if your API is hosted at <code>http://localhost:8081/api</code>,&nbsp;then&nbsp;the URL for accessing the console is <code>http://localhost:8081/api/console</code>.</p> 
-  </div> 
-  <div class="sect2"> 
-   <h3 id="how-to-expose-api-console"><a class="anchor" href="#how-to-expose-api-console"></a>How to Expose API Console</h3> 
-   <div class="paragraph"> 
-    <p>There are two ways to expose the APIkit Console. The recommended way is to create a flow dedicated to exposing the console. For example:</p> 
-   </div> 
-   <div class="listingblock"> 
-    <div class="content"> 
-     <pre>&lt;flow name="api-console"&gt;
-   &lt;http:listener config-ref="api-httpListenerConfig" path="/console/*" doc:name="HTTP"/&gt;
-
-   &lt;apikit:console config-ref="api-config" doc:name="APIkit Console"/&gt;
-&lt;/flow&gt;</pre> 
-    </div> 
-   </div> 
-   <div class="paragraph"> 
-    <p>One important benefit of this way, is the fact that, as it uses its own listener, the path of the console is not a part of the api namespace. Then you will be able to apply policies to your api without affecting the console.</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p>The second way, now deprecated, is configurating the apikit:config in the following way:</p> 
-   </div> 
-   <div class="listingblock"> 
-    <div class="content"> 
-     <pre> &lt;apikit:config name="apiConfig" raml="api.raml" consoleEnabled="true" consolePath="console"/&gt;</pre> 
-    </div> 
-   </div> 
-   <div class="paragraph"> 
-    <p>The path of the console is not a part of the api namespace as console uses its own listener. Then you will be able to apply policies to your api without affecting the console.</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p>The second way, now deprecated, is configuring the apikit:config in the following way:</p> 
-   </div> 
-   <div class="sect3"> 
-    <h4 id="enabling-and-disabling-api-console"><a class="anchor" href="#enabling-and-disabling-api-console"></a>Enabling and Disabling API Console</h4> 
-    <div class="paragraph"> 
-     <p>To enable/disable the console when exposing the API in the deprecated way, use the <a href="/apikit/apikit-reference#apikit-config-attributes">consoleEnabled</a> property.</p> 
-    </div> 
-    <div class="paragraph"> 
-     <p>To disable the console when exposing the API in the recommended way, follow these steps:</p> 
-    </div> 
-    <div class="olist arabic"> 
-     <ol class="arabic"> 
-      <li> <p>Add a conditional expression to the api-console flow as shown in the following example:</p> 
-       <div class="listingblock"> 
-        <div class="content"> 
-         <pre>&lt;flow name="api-console"&gt;
-   &lt;http:listener config-ref="api-httpListenerConfig" path="/console/*" doc:name="HTTP"/&gt;
-     &lt;choice doc:name="Choice"&gt;
-        &lt;when expression="${test}"&gt;
-           &lt;apikit:console config-ref="api-config" doc:name="APIkit Console"/&gt;
-        &lt;/when&gt;
-        &lt;otherwise&gt;
-            &lt;set-payload value="Resource not found" doc:name="Set Payload"/&gt;
-        &lt;/otherwise&gt;
-     &lt;/choice&gt;
-&lt;/flow&gt;</pre> 
-        </div> 
-       </div> </li> 
-      <li> <p>Define the <code>test</code> property in mule-app.properties.</p> </li> 
-      <li> <p>Set the <code>test</code> property to true or false to enable/disable the console.</p> </li> 
-     </ol> 
-    </div> 
-    <div class="paragraph"> 
-     <p>Important note: Using the consoleEnabled property ONLY affects the deprecated way to expose the console. The name of this property was not changed to keep backwards compatibility.</p> 
-    </div> 
-   </div> 
-   <div class="sect3"> 
-    <h4 id="using-api-console-and-a-reverse-proxy"><a class="anchor" href="#using-api-console-and-a-reverse-proxy"></a>Using API Console and a Reverse Proxy</h4> 
-    <div class="paragraph"> 
-     <p>APIkit 3.8.3 and later solves the problem accessing APIkit Console when a load balancer or reverse proxy is configured in front of an APIKit application. By default, the console uses the URL defined in the listener or provided by Cloudhub, making the console inaccessible.</p> 
-    </div> 
-    <div class="paragraph"> 
-     <p>If the RAML baseUri is relative, APIKit 3.8.3 and later uses the relative URI without overwriting it. When using a load balancer or reverse proxy, set the <code>keepRamlBaseUri</code> attribute in the <code>apikit:config</code> element to true. When you set the attribute to true, the console uses the URL of a the baseUri property of the RAML, and you can access API Console. By default, the attribute is false.</p> 
-    </div> 
-    <div class="paragraph"> 
-     <p>If the RAML baseUri is relative, APIKit 3.8.3 and later uses the relative URI without overwriting it.</p> 
-    </div> 
-   </div> 
-  </div> 
-  <div class="sect2"> 
-   <h3 id="hosting-additional-consoles"><a class="anchor" href="#hosting-additional-consoles"></a>Hosting Additional Consoles</h3> 
-   <div class="paragraph"> 
-    <p>Because the APIkit Console is a client that is accessing your API by making calls against it, hosting the console in the same URI as the API itself can cause policies to restrict calls more than you intended. Calls to populate the console and the favicon.ico count can have an impact, depending on applied policies. For example, if you applied a rate-limiting policy, loading the API Console consumes two of your allotted API calls, one to load the console in the browser and one for the favicon.ico. If your HTTP listener is protected with Basic Authentication, you need to authenticate in order to access or use the console. In particular, the APIkit Console doesn’t know the steps of the OAuth dance, so if you apply an OAuth policy to the API, you will not be able to access the API Console if you attempt to host multiple consoles in the same URI.</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p>To host an additional console:</p> 
-   </div> 
-   <div class="olist arabic"> 
-    <ol class="arabic"> 
-     <li> <p>In the <strong>Package Explorer</strong>, select the API name in <code>src/main/app</code>.</p> </li> 
-     <li> <p>On the Global Elements tab, click <strong>Create</strong> and select <strong>Connector Configuration</strong> &gt; <strong>HTTP Listener Configuration</strong>.</p> 
-      <div class="ulist"> 
-       <ul> 
-        <li> <p>Change the <strong>Port</strong> setting from 8081 to another port, for example 8083.</p> </li> 
-        <li> <p>Set the <strong>Base Path</strong> to <code>remote-vending/api/*</code>, the same base path you used for the first HTTP listener configuration. Click OK.</p> </li> 
-       </ul> 
-      </div> </li> 
-     <li> <p>On the <strong>Message Flow</strong> tab, drag an <strong>HTTP Connector</strong> onto the canvas to create a new flow in the project.</p> </li> 
-     <li> <p>Give the new flow an arbitrary name. For example, <code>api-console2</code>.</p> </li> 
-     <li> <p>In the properties editor, in <strong>Connector Configuration</strong>, select the new global HTTP listener configuration you created from the drop-down.</p> </li> 
-     <li> <p>In the Properties editor, set <strong>Path</strong> to a different path than you used for the first HTTP listener configuration. For example, set the path to <code>/console2/*</code>. Save the changes.</p> </li> 
-     <li> <p>Drag an <strong>APIkit Console</strong> standalone endpoint from the Mule Palette to the right of the HTTP listener.</p> 
-      <div class="paragraph"> 
-       <p>The following code snippet shows the configurations added to enable a second console.</p> 
-      </div> 
-      <div class="listingblock"> 
-       <div class="content"> 
-        <pre class="CodeRay highlight"><code data-lang="xml">
-             
-          <table class="CodeRay"> 
-           <tbody> 
-            <tr> 
-             <td class="line-numbers"><pre>1
-2
-3
-4
-5
-6
-</pre></td> 
-             <td class="code"><pre><span class="tag">&lt;http:listener-config</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">"</span><span class="content">HTTP_Listener_Configuration</span><span class="delimiter">"</span></span> <span class="attribute-name">host</span>=<span class="string"><span class="delimiter">"</span><span class="content">localhost</span><span class="delimiter">"</span></span> <span class="attribute-name">port</span>=<span class="string"><span class="delimiter">"</span><span class="content">8083</span><span class="delimiter">"</span></span> <span class="attribute-name">basePath</span>=<span class="string"><span class="delimiter">"</span><span class="content">remote-vending/api/*</span><span class="delimiter">"</span></span> <span class="attribute-name">doc:name</span>=<span class="string"><span class="delimiter">"</span><span class="content">HTTP Listener Configuration</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
-...
-<span class="tag">&lt;flow</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">"</span><span class="content">api-console2</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
-   <span class="tag">&lt;http:listener</span> <span class="attribute-name">config-ref</span>=<span class="string"><span class="delimiter">"</span><span class="content">HTTP_Listener_Configuration</span><span class="delimiter">"</span></span> <span class="attribute-name">path</span>=<span class="string"><span class="delimiter">"</span><span class="content">/console2/*</span><span class="delimiter">"</span></span> <span class="attribute-name">doc:name</span>=<span class="string"><span class="delimiter">"</span><span class="content">HTTP</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
-   <span class="tag">&lt;apikit:console</span> <span class="attribute-name">config-ref</span>=<span class="string"><span class="delimiter">"</span><span class="content">api-config</span><span class="delimiter">"</span></span> <span class="attribute-name">doc:name</span>=<span class="string"><span class="delimiter">"</span><span class="content">APIkit Console</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
-<span class="tag">&lt;/flow&gt;</span></pre></td> 
-            </tr> 
-           </tbody> 
-          </table></code></pre> 
-       </div> 
-      </div> </li> 
-     <li> <p>Save all, right-click the API in Project Explorer, and choose <strong>Run As</strong> &gt; <strong>Mule Application</strong>.</p> 
-      <div class="paragraph"> 
-       <p>The additional console tab appears.</p> 
-      </div> </li> 
-     <li> <p>Click the new tab.</p> 
-      <div class="imageblock"> 
-       <div class="content"> 
-        <img src="./_images/apikit-using-0b49a.png" alt="apikit-using-0b49a"> 
-       </div> 
-      </div> </li> 
-    </ol> 
-   </div> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
  <h2 id="using-a-load-balancer"><a class="anchor" href="#using-a-load-balancer"></a>Using a Load Balancer</h2> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
    <p>If your API implementation involves putting a load balancer in front of your APIkit application, configure the load balancer to redirect URLs that reference the <code>baseUri</code> of the application directly. If the load balancer does not redirect URLs, any calls that reach the load balancer looking for the application do not reach their destination. For example, you deploy an APIkit application to <code>myapp.mycompany.com</code>, and then add a load balancer at&nbsp;<code>www.exampleloadbalancer.com</code>. A call to the API arrives at <code>www.exampleloadbalancer.com</code> and the load balancer redirects the call to&nbsp;<code>myapp.mycompany.com</code> to get a response.</p> 
   </div> 
   <div class="paragraph"> 
-   <p>When using a load balance, set the <code>keepRamlBaseUri</code> attribute as described for <a href="/apikit/apikit-using#using-apikit-console-and-a-reverse-proxy">using APIkit with a reverse proxy</a>.</p> 
+   <p>When using a load balancer, set the <code>keepRamlBaseUri</code> attribute as described for using APIkit with a reverse proxy.</p> 
   </div> 
  </div> 
 </div> 
@@ -1750,6 +1230,7 @@
     <li> <p><a href="/apikit/apikit-for-soap">SOAP tutorial</a></p> </li> 
     <li> <p><a href="/runtime-manager/deploying-to-cloudhub#creating-an-application-name">Unique application name</a></p> </li> 
     <li> <p><a href="/mule-user-guide/v/3.8/mule-application-deployment-descriptor#options">Use different property files</a></p> </li> 
+    <li> <p><a href="/apikit/apikit-using#using-apikit-console-and-a-reverse-proxy">using APIkit with a reverse proxy</a></p> </li> 
    </ul> 
   </div> 
  </div> 
@@ -1758,7 +1239,7 @@
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#configuring-the-path-for-deployment-on-cloudhub">Configuring the Path for Deployment on CloudHub</a></li><li><a class="scroll-menu-link" href="#configuring-the-path-for-deployment-on-premises">Configuring the Path for Deployment On Premises</a></li><li><a class="scroll-menu-link" href="#configuring-an-http-request">Configuring an HTTP Request</a></li><li><a class="scroll-menu-link" href="#changing-apikit-elements">Changing APIkit Elements</a></li><li><a class="scroll-menu-link" href="#backend-first-design-process">Backend-First Design Process</a></li><li><a class="scroll-menu-link" href="#adding-apikit-to-an-existing-design">Adding APIkit to an Existing Design</a></li><li><a class="scroll-menu-link" href="#working-with-the-api-console">Working with the API Console</a></li><li><a class="scroll-menu-link" href="#using-a-load-balancer">Using a Load Balancer</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#running-multiple-versions-of-the-same-api">Running Multiple Versions of the Same API</a></li><li><a class="scroll-menu-link" href="#configuring-the-path-for-deployment-onsite">Configuring the Path for Deployment Onsite</a></li><li><a class="scroll-menu-link" href="#using-a-load-balancer">Using a Load Balancer</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>To Create a New Project // MuleSoft Documentation </title>
+  <title>To Create a New APIkit Project // MuleSoft Documentation </title>
   <link rel="shortcut icon" href="/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="/css/vendor.min.css?t=1498825733">
   <link rel="stylesheet" type="text/css" href="/css/mulesoft.min.css?t=1498825733">
@@ -15,8 +15,8 @@
   <script src="/js/scripts.js?t=1498825733"></script>
 
   <link rel="canonical" href="https://docs.mulesoft.com/apikit/apikit-create" />
-  <meta name="description" content="This procedure launches the new project and generates a Main flow with an HTTP Listener, an APIkit Router, and references to flows to handle APIkit..." />
-  <meta class="swiftype" name="title" data-type="string" content="To Create a New Project" />
+  <meta name="description" content="This procedure launches the new project and generates a Main flow with an HTTP Listener, an APIkit Router, and references to flows to handle errors..." />
+  <meta class="swiftype" name="title" data-type="string" content="To Create a New APIkit Project" />
 </head>
 <body>
 <!-- START Swiftype -->
@@ -867,11 +867,15 @@
 <li class="expanded">
 <i></i>
 <a href="/apikit/">APIkit</a><ul style="display: block;">
-<li class="expanded">
+<li><i></i><a href="/apikit/apikit-overview">APIkit Overview</a></li><li class="expanded">
 <i></i>
 <a href="/apikit/apikit-tutorial">Workflow: Create, Deploy, and Govern an API</a><ul style="display: block;">
-<li class="active"><i></i><a href="/apikit/apikit-create">To Create a New Project</a></li><li><i></i><a href="/apikit/apikit-run-test">To Run and Test the Project</a></li><li><i></i><a href="/apikit/apikit-add-logic">To Add Logic to the Project</a></li><li><i></i><a href="/apikit/apikit-deploy">To Deploy the Project</a></li><li><i></i><a href="/apikit/apikit-apply-policy">To Apply a Policy</a></li><li><i></i><a href="/apikit/apikit-test-policy">To Test a Policy</a></li></ul></li>
-<li><i></i><a href="/apikit/apikit-tutorial-jsonplaceholder">To Consume a REST Service</a></li><li><i></i><a href="/apikit/apikit-for-soap">SOAP Tutorial</a></li><li><i></i><a href="/apikit/apikit-using">Using APIkit Reference</a></li><li><i></i><a href="/apikit/creating-an-odata-api-with-apikit">Creating an OData API</a></li><li><i></i><a href="/apikit/apikit-odata-extension-reference">APIkit OData Reference</a></li><li><i></i><a href="/apikit/creating-an-apikit-project-with-maven">Creating an APIkit Project with Maven</a></li><li><i></i><a href="/apikit/apikit-basic-anatomy">APIkit Anatomy</a></li><li><i></i><a href="/apikit/apikit-reference">APIkit Reference</a></li></ul></li>
+<li class="active"><i></i><a href="/apikit/apikit-create">To Create a New APIkit Project</a></li><li><i></i><a href="/apikit/apikit-run-test">To Run and Test the Project</a></li><li><i></i><a href="/apikit/apikit-add-logic">To Add Logic to the Project</a></li><li><i></i><a href="/apikit/apikit-deploy">To Deploy the Project</a></li><li><i></i><a href="/apikit/apikit-apply-policy">To Apply a Policy</a></li><li><i></i><a href="/apikit/apikit-test-policy">To Test a Policy</a></li></ul></li>
+<li><i></i><a href="/apikit/apikit-tutorial-jsonplaceholder">To Consume a REST Service</a></li><li>
+<i></i>
+<a href="/apikit/apikit-add-raml-workflow">Workflow: Add APIkit to an Existing RAML Design</a><ul>
+<li><i></i><a href="/apikit/apikit-define-raml-task">To Define the RAML</a></li><li><i></i><a href="/apikit/apikit-create-flows-task">To Create flows and Exception Strategies</a></li><li><i></i><a href="/apikit/apikit-map-resources-task">To Map RAML Resources to Actions</a></li></ul></li>
+<li><i></i><a href="/apikit/apikit-add-wsdl-task">To Add APIkit to an Existing WSDL Design</a></li><li><i></i><a href="/apikit/apikit-configure-show-console-task">To Configure API Console to Open Automatically</a></li><li><i></i><a href="/apikit/apikit-console-expose-recommend-task">To Expose API Console (Recommended)</a></li><li><i></i><a href="/apikit/apikit-console-expose-deprecate-task">To Expose, Enable, and Disable API Console (Deprecated)</a></li><li><i></i><a href="/apikit/apikit-add-console">To Host an Additional API Console</a></li><li><i></i><a href="/apikit/apikit-retrieve-raml-task">To Retrieve RAML Code</a></li><li><i></i><a href="/apikit/apikit-for-soap">SOAP Tutorial</a></li><li><i></i><a href="/apikit/creating-an-odata-api-with-apikit">Creating an OData API</a></li><li><i></i><a href="/apikit/creating-an-apikit-project-with-maven">Creating an APIkit Project with Maven</a></li><li><i></i><a href="/apikit/apikit-odata-extension-reference">APIkit OData Reference</a></li><li><i></i><a href="/apikit/apikit-using">Naming the Application Reference</a></li><li><i></i><a href="/apikit/apikit-basic-anatomy">APIkit Anatomy Reference</a></li><li><i></i><a href="/apikit/apikit-reference">APIkit XML Reference</a></li><li><i></i><a href="/apikit/apikit-console-concept">About API Console</a></li><li><i></i><a href="/apikit/apikit-limitations-concept">About APIkit and APIkit Console Limitations</a></li></ul></li>
 <li>
 <i></i>
 <a href="/healthcare-toolkit/v/3.0/">Healthcare Toolkit</a><ul>
@@ -1107,12 +1111,12 @@
     <!-- START article content -->
     <div class="article-content col-md-7">
       
-      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">APIkit</a>/<a href="apikit-tutorial">Workflow: Create, Deploy, and Govern an API</a>/<a href="apikit-create" class="breadcrumb-active-link">To Create a New Project</a></div>
-      <h1>To Create a New Project</h1>
+      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">APIkit</a>/<a href="apikit-tutorial">Workflow: Create, Deploy, and Govern an API</a>/<a href="apikit-create" class="breadcrumb-active-link">To Create a New APIkit Project</a></div>
+      <h1>To Create a New APIkit Project</h1>
       <div id="preamble"> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>This procedure launches the new project and generates a Main flow with an HTTP Listener, an APIkit Router, and references to flows to handle APIkit errors and support REST resources and methods. The RAML file you imported resides&nbsp;in <code>src/main/api</code>. These flows, aptly called skeleton flows, are the bare minumum needed to support the RAML specification.</p> 
+   <p>This procedure launches the new project and generates a Main flow with an HTTP Listener, an APIkit Router, and references to flows to handle errors. The project support REST resources and methods. These flows, aptly called skeleton flows, are the bare minumum needed to support the RAML specification. The RAML file imported by this procedure resides&nbsp;in <code>src/main/api</code>.</p> 
   </div> 
   <div class="olist arabic"> 
    <ol class="arabic"> 

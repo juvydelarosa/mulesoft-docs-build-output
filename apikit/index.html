@@ -15,7 +15,7 @@
   <script src="/js/scripts.js?t=1498825733"></script>
 
   <link rel="canonical" href="https://docs.mulesoft.com/apikit/" />
-  <meta name="description" content="APIkit and APIkit for SOAP are toolkits for REST or SOAP API development. APIkit converts standard web service specification documents into sk..." />
+  
   <meta class="swiftype" name="title" data-type="string" content="APIkit Overview" />
 </head>
 <body>
@@ -867,11 +867,15 @@
 <li class="active expanded">
 <i></i>
 <a href="/apikit/">APIkit</a><ul style="display: block;">
-<li>
+<li><i></i><a href="/apikit/apikit-overview">APIkit Overview</a></li><li>
 <i></i>
 <a href="/apikit/apikit-tutorial">Workflow: Create, Deploy, and Govern an API</a><ul>
-<li><i></i><a href="/apikit/apikit-create">To Create a New Project</a></li><li><i></i><a href="/apikit/apikit-run-test">To Run and Test the Project</a></li><li><i></i><a href="/apikit/apikit-add-logic">To Add Logic to the Project</a></li><li><i></i><a href="/apikit/apikit-deploy">To Deploy the Project</a></li><li><i></i><a href="/apikit/apikit-apply-policy">To Apply a Policy</a></li><li><i></i><a href="/apikit/apikit-test-policy">To Test a Policy</a></li></ul></li>
-<li><i></i><a href="/apikit/apikit-tutorial-jsonplaceholder">To Consume a REST Service</a></li><li><i></i><a href="/apikit/apikit-for-soap">SOAP Tutorial</a></li><li><i></i><a href="/apikit/apikit-using">Using APIkit Reference</a></li><li><i></i><a href="/apikit/creating-an-odata-api-with-apikit">Creating an OData API</a></li><li><i></i><a href="/apikit/apikit-odata-extension-reference">APIkit OData Reference</a></li><li><i></i><a href="/apikit/creating-an-apikit-project-with-maven">Creating an APIkit Project with Maven</a></li><li><i></i><a href="/apikit/apikit-basic-anatomy">APIkit Anatomy</a></li><li><i></i><a href="/apikit/apikit-reference">APIkit Reference</a></li></ul></li>
+<li><i></i><a href="/apikit/apikit-create">To Create a New APIkit Project</a></li><li><i></i><a href="/apikit/apikit-run-test">To Run and Test the Project</a></li><li><i></i><a href="/apikit/apikit-add-logic">To Add Logic to the Project</a></li><li><i></i><a href="/apikit/apikit-deploy">To Deploy the Project</a></li><li><i></i><a href="/apikit/apikit-apply-policy">To Apply a Policy</a></li><li><i></i><a href="/apikit/apikit-test-policy">To Test a Policy</a></li></ul></li>
+<li><i></i><a href="/apikit/apikit-tutorial-jsonplaceholder">To Consume a REST Service</a></li><li>
+<i></i>
+<a href="/apikit/apikit-add-raml-workflow">Workflow: Add APIkit to an Existing RAML Design</a><ul>
+<li><i></i><a href="/apikit/apikit-define-raml-task">To Define the RAML</a></li><li><i></i><a href="/apikit/apikit-create-flows-task">To Create flows and Exception Strategies</a></li><li><i></i><a href="/apikit/apikit-map-resources-task">To Map RAML Resources to Actions</a></li></ul></li>
+<li><i></i><a href="/apikit/apikit-add-wsdl-task">To Add APIkit to an Existing WSDL Design</a></li><li><i></i><a href="/apikit/apikit-configure-show-console-task">To Configure API Console to Open Automatically</a></li><li><i></i><a href="/apikit/apikit-console-expose-recommend-task">To Expose API Console (Recommended)</a></li><li><i></i><a href="/apikit/apikit-console-expose-deprecate-task">To Expose, Enable, and Disable API Console (Deprecated)</a></li><li><i></i><a href="/apikit/apikit-add-console">To Host an Additional API Console</a></li><li><i></i><a href="/apikit/apikit-retrieve-raml-task">To Retrieve RAML Code</a></li><li><i></i><a href="/apikit/apikit-for-soap">SOAP Tutorial</a></li><li><i></i><a href="/apikit/creating-an-odata-api-with-apikit">Creating an OData API</a></li><li><i></i><a href="/apikit/creating-an-apikit-project-with-maven">Creating an APIkit Project with Maven</a></li><li><i></i><a href="/apikit/apikit-odata-extension-reference">APIkit OData Reference</a></li><li><i></i><a href="/apikit/apikit-using">Naming the Application Reference</a></li><li><i></i><a href="/apikit/apikit-basic-anatomy">APIkit Anatomy Reference</a></li><li><i></i><a href="/apikit/apikit-reference">APIkit XML Reference</a></li><li><i></i><a href="/apikit/apikit-console-concept">About API Console</a></li><li><i></i><a href="/apikit/apikit-limitations-concept">About APIkit and APIkit Console Limitations</a></li></ul></li>
 <li>
 <i></i>
 <a href="/healthcare-toolkit/v/3.0/">Healthcare Toolkit</a><ul>
@@ -1109,100 +1113,10 @@
       
       
       <h1>APIkit Overview</h1>
-      <div id="preamble"> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>APIkit&nbsp;and APIkit for SOAP are toolkits for REST or SOAP API development. APIkit converts standard web service specification documents into skeletal flows in the Mule project. The generated, minimal flows meet the communication operations required by the web service contract. Included are flows for handling error conditions, setting status codes, and making RESTful calls or SOAP API requests.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>You develop APIs based on one of the following modeling languages:</p> 
-  </div> 
-  <div class="ulist"> 
-   <ul> 
-    <li> <p>RESTful API Modeling Language</p> </li> 
-    <li> <p>Web Service Description Language</p> </li> 
-   </ul> 
-  </div> 
-  <div class="paragraph"> 
-   <p>You can reference an external RAML or WSDL design, import the design into Studio, or build the RAML or WSDL within Studio using the text editor.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>You can use API Console to simulate calls to a RAML-based API.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>After APIkit generates the framework of the flows, you build out the flows to implement the API: add web services, document, and so on.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>The best practice for API design with APIkit is first to design the RAML or WSDL interface outside Studio. For RAML development, MuleSoft recommends using Design Center. Next, you import the file into a Studio project to construct your main and backend flows. Alternatively, you can design the backend first by adding an API to an existing Studio project.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>After designing an API to the RAML specification using APIkit, you can apply policies to the API in Anypoint Platform.</p> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="limitations"><a class="anchor" href="#limitations"></a>Limitations</h2> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>The following limitations apply:</p> 
-  </div> 
-  <div class="ulist"> 
-   <ul> 
-    <li> <p>APIkit for SOAP works only on Mule EE runtime 3.8.0 or later.</p> </li> 
-    <li> <p>APIkit for SOAP does not download protected resources from the web.</p> 
-     <div class="paragraph"> 
-      <p>For example, a WSDL file behind a schema model, such as Basic Authentication, is not supported. You need to manually download the WSDL file and all dependencies, such as XSD, and select those files locally.</p> 
-     </div> </li> 
-   </ul> 
-  </div> 
-  <div class="sect2"> 
-   <h3 id="security-protocol-and-baseuriparameter-limitations"><a class="anchor" href="#security-protocol-and-baseuriparameter-limitations"></a>Security, Protocol, and baseUriParameter Limitations</h3> 
-   <div class="paragraph"> 
-    <p>APIkit 3.8.1 and later supports RAML 1.0. Mule 3.8.0 runtime limitations related to earlier versions of APIkit are covered in the RAML 1.0 early access document.</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p>In API Gateway Runtime 2.x and earlier, APIkit is designed to work very tightly with RAML interfaces, but does not automatically import the following items from the RAML definition:</p> 
-   </div> 
-   <div class="ulist"> 
-    <ul> 
-     <li> <p>securitySchemes</p> </li> 
-     <li> <p>protocols</p> </li> 
-     <li> <p>baseUriParameters</p> </li> 
-    </ul> 
-   </div> 
-   <div class="paragraph"> 
-    <p>The protocol, URI host, and path defined in the RAML file are disregarded in favor of the ones that you define in the APIkit project’s HTTP Connector.</p> 
-   </div> 
-  </div> 
-  <div class="sect2"> 
-   <h3 id="api-console-limitations"><a class="anchor" href="#api-console-limitations"></a>API Console Limitations</h3> 
-   <div class="paragraph"> 
-    <p>APIkit does not support the Client Credentials and Resource Owner Password Credentials grant types in the embedded API Console. To use these grant types, access the APIkit Console from a web browser. APIkit Console does not support scopes.</p> 
-   </div> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="see-also"><a class="anchor" href="#see-also"></a>See Also</h2> 
- <div class="sectionbody"> 
-  <div class="ulist"> 
-   <ul> 
-    <li> <p><a href="/api-manager/using-policies">Applying policies</a></p> </li> 
-    <li> <p><a href="/mule-user-guide/v/3.8/http-listener-connector">Basic authentication filters</a></p> </li> 
-    <li> <p><a href="/mule-user-guide/v/3.8/configuring-security">Security Manager</a></p> </li> 
-    <li> <p><a href="/mule-user-guide/v/3.8/anypoint-enterprise-security">Anypoint Enterprise Security</a>&nbsp;</p> </li> 
-    <li> <p><a href="/api-manager/using-policies">Runtime policy management</a></p> </li> 
-    <li> <p><a href="/api-manager/oauth2-provider-configuration#configuring-scopes">Configurinng scopes</a></p> </li> 
-    <li> <p><a href="https://docs.mulesoft.com/release-notes/raml-1-early-access-support">RAML 1.0 early access document</a></p> </li> 
-   </ul> 
-  </div> 
- </div> 
-</div>
+      
     </div>
     <!-- END article-content -->
-    <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
-                <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#limitations">Limitations</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
+    
   </div>
 </div>
 <!-- START footer -->
