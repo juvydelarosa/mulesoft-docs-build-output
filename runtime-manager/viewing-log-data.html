@@ -15,7 +15,7 @@
   <script src="/js/scripts.js?t=1498825733"></script>
 
   <link rel="canonical" href="https://docs.mulesoft.com/runtime-manager/viewing-log-data" />
-  <meta name="description" content=" CloudHub provides access to log data so that you can monitor your application and diagnose any potential issues. CloudHub stores log data in Unive..." />
+  <meta name="description" content=" CloudHub provides access to log data that includes deployment messages and events for each worker. Logs and diagnostics are a feature that is curr..." />
   <meta class="swiftype" name="title" data-type="string" content="Viewing Log Data" />
 </head>
 <body>
@@ -670,7 +670,7 @@
 <li>
 <i></i>
 <a href="/runtime-manager/tutorials">Tutorials</a><ul>
-<li><i></i><a href="/runtime-manager/building-an-https-service">Building an HTTPS Service</a></li><li><i></i><a href="/runtime-manager/vpc-tutorial">Create a VPC using Runtime Manager</a></li><li><i></i><a href="/runtime-manager/create-vpc-cli">Create a VPC using Anypoint Platform CLI</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/building-an-https-service">Building an HTTPS Service</a></li><li><i></i><a href="/runtime-manager/vpc-tutorial">Create a VPC using Runtime Manager</a></li><li><i></i><a href="/runtime-manager/create-vpc-cli">Create a VPC using Anypoint Platform CLI</a></li><li><i></i><a href="/runtime-manager/dedicated-load-balancer-tutorial">Create a Dedicated Load Balancer</a></li></ul></li>
 <li>
 <i></i>
 <a href="/runtime-manager/deployment-strategies">Deployment Strategies</a><ul>
@@ -681,7 +681,7 @@
 <li>
 <i></i>
 <a href="/runtime-manager/managing-applications-on-cloudhub">Managing Applications on CloudHub</a><ul>
-<li><i></i><a href="/runtime-manager/managing-queues">Managing Queues</a></li><li><i></i><a href="/runtime-manager/managing-schedules">Managing Schedules</a></li><li><i></i><a href="/runtime-manager/secure-application-properties">Secure Application Properties</a></li><li><i></i><a href="/runtime-manager/managing-application-data-with-object-stores">Managing App Data using Object Stores</a></li><li><i></i><a href="/runtime-manager/virtual-private-cloud">Virtual Private Cloud</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/managing-queues">Managing Queues</a></li><li><i></i><a href="/runtime-manager/managing-schedules">Managing Schedules</a></li><li><i></i><a href="/runtime-manager/secure-application-properties">Secure Application Properties</a></li><li><i></i><a href="/runtime-manager/managing-application-data-with-object-stores">Managing App Data using Object Stores</a></li><li><i></i><a href="/runtime-manager/virtual-private-cloud">Virtual Private Cloud</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li><li><i></i><a href="/runtime-manager/autoscaling-in-cloudhub">Autoscaling in CloudHub</a></li></ul></li>
 <li>
 <i></i>
 <a href="/runtime-manager/managing-applications-on-your-own-servers">Managing Applications on Your Own Servers</a><ul>
@@ -694,7 +694,7 @@
 <li>
 <i></i>
 <a href="/runtime-manager/monitoring">Monitoring</a><ul>
-<li><i></i><a href="/runtime-manager/alerts-on-runtime-manager">Alerts</a></li><li><i></i><a href="/runtime-manager/notifications-on-runtime-manager">Notifications</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li><li><i></i><a href="/runtime-manager/monitoring-dashboards">Dashboards</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/alerts-on-runtime-manager">Alerts</a></li><li><i></i><a href="/runtime-manager/notifications-on-runtime-manager">Notifications</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li><li><i></i><a href="/runtime-manager/monitoring-dashboards">Dashboards</a></li><li><i></i><a href="/runtime-manager/flow-metrics">Flow Metrics</a></li></ul></li>
 <li class="expanded">
 <i></i>
 <a href="/runtime-manager/troubleshooting">Troubleshooting</a><ul style="display: block;">
@@ -705,36 +705,12 @@
 <li><i></i><a href="/runtime-manager/worker-monitoring">Worker Monitoring</a></li><li>
 <i></i>
 <a href="/runtime-manager/sending-data-from-arm-to-external-analytics-software">Sending data from Runtime Manager to External Analytics Software</a><ul>
-<li><i></i><a href="/runtime-manager/sending-api-analytics-from-arm-to-db">Sending API Analytics</a></li><li><i></i><a href="/runtime-manager/sending-event-data-from-arm-to-db">Sending Event Data</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/about-logging-of-payload-formats">About Logging of Payload Formats</a></li><li><i></i><a href="/runtime-manager/sending-api-analytics-from-arm-to-db">Sending API Analytics</a></li><li><i></i><a href="/runtime-manager/sending-event-data-from-arm-to-db">Sending Event Data</a></li></ul></li>
 </ul></li>
 <li>
 <i></i>
 <a href="/runtime-manager/cloudhub">CloudHub</a><ul>
-<li><i></i><a href="/runtime-manager/cloudhub-faq">CloudHub FAQ</a></li><li><i></i><a href="/runtime-manager/developing-applications-for-cloudhub">Developing Applications for CloudHub</a></li><li><i></i><a href="/runtime-manager/cloudhub-architecture">CloudHub Architecture</a></li><li><i></i><a href="/runtime-manager/cloudhub-fabric">CloudHub Fabric</a></li><li><i></i><a href="/runtime-manager/managing-cloudhub-specific-settings">Managing Cloudhub Settings</a></li><li><i></i><a href="/runtime-manager/cloudhub-networking-guide">CloudHub Networking Guide</a></li><li><i></i><a href="/runtime-manager/penetration-testing-policies">Penetration Testing Policies</a></li><li>
-<i></i>
-<a href="/runtime-manager/cloudhub-api">CloudHub API</a><ul>
-<li>
-<i></i>
-<a href="/runtime-manager/working-with-applications">Working with Applications</a><ul>
-<li><i></i><a href="/runtime-manager/create-application">Create Application</a></li><li><i></i><a href="/runtime-manager/delete-application">Delete an Application</a></li><li><i></i><a href="/runtime-manager/deploy-application">Deploy Application</a></li><li><i></i><a href="/runtime-manager/get-application">Get an Application</a></li><li><i></i><a href="/runtime-manager/list-all-applications">List All Applications</a></li><li><i></i><a href="/runtime-manager/update-application-metadata">Update Application Metadata</a></li></ul></li>
-<li>
-<i></i>
-<a href="/runtime-manager/logs">Working with Logs</a><ul>
-<li><i></i><a href="/runtime-manager/list-all-logs">List Log Messages</a></li></ul></li>
-<li>
-<i></i>
-<a href="/runtime-manager/notifications">Working with Notifications</a><ul>
-<li><i></i><a href="/runtime-manager/create-notification">Create Notification</a></li><li><i></i><a href="/runtime-manager/list-notifications">List All Notifications</a></li><li><i></i><a href="/runtime-manager/update-all-notifications">Update All Notifications</a></li><li><i></i><a href="/runtime-manager/update-notification">Update Notification</a></li></ul></li>
-<li><i></i><a href="/runtime-manager/working-with-alerts">Working with Alerts</a></li></ul></li>
-</ul></li>
-<li>
-<i></i>
-<a href="/runtime-manager/dedicated-load-balancer-tutorial">About Load Balancers (CloudHub)</a><ul>
-<li><i></i><a href="/runtime-manager/lb-architecture">About Load Balancer Architecture</a></li><li><i></i><a href="/runtime-manager/lb-create-arm">To Create a Load Balancer using Runtime Manager</a></li><li><i></i><a href="/runtime-manager/lb-create-cli">To Create a Load Balancer using the CLI</a></li><li><i></i><a href="/runtime-manager/lb-create-api">To Create a Load Balancer using the API</a></li><li>
-<i></i>
-<a href="/runtime-manager/lb-cert-endpoints">About Load Balancer SSL Endpoints and Certificates</a><ul>
-<li><i></i><a href="/runtime-manager/lb-cert-upload">About Uploading Certificates</a></li><li><i></i><a href="/runtime-manager/lb-cert-validation">About Certificate Validation</a></li></ul></li>
-<li><i></i><a href="/runtime-manager/lb-mapping-rules">About Mapping Rules</a></li><li><i></i><a href="/runtime-manager/lb-whitelists">About Whitelists</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/cloudhub-faq">CloudHub FAQ</a></li><li><i></i><a href="/runtime-manager/developing-applications-for-cloudhub">Developing Applications for CloudHub</a></li><li><i></i><a href="/runtime-manager/cloudhub-architecture">CloudHub Architecture</a></li><li><i></i><a href="/runtime-manager/cloudhub-impaired-worker">About Impaired Workers</a></li><li><i></i><a href="/runtime-manager/cloudhub-fabric">CloudHub Fabric</a></li><li><i></i><a href="/runtime-manager/managing-cloudhub-specific-settings">Managing Cloudhub Settings</a></li><li><i></i><a href="/runtime-manager/cloudhub-networking-guide">CloudHub Networking Guide</a></li><li><i></i><a href="/runtime-manager/cloudhub-dedicated-load-balancer">Cloudhub Dedicated Load Balancer</a></li><li><i></i><a href="/runtime-manager/penetration-testing-policies">Penetration Testing Policies</a></li><li><i></i><a href="/runtime-manager/cloudhub-api">CloudHub API</a></li></ul></li>
 <li><i></i><a href="/runtime-manager/maintenance-and-upgrade-policy">Maintenance and Upgrade Policy</a></li><li>
 <i></i>
 <a href="/runtime-manager/runtime-manager-agent">Runtime Manager Agent</a><ul>
@@ -1119,7 +1095,7 @@
    <p><span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-cloud-active.png" alt="logo cloud active" title="CloudHub"></a></span> <span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-hybrid-disabled.png" alt="logo hybrid disabled" title="Hybrid Deployment"></a></span> <span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-server-disabled.png" alt="logo server disabled" title="Anypoint Platform Private Cloud Edition"></a></span> <span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-pcf-disabled.png" alt="logo pcf disabled" title="Pivotal Cloud Foundry"></a></span></p> 
   </div> 
   <div class="paragraph"> 
-   <p>CloudHub provides access to log data so that you can monitor your application and diagnose any potential issues. CloudHub stores log data in Universal Time (UTC); however, the console displays the log using your computer’s local time zone.&nbsp;</p> 
+   <p>CloudHub provides access to log data that includes deployment messages and events for each worker.</p> 
   </div> 
   <div class="admonitionblock note"> 
    <table> 
@@ -1144,7 +1120,7 @@
       <td class="icon"> <i class="fa icon-important" title="Important"></i> </td> 
       <td class="content"> 
        <div class="paragraph"> 
-        <p>After you delete an application, your log data is no longer accessible through the console. CloudHub archives old log data for a limited period of time before being purged. This allows you to recover the data if needed. <a href="mailto:cloudhub-support@mulesoft.com">Contact Support</a> for more information.</p> 
+        <p>After you delete an application, your log data is no longer accessible through the console. CloudHub archives old log data for a limited period of time before being purged. This allows you to recover the data if needed. Open a support case at: <a href="https://support.mulesoft.com">https://support.mulesoft.com</a> for more information.</p> 
        </div> </td> 
      </tr> 
     </tbody> 
@@ -1153,10 +1129,92 @@
  </div> 
 </div> 
 <div class="sect1"> 
- <h2 id="enhanced-log-management"><a class="anchor" href="#enhanced-log-management"></a>Enhanced Log Management</h2> 
+ <h2 id="view-logs"><a class="anchor" href="#view-logs"></a>View Logs</h2> 
+ <div class="sectionbody"> 
+  <div class="olist arabic"> 
+   <ol class="arabic"> 
+    <li> <p>Open the management options of an application that’s deployed to CloudHub</p> </li> 
+    <li> <p>Click <strong>Logs</strong>.</p> 
+     <div class="paragraph"> 
+      <p><span class="image"><img src="./_images/ELMStart.png" alt="ELMStart"></span></p> 
+     </div> </li> 
+    <li> <p>The Filters section on the right of the logging screen lets you selectively view the output by day, Deployment, System Log, and Workers. You can unapply a filter by unticking the checkbox next to a date.</p> 
+     <div class="paragraph"> 
+      <p><span class="image"><img src="./_images/ELMfilters.png" alt="ELMfilters"></span></p> 
+     </div> </li> 
+    <li> <p>You can also search for log content, or click <strong>Advanced</strong> to search for a time or day, or date range, or by message priority. After you choose, click <strong>Apply</strong>. For more information, see&nbsp;<a href="#Advanced Search">Advanced Search</a>.&nbsp;</p> 
+     <div class="paragraph"> 
+      <p><span class="image"><img src="./_images/ELMAdvancedSearch.png" alt="ELMAdvancedSearch"></span></p> 
+     </div> </li> 
+   </ol> 
+  </div> 
+ </div> 
+</div> 
+<div class="sect1"> 
+ <h2 id="download-logs"><a class="anchor" href="#download-logs"></a>Download Logs</h2> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>CloudHub provides an optional user interface and expanded storage capabilities for logging and diagnostics with the new Enhanced Log Management setting. Logs can be up to 100 MB or up to 30 days,&nbsp;whichever limit is hit first.</p> 
+   <p>There are separate logs for each worker in each deployment that can be downloaded.</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p>In the filters section on the right, find the date and worker you want to view, click the download icon next to it and select <strong>Logs</strong>.</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p><span class="image"><img src="./_images/DownloadLogs.png" alt="DownloadLogs"></span></p> 
+  </div> 
+  <div class="paragraph"> 
+   <p>The log file is a text file with <code>.log</code> file type and named in the format of: <em>deployment-ID</em>`.<code><em>instance-ID</em></code>.log`. You can view this file with a text editor.</p> 
+  </div> 
+ </div> 
+</div> 
+<div class="sect1"> 
+ <h2 id="download-diagnostics"><a class="anchor" href="#download-diagnostics"></a>Download Diagnostics</h2> 
+ <div class="sectionbody"> 
+  <div class="paragraph"> 
+   <p>Diagnostics display the Java thread dump of each CloudHub worker in each of your deployments. They indicate the current state of the server, useful for debugging and support.</p> 
+  </div> 
+  <div class="admonitionblock note"> 
+   <table> 
+    <tbody> 
+     <tr> 
+      <td class="icon"> <i class="fa icon-note" title="Note"></i> </td> 
+      <td class="content"> For apps that run on a Mule version prior to 3.8.0 (excluding version 3.7.4), diagnostics aren’t available. </td> 
+     </tr> 
+    </tbody> 
+   </table> 
+  </div> 
+  <div class="paragraph"> 
+   <p>In the filters section on the right, find the date and worker you want to view, click the download icon next to it and select <strong>Diagnostics</strong>.</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p>The log file is a text file with the .txt file type. You can view this file with a text editor.</p> 
+  </div> 
+  <div class="admonitionblock tip"> 
+   <table> 
+    <tbody> 
+     <tr> 
+      <td class="icon"> <i class="fa icon-tip" title="Tip"></i> </td> 
+      <td class="content"> 
+       <div class="paragraph"> 
+        <p>On the diagnostics, the instance ID of a worker is set as deployment id + worker number (0 to 4)</p> 
+       </div> 
+       <div class="paragraph"> 
+        <p>You can also download a diagnostics file directly, without having to go through the UI, by accessing the following URL:</p> 
+       </div> 
+       <div class="paragraph"> 
+        <p><code>api/v2/applications/appName/instances/instanceId/diagnostics</code></p> 
+       </div> </td> 
+     </tr> 
+    </tbody> 
+   </table> 
+  </div> 
+ </div> 
+</div> 
+<div class="sect1"> 
+ <h2 id="about-log-persistence"><a class="anchor" href="#about-log-persistence"></a>About Log Persistence</h2> 
+ <div class="sectionbody"> 
+  <div class="paragraph"> 
+   <p>CloudHub stores logs of up to 100 MB per app &amp; per worker or for up to 30 days,&nbsp;whichever limit is hit first.</p> 
   </div> 
   <div class="admonitionblock important"> 
    <table> 
@@ -1165,211 +1223,33 @@
       <td class="icon"> <i class="fa icon-important" title="Important"></i> </td> 
       <td class="content"> 
        <div class="paragraph"> 
-        <p><strong>Important:</strong></p> 
-       </div> 
-       <div class="ulist"> 
-        <ul> 
-         <li> <p>Before using enhanced logging, download all existing logs. When you enable this feature, the verify prompt contains a link to download your logs to your computer. The logs are saved as a text file.</p> </li> 
-         <li> <p>When you enable enhanced logging, CloudHub restarts your application, with <a href="https://docs.mulesoft.com/runtime-manager/managing-cloudhub-applications#zero-downtime-updates-with-cloudhub"><strong>zero downtime</strong></a>.</p> </li> 
-         <li> <p>For new apps, enhanced log management is enabled by default. For existing apps, you must opt in to enable enhanced logging.</p> </li> 
-         <li> <p>App Diagnostics are only available for applications that run on Mule runtime versions either 3.8.1 or above or <a href="/release-notes/mule-esb-3.7.4-release-notes">3.7.4</a> or above</p> </li> 
-        </ul> 
+        <p>After you delete an application, your log data is no longer accessible through the console. CloudHub archives old log data for a limited period of time before being purged. This allows you to recover the data if needed. <a href="https://support.mulesoft.com">Contact Support</a> for more information.</p> 
        </div> </td> 
      </tr> 
     </tbody> 
    </table> 
   </div> 
+ </div> 
+</div> 
+<div class="sect1"> 
+ <h2 id="about-log-timezones"><a class="anchor" href="#about-log-timezones"></a>About log Timezones</h2> 
+ <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>To enable this feature:</p> 
-  </div> 
-  <div class="olist arabic"> 
-   <ol class="arabic"> 
-    <li> <p>Sign in to the <a href="https://anypoint.mulesoft.com/#/signin">Anypoint Platform</a> and click <strong>Runtime Manager</strong>.</p> </li> 
-    <li> <p>Click an application to expand the details view:</p> 
-     <div class="paragraph"> 
-      <p><span class="image"><img src="./_images/CHApps.png" alt="CHApps"></span></p> 
-     </div> </li> 
-    <li> <p>Click <strong>Settings</strong> &gt;&nbsp;<strong>Enhanced Log Management</strong>.&nbsp;</p> 
-     <div class="paragraph"> 
-      <p><span class="image"><img src="./_images/EnLogMgmt.png" alt="EnLogMgmt"></span></p> 
-     </div> 
-     <div class="paragraph"> 
-      <p>The verification prompt appears:</p> 
-     </div> 
-     <div class="paragraph"> 
-      <p><span class="image"><img src="./_images/ELMEnableChangeSettingsPrompt.png" alt="ELMEnableChangeSettingsPrompt"></span></p> 
-     </div> </li> 
-    <li> <p>Click <strong>Download logs</strong>. Your computer opens a Save File dialog box where you can locate the directory to save the log file in. The log is saved as a text file with the .log file type.&nbsp;</p> </li> 
-    <li> <p>After you save your files, click the <strong>I understand log history will be lost</strong> …​ prompt, and click <strong>Change Settings</strong>.&nbsp;</p> </li> 
-    <li> <p>In the bottom of the CloudHub Settings screen, click <strong>Apply Changes</strong>.</p> </li> 
-    <li> <p>Click <strong>Logs</strong>. The new Enhanced Log Management screen appears. The application restarts after setting enhanced logging. The logs list deployment messages and events for each worker. You can use Advanced search to list errors or different message priorities—​see <a href="#search-by-message-priority">search by message priority</a>.</p> 
-     <div class="paragraph"> 
-      <p><span class="image"><img src="./_images/ELMStart.png" alt="ELMStart"></span></p> 
-     </div> </li> 
-    <li> <p>The Filters section on the right of the enhanced logging screen lets you selectively view the output by day, Deployment, System Log, and Workers. You can unapply a filter by unticking the checkbox next to a date.</p> 
-     <div class="paragraph"> 
-      <p><span class="image"><img src="./_images/ELMfilters.png" alt="ELMfilters"></span></p> 
-     </div> </li> 
-    <li> <p>The Filters section also contains the download buttons for both Logs and Diagnostics, to download the logs and diagnostics of the current worker and deployment:</p> 
-     <div class="paragraph"> 
-      <p><span class="image"><img src="./_images/DownloadLogs.png" alt="DownloadLogs"></span></p> 
-     </div> </li> 
-    <li> <p>You can also search for log content, or click <strong>Advanced</strong> to search for a time or day, or date range, or by message priority. After you choose, click <strong>Apply</strong>. For more information, see&nbsp;<a href="#advanced-search">Advanced Search</a>.&nbsp;</p> 
-     <div class="paragraph"> 
-      <p><span class="image"><img src="./_images/ELMAdvancedSearch.png" alt="ELMAdvancedSearch"></span></p> 
-     </div> </li> 
-   </ol> 
-  </div> 
-  <div class="paragraph"> 
-   <p><strong>Note</strong>: Enhanced logging combines both live and archive views into a single UI, so there is no longer a way to pause or clear the live view window.</p> 
-  </div> 
-  <div class="sect2"> 
-   <h3 id="downloading-logs-in-enhanced-logging"><a class="anchor" href="#downloading-logs-in-enhanced-logging"></a>Downloading Logs in Enhanced Logging</h3> 
-   <div class="paragraph"> 
-    <p>For the best audit trail, you may wish to download logs from enhanced logging. In enhanced logging, there are logs for each worker in each deployment. In the following example, there are 3 logs you may wish to back up:</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p><span class="image"><img src="./_images/ELMmanyLogs.png" alt="ELMmanyLogs"></span></p> 
-   </div> 
-   <div class="paragraph"> 
-    <p>When you hover over the download symbol, a panel will open to display both logs and diagnostics, click on the download symbol that corresponds to logs. Your computer then displays a dialog box to let you save the log file. The log file is a text file with the .log file type. You can view this file with a text editor.</p> 
-   </div> 
-   <div class="admonitionblock note"> 
-    <table> 
-     <tbody> 
-      <tr> 
-       <td class="icon"> <i class="fa icon-note" title="Note"></i> </td> 
-       <td class="content"> In case your app runs in a Mule version prior to 3.8.0 (excluding version 3.7.4), you will only have the option to download the logs, as diagnostics aren’t available for those versions. </td> 
-      </tr> 
-     </tbody> 
-    </table> 
-   </div> 
-   <div class="paragraph"> 
-    <p>The log file is named in the format of: <em>deployment-ID</em>`.<code><em>instance-ID</em></code>.log`</p> 
-   </div> 
-  </div> 
-  <div class="sect2"> 
-   <h3 id="downloading-diagnostics-in-enhanced-logging"><a class="anchor" href="#downloading-diagnostics-in-enhanced-logging"></a>Downloading Diagnostics in Enhanced Logging</h3> 
-   <div class="paragraph"> 
-    <p>Diagnostics display the Java thread dump of the CloudHub worker, indicating the current state of the server, useful for debugging and support.</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p>Diagnostics must also be downloaded from the enhanced logging page. In enhanced logging, there are diagnostics for each worker in each deployment:</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p><span class="image"><img src="./_images/ELMmanyDiagnostics.png" alt="ELMmanyLogs"></span></p> 
-   </div> 
-   <div class="paragraph"> 
-    <p>When you hover over the download symbol, a panel will open to display both logs and diagnostics, click on the download symbol that corresponds to diagnostics. Your computer then displays a dialog box to let you save the log file. The log file is a text file with the .txt file type. You can view this file with a text editor.</p> 
-   </div> 
-   <div class="admonitionblock tip"> 
-    <table> 
-     <tbody> 
-      <tr> 
-       <td class="icon"> <i class="fa icon-tip" title="Tip"></i> </td> 
-       <td class="content"> 
-        <div class="paragraph"> 
-         <p>On the diagnostics, the instance ID of a worker is set as deployment id + worker number (0 to 4)</p> 
-        </div> 
-        <div class="paragraph"> 
-         <p>You can also download a diagnostics file directly, without having to go through the UI, by accessing the following URL:</p> 
-        </div> 
-        <div class="paragraph"> 
-         <p><code>api/v2/applications/appName/instances/instanceId/diagnostics</code></p> 
-        </div> </td> 
-      </tr> 
-     </tbody> 
-    </table> 
-   </div> 
-  </div> 
-  <div class="sect2"> 
-   <h3 id="disabling-enhanced-logging"><a class="anchor" href="#disabling-enhanced-logging"></a>Disabling Enhanced Logging</h3> 
-   <div class="paragraph"> 
-    <p><strong>Important</strong>: Before disabling enhanced logging, back up each worker’s logs from each deployment.&nbsp;Disabling enhanced logging deletes all logs and restarts your application.</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p>To disable enhanced logging:</p> 
-   </div> 
-   <div class="olist arabic"> 
-    <ol class="arabic"> 
-     <li> <p>Click <strong>Settings</strong> and uncheck <strong>Enhanced Log Management</strong>.</p> </li> 
-     <li> <p>In the following prompt, click the <strong>I understand</strong> …​ message and click *Change Settings:</p> 
-      <div class="paragraph"> 
-       <p><span class="image"><img src="./_images/ELMChangingLogSettings.png" alt="ELMChangingLogSettings"></span></p> 
-      </div> </li> 
-    </ol> 
-   </div> 
+   <p>CloudHub stores log data in Universal Time (UTC); however, the console displays the log using your computer’s local time zone.&nbsp;</p> 
   </div> 
  </div> 
 </div> 
 <div class="sect1"> 
- <h2 id="default-log-management"><a class="anchor" href="#default-log-management"></a>Default Log Management</h2> 
+ <h2 id="search-logs"><a class="anchor" href="#search-logs"></a>Search Logs</h2> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>If <strong>Enhanced Log Management</strong> is not selected,&nbsp;CloudHub saves 100,000 log events per application. Logs that exceed the limit are truncated every 24 hours to 100,000 events by discarding the oldest events past the limit. Individual log entries are limited to a maximum length of 100K characters; longer log entries are truncated to the limit.</p> 
+   <p>Advanced search lets you search logs by date and priority.</p> 
   </div> 
   <div class="paragraph"> 
-   <p>The default interface differs from that of enhanced logging:</p> 
+   <p>To access it, click&nbsp;<strong>Advanced</strong>&nbsp;in the search field.</p> 
   </div> 
   <div class="paragraph"> 
-   <p><span class="image"><img src="./_images/chlog.png" alt="chlog"></span></p> 
-  </div> 
-  <div class="sect2"> 
-   <h3 id="pausing-and-clearing-a-log"><a class="anchor" href="#pausing-and-clearing-a-log"></a>Pausing and Clearing a Log</h3> 
-   <div class="paragraph"> 
-    <p>To pause the log so that entries are temporarily stopped from writing, click <strong>Live view</strong> and click <strong>Pause</strong>. While the log is paused, a green <strong>Resume</strong> button appears. Click <strong>Resume</strong> to enable more content to be written.</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p><span class="image"><img src="./_images/ResumeLog.png" alt="ResumeLog"></span></p> 
-   </div> 
-   <div class="paragraph"> 
-    <p>In <strong>Live view</strong>, you can click the <strong>Clear</strong> button to clear the viewing window, so you only see the latest logs generated by the application, which is useful for debugging. The log contents are not deleted, so if you switch views to Archive and back to Live view, the full contents of the log reappear. You can also refresh your browser to see the full log.</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p><span class="image"><img src="./_images/LogClear.png" alt="LogClear"></span></p> 
-   </div> 
-  </div> 
-  <div class="sect2"> 
-   <h3 id="log-page-controls"><a class="anchor" href="#log-page-controls"></a>Log Page Controls</h3> 
-   <div class="paragraph"> 
-    <p>CloudHub provides page controls to help you move through the logs when you view historical data. The most recent logs are on page one. The data gets older as you step through the higher pages.&nbsp;</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p>You can configure the number of results that display on each page by clicking <strong>Archive</strong> and the down-arrow next to the number of entries:</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p><span class="image"><img src="./_images/LogsPages.png" alt="LogsPages"></span></p> 
-   </div> 
-   <div class="paragraph"> 
-    <p>Click <strong>FIRST</strong>, <strong>LAST</strong>, or the number of entries to view per page, <strong>10</strong>, <strong>25</strong>, or <strong>50</strong>. === Downloading Log Data</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p>Click <strong>Archive</strong> and click <strong>Download</strong> to save a copy of the current log view to your computer:</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p><span class="image"><img src="./_images/LogsDownload.png" alt="LogsDownload"></span></p> 
-   </div> 
-   <div class="paragraph"> 
-    <p>You are prompted for a save location.&nbsp;You can download a maximum of 10,000 lines of log data with a single save. However, using repeated views with contiguous time windows as search criteria, the entire log may be downloaded.</p> 
-   </div> 
-  </div> 
-  <div class="sect2"> 
-   <h3 id="advanced-search"><a class="anchor" href="#advanced-search"></a>Advanced Search</h3> 
-   <div class="paragraph"> 
-    <p>Advanced search lets you search logs by date and priority. The Advanced search interface is the same for enhanced logging and default logging.</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p><strong>Enhanced logging</strong>&nbsp;- Click&nbsp;<strong>Advanced</strong>&nbsp;in the search field. Enhanced only provides a live console.</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p><strong>Default logging</strong> - Click&nbsp;<strong>Live view</strong> to provide a live, continually updated stream of current log data from all an application’s workers.&nbsp;Click&nbsp; <strong>Advanced</strong> &nbsp;in the search field to search only for strings in the logs. Click <strong>Archive view</strong> and <strong>Advanced</strong> to set search by text, date, or priority.</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p>The Advanced search interface is as follows (shown for enhanced logging):</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p><span class="image"><img src="./_images/ELMAdvSearch.png" alt="ELMAdvSearch"></span></p> 
-   </div> 
+   <p><span class="image"><img src="./_images/ELMAdvSearch.png" alt="ELMAdvSearch"></span></p> 
   </div> 
   <div class="sect2"> 
    <h3 id="search-by-date-and-time"><a class="anchor" href="#search-by-date-and-time"></a>Search by Date and Time</h3> 
@@ -1598,7 +1478,7 @@
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#enhanced-log-management">Enhanced Log Management</a></li><li><a class="scroll-menu-link" href="#default-log-management">Default Log Management</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#view-logs">View Logs</a></li><li><a class="scroll-menu-link" href="#download-logs">Download Logs</a></li><li><a class="scroll-menu-link" href="#download-diagnostics">Download Diagnostics</a></li><li><a class="scroll-menu-link" href="#about-log-persistence">About Log Persistence</a></li><li><a class="scroll-menu-link" href="#about-log-timezones">About log Timezones</a></li><li><a class="scroll-menu-link" href="#search-logs">Search Logs</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->

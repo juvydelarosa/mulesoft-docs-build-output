@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>To Create a Load Balancer using the CLI // MuleSoft Documentation </title>
+  <title>About Impaired Workers // MuleSoft Documentation </title>
   <link rel="shortcut icon" href="/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="/css/vendor.min.css?t=1498825733">
   <link rel="stylesheet" type="text/css" href="/css/mulesoft.min.css?t=1498825733">
@@ -14,9 +14,9 @@
   <script src="/js/trafficSource.js"></script>
   <script src="/js/scripts.js?t=1498825733"></script>
 
-  <link rel="canonical" href="https://docs.mulesoft.com/runtime-manager/lb-create-cli" />
-  <meta name="description" content="You can create an external load balancer using the Anypoint Platform CLI. To create a load balancer, ensure that you perform the following: To crea..." />
-  <meta class="swiftype" name="title" data-type="string" content="To Create a Load Balancer using the CLI" />
+  <link rel="canonical" href="https://docs.mulesoft.com/runtime-manager/cloudhub-impaired-worker" />
+  <meta name="description" content="CloudHub performs constant health checks on the underlying virtual machines where Mule applications are running. When an instance is impaired, ther..." />
+  <meta class="swiftype" name="title" data-type="string" content="About Impaired Workers" />
 </head>
 <body>
 <!-- START Swiftype -->
@@ -160,7 +160,7 @@
         <a href="#" class="tree-icon glyphicon glyphicon-th-list"><span>Nav</span></a>
       </div>
       <div class="toolbar-dropdown edit-github">
-        <a href="https://github.com/mulesoft/mulesoft-docs/blob/master/runtime-manager/v/latest/lb-create-cli.adoc" target="_blank"><span>Edit on GitHub</span></a>
+        <a href="https://github.com/mulesoft/mulesoft-docs/blob/master/runtime-manager/v/latest/cloudhub-impaired-worker.adoc" target="_blank"><span>Edit on GitHub</span></a>
       </div>
       <div class="toolbar-dropdown helpful">
         <div class="btn btn-default dropdown-toggle" id="dropdown-helpful">
@@ -670,7 +670,7 @@
 <li>
 <i></i>
 <a href="/runtime-manager/tutorials">Tutorials</a><ul>
-<li><i></i><a href="/runtime-manager/building-an-https-service">Building an HTTPS Service</a></li><li><i></i><a href="/runtime-manager/vpc-tutorial">Create a VPC using Runtime Manager</a></li><li><i></i><a href="/runtime-manager/create-vpc-cli">Create a VPC using Anypoint Platform CLI</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/building-an-https-service">Building an HTTPS Service</a></li><li><i></i><a href="/runtime-manager/vpc-tutorial">Create a VPC using Runtime Manager</a></li><li><i></i><a href="/runtime-manager/create-vpc-cli">Create a VPC using Anypoint Platform CLI</a></li><li><i></i><a href="/runtime-manager/dedicated-load-balancer-tutorial">Create a Dedicated Load Balancer</a></li></ul></li>
 <li>
 <i></i>
 <a href="/runtime-manager/deployment-strategies">Deployment Strategies</a><ul>
@@ -681,7 +681,7 @@
 <li>
 <i></i>
 <a href="/runtime-manager/managing-applications-on-cloudhub">Managing Applications on CloudHub</a><ul>
-<li><i></i><a href="/runtime-manager/managing-queues">Managing Queues</a></li><li><i></i><a href="/runtime-manager/managing-schedules">Managing Schedules</a></li><li><i></i><a href="/runtime-manager/secure-application-properties">Secure Application Properties</a></li><li><i></i><a href="/runtime-manager/managing-application-data-with-object-stores">Managing App Data using Object Stores</a></li><li><i></i><a href="/runtime-manager/virtual-private-cloud">Virtual Private Cloud</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/managing-queues">Managing Queues</a></li><li><i></i><a href="/runtime-manager/managing-schedules">Managing Schedules</a></li><li><i></i><a href="/runtime-manager/secure-application-properties">Secure Application Properties</a></li><li><i></i><a href="/runtime-manager/managing-application-data-with-object-stores">Managing App Data using Object Stores</a></li><li><i></i><a href="/runtime-manager/virtual-private-cloud">Virtual Private Cloud</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li><li><i></i><a href="/runtime-manager/autoscaling-in-cloudhub">Autoscaling in CloudHub</a></li></ul></li>
 <li>
 <i></i>
 <a href="/runtime-manager/managing-applications-on-your-own-servers">Managing Applications on Your Own Servers</a><ul>
@@ -694,7 +694,7 @@
 <li>
 <i></i>
 <a href="/runtime-manager/monitoring">Monitoring</a><ul>
-<li><i></i><a href="/runtime-manager/alerts-on-runtime-manager">Alerts</a></li><li><i></i><a href="/runtime-manager/notifications-on-runtime-manager">Notifications</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li><li><i></i><a href="/runtime-manager/monitoring-dashboards">Dashboards</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/alerts-on-runtime-manager">Alerts</a></li><li><i></i><a href="/runtime-manager/notifications-on-runtime-manager">Notifications</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li><li><i></i><a href="/runtime-manager/monitoring-dashboards">Dashboards</a></li><li><i></i><a href="/runtime-manager/flow-metrics">Flow Metrics</a></li></ul></li>
 <li>
 <i></i>
 <a href="/runtime-manager/troubleshooting">Troubleshooting</a><ul>
@@ -705,36 +705,12 @@
 <li><i></i><a href="/runtime-manager/worker-monitoring">Worker Monitoring</a></li><li>
 <i></i>
 <a href="/runtime-manager/sending-data-from-arm-to-external-analytics-software">Sending data from Runtime Manager to External Analytics Software</a><ul>
-<li><i></i><a href="/runtime-manager/sending-api-analytics-from-arm-to-db">Sending API Analytics</a></li><li><i></i><a href="/runtime-manager/sending-event-data-from-arm-to-db">Sending Event Data</a></li></ul></li>
-</ul></li>
-<li>
-<i></i>
-<a href="/runtime-manager/cloudhub">CloudHub</a><ul>
-<li><i></i><a href="/runtime-manager/cloudhub-faq">CloudHub FAQ</a></li><li><i></i><a href="/runtime-manager/developing-applications-for-cloudhub">Developing Applications for CloudHub</a></li><li><i></i><a href="/runtime-manager/cloudhub-architecture">CloudHub Architecture</a></li><li><i></i><a href="/runtime-manager/cloudhub-fabric">CloudHub Fabric</a></li><li><i></i><a href="/runtime-manager/managing-cloudhub-specific-settings">Managing Cloudhub Settings</a></li><li><i></i><a href="/runtime-manager/cloudhub-networking-guide">CloudHub Networking Guide</a></li><li><i></i><a href="/runtime-manager/penetration-testing-policies">Penetration Testing Policies</a></li><li>
-<i></i>
-<a href="/runtime-manager/cloudhub-api">CloudHub API</a><ul>
-<li>
-<i></i>
-<a href="/runtime-manager/working-with-applications">Working with Applications</a><ul>
-<li><i></i><a href="/runtime-manager/create-application">Create Application</a></li><li><i></i><a href="/runtime-manager/delete-application">Delete an Application</a></li><li><i></i><a href="/runtime-manager/deploy-application">Deploy Application</a></li><li><i></i><a href="/runtime-manager/get-application">Get an Application</a></li><li><i></i><a href="/runtime-manager/list-all-applications">List All Applications</a></li><li><i></i><a href="/runtime-manager/update-application-metadata">Update Application Metadata</a></li></ul></li>
-<li>
-<i></i>
-<a href="/runtime-manager/logs">Working with Logs</a><ul>
-<li><i></i><a href="/runtime-manager/list-all-logs">List Log Messages</a></li></ul></li>
-<li>
-<i></i>
-<a href="/runtime-manager/notifications">Working with Notifications</a><ul>
-<li><i></i><a href="/runtime-manager/create-notification">Create Notification</a></li><li><i></i><a href="/runtime-manager/list-notifications">List All Notifications</a></li><li><i></i><a href="/runtime-manager/update-all-notifications">Update All Notifications</a></li><li><i></i><a href="/runtime-manager/update-notification">Update Notification</a></li></ul></li>
-<li><i></i><a href="/runtime-manager/working-with-alerts">Working with Alerts</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/about-logging-of-payload-formats">About Logging of Payload Formats</a></li><li><i></i><a href="/runtime-manager/sending-api-analytics-from-arm-to-db">Sending API Analytics</a></li><li><i></i><a href="/runtime-manager/sending-event-data-from-arm-to-db">Sending Event Data</a></li></ul></li>
 </ul></li>
 <li class="expanded">
 <i></i>
-<a href="/runtime-manager/dedicated-load-balancer-tutorial">About Load Balancers (CloudHub)</a><ul style="display: block;">
-<li><i></i><a href="/runtime-manager/lb-architecture">About Load Balancer Architecture</a></li><li><i></i><a href="/runtime-manager/lb-create-arm">To Create a Load Balancer using Runtime Manager</a></li><li class="active"><i></i><a href="/runtime-manager/lb-create-cli">To Create a Load Balancer using the CLI</a></li><li><i></i><a href="/runtime-manager/lb-create-api">To Create a Load Balancer using the API</a></li><li>
-<i></i>
-<a href="/runtime-manager/lb-cert-endpoints">About Load Balancer SSL Endpoints and Certificates</a><ul>
-<li><i></i><a href="/runtime-manager/lb-cert-upload">About Uploading Certificates</a></li><li><i></i><a href="/runtime-manager/lb-cert-validation">About Certificate Validation</a></li></ul></li>
-<li><i></i><a href="/runtime-manager/lb-mapping-rules">About Mapping Rules</a></li><li><i></i><a href="/runtime-manager/lb-whitelists">About Whitelists</a></li></ul></li>
+<a href="/runtime-manager/cloudhub">CloudHub</a><ul style="display: block;">
+<li><i></i><a href="/runtime-manager/cloudhub-faq">CloudHub FAQ</a></li><li><i></i><a href="/runtime-manager/developing-applications-for-cloudhub">Developing Applications for CloudHub</a></li><li><i></i><a href="/runtime-manager/cloudhub-architecture">CloudHub Architecture</a></li><li class="active"><i></i><a href="/runtime-manager/cloudhub-impaired-worker">About Impaired Workers</a></li><li><i></i><a href="/runtime-manager/cloudhub-fabric">CloudHub Fabric</a></li><li><i></i><a href="/runtime-manager/managing-cloudhub-specific-settings">Managing Cloudhub Settings</a></li><li><i></i><a href="/runtime-manager/cloudhub-networking-guide">CloudHub Networking Guide</a></li><li><i></i><a href="/runtime-manager/cloudhub-dedicated-load-balancer">Cloudhub Dedicated Load Balancer</a></li><li><i></i><a href="/runtime-manager/penetration-testing-policies">Penetration Testing Policies</a></li><li><i></i><a href="/runtime-manager/cloudhub-api">CloudHub API</a></li></ul></li>
 <li><i></i><a href="/runtime-manager/maintenance-and-upgrade-policy">Maintenance and Upgrade Policy</a></li><li>
 <i></i>
 <a href="/runtime-manager/runtime-manager-agent">Runtime Manager Agent</a><ul>
@@ -1111,56 +1087,20 @@
     <!-- START article content -->
     <div class="article-content col-md-7">
       
-      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Runtime Manager</a>/<a href="dedicated-load-balancer-tutorial">About Load Balancers (CloudHub)</a>/<a href="lb-create-cli" class="breadcrumb-active-link">To Create a Load Balancer using the CLI</a></div>
-      <h1>To Create a Load Balancer using the CLI</h1>
-      <div id="preamble"> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>You can create an external load balancer using the Anypoint Platform CLI.</p> 
-  </div> 
- </div> 
+      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Runtime Manager</a>/<a href="cloudhub">CloudHub</a>/<a href="cloudhub-impaired-worker" class="breadcrumb-active-link">About Impaired Workers</a></div>
+      <h1>About Impaired Workers</h1>
+      <div class="paragraph"> 
+ <p>CloudHub performs constant health checks on the underlying virtual machines where Mule applications are running. When an instance is impaired, there is hardware or software failure that may negatively impact the running application deployed on the instance. Examples of hardware and software failures include network disconnection, memory issues, server hardware failures, file corruption, etc.</p> 
 </div> 
-<div class="sect1"> 
- <h2 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Prerequisites</h2> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>To create a load balancer, ensure that you perform the following:</p> 
-  </div> 
-  <div class="ulist"> 
-   <ul> 
-    <li> <p>Ensure that your profile is a a member of the adminstrator role of in the organization where you are creating the load balancer.</p> </li> 
-    <li> <p>Create a Virtual Private Cloud (VPC) in the organization where you want to create a load balancer.</p> </li> 
-    <li> <p>Create at least one certificate and private key for your certificate.</p> </li> 
-   </ul> 
-  </div> 
- </div> 
+<div class="paragraph"> 
+ <p>When an instance is impaired, CloudHub automatically attempts to restart the instance and relaunch the application. If a retry is successful, the underlying instance and the mule application are recovered, without requiring any further action from the user.</p> 
 </div> 
-<div class="sect1"> 
- <h2 id="creating-a-load-balancer"><a class="anchor" href="#creating-a-load-balancer"></a>Creating a Load Balancer</h2> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>To create a load balancer from the CLI, use the <code>cloudhub load-balancer create</code>. This command enables you to specify the VPC where the load balancer is created. It also enables you to specify the certificate and private keys used by the load balancer.</p> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="see-also"><a class="anchor" href="#see-also"></a>See Also</h2> 
- <div class="sectionbody"> 
-  <div class="ulist"> 
-   <ul> 
-    <li> <p><a href="/runtime-manager/anypoint-platform-cli#cloudhub-load-balancer-create">cloudhub load-balancer create</a></p> </li> 
-    <li> <p><a href="/runtime-manager/lb-cert-upload">About Uploading Certificates</a></p> </li> 
-    <li> <p><a href="/access-management">Access Management</a></p> </li> 
-    <li> <p><a href="/runtime-manaager">To Create a Load Balancer using Runtime Manager</a></p> </li> 
-   </ul> 
-  </div> 
- </div> 
+<div class="paragraph"> 
+ <p>However, if five retry attempts fail, an application’s status becomes Failed or Unrecoverable Runtime Error. In this situation, you must manually redeploy and restart the application.</p> 
 </div>
     </div>
     <!-- END article-content -->
-    <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
-                <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#prerequisites">Prerequisites</a></li><li><a class="scroll-menu-link" href="#creating-a-load-balancer">Creating a Load Balancer</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
+    
   </div>
 </div>
 <!-- START footer -->

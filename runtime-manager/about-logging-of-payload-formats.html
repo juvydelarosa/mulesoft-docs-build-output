@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>About Load Balancer Mapping Rules // MuleSoft Documentation </title>
+  <title>About Logging of Payload Formats // MuleSoft Documentation </title>
   <link rel="shortcut icon" href="/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="/css/vendor.min.css?t=1498825733">
   <link rel="stylesheet" type="text/css" href="/css/mulesoft.min.css?t=1498825733">
@@ -14,9 +14,9 @@
   <script src="/js/trafficSource.js"></script>
   <script src="/js/scripts.js?t=1498825733"></script>
 
-  <link rel="canonical" href="https://docs.mulesoft.com/runtime-manager/lb-mapping-rules" />
-  <meta name="description" content="The load balancer configuration is defined by a list of Mapping Rules which describe how input URL should be translated into calls to different Clo..." />
-  <meta class="swiftype" name="title" data-type="string" content="About Load Balancer Mapping Rules" />
+  <link rel="canonical" href="https://docs.mulesoft.com/runtime-manager/about-logging-of-payload-formats" />
+  <meta name="description" content=" In order to send message payload data to external analytics software, it must first be serialized and converted to text. Some payload formats can’..." />
+  <meta class="swiftype" name="title" data-type="string" content="About Logging of Payload Formats" />
 </head>
 <body>
 <!-- START Swiftype -->
@@ -160,7 +160,7 @@
         <a href="#" class="tree-icon glyphicon glyphicon-th-list"><span>Nav</span></a>
       </div>
       <div class="toolbar-dropdown edit-github">
-        <a href="https://github.com/mulesoft/mulesoft-docs/blob/master/runtime-manager/v/latest/lb-mapping-rules.adoc" target="_blank"><span>Edit on GitHub</span></a>
+        <a href="https://github.com/mulesoft/mulesoft-docs/blob/master/runtime-manager/v/latest/about-logging-of-payload-formats.adoc" target="_blank"><span>Edit on GitHub</span></a>
       </div>
       <div class="toolbar-dropdown helpful">
         <div class="btn btn-default dropdown-toggle" id="dropdown-helpful">
@@ -670,7 +670,7 @@
 <li>
 <i></i>
 <a href="/runtime-manager/tutorials">Tutorials</a><ul>
-<li><i></i><a href="/runtime-manager/building-an-https-service">Building an HTTPS Service</a></li><li><i></i><a href="/runtime-manager/vpc-tutorial">Create a VPC using Runtime Manager</a></li><li><i></i><a href="/runtime-manager/create-vpc-cli">Create a VPC using Anypoint Platform CLI</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/building-an-https-service">Building an HTTPS Service</a></li><li><i></i><a href="/runtime-manager/vpc-tutorial">Create a VPC using Runtime Manager</a></li><li><i></i><a href="/runtime-manager/create-vpc-cli">Create a VPC using Anypoint Platform CLI</a></li><li><i></i><a href="/runtime-manager/dedicated-load-balancer-tutorial">Create a Dedicated Load Balancer</a></li></ul></li>
 <li>
 <i></i>
 <a href="/runtime-manager/deployment-strategies">Deployment Strategies</a><ul>
@@ -681,7 +681,7 @@
 <li>
 <i></i>
 <a href="/runtime-manager/managing-applications-on-cloudhub">Managing Applications on CloudHub</a><ul>
-<li><i></i><a href="/runtime-manager/managing-queues">Managing Queues</a></li><li><i></i><a href="/runtime-manager/managing-schedules">Managing Schedules</a></li><li><i></i><a href="/runtime-manager/secure-application-properties">Secure Application Properties</a></li><li><i></i><a href="/runtime-manager/managing-application-data-with-object-stores">Managing App Data using Object Stores</a></li><li><i></i><a href="/runtime-manager/virtual-private-cloud">Virtual Private Cloud</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/managing-queues">Managing Queues</a></li><li><i></i><a href="/runtime-manager/managing-schedules">Managing Schedules</a></li><li><i></i><a href="/runtime-manager/secure-application-properties">Secure Application Properties</a></li><li><i></i><a href="/runtime-manager/managing-application-data-with-object-stores">Managing App Data using Object Stores</a></li><li><i></i><a href="/runtime-manager/virtual-private-cloud">Virtual Private Cloud</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li><li><i></i><a href="/runtime-manager/autoscaling-in-cloudhub">Autoscaling in CloudHub</a></li></ul></li>
 <li>
 <i></i>
 <a href="/runtime-manager/managing-applications-on-your-own-servers">Managing Applications on Your Own Servers</a><ul>
@@ -694,47 +694,23 @@
 <li>
 <i></i>
 <a href="/runtime-manager/monitoring">Monitoring</a><ul>
-<li><i></i><a href="/runtime-manager/alerts-on-runtime-manager">Alerts</a></li><li><i></i><a href="/runtime-manager/notifications-on-runtime-manager">Notifications</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li><li><i></i><a href="/runtime-manager/monitoring-dashboards">Dashboards</a></li></ul></li>
-<li>
+<li><i></i><a href="/runtime-manager/alerts-on-runtime-manager">Alerts</a></li><li><i></i><a href="/runtime-manager/notifications-on-runtime-manager">Notifications</a></li><li><i></i><a href="/runtime-manager/custom-application-alerts">Custom Application Alerts</a></li><li><i></i><a href="/runtime-manager/monitoring-dashboards">Dashboards</a></li><li><i></i><a href="/runtime-manager/flow-metrics">Flow Metrics</a></li></ul></li>
+<li class="expanded">
 <i></i>
-<a href="/runtime-manager/troubleshooting">Troubleshooting</a><ul>
+<a href="/runtime-manager/troubleshooting">Troubleshooting</a><ul style="display: block;">
 <li><i></i><a href="/runtime-manager/insight">Insight</a></li><li>
 <i></i>
 <a href="/runtime-manager/viewing-log-data">Viewing Log Data</a><ul>
 <li><i></i><a href="/runtime-manager/custom-log-appender">Custom Log Appender</a></li></ul></li>
-<li><i></i><a href="/runtime-manager/worker-monitoring">Worker Monitoring</a></li><li>
+<li><i></i><a href="/runtime-manager/worker-monitoring">Worker Monitoring</a></li><li class="expanded">
 <i></i>
-<a href="/runtime-manager/sending-data-from-arm-to-external-analytics-software">Sending data from Runtime Manager to External Analytics Software</a><ul>
-<li><i></i><a href="/runtime-manager/sending-api-analytics-from-arm-to-db">Sending API Analytics</a></li><li><i></i><a href="/runtime-manager/sending-event-data-from-arm-to-db">Sending Event Data</a></li></ul></li>
+<a href="/runtime-manager/sending-data-from-arm-to-external-analytics-software">Sending data from Runtime Manager to External Analytics Software</a><ul style="display: block;">
+<li class="active"><i></i><a href="/runtime-manager/about-logging-of-payload-formats">About Logging of Payload Formats</a></li><li><i></i><a href="/runtime-manager/sending-api-analytics-from-arm-to-db">Sending API Analytics</a></li><li><i></i><a href="/runtime-manager/sending-event-data-from-arm-to-db">Sending Event Data</a></li></ul></li>
 </ul></li>
 <li>
 <i></i>
 <a href="/runtime-manager/cloudhub">CloudHub</a><ul>
-<li><i></i><a href="/runtime-manager/cloudhub-faq">CloudHub FAQ</a></li><li><i></i><a href="/runtime-manager/developing-applications-for-cloudhub">Developing Applications for CloudHub</a></li><li><i></i><a href="/runtime-manager/cloudhub-architecture">CloudHub Architecture</a></li><li><i></i><a href="/runtime-manager/cloudhub-fabric">CloudHub Fabric</a></li><li><i></i><a href="/runtime-manager/managing-cloudhub-specific-settings">Managing Cloudhub Settings</a></li><li><i></i><a href="/runtime-manager/cloudhub-networking-guide">CloudHub Networking Guide</a></li><li><i></i><a href="/runtime-manager/penetration-testing-policies">Penetration Testing Policies</a></li><li>
-<i></i>
-<a href="/runtime-manager/cloudhub-api">CloudHub API</a><ul>
-<li>
-<i></i>
-<a href="/runtime-manager/working-with-applications">Working with Applications</a><ul>
-<li><i></i><a href="/runtime-manager/create-application">Create Application</a></li><li><i></i><a href="/runtime-manager/delete-application">Delete an Application</a></li><li><i></i><a href="/runtime-manager/deploy-application">Deploy Application</a></li><li><i></i><a href="/runtime-manager/get-application">Get an Application</a></li><li><i></i><a href="/runtime-manager/list-all-applications">List All Applications</a></li><li><i></i><a href="/runtime-manager/update-application-metadata">Update Application Metadata</a></li></ul></li>
-<li>
-<i></i>
-<a href="/runtime-manager/logs">Working with Logs</a><ul>
-<li><i></i><a href="/runtime-manager/list-all-logs">List Log Messages</a></li></ul></li>
-<li>
-<i></i>
-<a href="/runtime-manager/notifications">Working with Notifications</a><ul>
-<li><i></i><a href="/runtime-manager/create-notification">Create Notification</a></li><li><i></i><a href="/runtime-manager/list-notifications">List All Notifications</a></li><li><i></i><a href="/runtime-manager/update-all-notifications">Update All Notifications</a></li><li><i></i><a href="/runtime-manager/update-notification">Update Notification</a></li></ul></li>
-<li><i></i><a href="/runtime-manager/working-with-alerts">Working with Alerts</a></li></ul></li>
-</ul></li>
-<li class="expanded">
-<i></i>
-<a href="/runtime-manager/dedicated-load-balancer-tutorial">About Load Balancers (CloudHub)</a><ul style="display: block;">
-<li><i></i><a href="/runtime-manager/lb-architecture">About Load Balancer Architecture</a></li><li><i></i><a href="/runtime-manager/lb-create-arm">To Create a Load Balancer using Runtime Manager</a></li><li><i></i><a href="/runtime-manager/lb-create-cli">To Create a Load Balancer using the CLI</a></li><li><i></i><a href="/runtime-manager/lb-create-api">To Create a Load Balancer using the API</a></li><li>
-<i></i>
-<a href="/runtime-manager/lb-cert-endpoints">About Load Balancer SSL Endpoints and Certificates</a><ul>
-<li><i></i><a href="/runtime-manager/lb-cert-upload">About Uploading Certificates</a></li><li><i></i><a href="/runtime-manager/lb-cert-validation">About Certificate Validation</a></li></ul></li>
-<li class="active"><i></i><a href="/runtime-manager/lb-mapping-rules">About Mapping Rules</a></li><li><i></i><a href="/runtime-manager/lb-whitelists">About Whitelists</a></li></ul></li>
+<li><i></i><a href="/runtime-manager/cloudhub-faq">CloudHub FAQ</a></li><li><i></i><a href="/runtime-manager/developing-applications-for-cloudhub">Developing Applications for CloudHub</a></li><li><i></i><a href="/runtime-manager/cloudhub-architecture">CloudHub Architecture</a></li><li><i></i><a href="/runtime-manager/cloudhub-impaired-worker">About Impaired Workers</a></li><li><i></i><a href="/runtime-manager/cloudhub-fabric">CloudHub Fabric</a></li><li><i></i><a href="/runtime-manager/managing-cloudhub-specific-settings">Managing Cloudhub Settings</a></li><li><i></i><a href="/runtime-manager/cloudhub-networking-guide">CloudHub Networking Guide</a></li><li><i></i><a href="/runtime-manager/cloudhub-dedicated-load-balancer">Cloudhub Dedicated Load Balancer</a></li><li><i></i><a href="/runtime-manager/penetration-testing-policies">Penetration Testing Policies</a></li><li><i></i><a href="/runtime-manager/cloudhub-api">CloudHub API</a></li></ul></li>
 <li><i></i><a href="/runtime-manager/maintenance-and-upgrade-policy">Maintenance and Upgrade Policy</a></li><li>
 <i></i>
 <a href="/runtime-manager/runtime-manager-agent">Runtime Manager Agent</a><ul>
@@ -1111,512 +1087,546 @@
     <!-- START article content -->
     <div class="article-content col-md-7">
       
-      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Runtime Manager</a>/<a href="dedicated-load-balancer-tutorial">About Load Balancers (CloudHub)</a>/<a href="lb-mapping-rules" class="breadcrumb-active-link">About Mapping Rules</a></div>
-      <h1>About Load Balancer Mapping Rules</h1>
+      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Runtime Manager</a>/<a href="troubleshooting">Troubleshooting</a>/<a href="sending-data-from-arm-to-external-analytics-software">Sending data from Runtime Manager to External Analytics Software</a>/<a href="about-logging-of-payload-formats" class="breadcrumb-active-link">About Logging of Payload Formats</a></div>
+      <h1>About Logging of Payload Formats</h1>
       <div id="preamble"> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>The load balancer configuration is defined by a list of <strong>Mapping Rules</strong> which describe how input URL should be translated into calls to different CloudHub apps.<br> Mapping rules are attributes of the load balancer’s SSL endpoint.<br> When you create a mapping rule, you need to specify a certificate CN. Omitting the <code>[certificateName]</code> parameter adds the mappings to the default endpoint.</p> 
+   <p><span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-cloud-disabled.png" alt="logo cloud disabled" title="CloudHub"></a></span> <span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-hybrid-active.png" alt="logo hybrid active" title="Hybrid Deployment"></a></span> <span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-server-active.png" alt="logo server active" title="Anypoint Platform Private Cloud Edition"></a></span> <span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-pcf-disabled.png" alt="logo pcf disabled" title="Pivotal Cloud Foundry"></a></span></p> 
   </div> 
   <div class="paragraph"> 
-   <p>When creating a simple matching rule, one input address is literally matched to the defined output: the endpoint of one of your applications.<br> Instead of using literal matchings you can also use a <strong>Pattern</strong> to match a variable-like input text to an endpoint.</p> 
+   <p>In order to send message payload data <a href="/runtime-manager/sending-data-from-arm-to-external-analytics-software">to external analytics software</a>, it must first be serialized and converted to text.</p> 
   </div> 
   <div class="paragraph"> 
-   <p>By using proxy rules, you can map a domain or subdomain to one of your Mule applications that run in CloudHub</p> 
+   <p>Some payload formats can’t be converted to plain text. Because of this, the Runtiem Manager Agent differentiates formats accordingly and only converts those that are considered to work.</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p>When the payload format isn’t of a convertible type, the agent only passes on the full qualified name of the payload class type, not its content.</p> 
+  </div> 
+  <div class="admonitionblock warning"> 
+   <table> 
+    <tbody> 
+     <tr> 
+      <td class="icon"> <i class="fa icon-warning" title="Warning"></i> </td> 
+      <td class="content"> The information on this document only applies as of version <a href="/release-notes/runtime-manager-agent-1.6.3-release-notes">1.6.3</a> of the Runtime Manager agent. Prior versions attempt to convert all formats, causing failures on some. </td> 
+     </tr> 
+    </tbody> 
+   </table> 
   </div> 
  </div> 
 </div> 
 <div class="sect1"> 
- <h2 id="using-patterns-in-mapping-rules"><a class="anchor" href="#using-patterns-in-mapping-rules"></a>Using Patterns in Mapping Rules</h2> 
+ <h2 id="default-conversion-behaviour"><a class="anchor" href="#default-conversion-behaviour"></a>Default Conversion Behaviour</h2> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>A pattern is a string that defines a template for matching an input text. Whatever is placed into curly brackets (<code>{ }</code>) is treated like a variable. These variables can contain only letters (a-z) and cannot contain any other characters, such as digits, slashes, etc. The variable values can contain the following characters ‘a-z0-1.&amp;?-_’ but no slashes.</p> 
+   <p>The Runtime Manager agent only passes on payload messages where the <strong>Converted to String</strong> column reads <code>TRUE</code> in the table below:</p> 
+  </div> 
+  <table class="tableblock frame-all grid-all spread"> 
+   <colgroup> 
+    <col style="width: 15.7894%;"> 
+    <col style="width: 36.8421%;"> 
+    <col style="width: 26.3157%;"> 
+    <col style="width: 21.0528%;"> 
+   </colgroup> 
+   <thead> 
+    <tr> 
+     <th class="tableblock halign-left valign-top">Extension</th> 
+     <th class="tableblock halign-left valign-top">Kind of document</th> 
+     <th class="tableblock halign-left valign-top">MIME Type</th> 
+     <th class="tableblock halign-left valign-top">Converted to String</th> 
+    </tr> 
+   </thead> 
+   <tbody> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.epub</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Electronic publication (EPUB)</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/epub+zip</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.jar</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Java Archive (JAR)</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/java-archive</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.js</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">JavaScript (ECMAScript)</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/javascrip</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">t TRUE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.json</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">JSON format</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/jso</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">n TRUE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.doc</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Microsoft Word</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/msword</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.arc</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Archive document (multiple files embedded)</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/octet-stream</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.bin</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Any kind of binary data</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/octet-stream</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.ogx</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">OGG</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/ogg</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.pdf</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Adobe Portable Document Format (PDF)</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/pdf</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.rtf</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Rich Text Format (RTF)</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/rt</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">f TRUE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.azw</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Amazon Kindle eBook format</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/vnd.amazon.ebook</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.mpkg</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Apple Installer Package</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/vnd.apple.installer+xml</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.xul</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">XUL</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/vnd.mozilla.xul+xm</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">l TRUE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.xls</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Microsoft Excel</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/vnd.ms-excel</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.ppt</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Microsoft PowerPoint</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/vnd.ms-powerpoint</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.odp</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">OpenDocuemnt presentation document</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/vnd.oasis.opendocument.presentation</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.ods</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">OpenDocuemnt spreadsheet document</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/vnd.oasis.opendocument.spreadsheet</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.odt</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">OpenDocument text document</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/vnd.oasis.opendocument.text</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.vsd</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Microsoft Visio</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/vnd.visio</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.7z</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">7-zip archive</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/x-7z-compressed</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.abw</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">AbiWord document</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/x-abiword</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.bz</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">BZip archive</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/x-bzip</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.bz2</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">BZip2 archive</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/x-bzip2</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.csh</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">C-Shell script</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/x-cs</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">h TRUE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.rar</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">RAR archive</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/x-rar-compressed</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.sh</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Bourne shell script</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/x-sh</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">TRUE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.swf</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Small web format (SWF) or Adobe Flash document</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/x-shockwave-flash</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.tar</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Tape Archive (TAR)</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/x-tar</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.xhtml</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">XHTML</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/xhtml+xml</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">TRUE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.xml</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">XML</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/xm</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">l TRUE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.zip</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">ZIP archive</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">application/zip</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.aac</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">AAC audio file</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">audio/aac</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.mid .midi</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Musical Instrument Digital Interface (MIDI)</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">audio/midi</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.oga</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">OGG audio</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">audio/ogg</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.weba</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">WEBM audio</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">audio/webm</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.wav</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Waveform Audio Format</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">audio/x-wav</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.ttf</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">TrueType Font</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">font/ttf</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.woff</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Web Open Font Format (WOFF)</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">font/woff</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.woff2</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Web Open Font Format (WOFF)</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">font/woff2</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.gif</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Graphics Interchange Format (GIF)</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">image/gif</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.jpeg .jpg</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">JPEG images</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">image/jpeg</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.svg</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Scalable Vector Graphics (SVG)</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">image/svg+xml</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">TRUE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.tif</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.tiff Tagged Image File Format (TIFF)</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">image/tiff</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.webp</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">WEBP image</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">image/webp</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.ico</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Icon format</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">image/x-icon</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.ics</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">iCalendar format</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">text/calenda</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">r TRUE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.css</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Cascading Style Sheets (CSS)</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">text/css</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">TRUE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.csv</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Comma-separated values (CSV)</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">text/csv</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">TRUE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.htm</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.html HyperText Markup Language (HTML)</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">text/htm</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">l TRUE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.txt</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Plain Text</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">text/plain</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">TRUE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.3gp</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">3GPP audio/video container</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">video/3gpp audio/3gpp if it doesn’t contain video</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.3g2</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">3GPP2 audio/video container</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">video/3gpp2 audio/3gpp2 if it doesn’t contain video</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.mpeg</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">MPEG Video</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">video/mpeg</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.ogv</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">OGG video</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">video/ogg</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.webm</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">WEBM video</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">video/webm</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">.avi</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">AVI: Audio Video Interleave</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">video/x-msvideo</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Multipart</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">"multipart/mixed, multipart/alternative, multipart/digest multipart/parallel"</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td> 
+    </tr> 
+   </tbody> 
+  </table> 
+ </div> 
+</div> 
+<div class="sect1"> 
+ <h2 id="customizing-conversion-behaviour"><a class="anchor" href="#customizing-conversion-behaviour"></a>Customizing Conversion Behaviour</h2> 
+ <div class="sectionbody"> 
+  <div class="paragraph"> 
+   <p>You can override the default behavior make the agent forward all payload formats or none. This is achieved by adding certain properties to the <code>conf/mule-agent.yml</code> file.</p> 
   </div> 
   <div class="paragraph"> 
-   <p>For example, you can literally bind two hostnames for redirect:</p> 
+   <p>You may want to force the exclusion of certain formats from the external logs. This may be because of security concerns around shearing certain types of data:</p> 
   </div> 
   <div class="listingblock"> 
+   <div class="title">
+     Force exclusion on a specific application 
+   </div> 
    <div class="content"> 
-    <pre class="CodeRay highlight"><code data-lang="Example">
+    <pre class="CodeRay highlight"><code data-lang="yaml">
          
       <table class="CodeRay"> 
        <tbody> 
         <tr> 
          <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
 </pre></td> 
-         <td class="code"><pre>‘app.example.com’ -&gt;  application: `app` URI: `/example’</pre></td> 
+         <td class="code"><pre>    <span class="key">mule.agent.tracking.service</span>:
+        <span class="key">globalTrackingLevel</span>: <span class="string"><span class="content">DEBUG</span></span>
+        <span class="key">enabled</span>: <span class="string"><span class="content">true</span></span>
+        <span class="key">trackedApplications</span>:
+            - <span class="string"><span class="content">appName: someApp</span></span>
+              <span class="key">trackingLevel</span>: <span class="string"><span class="content">DEBUG</span></span>
+              <span class="key">payloadExcluded</span>: <span class="string"><span class="content">true</span></span></pre></td> 
+        </tr> 
+       </tbody> 
+      </table></code></pre> 
+   </div> 
+  </div> 
+  <div class="listingblock"> 
+   <div class="title">
+     Force exclusion globally 
+   </div> 
+   <div class="content"> 
+    <pre class="CodeRay highlight"><code data-lang="yaml">
+         
+      <table class="CodeRay"> 
+       <tbody> 
+        <tr> 
+         <td class="line-numbers"><pre>1
+2
+3
+4
+</pre></td> 
+         <td class="code"><pre>    <span class="key">mule.agent.tracking.service</span>:
+        <span class="key">globalTrackingLevel</span>: <span class="string"><span class="content">DEBUG</span></span>
+        <span class="key">enabled</span>: <span class="string"><span class="content">true</span></span>
+        <span class="key">globalPayloadExclusion</span>: <span class="string"><span class="content">true</span></span></pre></td> 
         </tr> 
        </tbody> 
       </table></code></pre> 
    </div> 
   </div> 
   <div class="paragraph"> 
-   <p>Or you can define a pattern to hold the input value:</p> 
+   <p>You may also want to force the conversion and forwarding of formats that are considered to not be convertible.</p> 
+  </div> 
+  <div class="admonitionblock warning"> 
+   <table> 
+    <tbody> 
+     <tr> 
+      <td class="icon"> <i class="fa icon-warning" title="Warning"></i> </td> 
+      <td class="content"> Note that by doing this there’s a risk of breaking the payload. </td> 
+     </tr> 
+    </tbody> 
+   </table> 
   </div> 
   <div class="listingblock"> 
+   <div class="title">
+     Force inclusion on a specific application 
+   </div> 
    <div class="content"> 
-    <pre class="CodeRay highlight"><code data-lang="Example">
+    <pre class="CodeRay highlight"><code data-lang="yaml">
          
       <table class="CodeRay"> 
        <tbody> 
         <tr> 
          <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
 </pre></td> 
-         <td class="code"><pre>‘example.com/{mypattern}’ -&gt; application: `app-{mypattern}` URI: /data</pre></td> 
+         <td class="code"><pre>    <span class="key">mule.agent.tracking.service</span>:
+        <span class="key">globalTrackingLevel</span>: <span class="string"><span class="content">DEBUG</span></span>
+        <span class="key">enabled</span>: <span class="string"><span class="content">true</span></span>
+        <span class="key">trackedApplications</span>:
+            - <span class="string"><span class="content">appName: someApp</span></span>
+              <span class="key">trackingLevel</span>: <span class="string"><span class="content">DEBUG</span></span>
+              <span class="key">forcePayloadInclusion</span>: <span class="string"><span class="content">true</span></span></pre></td> 
         </tr> 
        </tbody> 
       </table></code></pre> 
    </div> 
   </div> 
-  <div class="paragraph"> 
-   <p>The example above causes that both ’example.com/bookings’ and ‘example.com/sales’ match to <code>app-bookings/data</code> and <code>app-sales/data</code> respectively, as the variable <code>mypattern</code> holds these values.<br> For input=”bookings.example.com”, the pattern can be resolved by assigning <code><em>mypattern</em>=”bookings” and for input=`sales.example.com</code>, the pattern is resolved to assign `<em>mypattern</em>=”sales”</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>Depending on your design, you can choose to leverage your internal redirects to your endpoints using patterns or simply literal mappings.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>Note that currently patterns in the application URI are not supported.</p> 
+  <div class="listingblock"> 
+   <div class="title">
+     Force inclusion globally 
+   </div> 
+   <div class="content"> 
+    <pre class="CodeRay highlight"><code data-lang="yaml">
+         
+      <table class="CodeRay"> 
+       <tbody> 
+        <tr> 
+         <td class="line-numbers"><pre>1
+2
+3
+4
+</pre></td> 
+         <td class="code"><pre>    <span class="key">mule.agent.tracking.service</span>:
+        <span class="key">globalTrackingLevel</span>: <span class="string"><span class="content">DEBUG</span></span>
+        <span class="key">enabled</span>: <span class="string"><span class="content">true</span></span>
+        <span class="key">forceGlobalPayloadInclusion</span>: <span class="string"><span class="content">true</span></span></pre></td> 
+        </tr> 
+       </tbody> 
+      </table></code></pre> 
+   </div> 
   </div> 
  </div> 
 </div> 
 <div class="sect1"> 
- <h2 id="creating-mapping-rules"><a class="anchor" href="#creating-mapping-rules"></a>Creating Mapping Rules</h2> 
+ <h2 id="see-also"><a class="anchor" href="#see-also"></a>See Also</h2> 
  <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>A mapping rule is a set of fields that define an <strong>Input URL</strong>, and a set of fields that describe the <strong>Output URL</strong>.</p> 
-  </div> 
   <div class="ulist"> 
    <ul> 
-    <li> <p>The <em>input URL</em> is described using a URI parameter which can be specified by the user:</p> 
-     <div class="olist arabic"> 
-      <ol class="arabic"> 
-       <li> <p><strong>URI</strong> - a String or Pattern that describes the Input URI.</p> 
-        <div class="admonitionblock note"> 
-         <table> 
-          <tbody> 
-           <tr> 
-            <td class="icon"> <i class="fa icon-note" title="Note"></i> </td> 
-            <td class="content"> 
-             <div class="paragraph"> 
-              <p>The input URL follows the main load balancer’s domain (This value should remain constant for the same load balancer)</p> 
-             </div> </td> 
-           </tr> 
-          </tbody> 
-         </table> 
-        </div> </li> 
-      </ol> 
-     </div> </li> 
-    <li> <p>The <em>Output URL</em> is specified by two fields.</p> 
-     <div class="olist arabic"> 
-      <ol class="arabic"> 
-       <li> <p><strong>appName</strong> - Output the application name where the request will be forwarded to.</p> </li> 
-       <li> <p><strong>appURI</strong> - the URI string that is passed to the resolved application.</p> </li> 
-      </ol> 
-     </div> </li> 
+    <li> <p><a href="/runtime-manager/managing-servers">Managing Servers</a></p> </li> 
+    <li> <p><a href="/runtime-manager/monitoring">Monitoring Applications</a></p> </li> 
+    <li> <p>Learn how to first <a href="/runtime-manager/deploying-to-your-own-servers">Deploy Applications to your Own Servers</a></p> </li> 
+    <li> <p><a href="/runtime-manager/managing-deployed-applications">Managing Deployed Applications</a> contains more information on how to manage your application once deployed</p> </li> 
+    <li> <p><a href="/runtime-manager/managing-applications-on-your-own-servers">Managing Applications on Your Own Servers</a> contains more information specific to on-premise deployments</p> </li> 
+    <li> <p>A <a href="/runtime-manager/runtime-manager-api">REST APIs</a>&nbsp;is also available for deployment to your servers.</p> </li> 
    </ul> 
-  </div> 
-  <div class="paragraph"> 
-   <p>Both input and output URLs can be defined using patterns or literal Strings.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>Mapping rules are attributes of the load balancer’s SSL endpoint, which is identified by the certificate name.<br> When you create a mapping rule, you need to specify a certificate CN. Omitting the <code>[certificateName]</code> parameter adds the mappings to the default endpoint.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>If your SSL endpoint sets a <a href="https://en.wikipedia.org/wiki/Wildcard_certificate">wildcard certificate</a>, and you want to use the subdomain portion in a mapping rule, you can use the pre-defined <code>{subdomain}</code> variable.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>The rule which is defined first has high priority against other ones defined after it. This means that the first matched rule will be applied.<br> You can create, view and delete existing rules using the <a href="/runtime-manager/anypoint-platform-cli#cloudhub-load-balancer-mappings-add">mappings add</a>, <a href="/runtime-manager/anypoint-platform-cli#cloudhub-load-balancer-mappings-describe">mappings describe</a> and <a href="/runtime-manager/anypoint-platform-cli#cloudhub-load-balancer-mappings-remove">mappings remove</a> commands respectively.</p> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="mapping-rule-examples"><a class="anchor" href="#mapping-rule-examples"></a>Mapping Rule Examples</h2> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>The table below contains some mapping rule examples:</p> 
-  </div> 
-  <div class="admonitionblock note"> 
-   <table> 
-    <tbody> 
-     <tr> 
-      <td class="icon"> <i class="fa icon-note" title="Note"></i> </td> 
-      <td class="content"> Given that the external load balancer domain name depends on the unique name you assign to it, assume that the load balancer in these examples is <code>lb-demo</code>. </td> 
-     </tr> 
-    </tbody> 
-   </table> 
-  </div> 
-  <div class="admonitionblock caution"> 
-   <table> 
-    <tbody> 
-     <tr> 
-      <td class="icon"> <i class="fa icon-caution" title="Caution"></i> </td> 
-      <td class="content"> 
-       <div class="paragraph"> 
-        <p>By default, your load balancer listens to external requests on HTTPS and communicates internally with your worker over HTTP. If you configured your Mule application within the VPC to listen on HTTPS, make sure you set <code>upstreamProtocol</code> to <code>HTTPS</code> when creating the mapping list using the <a href="/runtime-manager/anypoint-platform-cli#cloudhub-load-balancer-mappings-add">load-balancer mappings add</a> command.</p> 
-       </div> </td> 
-     </tr> 
-    </tbody> 
-   </table> 
-  </div> 
-  <div class="sect2"> 
-   <h3 id="url-mapping"><a class="anchor" href="#url-mapping"></a>URL Mapping</h3> 
-   <div class="paragraph"> 
-    <p>You can pass the app name as an input URI and map it directly to the app name in CloudHub:</p> 
-   </div> 
-   <table class="tableblock frame-all grid-all spread"> 
-    <colgroup> 
-     <col style="width: 16.6666%;"> 
-     <col style="width: 33.3333%;"> 
-     <col style="width: 33.3333%;"> 
-     <col style="width: 16.6668%;"> 
-    </colgroup> 
-    <thead> 
-     <tr> 
-      <th class="tableblock halign-left valign-top">Rule #</th> 
-      <th class="tableblock halign-left valign-top">Input URL</th> 
-      <th class="tableblock halign-center valign-top" colspan="2">Output URL</th> 
-     </tr> 
-    </thead> 
-    <tbody> 
-     <tr> 
-      <td class="tableblock halign-left valign-top"> 
-       <div></div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p><strong>URI</strong></p> 
-        </div> 
-       </div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p><strong>appName</strong></p> 
-        </div> 
-       </div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p><strong>appURI</strong></p> 
-        </div> 
-       </div></td> 
-     </tr> 
-     <tr> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>0</p> 
-        </div> 
-       </div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>/{app}/</p> 
-        </div> 
-       </div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>{app}</p> 
-        </div> 
-       </div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>/</p> 
-        </div> 
-       </div></td> 
-     </tr> 
-    </tbody> 
-   </table> 
-   <div class="paragraph"> 
-    <p>This rule maps <code>lb-demo.lb.anypointdns.net/{app}</code> to <code>{app}.cloudhub.io</code>.<br> {app} being a pattern for application name you choose to pass.</p> 
-   </div> 
-  </div> 
-  <div class="sect2"> 
-   <h3 id="host-mapping"><a class="anchor" href="#host-mapping"></a>Host Mapping</h3> 
-   <div class="paragraph"> 
-    <p>If you have a wildcard certificate (like <code>*.example.com</code>), you can use the ´subdomain´ variable to map any subdomain:</p> 
-   </div> 
-   <table class="tableblock frame-all grid-all spread"> 
-    <colgroup> 
-     <col style="width: 16.6666%;"> 
-     <col style="width: 33.3333%;"> 
-     <col style="width: 33.3333%;"> 
-     <col style="width: 16.6668%;"> 
-    </colgroup> 
-    <thead> 
-     <tr> 
-      <th class="tableblock halign-left valign-top">Rule #</th> 
-      <th class="tableblock halign-left valign-top">Input URL</th> 
-      <th class="tableblock halign-center valign-top" colspan="2">Output URL</th> 
-     </tr> 
-    </thead> 
-    <tbody> 
-     <tr> 
-      <td class="tableblock halign-left valign-top"> 
-       <div></div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p><strong>URI</strong></p> 
-        </div> 
-       </div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p><strong>appName</strong></p> 
-        </div> 
-       </div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p><strong>appURI</strong></p> 
-        </div> 
-       </div></td> 
-     </tr> 
-     <tr> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>0</p> 
-        </div> 
-       </div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>/</p> 
-        </div> 
-       </div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>{subdomain}</p> 
-        </div> 
-       </div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>/</p> 
-        </div> 
-       </div></td> 
-     </tr> 
-    </tbody> 
-   </table> 
-   <div class="paragraph"> 
-    <p>This rule automatically maps any request passed to a subdomain of example.com to the corresponding appName. For example:</p> 
-   </div> 
-   <div class="ulist"> 
-    <ul> 
-     <li> <p>Passing <code>api.example.com</code> would redirect to <code>api.cloudhub.io</code><br></p> </li> 
-     <li> <p>Passing <code>application.example.com</code> is mapped to <code>application.cloudhub.io</code>.</p> </li> 
-    </ul> 
-   </div> 
-   <div class="paragraph"> 
-    <p>The same applies for the <a href="https://en.wikipedia.org/wiki/Subject_Alternative_Name">Subject Alternative Names</a> (SANs) of your SSL Endpoints.<br> If you have different SANs configured for a certificate’s common name, you can use the ´subdomain´ variable to map the subdomain portion of your domain name to your application. For this to work, however, your applications need to have the same name as the common portion of your domain name.</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p>For example, having:</p> 
-   </div> 
-   <div class="ulist"> 
-    <ul> 
-     <li> <p>Two deployed applications:</p> 
-      <div class="ulist"> 
-       <ul> 
-        <li> <p>dev-app</p> </li> 
-        <li> <p>qa-app</p> </li> 
-       </ul> 
-      </div> </li> 
-     <li> <p>And an SSL endpoint with the Subject Alternative Names:</p> 
-      <div class="ulist"> 
-       <ul> 
-        <li> <p>dev.example.com</p> </li> 
-        <li> <p>qa.example.com</p> </li> 
-       </ul> 
-      </div> </li> 
-     <li> <p>The mapping rule:</p> 
-      <table class="tableblock frame-all grid-all spread"> 
-       <colgroup> 
-        <col style="width: 16.6666%;"> 
-        <col style="width: 33.3333%;"> 
-        <col style="width: 33.3333%;"> 
-        <col style="width: 16.6668%;"> 
-       </colgroup> 
-       <thead> 
-        <tr> 
-         <th class="tableblock halign-left valign-top">Rule #</th> 
-         <th class="tableblock halign-left valign-top">Input URL</th> 
-         <th class="tableblock halign-center valign-top" colspan="2">Output URL</th> 
-        </tr> 
-       </thead> 
-       <tbody> 
-        <tr> 
-         <td class="tableblock halign-left valign-top"> 
-          <div></div></td> 
-         <td class="tableblock halign-left valign-top"> 
-          <div> 
-           <div class="paragraph"> 
-            <p><strong>URI</strong></p> 
-           </div> 
-          </div></td> 
-         <td class="tableblock halign-left valign-top"> 
-          <div> 
-           <div class="paragraph"> 
-            <p><strong>appName</strong></p> 
-           </div> 
-          </div></td> 
-         <td class="tableblock halign-left valign-top"> 
-          <div> 
-           <div class="paragraph"> 
-            <p><strong>appURI</strong></p> 
-           </div> 
-          </div></td> 
-        </tr> 
-        <tr> 
-         <td class="tableblock halign-left valign-top"> 
-          <div> 
-           <div class="paragraph"> 
-            <p>0</p> 
-           </div> 
-          </div></td> 
-         <td class="tableblock halign-left valign-top"> 
-          <div> 
-           <div class="paragraph"> 
-            <p>/</p> 
-           </div> 
-          </div></td> 
-         <td class="tableblock halign-left valign-top"> 
-          <div> 
-           <div class="paragraph"> 
-            <p>{subdomain}-app</p> 
-           </div> 
-          </div></td> 
-         <td class="tableblock halign-left valign-top"> 
-          <div> 
-           <div class="paragraph"> 
-            <p>/</p> 
-           </div> 
-          </div></td> 
-        </tr> 
-       </tbody> 
-      </table> </li> 
-    </ul> 
-   </div> 
-   <div class="paragraph"> 
-    <p>Then, this rule would map the subdomain part of your domain name to the application name:</p> 
-   </div> 
-   <div class="ulist"> 
-    <ul> 
-     <li> <p>Passing <code>dev.example.com</code> redirects to <code>dev-app.cloudhub.io</code>.</p> </li> 
-     <li> <p>Passing <code>qa.example.com</code> redirects to <code>qa-app.cloudhub.io</code>.</p> </li> 
-    </ul> 
-   </div> 
-  </div> 
-  <div class="sect2"> 
-   <h3 id="1-1-mapping"><a class="anchor" href="#1-1-mapping"></a>1:1 Mapping</h3> 
-   <div class="paragraph"> 
-    <p>If you have only one application, you can map the literal app name.</p> 
-   </div> 
-   <table class="tableblock frame-all grid-all spread"> 
-    <colgroup> 
-     <col style="width: 16.6666%;"> 
-     <col style="width: 33.3333%;"> 
-     <col style="width: 33.3333%;"> 
-     <col style="width: 16.6668%;"> 
-    </colgroup> 
-    <thead> 
-     <tr> 
-      <th class="tableblock halign-left valign-top">Rule #</th> 
-      <th class="tableblock halign-left valign-top">Input URL</th> 
-      <th class="tableblock halign-center valign-top" colspan="2">Output URL</th> 
-     </tr> 
-    </thead> 
-    <tbody> 
-     <tr> 
-      <td class="tableblock halign-left valign-top"> 
-       <div></div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p><strong>URI</strong></p> 
-        </div> 
-       </div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p><strong>appName</strong></p> 
-        </div> 
-       </div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p><strong>appURI</strong></p> 
-        </div> 
-       </div></td> 
-     </tr> 
-     <tr> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>0</p> 
-        </div> 
-       </div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>/</p> 
-        </div> 
-       </div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>myApp</p> 
-        </div> 
-       </div></td> 
-      <td class="tableblock halign-left valign-top"> 
-       <div> 
-        <div class="paragraph"> 
-         <p>/</p> 
-        </div> 
-       </div></td> 
-     </tr> 
-    </tbody> 
-   </table> 
-   <div class="paragraph"> 
-    <p>This maps your default load balancer <code>lb-demo.lb.anypointdns.net</code> directly to your app in Cloudhub <code>myApp.cloudhub.io</code>.</p> 
-   </div> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="indexing-the-priority-of-rules"><a class="anchor" href="#indexing-the-priority-of-rules"></a>Indexing the Priority of Rules</h2> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>When creating a <em>mapping rule</em>, you need to assign an index to it to define the rule’s priority order.<br> A rule defined first, at index <code>0</code> has higher priority against other rules defined after it. The higher the index assigned, the less priority the mapping rule has.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>Every rule must have a priority defined. It is highly recommended to pay attention to each rules’ order when creating them, and multiple rules might override each other.</p> 
-  </div> 
-  <div class="sect2"> 
-   <h3 id="ordering-and-prioritizing-rules"><a class="anchor" href="#ordering-and-prioritizing-rules"></a>Ordering and Prioritizing Rules</h3> 
-   <div class="paragraph"> 
-    <p>You can set the order of your mapping rules when creating them using the <a href="https://docs.mulesoft.com/runtime-manager/anypoint-platform-cli#cloudhub-load-balancer-mappings-add">cloudhub load-balancer mappings add</a> command in the Anypoint-CLI by specifying an index value.</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p>When using the API to create a rule, you can not specify a priority order, but you can send a <code>PATCH</code> request later to the load balancer endpoint <code>anypoint.mulesoft.com/cloudhub/api/organizations/{orgid}/loadbalancers/{loadbalancerId}</code> and update your rules expressions with an order index, to match your needs based on the order logic explained above.</p> 
-   </div> 
-   <div class="admonitionblock note"> 
-    <table> 
-     <tbody> 
-      <tr> 
-       <td class="icon"> <i class="fa icon-note" title="Note"></i> </td> 
-       <td class="content"> 
-        <div class="paragraph"> 
-         <p>The load balancer ID is provided to you when you create it.<br> You can also perform a <code>GET</code> request to your endpoint /organizations/{orgid}}/loadbalancers` to get the ID.</p> 
-        </div> </td> 
-      </tr> 
-     </tbody> 
-    </table> 
-   </div> 
   </div> 
  </div> 
 </div>
@@ -1624,7 +1634,7 @@
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#using-patterns-in-mapping-rules">Using Patterns in Mapping Rules</a></li><li><a class="scroll-menu-link" href="#creating-mapping-rules">Creating Mapping Rules</a></li><li><a class="scroll-menu-link" href="#mapping-rule-examples">Mapping Rule Examples</a></li><li><a class="scroll-menu-link" href="#indexing-the-priority-of-rules">Indexing the Priority of Rules</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#default-conversion-behaviour">Default Conversion Behaviour</a></li><li><a class="scroll-menu-link" href="#customizing-conversion-behaviour">Customizing Conversion Behaviour</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->
