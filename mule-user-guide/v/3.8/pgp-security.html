@@ -1118,7 +1118,7 @@
       <div id="preamble"> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>The Pretty Good Privacy (PGP) extension adds <a href="http://www.pgpi.org/doc/pgpintro/">PGP</a> security on connector communication. With PGP you can achieve end-to-end security communication with signed and encrypted messages between parties.</p> 
+   <p>The Pretty Good Privacy (PGP) extension adds PGP security on connector communication. With PGP you can achieve end-to-end security communication with signed and encrypted messages between parties.</p> 
   </div> 
  </div> 
 </div> 
@@ -1128,36 +1128,13 @@
   <div class="sect2"> 
    <h3 id="policy-files"><a class="anchor" href="#policy-files"></a>Policy Files</h3> 
    <div class="paragraph"> 
-    <p>If you are running a JDK that comes with the <a href="http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html">Oracle Java Cryptography Extension (JCE)</a> by default, you must install the Unlimited Strength Jurisdiction Policy files, which can be downloaded from the following URLs (note that they are listed entirely at the bottom of the page, in the Other Downloads section):</p> 
-   </div> 
-   <div class="ulist"> 
-    <ul> 
-     <li> <p><a href="http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase6-419409.html">JDK 6</a>, <a href="http://www.oracle.com/technetwork/java/javase/downloads/jce-6-download-429243.html">JCE 6</a></p> </li> 
-     <li> <p><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html">JDK 7</a>, <a href="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html">JCE 7</a></p> </li> 
-     <li> <p><a href="http://www.oracle.com/technetwork/java/javase/overview/index.html">JDK 8</a>, <a href="http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html">JCE 8</a></p> </li> 
-    </ul> 
+    <p>If you are running a JDK that comes with the Oracle Java Cryptography Extension (JCE) by default, you must install the Unlimited Strength Jurisdiction Policy files, which can be downloaded from the following URLs (note that they are listed entirely at the bottom of the page, in the Other Downloads section):</p> 
    </div> 
    <div class="paragraph"> 
     <p>These files must be installed in the <code>$JAVA_HOME$/jre/lib/security</code> directory.</p> 
    </div> 
    <div class="paragraph"> 
     <p>According to Oracle, the default distribution of the JCE allows "strong, but limited strength cryptography." This means that you cannot use RSA keys bigger than 2048 bits and no symmetric ciphers that use more than 128 bits. ElGamal is not allowed at all, thus DH/DSS cannot be used for encryption.</p> 
-   </div> 
-   <div class="admonitionblock tip"> 
-    <table> 
-     <tbody> 
-      <tr> 
-       <td class="icon"> <i class="fa icon-tip" title="Tip"></i> </td> 
-       <td class="content"> 
-        <div class="paragraph"> 
-         <p><strong>Useful PGP Links</strong></p> 
-        </div> 
-        <div class="paragraph"> 
-         <p><a href="http://www.pgpi.org/doc/pgpintro/">How PGP works</a> (intro documentation) <a href="http://www.gnupg.org/">GnuPG</a> (freeware implementation) <a href="http://enigmail.mozdev.org/">enigmail</a> (extension for <a href="http://www.mozilla.org/products/thunderbird/">Thunderbird</a>)</p> 
-        </div> </td> 
-      </tr> 
-     </tbody> 
-    </table> 
    </div> 
   </div> 
  </div> 
@@ -1232,7 +1209,7 @@
    </div> 
   </div> 
   <div class="paragraph"> 
-   <p>The pgpKeyManager (inside the <code>&lt;spring:beans&gt;</code> tag) is the one responsible for reading the rings. You have to set all the parameters: public and secret rings, the alias ID (the long value in the ring) and the secret passphrase. In the same section, you can see the credentials accessor which needs to implement the CredentialsAccessor interface basically returning the key id based on the message (MuleEvent). Finally the <a href="http://pgpsecurity-manager">pgp:security-manager</a> glues both beans.</p> 
+   <p>The pgpKeyManager (inside the <code>&lt;spring:beans&gt;</code> tag) is the one responsible for reading the rings. You have to set all the parameters: public and secret rings, the alias ID (the long value in the ring) and the secret passphrase. In the same section, you can see the credentials accessor which needs to implement the CredentialsAccessor interface basically returning the key id based on the message (MuleEvent). Finally the pgp:security-manager glues both beans.</p> 
   </div> 
   <div class="paragraph"> 
    <p>You are ready to encrypt and decrypt messages in your flows. The following two flows show how to use the encrypt-transformer and decrypt-transformer to encrypt and decrypt files.</p> 
@@ -1586,12 +1563,28 @@
    <p>There are no Child Elements of security-filter.</p> 
   </div> 
  </div> 
+</div> 
+<div class="sect1"> 
+ <h2 id="see-also"><a class="anchor" href="#see-also"></a>See Also</h2> 
+ <div class="sectionbody"> 
+  <div class="ulist"> 
+   <ul> 
+    <li> <p><a href="http://www.pgpi.org">PGP</a></p> </li> 
+    <li> <p><a href="http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase6-419409.html">JDK 6</a></p> </li> 
+    <li> <p><a href="http://www.oracle.com/technetwork/java/javase/downloads/jce-6-download-429243.html">JCE 6</a></p> </li> 
+    <li> <p><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html">JDK 7</a></p> </li> 
+    <li> <p><a href="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html">JCE 7</a></p> </li> 
+    <li> <p><a href="http://www.oracle.com/technetwork/java/javase/overview/index.html">JDK 8</a></p> </li> 
+    <li> <p><a href="http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html">JCE 8</a></p> </li> 
+   </ul> 
+  </div> 
+ </div> 
 </div>
     </div>
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#requirements">Requirements</a></li><li><a class="scroll-menu-link" href="#encrypting-and-decrypting">Encrypting and Decrypting</a></li><li><a class="scroll-menu-link" href="#configuration-reference">Configuration Reference</a></li><li><a class="scroll-menu-link" href="#security-manager">Security Manager</a></li><li><a class="scroll-menu-link" href="#security-provider">Security Provider</a></li><li><a class="scroll-menu-link" href="#key-based-encryption-strategy">Key-Based Encryption Strategy</a></li><li><a class="scroll-menu-link" href="#security-filter">Security Filter</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#requirements">Requirements</a></li><li><a class="scroll-menu-link" href="#encrypting-and-decrypting">Encrypting and Decrypting</a></li><li><a class="scroll-menu-link" href="#configuration-reference">Configuration Reference</a></li><li><a class="scroll-menu-link" href="#security-manager">Security Manager</a></li><li><a class="scroll-menu-link" href="#security-provider">Security Provider</a></li><li><a class="scroll-menu-link" href="#key-based-encryption-strategy">Key-Based Encryption Strategy</a></li><li><a class="scroll-menu-link" href="#security-filter">Security Filter</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->

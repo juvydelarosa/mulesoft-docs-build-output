@@ -1138,7 +1138,15 @@
  <h2 id="overview-of-consuming-a-rest-api-studio"><a class="anchor" href="#overview-of-consuming-a-rest-api-studio"></a>Overview of Consuming a REST API—​Studio</h2> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>This example queries the <a href="http://baconipsum.com/">Bacon Ipsum</a> REST API, which generates&nbsp;<a href="http://en.wikipedia.org/wiki/Lorem_ipsum">lorem ipsum</a> text. You don’t have to use HTTPS or set up an account. Initally, you add and configure an HTTP listener and an HTTP requester:</p> 
+   <p>This example queries the Bacon Ipsum REST API at:</p> 
+  </div> 
+  <div class="listingblock"> 
+   <div class="content"> 
+    <pre>http://baconipsum.com/</pre> 
+   </div> 
+  </div> 
+  <div class="paragraph"> 
+   <p>This API generates&nbsp;lorem ipsum text. You don’t have to use HTTPS or set up an account. Initally, you add and configure an HTTP listener and an HTTP requester:</p> 
   </div> 
   <div class="imageblock"> 
    <div class="content"> 
@@ -1162,7 +1170,7 @@
    </div> 
   </div> 
   <div class="paragraph"> 
-   <p>The&nbsp;<code>&lt;query&gt;</code> consists of the parameters accepted by the REST API. When the HTTP listener receives the HTTP request, the application records&nbsp;<code>&lt;query&gt;</code> as a set of inbound properties. The HTTP listener passes these properties to the next element in the flow, the HTTP request connector. This outbound connector is configured to query the remote REST API at&nbsp;http://baconipsum.com/api. The HTTP request connector uses <a href="/mule-user-guide/v/3.8/mule-expression-language-mel">MEL expressions</a> to extract the query parameters from the properties in the message, and constructs the full URL for the remote API, including the query parameters.</p> 
+   <p>The&nbsp;<code>&lt;query&gt;</code> consists of the parameters accepted by the REST API. When the HTTP listener receives the HTTP request, the application records&nbsp;<code>&lt;query&gt;</code> as a set of inbound properties. The HTTP listener passes these properties to the next element in the flow, the HTTP request connector. This outbound connector is configured to query the remote REST API at&nbsp;<code><a href="http://baconipsum.com/api" class="bare">http://baconipsum.com/api</a></code>. The HTTP request connector uses <a href="/mule-user-guide/v/3.8/mule-expression-language-mel">MEL expressions</a> to extract the query parameters from the properties in the message, and constructs the full URL for the remote API, including the query parameters.</p> 
   </div> 
   <div class="paragraph"> 
    <p>For example, you enter this local browser request: <code><a href="http://localhost:8081?type=meat-and-filler" class="bare">http://localhost:8081?type=meat-and-filler</a></code>.</p> 
@@ -1362,7 +1370,7 @@
      </ol> 
     </div> 
     <div class="paragraph"> 
-     <p>The <a href="http://baconipsum.com/api/">Bacon Ipsum API page</a> contains a list of parameters you can use, but this application uses only&nbsp;<strong>type</strong> and&nbsp;<strong>sentences</strong>. An example of a valid value for type is <code>meat-and-filler</code>, as shown later in the example of [running this application]. The optional <code>sentences</code> parameter determines the number of sentences to return in the JSON response.</p> 
+     <p>The Bacon Ipsum API page contains a list of parameters you can use, but this application uses only&nbsp;<strong>type</strong> and&nbsp;<strong>sentences</strong>. An example of a valid value for type is <code>meat-and-filler</code>, as shown later. The optional <code>sentences</code> parameter determines the number of sentences to return in the JSON response.</p> 
     </div> 
    </div> 
   </div> 
@@ -1420,7 +1428,7 @@
     </ol> 
    </div> 
    <div class="paragraph"> 
-    <p>Alternatively, you can use an HTTP client, such as the <a href="http://curl.haxx.se/download.html">curl</a> command-line utility to trigger the flow.</p> 
+    <p>Alternatively, you can use an HTTP client, such as the Curl command-line utility to trigger the flow.</p> 
    </div> 
    <div class="listingblock"> 
     <div class="content"> 
@@ -1428,7 +1436,7 @@
     </div> 
    </div> 
    <div class="paragraph"> 
-    <p>The <a href="http://baconipsum.com/api/">Bacon Ipsum API page</a> contains a list of parameters you can use, but when configuring the HTTP request connector, you set up your connector to use only&nbsp;<strong>type</strong> and&nbsp;<strong>sentences</strong>. The first parameter=value pair must be preceded by the <code>?</code> operator. To insert additional parameter=value pairs, use the&nbsp;<code>&amp;</code> operator. Example queries you can send to the HTTP listener on localhost port 8081 are:</p> 
+    <p>The Bacon Ipsum API page contains a list of parameters you can use, but when configuring the HTTP request connector, you set up your connector to use only&nbsp;<strong>type</strong> and&nbsp;<strong>sentences</strong>. The first parameter=value pair must be preceded by the <code>?</code> operator. To insert additional parameter=value pairs, use the&nbsp;<code>&amp;</code> operator. Example queries you can send to the HTTP listener on localhost port 8081 are:</p> 
    </div> 
    <div class="listingblock"> 
     <div class="content"> 
@@ -1640,7 +1648,7 @@ http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/fil
  <h2 id="extracting-and-storing-xml-data-from-a-rest-api-studio"><a class="anchor" href="#extracting-and-storing-xml-data-from-a-rest-api-studio"></a>Extracting and Storing XML Data from a REST API—​Studio</h2> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>This example consumes XML data from an external REST API, extracts values from the XML, and inserts the values into a Postgres database. The application uses the <a href="http://developer.yahoo.com/yql/console/">Yahoo! REST API</a> for financial services, which is free to use and does not require a user account. You call the API to retrieve financial quotes using the SQL-based&nbsp;<a href="http://developer.yahoo.com/yql/guide/running-chapt.html">Yahoo Query Language</a>.</p> 
+   <p>This example consumes XML data from an external REST API, extracts values from the XML, and inserts the values into a Postgres database. The application uses the Yahoo! REST API for financial services, which is free to use and does not require a user account. You call the API to retrieve financial quotes using the SQL-based&nbsp;Yahoo Query Language.</p> 
   </div> 
   <div class="sect2"> 
    <h3 id="overview-of-extracting-and-storing-xml-data-from-a-rest-api"><a class="anchor" href="#overview-of-extracting-and-storing-xml-data-from-a-rest-api"></a>Overview of Extracting and Storing XML Data from a REST API</h3> 
@@ -2297,7 +2305,7 @@ flowVars.dbBookValue=xpath3('//BookValue');</code></pre>
      <li> <p>Run the example as a Mule application.</p> </li> 
      <li> <p>Call the HTTP listener with your query.</p> 
       <div class="paragraph"> 
-       <p>Use a Web browser or an HTTP client, such as the <a href="http://curl.haxx.se/download.html">curl</a> command-line utility, to call the HTTP&nbsp;listener on localhost port 8081. Remove any line breaks from the URL or <code>curl</code> command.</p> 
+       <p>Use a Web browser or an HTTP client, such as the Curl command-line utility, to call the HTTP&nbsp;listener on localhost port 8081. Remove any line breaks from the URL or <code>curl</code> command.</p> 
       </div> 
       <div class="listingblock"> 
        <div class="content"> 
