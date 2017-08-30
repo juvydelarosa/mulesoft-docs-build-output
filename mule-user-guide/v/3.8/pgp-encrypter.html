@@ -15,7 +15,7 @@
   <script src="/js/scripts.js?t=1498825733"></script>
 
   <link rel="canonical" href="https://docs.mulesoft.com/mule-user-guide/v/3.8/pgp-encrypter" />
-  <meta name="description" content="Mule has the ability to encrypt a message payload, or part of a payload, using Pretty Good Privacy (PGP). PGP combines data compression a..." />
+  <meta name="description" content="Mule has the ability to encrypt a message payload, or part of a payload, using Pretty Good Privacy (PGP). PGP combines data compression and da..." />
   <meta class="swiftype" name="title" data-type="string" content="PGP Encrypter" />
   <meta class="swiftype" name="version" data-type="enum" content="3.8" />
 </head>
@@ -1118,7 +1118,7 @@
       <div id="preamble"> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>Mule has the ability to encrypt a message payload, or part of a payload, using&nbsp;<a href="http://www.pgpi.org/doc">Pretty Good Privacy (PGP)</a>.&nbsp;PGP combines data compression and data encryption to secure messages. The compression reduces message transmission time between origin and destination.&nbsp;</p> 
+   <p>Mule has the ability to encrypt a message payload, or part of a payload, using Pretty Good Privacy (PGP).&nbsp;PGP combines data compression and data encryption to secure messages. The compression reduces message transmission time between origin and destination.&nbsp;</p> 
   </div> 
   <div class="paragraph"> 
    <p>There are two scenarios that this document addresses:</p> 
@@ -1138,7 +1138,7 @@
  <h2 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Prerequisites</h2> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>This document assumes that you are reasonably familiar with PGP encryption, and the concept of public and private keys.&nbsp;For more details on encryption in general, and PGP in particular, review the&nbsp;<a href="http://www.pgpi.org/doc/pgpintro/">PGP 6.5.1 documentation</a>&nbsp;or&nbsp;<a href="http://www.pgpi.org/doc/pgpintro/">How PGP Works</a>.</p> 
+   <p>This document assumes that you are reasonably familiar with PGP encryption, and the concept of public and private keys.&nbsp;For more details on encryption in general, and PGP in particular, review the&nbsp;PGP 6.5.1 documentation.</p> 
   </div> 
  </div> 
 </div> 
@@ -1160,7 +1160,7 @@
     <div class="tab-pane in active fade no-padding" id="tab-1_1"> 
      <div class="olist arabic"> 
       <ol class="arabic"> 
-       <li> <p>Use a tool such as&nbsp;<a href="https://gpgtools.org/keychain/index.html">GPG Keychain Access</a>&nbsp;to&nbsp;<strong>import</strong>&nbsp;the other party’s public key. Refer to section below for more details about using GPG to facilitate implementation of PGP encryption and decryption in Mule.</p> </li> 
+       <li> <p>Use a tool such as&nbsp;GPG Keychain Access&nbsp;to&nbsp;<strong>import</strong>&nbsp;the other party’s public key. Refer to section below for more details about using GPG to facilitate implementation of PGP encryption and decryption in Mule.</p> </li> 
        <li> <p>Using the same tool,&nbsp;<strong>export</strong>&nbsp;the public key, selecting binary as the output format. This produces a&nbsp;key ring file with a <code>.gpg</code> extension.</p> </li> 
        <li> <p>Ensure that the <code>.gpg</code> file is stored in a place that the Mule application can access it at runtime; record the filepath of the <code>.gpg</code> file (also known as your public key ring file).</p> </li> 
        <li> <p>In your Mule application, create a global <strong>Encryption</strong> element, specifying a name for the element; change the default value for the <strong>Default Encrypter</strong> to <code>PGP_ENCRYPTER</code>.</p> </li> 
@@ -1406,7 +1406,7 @@
     <div class="tab-pane fade no-padding" id="tab-1_2"> 
      <div class="olist arabic"> 
       <ol class="arabic"> 
-       <li> <p>Use a tool such as&nbsp;<a href="https://gpgtools.org/keychain/index.html">GPG Keychain Access</a>&nbsp;to&nbsp;<strong>import</strong>&nbsp;the other party’s public key.</p> </li> 
+       <li> <p>Use a tool such as&nbsp;GPG Keychain Access&nbsp;to&nbsp;<strong>import</strong>&nbsp;the other party’s public key.</p> </li> 
        <li> <p>Using the same tool,&nbsp;<strong>export</strong>&nbsp;the public key, selecting binary as the output format. This produces a&nbsp;key ring file with a <code>.gpg</code> extension.</p> </li> 
        <li> <p>Ensure that the <code>.gpg</code> file is stored in a place that the Mule application can access it at runtime; record the filepath of the <code>.gpg</code> file (also known as your public key ring file).</p> </li> 
        <li> <p>In your Mule application, create an global <code>encryption:config</code> element, set above all the flows in your config file.&nbsp;</p> </li> 
