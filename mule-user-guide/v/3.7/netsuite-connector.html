@@ -3087,7 +3087,7 @@
    <div class="sect3"> 
     <h4 id="itemsearchadvanced-and-returnsearchcolumns"><a class="anchor" href="#itemsearchadvanced-and-returnsearchcolumns"></a>ItemSearchAdvanced and returnSearchColumns</h4> 
     <div class="paragraph"> 
-     <p>When using <code>search</code> the connector will output a list of maps representing the Record objects returned by your <code>search</code> operation. If using an advanced search and the <code>returnSearchColumns</code> flag is set to true, NetSuite will return a <code>SearchRowList</code> containing the search results. The connector would then be responsible for mapping <code>SearchRows</code> into the corresponding <code>Record</code> type object in order to facilitate usability.</p> 
+     <p>When using <code>search</code> the connector will output a list of maps representing the Record objects returned by your <code>search</code> operation. If using an advanced search and the <code>returnSearchColumns</code> flag is set to true, NetSuite will return a <code>SearchRowList</code> containing the search results.</p> 
     </div> 
     <div class="paragraph"> 
      <p>However, in the case of <code>ItemSearchAdvanced</code> the connector will not do this mapping and will simply provide the user with the SearchRows. This is the case due to the fact that ITEMs in NetSuite can be of various types and we cannot assume the item type from an <code>ItemSearchRow</code>. This issue would also occur with any other record type that behaves similar to <code>ITEM</code>, but we are currently not aware of others.</p> 
