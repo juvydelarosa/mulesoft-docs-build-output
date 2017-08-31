@@ -1123,28 +1123,28 @@
  </div> 
 </div> 
 <div class="sect1"> 
- <h2 id="install-required-software-packages"><a class="anchor" href="#install-required-software-packages"></a>Install Required Software Packages</h2> 
+ <h2 id="install-logical-volume-manager-2-lvm2"><a class="anchor" href="#install-logical-volume-manager-2-lvm2"></a>Install Logical Volume Manager 2 (LVM2)</h2> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p><strong>Yum</strong> is an open-source command-line package-management utility for Linux operating systems using the RPM Package Manager.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>Through Yum, install the tool LVM. LVM (Logical Volume Manager) is a tool that adds a layer of abstraction between your operating system and the disks/partitions it uses. You can install LVM through the following command:</p> 
-  </div> 
-  <div class="listingblock"> 
-   <div class="content"> 
-    <pre>sudo yum install lvm2</pre> 
-   </div> 
+   <p>To install and run Anypoint Platform Private Cloud Edition, you must install LVM2. LVM2 is a tool that adds a layer of abstraction between your operating system and the disks/partitions it uses. You must have root access to install LVM2.</p> 
   </div> 
   <div class="admonitionblock warning"> 
    <table> 
     <tbody> 
      <tr> 
       <td class="icon"> <i class="fa icon-warning" title="Warning"></i> </td> 
-      <td class="content"> You must have root access to perform this installation. </td> 
+      <td class="content"> Only LVM2 versions 2.02.166-1.el7_3.5 and earlier are supported. Later versions of LVM2 are not supported. </td> 
      </tr> 
     </tbody> 
    </table> 
+  </div> 
+  <div class="paragraph"> 
+   <p>You can install LVM using Yum. Yum is an open-source command-line package-management utility for Linux operating systems using the RPM Package Manager. Using Yum, you can install LVM through the following command:</p> 
+  </div> 
+  <div class="listingblock"> 
+   <div class="content"> 
+    <pre>sudo yum install lvm2</pre> 
+   </div> 
   </div> 
  </div> 
 </div> 
@@ -1411,7 +1411,7 @@ sudo systemctl start var-lib-data.mount</pre>
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#install-required-software-packages">Install Required Software Packages</a></li><li><a class="scroll-menu-link" href="#uninstall-unsupported-packages">Uninstall Unsupported Packages</a></li><li><a class="scroll-menu-link" href="#disk-performance-verification">Disk Performance Verification</a></li><li><a class="scroll-menu-link" href="#docker">Docker</a></li><li><a class="scroll-menu-link" href="#network-req">Device Requirements</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#install-logical-volume-manager-2-lvm2">Install Logical Volume Manager 2 (LVM2)</a></li><li><a class="scroll-menu-link" href="#uninstall-unsupported-packages">Uninstall Unsupported Packages</a></li><li><a class="scroll-menu-link" href="#disk-performance-verification">Disk Performance Verification</a></li><li><a class="scroll-menu-link" href="#docker">Docker</a></li><li><a class="scroll-menu-link" href="#network-req">Device Requirements</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->

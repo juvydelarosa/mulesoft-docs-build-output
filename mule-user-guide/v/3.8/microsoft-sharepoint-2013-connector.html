@@ -1172,72 +1172,75 @@
      </div> </li> 
    </ul> 
   </div> 
+ </div> 
+</div> 
+<div class="sect1"> 
+ <h2 id="authentication"><a class="anchor" href="#authentication"></a>Authentication</h2> 
+ <div class="sectionbody"> 
+  <div class="paragraph"> 
+   <p>The Microsoft SharePoint connector supports different authentication schemes based on which Microsoft SharePoint that you access:</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p>Supported Microsoft SharePoint authentication on-premise:</p> 
+  </div> 
+  <div class="ulist"> 
+   <ul> 
+    <li> <p>NTLM</p> </li> 
+    <li> <p>Claims-based authentication against Microsoft ADFS</p> </li> 
+    <li> <p>Security token obtained from Microsoft ADFS</p> </li> 
+    <li> <p>Unsupported authentication: Kerberos</p> </li> 
+   </ul> 
+  </div> 
+  <div class="paragraph"> 
+   <p>Supported Microsoft SharePoint Online authentication:</p> 
+  </div> 
+  <div class="ulist"> 
+   <ul> 
+    <li> <p>Microsoft Online (Office 365) managed users</p> </li> 
+    <li> <p>Microsoft Online (Office 365) federated users against Microsoft ADFS</p> </li> 
+    <li> <p>Security token obtained from Microsoft Online</p> </li> 
+    <li> <p>Standard SharePoint Online user credentials</p> </li> 
+   </ul> 
+  </div> 
   <div class="sect2"> 
-   <h3 id="authentication"><a class="anchor" href="#authentication"></a>Authentication</h3> 
+   <h3 id="claims-based-authentication"><a class="anchor" href="#claims-based-authentication"></a>Claims-Based Authentication</h3> 
    <div class="paragraph"> 
-    <p>The Microsoft SharePoint connector supports different authentication schemes based on which Microsoft SharePoint that you access:</p> 
-   </div> 
-   <div class="paragraph"> 
-    <p>Supported Microsoft SharePoint authentication on-premise:</p> 
+    <p>Configuring the connector to use claims-based authentication requires the following information from the Security Token Service (STS) that to use for authenticating:</p> 
    </div> 
    <div class="ulist"> 
     <ul> 
-     <li> <p>NTLM</p> </li> 
-     <li> <p>Claims-based authentication against Microsoft ADFS</p> </li> 
-     <li> <p>Security token obtained from Microsoft ADFS</p> </li> 
-     <li> <p>Unsupported authentication: Kerberos</p> </li> 
+     <li> <p><strong>Sts Url</strong>: The STS endpoint that accepts username and password for authenticating users and understands the WS-Trust 1.3 protocol. When the STS is Microsoft’s ADFS (Active Directory Federation Services), this URL usually is <code><a href="https://youradfs.com/adfs/services/trust/13/usernamemixed" class="bare">https://youradfs.com/adfs/services/trust/13/usernamemixed</a></code>.</p> </li> 
+     <li> <p><strong>Sts App Identifier</strong>: A string that identifies the Sharepoint site in the STS. It is also known as Relying Party Identifier, Client Identifier, Scope, or Realm. When the STS is Microsoft’s ADFS, this value can be discovered in the AD FS Management console under AD FS at <strong>Trust Relationships</strong> &gt; <strong>Relying Party Trusts</strong> &gt; <em>(Sharepoint Site’s relying part properties)</em> &gt; <strong>Identifiers</strong> tab.</p> 
+      <div class="paragraph"> 
+       <p>You can obtain the STS App Identifier by logging into the Sharepoint Site that you want to be accessed by opening the Site URL in a web browser. If there is more than one authentication provider configured for a site, a drop-down menu lists the options. Select the desired STS to be redirected to the STS’s login page. At this point, the address bar of the web browser contains a URL that includes the following query parameters:<br></p> 
+      </div> 
+      <div class="paragraph"> 
+       <p><code>wa=wsignin1.0&amp;wtrealm=uri%3amule%3asp80</code></p> 
+      </div> 
+      <div class="paragraph"> 
+       <p>The parameter <strong><em>wa</em></strong> tells the STS that a signin is being initiated. The <strong><em>wtrealm</em></strong> contains the URI-encoded value for the Sts App Identifier. In the example, <code>uri%3amule%3asp80</code> is <code>uri:mule:sp80</code>. The unencoded value is the parameter for the connector’s configuration.</p> 
+      </div> </li> 
     </ul> 
    </div> 
+  </div> 
+  <div class="sect2"> 
+   <h3 id="security-token-authentication"><a class="anchor" href="#security-token-authentication"></a>Security Token Authentication</h3> 
    <div class="paragraph"> 
-    <p>Supported Microsoft SharePoint Online authentication:</p> 
+    <p>In cases where it is not possible to configure a connection depending on username and password, or when you need to authenticate using a custom Security Token Service (STS) (different from the supported ones), the <code>Security Token Connection</code> settings allow you to provide the security token that you obtained from your custom STS. This configuration requires you that you set up the following information to use for authenticating:</p> 
    </div> 
    <div class="ulist"> 
     <ul> 
-     <li> <p>Microsoft Online (Office 365) managed users</p> </li> 
-     <li> <p>Microsoft Online (Office 365) federated users against Microsoft ADFS</p> </li> 
-     <li> <p>Security token obtained from Microsoft Online</p> </li> 
+     <li> <p><strong>Security Token</strong>: (Optional) A string containing the security token (that is, a full XML document) obtained from your STS to authenticate the connection with your Sharepoint instance. If you don’t configure the security token in this setting, you need to provide a <code>Security Token Provider</code> as defined in the advanced section’s setting detailed below.</p> </li> 
+     <li> <p><strong>Instance Type</strong>: Indicates if the connector should authenticate to an on-premises or an on-line instance as each one provides different endpoints and methods to attach the security token and authenticate the connection.</p> </li> 
     </ul> 
    </div> 
-   <div class="sect3"> 
-    <h4 id="claims-based-authentication"><a class="anchor" href="#claims-based-authentication"></a>Claims-Based Authentication</h4> 
-    <div class="paragraph"> 
-     <p>Configuring the connector to use claims-based authentication requires the following information from the Security Token Service (STS) that to use for authenticating:</p> 
-    </div> 
-    <div class="ulist"> 
-     <ul> 
-      <li> <p><strong>Sts Url</strong>: The STS endpoint that accepts username and password for authenticating users and understands the WS-Trust 1.3 protocol. When the STS is Microsoft’s ADFS (Active Directory Federation Services), this URL usually is <code><a href="https://youradfs.com/adfs/services/trust/13/usernamemixed" class="bare">https://youradfs.com/adfs/services/trust/13/usernamemixed</a></code>.</p> </li> 
-      <li> <p><strong>Sts App Identifier</strong>: A string that identifies the Sharepoint site in the STS. It is also known as Relying Party Identifier, Client Identifier, Scope, or Realm. When the STS is Microsoft’s ADFS, this value can be discovered in the AD FS Management console under AD FS at <strong>Trust Relationships</strong> &gt; <strong>Relying Party Trusts</strong> &gt; <em>(Sharepoint Site’s relying part properties)</em> &gt; <strong>Identifiers</strong> tab.</p> 
-       <div class="paragraph"> 
-        <p>You can obtain the STS App Identifier by logging into the Sharepoint Site that you want to be accessed by opening the Site URL in a web browser. If there is more than one authentication provider configured for a site, a drop-down menu lists the options. Select the desired STS to be redirected to the STS’s login page. At this point, the address bar of the web browser contains a URL that includes the following query parameters:<br></p> 
-       </div> 
-       <div class="paragraph"> 
-        <p><code>wa=wsignin1.0&amp;wtrealm=uri%3amule%3asp80</code></p> 
-       </div> 
-       <div class="paragraph"> 
-        <p>The parameter <strong><em>wa</em></strong> tells the STS that a signin is being initiated. The <strong><em>wtrealm</em></strong> contains the URI-encoded value for the Sts App Identifier. In the example, <code>uri%3amule%3asp80</code> is <code>uri:mule:sp80</code>. The unencoded value is the parameter for the connector’s configuration.</p> 
-       </div> </li> 
-     </ul> 
-    </div> 
+   <div class="paragraph"> 
+    <p>In addition to the basic configuration shown above, there is an advanced setting where you can provide a <code>Security Token Provider</code> instance of your own. This mechanism allows you to obtain the security token using a custom implementation and allows the connector refreshing the connection when the token has expired (which is not the case for when just providing the <code>Security Token</code> as XML document).</p> 
    </div> 
-   <div class="sect3"> 
-    <h4 id="security-token-authentication"><a class="anchor" href="#security-token-authentication"></a>Security Token Authentication</h4> 
-    <div class="paragraph"> 
-     <p>In cases where it is not possible to configure a connection depending on username and password, or when you need to authenticate using a custom Security Token Service (STS) (different from the supported ones), the <code>Security Token Connection</code> settings allow you to provide the security token that you obtained from your custom STS. This configuration requires you that you set up the following information to use for authenticating:</p> 
-    </div> 
-    <div class="ulist"> 
-     <ul> 
-      <li> <p><strong>Security Token</strong>: (Optional) A string containing the security token (that is, a full XML document) obtained from your STS to authenticate the connection with your Sharepoint instance. If you don’t configure the security token in this setting, you need to provide a <code>Security Token Provider</code> as defined in the advanced section’s setting detailed below.</p> </li> 
-      <li> <p><strong>Instance Type</strong>: Indicates if the connector should authenticate to an on-premises or an on-line instance as each one provides different endpoints and methods to attach the security token and authenticate the connection.</p> </li> 
-     </ul> 
-    </div> 
-    <div class="paragraph"> 
-     <p>In addition to the basic configuration shown above, there is an advanced setting where you can provide a <code>Security Token Provider</code> instance of your own. This mechanism allows you to obtain the security token using a custom implementation and allows the connector refreshing the connection when the token has expired (which is not the case for when just providing the <code>Security Token</code> as XML document).</p> 
-    </div> 
-    <div class="ulist"> 
-     <ul> 
-      <li> <p><strong>Security Token Provider</strong>: (Optional) A string that references to a Spring bean which should be a class that implements the <code>org.mule.module.sharepoint.connection.providers.SecurityTokenProvider</code> interface. Within the implementation you are responsible of providing a security token each time the connector requests one. In order to provide a reference to your own implementation as a Spring bean, refer to the following <a href="/mule-user-guide/v/3.8/using-spring-beans-as-flow-components">documentation</a>.</p> </li> 
-     </ul> 
-    </div> 
+   <div class="ulist"> 
+    <ul> 
+     <li> <p><strong>Security Token Provider</strong>: (Optional) A string that references to a Spring bean which should be a class that implements the <code>org.mule.module.sharepoint.connection.providers.SecurityTokenProvider</code> interface. Within the implementation you are responsible of providing a security token each time the connector requests one. In order to provide a reference to your own implementation as a Spring bean, refer to the following <a href="/mule-user-guide/v/3.8/using-spring-beans-as-flow-components">documentation</a>.</p> </li> 
+    </ul> 
    </div> 
   </div> 
  </div> 
@@ -1278,15 +1281,11 @@
            <li> <p>To connect to SharePoint Online, leave&nbsp;&nbsp;NTLM and Claims inputs empty. Just specify a&nbsp;<strong>Username</strong>,&nbsp;<strong>Password</strong>, and&nbsp;<strong>Site URL</strong>.</p> </li> 
           </ul> 
          </div> </li> 
+        <li> <p>Click <strong>Test Connection</strong> to ensure the connection works correctly:</p> 
+         <div class="paragraph"> 
+          <p><span class="image"><img src="./_images/SPGlobalElementProps.png" alt="SPGlobalElementProps"></span>&nbsp;</p> 
+         </div> </li> 
        </ol> 
-      </div> </li> 
-    </ol> 
-   </div> 
-   <div class="olist loweralpha"> 
-    <ol class="loweralpha" type="a"> 
-     <li> <p>Click <strong>Test Connection</strong> to ensure the connection works correctly:</p> 
-      <div class="paragraph"> 
-       <p><span class="image"><img src="./_images/SPGlobalElementProps.png" alt="SPGlobalElementProps"></span>&nbsp;</p> 
       </div> </li> 
     </ol> 
    </div> 
@@ -1318,7 +1317,10 @@
       <div class="olist loweralpha"> 
        <ol class="loweralpha" type="a"> 
         <li> <p>From the Connector Configuration list, click&nbsp;the <strong>Microsoft SharePoint</strong> configuration that was previously created.</p> </li> 
-        <li> <p>From the Operation list, click&nbsp;<strong>List query</strong>.&nbsp;<br> <strong>Note</strong>: The <strong>List query</strong> option only appears in the Operation list after you have successfully connected to a SharePoint instance.</p> </li> 
+        <li> <p>From the Operation list, click&nbsp;<strong>List query</strong>.</p> 
+         <div class="paragraph"> 
+          <p><strong>Note</strong>: The <strong>List query</strong> option only appears in the Operation list after you have successfully connected to a SharePoint instance.</p> 
+         </div> </li> 
         <li> <p>From the Language list, click <strong>DataSense Query Language</strong>.</p> </li> 
        </ol> 
       </div> </li> 
@@ -1328,7 +1330,10 @@
         <li> <p>From the list of Types, click <strong>Documents</strong>.</p> </li> 
         <li> <p>From the list of Fields, click <strong>ID</strong>, and <strong>Title</strong>.</p> </li> 
         <li> <p>From Order By, click <strong>Title</strong>.</p> </li> 
-        <li> <p>From Direction, click&nbsp; <strong>DESCENDING</strong> <br> <br> <span class="image"><img src="./_images/MSSPQueryBuilder.png" alt="MSSPQueryBuilder"></span>&nbsp;</p> </li> 
+        <li> <p>From Direction, click&nbsp; <strong>DESCENDING</strong>.</p> 
+         <div class="paragraph"> 
+          <p><span class="image"><img src="./_images/MSSPQueryBuilder.png" alt="MSSPQueryBuilder"></span>&nbsp;</p> 
+         </div> </li> 
        </ol> 
       </div> </li> 
     </ol> 
@@ -1342,7 +1347,7 @@
   <div class="olist arabic"> 
    <ol class="arabic"> 
     <li> <p>In Package Explorer, right click on sharepoint2013-demo and select <strong>Run As &gt; Mule&nbsp;Application</strong>.</p> </li> 
-    <li> <p>Check the console to see when the application starts. You should see the following&nbsp; message if no errors occurred:<br></p> 
+    <li> <p>Check the console to see when the application starts. You should see the following&nbsp; message if no errors occurred:</p> 
      <div class="listingblock"> 
       <div class="content"> 
        <pre class="CodeRay highlight"><code data-lang="code">
@@ -1362,32 +1367,32 @@
          </table></code></pre> 
       </div> 
      </div> </li> 
-    <li> <p>Open an Internet browser and visit <a href="http://localhost:8081/query" class="bare">http://localhost:8081/query</a></p> </li> 
-    <li> <p>The list of documents are ordered by descending title and returns in JSON format&nbsp; (results vary according to your SharePoint 2013 instance).<br></p> </li> 
-   </ol> 
-  </div> 
-  <div class="listingblock"> 
-   <div class="content"> 
-    <pre class="CodeRay highlight"><code data-lang="code">
-         
-      <table class="CodeRay"> 
-       <tbody> 
-        <tr> 
-         <td class="line-numbers"><pre>1
+    <li> <p>Open an Internet browser and visit <a href="http://localhost:8081/query" class="bare">http://localhost:8081/query</a>.</p> </li> 
+    <li> <p>The list of documents are ordered by descending title and returns in JSON format&nbsp; (results vary according to your SharePoint 2013 instance).</p> 
+     <div class="listingblock"> 
+      <div class="content"> 
+       <pre class="CodeRay highlight"><code data-lang="code">
+            
+         <table class="CodeRay"> 
+          <tbody> 
+           <tr> 
+            <td class="line-numbers"><pre>1
 2
 3
 4
 5
 </pre></td> 
-         <td class="code"><pre>[{"__metadata":{"id":"Web/Lists(guid'2af685ae-5aec-4f60-b175-
+            <td class="code"><pre>[{"__metadata":{"id":"Web/Lists(guid'2af685ae-5aec-4f60-b175-
 54b21b6bd668')/Items(4)","uri":"https://ec2-54-200-49-206.us-west-
 2.compute.amazonaws.com/_api/Web/Lists(guid'2af685ae-5aec-4f60-b175-
 54b21b6bd668')/Items(4)","etag":"\"1\"","type":"SP.Data.Shared_x0020_Document
 sItem"},"Id":4,"ID":4,"Title":"folder"}]</pre></td> 
-        </tr> 
-       </tbody> 
-      </table></code></pre> 
-   </div> 
+           </tr> 
+          </tbody> 
+         </table></code></pre> 
+      </div> 
+     </div> </li> 
+   </ol> 
   </div> 
  </div> 
 </div> 
@@ -1410,8 +1415,12 @@ sItem"},"Id":4,"ID":4,"Title":"folder"}]</pre></td>
         <tbody> 
          <tr> 
           <td class="line-numbers"><pre>1
+2
+3
 </pre></td> 
-          <td class="code"><pre><span class="tag">&lt;sharepoint-2013:list-create</span> <span class="attribute-name">config-ref</span>=<span class="string"><span class="delimiter">"</span><span class="content">Sharepoint_2013</span><span class="delimiter">"</span></span> <span class="attribute-name">doc:name</span>=<span class="string"><span class="delimiter">"</span><span class="content">Sharepoint 2013</span><span class="delimiter">"</span></span> <span class="attribute-name">baseTemplate</span>=<span class="string"><span class="delimiter">"</span><span class="content">GENERIC_LIST</span><span class="delimiter">"</span></span> <span class="attribute-name">title</span>=<span class="string"><span class="delimiter">"</span><span class="content">Title</span><span class="delimiter">"</span></span><span class="tag">&gt;</span> <span class="tag">&lt;sharepoint-2013:list</span> <span class="attribute-name">ref</span>=<span class="string"><span class="delimiter">"</span><span class="content">#[payload]</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span> <span class="tag">&lt;/sharepoint-2013:list-create&gt;</span></pre></td> 
+          <td class="code"><pre><span class="tag">&lt;sharepoint-2013:list-create</span> <span class="attribute-name">config-ref</span>=<span class="string"><span class="delimiter">"</span><span class="content">Sharepoint_2013</span><span class="delimiter">"</span></span> <span class="attribute-name">doc:name</span>=<span class="string"><span class="delimiter">"</span><span class="content">Sharepoint 2013</span><span class="delimiter">"</span></span> <span class="attribute-name">baseTemplate</span>=<span class="string"><span class="delimiter">"</span><span class="content">GENERIC_LIST</span><span class="delimiter">"</span></span> <span class="attribute-name">title</span>=<span class="string"><span class="delimiter">"</span><span class="content">Title</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
+  <span class="tag">&lt;sharepoint-2013:list</span> <span class="attribute-name">ref</span>=<span class="string"><span class="delimiter">"</span><span class="content">#[payload]</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+<span class="tag">&lt;/sharepoint-2013:list-create&gt;</span></pre></td> 
          </tr> 
         </tbody> 
        </table></code></pre> 
@@ -1428,8 +1437,12 @@ sItem"},"Id":4,"ID":4,"Title":"folder"}]</pre></td>
         <tbody> 
          <tr> 
           <td class="line-numbers"><pre>1
+2
+3
 </pre></td> 
-          <td class="code"><pre><span class="tag">&lt;sharepoint-2013:list-create</span> <span class="attribute-name">config-ref</span>=<span class="string"><span class="delimiter">"</span><span class="content">Sharepoint_2013</span><span class="delimiter">"</span></span> <span class="attribute-name">doc:name</span>=<span class="string"><span class="delimiter">"</span><span class="content">Sharepoint 2013</span><span class="delimiter">"</span></span> <span class="attribute-name">baseTemplate</span>=<span class="string"><span class="delimiter">"</span><span class="content">GENERIC_LIST</span><span class="delimiter">"</span></span> <span class="attribute-name">title</span>=<span class="string"><span class="delimiter">"</span><span class="content">Title</span><span class="delimiter">"</span></span><span class="tag">&gt;</span> <span class="tag">&lt;sharepoint-2013:list</span> <span class="attribute-name">contentTypesEnabled</span>=<span class="string"><span class="delimiter">"</span><span class="content">true</span><span class="delimiter">"</span></span> <span class="attribute-name">description</span>=<span class="string"><span class="delimiter">"</span><span class="content">Description</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span> <span class="tag">&lt;/sharepoint-2013:list-create&gt;</span></pre></td> 
+          <td class="code"><pre><span class="tag">&lt;sharepoint-2013:list-create</span> <span class="attribute-name">config-ref</span>=<span class="string"><span class="delimiter">"</span><span class="content">Sharepoint_2013</span><span class="delimiter">"</span></span> <span class="attribute-name">doc:name</span>=<span class="string"><span class="delimiter">"</span><span class="content">Sharepoint 2013</span><span class="delimiter">"</span></span> <span class="attribute-name">baseTemplate</span>=<span class="string"><span class="delimiter">"</span><span class="content">GENERIC_LIST</span><span class="delimiter">"</span></span> <span class="attribute-name">title</span>=<span class="string"><span class="delimiter">"</span><span class="content">Title</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
+  <span class="tag">&lt;sharepoint-2013:list</span> <span class="attribute-name">contentTypesEnabled</span>=<span class="string"><span class="delimiter">"</span><span class="content">true</span><span class="delimiter">"</span></span> <span class="attribute-name">description</span>=<span class="string"><span class="delimiter">"</span><span class="content">Description</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+<span class="tag">&lt;/sharepoint-2013:list-create&gt;</span></pre></td> 
          </tr> 
         </tbody> 
        </table></code></pre> 
@@ -1440,17 +1453,7 @@ sItem"},"Id":4,"ID":4,"Title":"folder"}]</pre></td>
    </div> 
    <div class="listingblock"> 
     <div class="content"> 
-     <pre class="CodeRay highlight"><code data-lang="xml">
-          
-       <table class="CodeRay"> 
-        <tbody> 
-         <tr> 
-          <td class="line-numbers"><pre>1
-</pre></td> 
-          <td class="code"><pre><span class="tag">&lt;sharepoint-2013:list-delete</span> <span class="attribute-name">config-ref</span>=<span class="string"><span class="delimiter">"</span><span class="content">Sharepoint_2013</span><span class="delimiter">"</span></span> <span class="attribute-name">doc:name</span>=<span class="string"><span class="delimiter">"</span><span class="content">Sharepoint 2013</span><span class="delimiter">"</span></span> <span class="attribute-name">listId</span>=<span class="string"><span class="delimiter">"</span><span class="content">8e306633-c600-40ab-80db-80f57968c0a1</span><span class="delimiter">"</span></span> <span class="tag">/&gt;</span></pre></td> 
-         </tr> 
-        </tbody> 
-       </table></code></pre> 
+     <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;sharepoint-2013:list-delete</span> <span class="attribute-name">config-ref</span>=<span class="string"><span class="delimiter">"</span><span class="content">Sharepoint_2013</span><span class="delimiter">"</span></span> <span class="attribute-name">doc:name</span>=<span class="string"><span class="delimiter">"</span><span class="content">Sharepoint 2013</span><span class="delimiter">"</span></span> <span class="attribute-name">listId</span>=<span class="string"><span class="delimiter">"</span><span class="content">8e306633-c600-40ab-80db-80f57968c0a1</span><span class="delimiter">"</span></span> <span class="tag">/&gt;</span></code></pre> 
     </div> 
    </div> 
   </div> 
@@ -1591,15 +1594,8 @@ sItem"},"Id":4,"ID":4,"Title":"folder"}]</pre></td>
    <div class="paragraph"> 
     <p><span class="image"><img src="./_images/SPExampleQText.png" alt="SPExampleQText"></span></p> 
    </div> 
-   <div class="admonitionblock warning"> 
-    <table> 
-     <tbody> 
-      <tr> 
-       <td class="icon"> <i class="fa icon-warning" title="Warning"></i> </td> 
-       <td class="content"> Checking this option may cause large item lists with many reference fields to take a long time to retrieve. </td> 
-      </tr> 
-     </tbody> 
-    </table> 
+   <div class="paragraph"> 
+    <p><strong>Note:</strong> Checking this option may cause large item lists with many reference fields to take a long time to retrieve.</p> 
    </div> 
    <div class="paragraph"> 
     <p>Since version 2.1.10 of this connector you can use the <em>internal</em> or <em>title</em> field names in DSQL queries (as well as in other list’s operations as detailed below).</p> 
@@ -1638,15 +1634,8 @@ sItem"},"Id":4,"ID":4,"Title":"folder"}]</pre></td>
      <li> <p>Querying items in the list</p> </li> 
     </ul> 
    </div> 
-   <div class="admonitionblock note"> 
-    <table> 
-     <tbody> 
-      <tr> 
-       <td class="icon"> <i class="fa icon-note" title="Note"></i> </td> 
-       <td class="content"> In order to filter by a datetime field type, you need to write the value using ISO8601 format when specified in a DSQL clause (for example, Created &gt; 2000-01-01T00:00:00-03:00). </td> 
-      </tr> 
-     </tbody> 
-    </table> 
+   <div class="paragraph"> 
+    <p><strong>Note:</strong> To filter by a datetime field type, write the value using ISO-8601 format when specified in a DSQL clause (for example, Created &gt; 2000-01-01T00:00:00-03:00).</p> 
    </div> 
   </div> 
  </div> 
@@ -2153,7 +2142,7 @@ List-item["ChoiceMultiSelect"] = multiValuesMap</pre></td>
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#overview">Overview</a></li><li><a class="scroll-menu-link" href="#install-and-configure">Install and Configure</a></li><li><a class="scroll-menu-link" href="#running-the-flow">Running the Flow</a></li><li><a class="scroll-menu-link" href="#operations-lists-and-list-items-api">Operations: Lists and List Items API</a></li><li><a class="scroll-menu-link" href="#operations-file-and-folder-api">Operations: File and Folder API</a></li><li><a class="scroll-menu-link" href="#resolving-deferred-properties">Resolving Deferred Properties</a></li><li><a class="scroll-menu-link" href="#attaching-a-file-to-a-list-item">Attaching a File to a List Item</a></li><li><a class="scroll-menu-link" href="#executing-direct-calls-against-the-rest-api">Executing Direct Calls Against the REST API</a></li><li><a class="scroll-menu-link" href="#working-with-choice-column-type-with-multiple-values">Working with Choice Column Type with Multiple Values</a></li><li><a class="scroll-menu-link" href="#exception-handling">Exception Handling</a></li><li><a class="scroll-menu-link" href="#frequently-asked-questions">Frequently Asked Questions</a></li><li><a class="scroll-menu-link" href="#see-also">See Also </a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#overview">Overview</a></li><li><a class="scroll-menu-link" href="#authentication">Authentication</a></li><li><a class="scroll-menu-link" href="#install-and-configure">Install and Configure</a></li><li><a class="scroll-menu-link" href="#running-the-flow">Running the Flow</a></li><li><a class="scroll-menu-link" href="#operations-lists-and-list-items-api">Operations: Lists and List Items API</a></li><li><a class="scroll-menu-link" href="#operations-file-and-folder-api">Operations: File and Folder API</a></li><li><a class="scroll-menu-link" href="#resolving-deferred-properties">Resolving Deferred Properties</a></li><li><a class="scroll-menu-link" href="#attaching-a-file-to-a-list-item">Attaching a File to a List Item</a></li><li><a class="scroll-menu-link" href="#executing-direct-calls-against-the-rest-api">Executing Direct Calls Against the REST API</a></li><li><a class="scroll-menu-link" href="#working-with-choice-column-type-with-multiple-values">Working with Choice Column Type with Multiple Values</a></li><li><a class="scroll-menu-link" href="#exception-handling">Exception Handling</a></li><li><a class="scroll-menu-link" href="#frequently-asked-questions">Frequently Asked Questions</a></li><li><a class="scroll-menu-link" href="#see-also">See Also </a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->
