@@ -1377,7 +1377,7 @@
     <ul> 
      <li> <p><strong>SPN</strong>: The Service Principal Name can usually be automatically discovered from the Organization Service’s WSDL. If the SPN cannot be discovered automatically, the value has to be set in the connector’s connection configuration property SPN. The SPN usually looks like host/SERVER-NAME.MYREALM.COM.</p> 
       <div class="paragraph"> 
-       <p>If the Organization Service WSDL reports a User Principal Name (UPN) instead of an SPN, then the CRM service is configured to run under a domain account. In this case, you must ensure that the domain admin has created an SPN under this service account in AD for the CRM hostname. In this case, the SPN is in the form <a href="http://crm.mycompany.com" class="bare">http://crm.mycompany.com</a> – note that the SPN is typically created to match a fully qualified DNS name that is used to access the CRM service.</p> 
+       <p>If the Organization Service WSDL reports a User Principal Name (UPN) instead of an SPN, then the CRM service is configured to run under a domain account. In this case, you must ensure that the domain admin has created an SPN under this service account in AD for the CRM hostname. In this case, the SPN is in the form <code>http://crm.mycompany.com</code> – note that the SPN is typically created to match a fully qualified DNS name that is used to access the CRM service.</p> 
       </div> </li> 
      <li> <p><strong>Realm</strong>: The Domain that the user belongs to. Note that this value is case-sensitive and must be specified exactly as defined in Active Directory.</p> </li> 
      <li> <p><strong>KDC</strong>: This is usually the Domain Controller (server name or IP).</p> </li> 
