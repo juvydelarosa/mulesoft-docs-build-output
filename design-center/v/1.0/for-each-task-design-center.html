@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>To Use For Each over a Collection (Design Center) // MuleSoft Documentation </title>
+  <title>To Use For Each Over a Collection (Design Center) // MuleSoft Documentation </title>
   <link rel="shortcut icon" href="/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="/css/vendor.min.css?t=1498825733">
   <link rel="stylesheet" type="text/css" href="/css/mulesoft.min.css?t=1498825733">
@@ -15,8 +15,8 @@
   <script src="/js/scripts.js?t=1498825733"></script>
 
   <link rel="canonical" href="https://docs.mulesoft.com/design-center/v/1.0/for-each-task-design-center" />
-  <meta name="description" content="If you’re sending data as a collection (a list, an array or a map) through your flow, you can process each element in the collection separately. Th..." />
-  <meta class="swiftype" name="title" data-type="string" content="To Use For Each over a Collection (Design Center)" />
+  <meta name="description" content="If you’re sending data as a collection (a list, an array, or a map) through your flow, you can process each element in the collection separately. T..." />
+  <meta class="swiftype" name="title" data-type="string" content="To Use For Each Over a Collection (Design Center)" />
   <meta class="swiftype" name="version" data-type="enum" content="1.0" />
 </head>
 <body>
@@ -1118,11 +1118,11 @@
     <div class="article-content col-md-7">
       
       <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Design Center</a>/<a href="about-designing-a-mule-application">About Designing a Mule Application</a>/<a href="for-each-task-design-center" class="breadcrumb-active-link">To Use For Each over a Collection</a></div>
-      <h1>To Use For Each over a Collection (Design Center)</h1>
+      <h1>To Use For Each Over a Collection (Design Center)</h1>
       <div id="preamble"> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>If you’re sending data as a collection (a list, an array or a map) through your flow, you can process each element in the collection separately. This is similar to using a For Each statement in most programming languages.</p> 
+   <p>If you’re sending data as a collection (a list, an array, or a map) through your flow, you can process each element in the collection separately. This is similar to using a For Each statement in most programming languages.</p> 
   </div> 
   <div class="paragraph"> 
    <p>You achieve this by placing components inside a For Each scope. When a Mule message containing a collection flows through a For Each scope, it is split into a series of separate Mule messages. The elements in the scope process these separate Mule messages one at a time. Once the messages have all gone through what’s in the scope, they are merged back as a collection into a single Mule message.</p> 
@@ -1139,7 +1139,7 @@
       <p><span class="image"><img src="./_images/for-each-task-design-center-afce9.png" alt="for each task design center afce9"></span></p> 
      </div> 
      <div class="paragraph"> 
-      <p>These compoonents receive separate elements of the collection as their input.</p> 
+      <p>These components receive separate elements of the collection as their input.</p> 
      </div> </li> 
    </ol> 
   </div> 
@@ -1156,7 +1156,7 @@
     <li> <p>Open a For Each card to edit its properties.</p> </li> 
     <li> <p>Change the Collection field to point to the collection you want to iterate over.</p> 
      <div class="paragraph"> 
-      <p>For example, in the object below, if you want to go over the collection nested in <code>field3</code> you must set the Collection field to <code>payload.myobject.field3</code>.</p> 
+      <p>For example, in the object below, if you want to go over the collection nested in <code>field3</code>, you must set the Collection field to <code>payload.myobject.field3</code>.</p> 
      </div> 
      <div class="listingblock"> 
       <div class="content"> 
