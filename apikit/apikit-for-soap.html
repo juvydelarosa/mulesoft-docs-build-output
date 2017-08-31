@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>APIkit for SOAP Tutorial // MuleSoft Documentation </title>
+  <title>Workflow: Implement a SOAP Interface // MuleSoft Documentation </title>
   <link rel="shortcut icon" href="/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="/css/vendor.min.css?t=1498825733">
   <link rel="stylesheet" type="text/css" href="/css/mulesoft.min.css?t=1498825733">
@@ -15,8 +15,8 @@
   <script src="/js/scripts.js?t=1498825733"></script>
 
   <link rel="canonical" href="https://docs.mulesoft.com/apikit/apikit-for-soap" />
-  <meta name="description" content="APIkit for SOAP helps you implement a SOAP interface for accessing data resources and integrating the interface with backend processes to function ..." />
-  <meta class="swiftype" name="title" data-type="string" content="APIkit for SOAP Tutorial" />
+  <meta name="description" content="In this workflow, you create an API using Studio and APIkit for SOAP. APIkit for SOAP supports consuming a remote WSDL. This workflow, however, use..." />
+  <meta class="swiftype" name="title" data-type="string" content="Workflow: Implement a SOAP Interface" />
 </head>
 <body>
 <!-- START Swiftype -->
@@ -875,6 +875,10 @@
 <i></i>
 <a href="/apikit/apikit-add-raml-workflow">Workflow: Add APIkit to an Existing RAML Design</a><ul>
 <li><i></i><a href="/apikit/apikit-define-raml-task">To Define the RAML</a></li><li><i></i><a href="/apikit/apikit-create-flows-task">To Create flows and Exception Strategies</a></li><li><i></i><a href="/apikit/apikit-map-resources-task">To Map RAML Resources to Actions</a></li></ul></li>
+<li class="active expanded">
+<i></i>
+<a href="/apikit/apikit-for-soap">Workflow: Implement a SOAP Interface</a><ul style="display: block;">
+<li><i></i><a href="/apikit/apikit-soap-prerequisites-task">To Meet Prerequisites for Using APIkit for SOAP</a></li><li><i></i><a href="/apikit/apikit-soap-project-task">To Create an APIkit for SOAP Project</a></li><li><i></i><a href="/apikit/apikit-soap-fault-task">To Generate a SOAP Fault</a></li><li><i></i><a href="/apikit/apikit-prevent-fault-task">To Prevent the SOAP Fault</a></li><li><i></i><a href="/apikit/apikit-soap-headers-task">To Work with SOAP Headers</a></li><li><i></i><a href="/apikit/apikit-display-fault-task">To Display a Typed Fault</a></li><li><i></i><a href="/apikit/apikit-get-header-task">To Get a SOAP Header</a></li><li><i></i><a href="/apikit/apikit-set-header-task">To Set a SOAP Header</a></li></ul></li>
 <li><i></i><a href="/apikit/apikit-add-wsdl-task">To Add APIkit to an Existing WSDL Design</a></li><li><i></i><a href="/apikit/apikit-configure-show-console-task">To Configure API Console to Open Automatically</a></li><li><i></i><a href="/apikit/apikit-console-expose-recommend-task">To Expose API Console (Recommended)</a></li><li><i></i><a href="/apikit/apikit-console-expose-deprecate-task">To Expose, Enable, and Disable API Console (Deprecated)</a></li><li><i></i><a href="/apikit/apikit-add-console">To Host an Additional API Console</a></li><li><i></i><a href="/apikit/apikit-retrieve-raml-task">To Retrieve RAML Code</a></li><li class="active"><i></i><a href="/apikit/apikit-for-soap">SOAP Tutorial</a></li><li><i></i><a href="/apikit/creating-an-odata-api-with-apikit">Creating an OData API</a></li><li><i></i><a href="/apikit/creating-an-apikit-project-with-maven">Creating an APIkit Project with Maven</a></li><li><i></i><a href="/apikit/apikit-odata-extension-reference">APIkit OData Reference</a></li><li><i></i><a href="/apikit/apikit-using">Naming the Application Reference</a></li><li><i></i><a href="/apikit/apikit-basic-anatomy">APIkit Anatomy Reference</a></li><li><i></i><a href="/apikit/apikit-reference">APIkit XML Reference</a></li><li><i></i><a href="/apikit/apikit-console-concept">About API Console</a></li><li><i></i><a href="/apikit/apikit-limitations-concept">About APIkit and APIkit Console Limitations</a></li></ul></li>
 <li>
 <i></i>
@@ -1111,564 +1115,23 @@
     <!-- START article content -->
     <div class="article-content col-md-7">
       
-      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">APIkit</a>/<a href="apikit-for-soap" class="breadcrumb-active-link">SOAP Tutorial</a></div>
-      <h1>APIkit for SOAP Tutorial</h1>
+      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">APIkit</a>/<a href="apikit-for-soap" class="breadcrumb-active-link">Workflow: Implement a SOAP Interface</a></div>
+      <h1>Workflow: Implement a SOAP Interface</h1>
       <div id="preamble"> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>APIkit for SOAP helps you implement a SOAP interface for accessing data resources and integrating the interface with backend processes to function as an API. Using APIkit for SOAP you can transition the implementation to REST.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>In this tutorial, you create an API using Studio and APIkit for SOAP. You can <a href="_attachments/apikit-for-soap-tutorial.xml">download the XML code</a> for the API or follow the steps in this document to create the flows and corresponding XML in Studio.</p> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Prerequisites</h2> 
- <div class="sectionbody"> 
-  <div class="ulist"> 
-   <ul> 
-    <li> <p><a href="https://www.soapui.org/downloads/soapui.html">SoapUI client</a></p> </li> 
-    <li> <p>Mule EE Runtime</p> </li> 
-    <li> <p>The <a href="_attachments/tshirt2.wsdl">tshirt2.wsdl</a> file</p> </li> 
-   </ul> 
-  </div> 
-  <div class="paragraph"> 
-   <p>APIkit for SOAP supports consuming a remote WSDL. This tutorial, however, uses a local WSDL.</p> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="create-a-new-project"><a class="anchor" href="#create-a-new-project"></a>Create a New Project</h2> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>You create a new project, specify the use of APIkit components, and refer to a WSDL file that you download.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>To create an APIkit for SOAP project:</p> 
+   <p>In this workflow, you create an API using Studio and APIkit for SOAP. APIkit for SOAP supports consuming a remote WSDL. This workflow, however, uses a local WSDL that you download. The SOAP interface you create accesses data resources and integrates the interface with backend processes that function as an API.</p> 
   </div> 
   <div class="olist arabic"> 
    <ol class="arabic"> 
-    <li> <p>Check that you are using a version of Studio that includes the Anypoint APIkit SOAP Extension: <strong>Help</strong> &gt; <strong>Installation Details</strong>. If not, <a href="/anypoint-studio/v/6/download-and-launch-anypoint-studio">install Studio 6.0</a> or later.</p> </li> 
-    <li> <p>Download the example <a href="_attachments/tshirt2.wsdl">tshirt2.wsdl</a> file to your local drive.</p> </li> 
-    <li> <p>Under the <strong>File menu</strong>, select <strong>New</strong> &gt; <strong>Mule Project</strong>.</p> 
-     <div class="paragraph"> 
-      <p>The New Mule Project wizard appears.</p> 
-     </div> </li> 
-    <li> <p>In <strong>Project Name</strong>, enter a name for the project. Select or accept the default <strong>EE runtime</strong>, for example Mule Server 3.8.1 EE.</p> </li> 
-    <li> <p>Check the <strong>Add APIkit components</strong> checkbox, and browse to the tshirt2.wsdl file you downloaded.</p> </li> 
-    <li> <p>Select a service and port from the drop-down menus. For example, select TshirtService and TshirtServicePort.</p> 
-     <div class="imageblock"> 
-      <div class="content"> 
-       <img src="./_images/apikit-for-soap-47fb8.png" alt="apikit-for-soap-47fb8"> 
-      </div> 
-     </div> </li> 
-    <li> <p>Click <strong>Finish</strong>.</p> 
-     <div class="paragraph"> 
-      <p>The new project having a <code>src/main/wsdl</code> folder that contains the WSDL file appears.</p> 
-     </div> </li> 
-    <li> <p>Right-click a blank area of the canvas and run the project.</p> </li> 
-    <li> <p>Go to <code>http://localhost:8081/TshirtService/TshirtServicePort?wsdl</code>.</p> 
-     <div class="paragraph"> 
-      <p>The contents of the TShirtService WSDL file appear.</p> 
-     </div> </li> 
-   </ol> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="implementing-an-operation"><a class="anchor" href="#implementing-an-operation"></a>Implementing an Operation</h2> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>By default, each flow you generate in Studio has a payload that identifies the current operation that needs to be implemented by returning a <a href="http://whatis.techtarget.com/definition/SOAP-fault">SOAP fault</a>.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>In this part of the tutorial, you use the SoapUI tool to identify an operation that you need to implement by requesting the API that fails. Use the <code>OrderTshirt</code> operation to create a request in SOAP UI to place an order for a large t-shirt for John. The API cannot handle this operation and a SOAP fault occurs.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>To resolve the fault, you modify the API. You add the <strong>Transform Message</strong> component to the flow and specify a message in <a href="/mule-user-guide/v/3.8/dataweave"><strong>DataWeave</strong></a> transformation language for responding to the request, effectively implementing the operation. In the DataWeave code, you use the proper namespace to avoid a <code>soap:Server faultcode</code> at the beginning of the response to the request.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>The <strong>Transform Message</strong> component works on the process side after the endpoint defined in the WSDL has been hit, triggering the main flow of the Mule application to execute, which then calls the backend flow.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>To generate a SOAP fault:</p> 
-  </div> 
-  <div class="olist arabic"> 
-   <ol class="arabic"> 
-    <li> <p>Create a SoapUI project using the <code><a href="http://localhost:8081/TshirtService/TshirtServicePort?wsdl" class="bare">http://localhost:8081/TshirtService/TshirtServicePort?wsdl</a></code> for the initial WSDL:</p> 
-     <div class="paragraph"> 
-      <p><span class="image"><img src="./_images/soapui-new-project.png" alt="soapui-new-project.png"></span></p> 
-     </div> </li> 
-    <li> <p>In the SoapUI client, request a large t-shirt for John by entering some values into the request envelope. For example:</p> 
-     <div class="ulist"> 
-      <ul> 
-       <li> <p>Enter <strong>L</strong> between the <code>&lt;size&gt;</code> tags.</p> </li> 
-       <li> <p>Enter <strong>John</strong> between the <code>&lt;name&gt;</code> tags.</p> </li> 
-      </ul> 
-     </div> </li> 
-    <li> <p>Submit the request.</p> 
-     <div class="paragraph"> 
-      <p>The result is the SOAP fault.</p> 
-     </div> 
-     <div class="listingblock"> 
-      <div class="content"> 
-       <pre class="CodeRay highlight"><code data-lang="xml">
-            
-         <table class="CodeRay"> 
-          <tbody> 
-           <tr> 
-            <td class="line-numbers"><pre>1
-2
-3
-4
-5
-6
-7
-8
-</pre></td> 
-            <td class="code"><pre><span class="tag">&lt;soap:Envelope</span> <span class="attribute-name">xmlns:soap</span>=<span class="string"><span class="delimiter">"</span><span class="content">http://schemas.xmlsoap.org/soap/envelope/</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
-   <span class="tag">&lt;soap:Body&gt;</span>
-      <span class="tag">&lt;soap:Fault</span> <span class="attribute-name">xmlns:soap</span>=<span class="string"><span class="delimiter">"</span><span class="content">http://www.w3.org/2003/05/soap-envelope</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
-         <span class="tag">&lt;faultcode&gt;</span>soap:Server<span class="tag">&lt;/faultcode&gt;</span>
-         <span class="tag">&lt;faultstring&gt;</span>Operation [OrderTshirt:/TshirtService/TshirtServicePort/api-config] not implemented<span class="tag">&lt;/faultstring&gt;</span>
-      <span class="tag">&lt;/soap:Fault&gt;</span>
-   <span class="tag">&lt;/soap:Body&gt;</span>
-<span class="tag">&lt;/soap:Envelope&gt;</span></pre></td> 
-           </tr> 
-          </tbody> 
-         </table></code></pre> 
-      </div> 
-     </div> </li> 
-   </ol> 
-  </div> 
-  <div class="paragraph"> 
-   <p>To implement an operation to prevent the SOAP fault:</p> 
-  </div> 
-  <div class="olist arabic"> 
-   <ol class="arabic"> 
-    <li> <p>Remove the <strong>Set Payload</strong> element from the flow <code>OrderTshirt:api-config</code>.</p> </li> 
-    <li> <p>Drag a <strong>Transform Message</strong> component from the Mule palette to replace Set Payload.</p> 
-     <div class="paragraph"> 
-      <p>Leave the Source section of the APIkit backend flow empty.</p> 
-     </div> 
-     <div class="imageblock"> 
-      <div class="content"> 
-       <img src="./_images/apikit-for-soap-e8679.png" alt="apikit-for-soap-e8679"> 
-      </div> 
-     </div> </li> 
-    <li> <p>Select the Transform Message component.</p> 
-     <div class="paragraph"> 
-      <p>The user interface displays the input and output for the current operation, <code>OrderTshirt</code> as input, and <code>OrderTshirtResponse</code> as output.</p> 
-     </div> </li> 
-    <li> <p>In the properties editor, specify the payload as follows:</p> 
-     <div class="listingblock"> 
-      <div class="content"> 
-       <pre class="CodeRay highlight"><code data-lang="xml">
-            
-         <table class="CodeRay"> 
-          <tbody> 
-           <tr> 
-            <td class="line-numbers"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-</pre></td> 
-            <td class="code"><pre>%dw 1.0
-%output application/xml
-%namespace ns0 http://mulesoft.org/tshirt-service
----
-{
-  ns0#OrderTshirtResponse: {
-    orderId: "I got a request from "
-    ++ payload.ns0#OrderTshirt.name
-  }
-}</pre></td> 
-           </tr> 
-          </tbody> 
-         </table></code></pre> 
-      </div> 
-     </div> 
-     <div class="imageblock"> 
-      <div class="content"> 
-       <img src="./_images/apikit-for-soap-475c0.png" alt="apikit-for-soap-475c0"> 
-      </div> 
-     </div> </li> 
-    <li> <p>Save and rerun the project.</p> </li> 
-    <li> <p>In the SoapUI client, repeat the request.</p> 
-     <div class="paragraph"> 
-      <p>The output changes to a valid response:</p> 
-     </div> </li> 
-   </ol> 
-  </div> 
-  <div class="listingblock"> 
-   <div class="content"> 
-    <pre class="CodeRay highlight"><code data-lang="xml">
-         
-      <table class="CodeRay"> 
-       <tbody> 
-        <tr> 
-         <td class="line-numbers"><pre>1
-2
-3
-4
-5
-6
-7
-</pre></td> 
-         <td class="code"><pre><span class="tag">&lt;soap:Envelope</span> <span class="attribute-name">xmlns:soap</span>=<span class="string"><span class="delimiter">"</span><span class="content">http://schemas.xmlsoap.org/soap/envelope/</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
-   <span class="tag">&lt;soap:Body&gt;</span>
-      <span class="tag">&lt;ns0:OrderTshirtResponse</span> <span class="attribute-name">xmlns:ns0</span>=<span class="string"><span class="delimiter">"</span><span class="content">http://mulesoft.org/tshirt-service</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
-         <span class="tag">&lt;orderId&gt;</span>I got a request from John<span class="tag">&lt;/orderId&gt;</span>
-      <span class="tag">&lt;/ns0:OrderTshirtResponse&gt;</span>
-   <span class="tag">&lt;/soap:Body&gt;</span>
-<span class="tag">&lt;/soap:Envelope&gt;</span></pre></td> 
-        </tr> 
-       </tbody> 
-      </table></code></pre> 
-   </div> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="working-with-headers"><a class="anchor" href="#working-with-headers"></a>Working with Headers</h2> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>In the SoapUI, the request window shows the soap Envelope header.</p> 
-  </div> 
-  <div class="imageblock"> 
-   <div class="content"> 
-    <img src="./_images/apikit-for-soap-53dc2.png" alt="apikit-for-soap-53dc2"> 
-   </div> 
-  </div> 
-  <div class="paragraph"> 
-   <p>In this part of the tutorial, you modify the API to get header information from the request and add header information to the outbound response. Additional header information that complies with the WSDL document is called APIUsageInformation.</p> 
-  </div> 
-  <div class="olist arabic"> 
-   <ol class="arabic"> 
-    <li> <p>In the SoapUI, modify the OrderTshirt request by entering a value for the API key. For example, enter <code>987654321</code> between the <code>&lt;apiKey&gt;</code> tags.</p> </li> 
-    <li> <p>In Studio, edit the DataWeave code to get the API key, which is an inbound property, from the header:</p> 
-     <div class="listingblock"> 
-      <div class="content"> 
-       <pre class="CodeRay highlight"><code data-lang="xml">
-            
-         <table class="CodeRay"> 
-          <tbody> 
-           <tr> 
-            <td class="line-numbers"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-</pre></td> 
-            <td class="code"><pre>%dw 1.0
-%output application/xml
-%namespace ns0 http://mulesoft.org/tshirt-service
----
-{
-  ns0#OrderTshirtResponse: {
-    orderId: "I got a request from "
-    ++ payload.ns0#OrderTshirt.name
-    ++ ", using the following auth header "
-    ++ inboundProperties['soap.AuthenticationHeader'].ns0#AuthenticationHeader.apiKey
-  }
-}</pre></td> 
-           </tr> 
-          </tbody> 
-         </table></code></pre> 
-      </div> 
-     </div> </li> 
-    <li> <p>Save and rerun the project.</p> </li> 
-    <li> <p>In SoapUI, send a request, and check that the response changes to the following:</p> 
-     <div class="listingblock"> 
-      <div class="content"> 
-       <pre class="CodeRay highlight"><code data-lang="xml">
-            
-         <table class="CodeRay"> 
-          <tbody> 
-           <tr> 
-            <td class="line-numbers"><pre>1
-2
-3
-4
-5
-6
-7
-</pre></td> 
-            <td class="code"><pre><span class="tag">&lt;soap:Envelope</span> <span class="attribute-name">xmlns:soap</span>=<span class="string"><span class="delimiter">"</span><span class="content">http://schemas.xmlsoap.org/soap/envelope/</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
-   <span class="tag">&lt;soap:Body&gt;</span>
-      <span class="tag">&lt;ns0:OrderTshirtResponse</span> <span class="attribute-name">xmlns:ns0</span>=<span class="string"><span class="delimiter">"</span><span class="content">http://mulesoft.org/tshirt-service</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
-         <span class="tag">&lt;orderId&gt;</span>I got a request from John, using the following auth header 987654321<span class="tag">&lt;/orderId&gt;</span>
-      <span class="tag">&lt;/ns0:OrderTshirtResponse&gt;</span>
-   <span class="tag">&lt;/soap:Body&gt;</span>
-<span class="tag">&lt;/soap:Envelope&gt;</span></pre></td> 
-           </tr> 
-          </tbody> 
-         </table></code></pre> 
-      </div> 
-     </div> </li> 
-   </ol> 
-  </div> 
-  <div class="paragraph"> 
-   <p>To add a header to the outgoing message that complies with the WSDL document:</p> 
-  </div> 
-  <div class="olist arabic"> 
-   <ol class="arabic"> 
-    <li> <p>In Studio, open the tshirt2.wsdl in <code>src/main/wsdl</code> and scroll to APIUsageInformation element, which is the element expected by the contract. Copy the name of the element to the clipboard.</p> </li> 
-    <li> <p>On the canvas, select Transform message in the <code>OrderTshirt:/TshirtService/TshirtServicePort/api-config</code> flow, and in the properties editor, click <strong>Add new target</strong>:</p> 
-     <div class="imageblock"> 
-      <div class="content"> 
-       <img src="./_images/apikit-for-soap-3005f.png" alt="apikit-for-soap-3005f" width="700" height="440"> 
-      </div> 
-     </div> 
-     <div class="paragraph"> 
-      <p>The <strong>Selection dialog</strong> for selecting a target appears.</p> 
-     </div> </li> 
-    <li> <p>Select <strong>Property</strong> instead of <strong>Variable</strong> from the drop-down.</p> </li> 
-    <li> <p>In <strong>Variable name</strong>, paste the contents of the clipboard, and add <code>soap.</code> as a prefix. or type <code>soap.APIUsageInformation</code>.</p> 
-     <div class="paragraph"> 
-      <p>The complete variable name looks like this:</p> 
-     </div> 
-     <div class="paragraph"> 
-      <p><code>soap.APIUsageInformation</code></p> 
-     </div> </li> 
-    <li> <p>Click OK.</p> </li> 
-    <li> <p>Double-click the <code>apiCallsRemaining: <em>Integer</em></code>.</p> 
-     <div class="imageblock"> 
-      <div class="content"> 
-       <img src="./_images/apikit-for-soap-41732.png" alt="apikit-for-soap-41732" width="700" height="440"> 
-      </div> 
-     </div> 
-     <div class="paragraph"> 
-      <p>Double-clicking apiCallsRemaining: <em>Integer</em> adds <code>APIUsageInformation: { apiCallsRemaining: null }</code> to the DataWeave code for the outbound property:</p> 
-     </div> 
-     <div class="listingblock"> 
-      <div class="content"> 
-       <pre class="CodeRay highlight"><code data-lang="xml">
-            
-         <table class="CodeRay"> 
-          <tbody> 
-           <tr> 
-            <td class="line-numbers"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9
-</pre></td> 
-            <td class="code"><pre>%dw 1.0
-%output application/xml
-%namespace ns0 http://mulesoft.org/tshirt-service
----
-{
-  ns0#APIUsageInformation: {
-    apiCallsRemaining: null
-  }
-}</pre></td> 
-           </tr> 
-          </tbody> 
-         </table></code></pre> 
-      </div> 
-     </div> </li> 
-    <li> <p>Change <code>null</code> to <code>10</code>.</p> </li> 
-    <li> <p>Save and rerun the project.</p> </li> 
-    <li> <p>In the SoapUI, execute the OrderTshirt request again. The response envelope from APIkit for SOAP is:</p> 
-     <div class="listingblock"> 
-      <div class="content"> 
-       <pre class="CodeRay highlight"><code data-lang="xml">
-            
-         <table class="CodeRay"> 
-          <tbody> 
-           <tr> 
-            <td class="line-numbers"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-</pre></td> 
-            <td class="code"><pre><span class="tag">&lt;soap:Envelope</span> <span class="attribute-name">xmlns:soap</span>=<span class="string"><span class="delimiter">"</span><span class="content">http://schemas.xmlsoap.org/soap/envelope/</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
-   <span class="tag">&lt;soap:Header&gt;</span>
-      <span class="tag">&lt;ns0:APIUsageInformation</span> <span class="attribute-name">xmlns:ns0</span>=<span class="string"><span class="delimiter">"</span><span class="content">http://mulesoft.org/tshirt-service</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
-         <span class="tag">&lt;apiCallsRemaining&gt;</span>10<span class="tag">&lt;/apiCallsRemaining&gt;</span>
-      <span class="tag">&lt;/ns0:APIUsageInformation&gt;</span>
-   <span class="tag">&lt;/soap:Header&gt;</span>
-   <span class="tag">&lt;soap:Body&gt;</span>
-      <span class="tag">&lt;ns0:OrderTshirtResponse</span> <span class="attribute-name">xmlns:ns0</span>=<span class="string"><span class="delimiter">"</span><span class="content">http://mulesoft.org/tshirt-service</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
-         <span class="tag">&lt;orderId&gt;</span>I got a request from John, using the following auth header 987654321<span class="tag">&lt;/orderId&gt;</span>
-      <span class="tag">&lt;/ns0:OrderTshirtResponse&gt;</span>
-   <span class="tag">&lt;/soap:Body&gt;</span>
-<span class="tag">&lt;/soap:Envelope&gt;</span></pre></td> 
-           </tr> 
-          </tbody> 
-         </table></code></pre> 
-      </div> 
-     </div> </li> 
-   </ol> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="using-typed-faults"><a class="anchor" href="#using-typed-faults"></a>Using Typed Faults</h2> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>APIkit for SOAP supports typed SOAP Faults. The SOAP Fault processor has generic faults and the following types:</p> 
-  </div> 
-  <div class="ulist"> 
-   <ul> 
-    <li> <p>Soap Fault 1.1</p> </li> 
-    <li> <p>Soap Fault 1.2</p> </li> 
-   </ul> 
-  </div> 
-  <div class="paragraph"> 
-   <p>You can select either type using any WSDL file, even for those files that do not contain typed faults.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>For the <code>tshirt2.wsdl</code> file, there is just one typed fault named <code>TshirtFault</code>, which is mapped to every operation that the WSDL has: OrderTshirt, ListInventory, and TrackOrder.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>To make the ListInventory operation display the typed fault:</p> 
-  </div> 
-  <div class="olist arabic"> 
-   <ol class="arabic"> 
-    <li> <p>In Studio, delete the Set Payload processor of the <code>ListInventory:api-config</code> flow.</p> </li> 
-    <li> <p>Search for <code>fault</code> in the palette, drag and drop <strong>SOAP Fault</strong> into the <code>ListInventory:api-config</code> flow.</p> </li> 
-    <li> <p>In the properties editor, select <code>ListInventory</code> from the <strong>Operation</strong> drop-down.</p> </li> 
-    <li> <p>Select or accept the default <code>TshirtFault</code> from the <strong>Fault Type</strong> drop-down.</p> </li> 
-    <li> <p>Add a Transform Message component before the SOAP Fault component.</p> </li> 
-    <li> <p>In the component properties, set up the following DataWeave code:</p> 
-     <div class="listingblock"> 
-      <div class="content"> 
-       <pre class="CodeRay highlight"><code data-lang="xml">
-            
-         <table class="CodeRay"> 
-          <tbody> 
-           <tr> 
-            <td class="line-numbers"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-</pre></td> 
-            <td class="code"><pre>%dw 1.0
- %output application/xml
- %namespace ns0 http://mulesoft.org/tshirt-service
- %namespace soap http://www.w3.org/2003/05/soap-envelope
----
- soap#Fault: {
-   faultcode: "soap:Server",
-   faultstring: "The error details",
-   detail: {
-     ns0#TshirtFault: {
-      errorStuff: 500
-     }
-   }
- }</pre></td> 
-           </tr> 
-          </tbody> 
-         </table></code></pre> 
-      </div> 
-     </div> </li> 
-    <li> <p>Save and rerun the project.</p> 
-     <div class="paragraph"> 
-      <p>Using the SoapUI client, run the <code>ListInventory</code> operation.</p> 
-     </div> 
-     <div class="paragraph"> 
-      <p>The client returns the following envelope instead of the default fault:</p> 
-     </div> 
-     <div class="listingblock"> 
-      <div class="content"> 
-       <pre class="CodeRay highlight"><code data-lang="xml">
-            
-         <table class="CodeRay"> 
-          <tbody> 
-           <tr> 
-            <td class="line-numbers"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-</pre></td> 
-            <td class="code"><pre><span class="tag">&lt;soap:Envelope</span> <span class="attribute-name">xmlns:soap</span>=<span class="string"><span class="delimiter">"</span><span class="content">http://schemas.xmlsoap.org/soap/envelope/</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
-   <span class="tag">&lt;soap:Body&gt;</span>
-      <span class="tag">&lt;soap:Fault</span> <span class="attribute-name">xmlns:soap</span>=<span class="string"><span class="delimiter">"</span><span class="content">http://www.w3.org/2003/05/soap-envelope</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
-         <span class="tag">&lt;faultcode&gt;</span>soap:Server<span class="tag">&lt;/faultcode&gt;</span>
-         <span class="tag">&lt;faultstring&gt;</span>The error details<span class="tag">&lt;/faultstring&gt;</span>
-         <span class="tag">&lt;detail&gt;</span>
-            <span class="tag">&lt;ns0:TshirtFault</span> <span class="attribute-name">xmlns:ns0</span>=<span class="string"><span class="delimiter">"</span><span class="content">http://mulesoft.org/tshirt-service</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
-               <span class="tag">&lt;errorStuff&gt;</span>500<span class="tag">&lt;/errorStuff&gt;</span>
-            <span class="tag">&lt;/ns0:TshirtFault&gt;</span>
-         <span class="tag">&lt;/detail&gt;</span>
-      <span class="tag">&lt;/soap:Fault&gt;</span>
-   <span class="tag">&lt;/soap:Body&gt;</span>
-<span class="tag">&lt;/soap:Envelope&gt;</span></pre></td> 
-           </tr> 
-          </tbody> 
-         </table></code></pre> 
-      </div> 
-     </div> </li> 
-   </ol> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="updating-a-wsdl-file"><a class="anchor" href="#updating-a-wsdl-file"></a>Updating a WSDL File</h2> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>After modifying a WSDL, such as adding an operation or editing a message, regenerate SOAP flows. Because modifying a WSDL is error-prone, before making a change, make a backup, change the attribute, and verify that the change worked.</p> 
-  </div> 
-  <div class="paragraph"> 
-   <p>To update a WSDL file:</p> 
-  </div> 
-  <div class="olist arabic"> 
-   <ol class="arabic"> 
-    <li> <p>Download <a href="_attachments/tshirt-modified.wsdl">tshirt-modified.wsdl</a>, copy the entire contents of the downloaded file, and paste it in tshirt2.wsdl, replacing the tshirt2.wsdl content.</p> </li> 
-    <li> <p>In Package Explorer, right-click the project and select <strong>Mule</strong> &gt; <strong>Generate SOAP Flows</strong>.</p> 
-     <div class="paragraph"> 
-      <p>A new flow named <code>DeleteOrder:api-config</code> appears.</p> 
-     </div> 
-     <div class="paragraph"> 
-      <p><span class="image"><img src="./_images/generate-sources.png" alt="generate-sources.png" width="300"></span></p> 
-     </div> </li> 
+    <li> <p><a href="/apikit/apikit-soap-prerequisites-task">Meet prerequisites for using APIkit for SOAP</a></p> </li> 
+    <li> <p><a href="/apikit/apikit-soap-project-task">Create an APIkit for SOAP project</a></p> </li> 
+    <li> <p><a href="/apikit/apikit-soap-fault-task">Generate a SOAP fault</a></p> </li> 
+    <li> <p><a href="/apikit/apikit-prevent-fault-task">Prevent the SOAP fault</a></p> </li> 
+    <li> <p><a href="/apikit/apikit-get-header-task">To get a SOAP header</a></p> </li> 
+    <li> <p><a href="/apikit/apikit-set-header-task">To set a SOAP header</a></p> </li> 
+    <li> <p><a href="/apikit/apikit-display-fault-task">To display a typed fault</a></p> </li> 
+    <li> <p><a href="/apikit/apikit-update-wsdl-task">To Update a WSDL</a></p> </li> 
    </ol> 
   </div> 
  </div> 
@@ -1680,9 +1143,6 @@
    <ul> 
     <li> <p><a href="/apikit/apikit-using">Using APIkit</a></p> </li> 
     <li> <p><a href="/apikit/apikit-reference">APIkit Reference</a></p> </li> 
-    <li> <p><a href="https://en.wikipedia.org/wiki/Web_Services_Description_Language">WSDL</a> file.</p> </li> 
-    <li> <p><a href="https://en.wikipedia.org/wiki/SOAP">SOAP</a> and API principles</p> </li> 
-    <li> <p><a href="https://en.wikipedia.org/wiki/SoapUI">SoapUI</a> - a SOAP client testing tool</p> </li> 
    </ul> 
   </div> 
  </div> 
@@ -1691,7 +1151,7 @@
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#prerequisites">Prerequisites</a></li><li><a class="scroll-menu-link" href="#create-a-new-project">Create a New Project</a></li><li><a class="scroll-menu-link" href="#implementing-an-operation">Implementing an Operation</a></li><li><a class="scroll-menu-link" href="#working-with-headers">Working with Headers</a></li><li><a class="scroll-menu-link" href="#using-typed-faults">Using Typed Faults</a></li><li><a class="scroll-menu-link" href="#updating-a-wsdl-file">Updating a WSDL File</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->
