@@ -1228,11 +1228,24 @@
    </div> 
   </div> 
   <div class="paragraph"> 
-   <p>then reference this bean in <code>&lt;jms:activemq-connector&gt;</code>, for example:</p> 
+   <p>Then reference this bean in <code>&lt;jms:activemq-connector&gt;</code>, for example:</p> 
   </div> 
   <div class="listingblock"> 
    <div class="content"> 
     <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;jms:activemq-connector</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">"</span><span class="content">jmsConnector</span><span class="delimiter">"</span></span> <span class="attribute-name">connectionFactory-ref</span>=<span class="string"><span class="delimiter">"</span><span class="content">connectionFactory</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span></code></pre> 
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<div class="sect1"> 
+ <h2 id="debugging-activemq"><a class="anchor" href="#debugging-activemq"></a>Debugging ActiveMQ</h2> 
+ <div class="sectionbody"> 
+  <div class="paragraph"> 
+   <p>Debugging information for ActiveMQ can be enabled with the following log4j configuration:</p> 
+  </div> 
+  <div class="listingblock"> 
+   <div class="content"> 
+    <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;AsyncLogger</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">"</span><span class="content">com.mulesoft.mq</span><span class="delimiter">"</span></span> <span class="attribute-name">level</span>=<span class="string"><span class="delimiter">"</span><span class="content">DEBUG</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span></code></pre> 
    </div> 
   </div> 
  </div> 
@@ -1965,7 +1978,7 @@
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#usage">Usage</a></li><li><a class="scroll-menu-link" href="#activemq-connector-reference">ActiveMQ Connector Reference</a></li><li><a class="scroll-menu-link" href="#activemq-xa-connector-reference">ActiveMQ XA Connector Reference</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#usage">Usage</a></li><li><a class="scroll-menu-link" href="#debugging-activemq">Debugging ActiveMQ</a></li><li><a class="scroll-menu-link" href="#activemq-connector-reference">ActiveMQ Connector Reference</a></li><li><a class="scroll-menu-link" href="#activemq-xa-connector-reference">ActiveMQ XA Connector Reference</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->
