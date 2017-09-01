@@ -1169,11 +1169,33 @@
  <h2 id="debugging-activemq"><a class="anchor" href="#debugging-activemq"></a>Debugging ActiveMQ</h2> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>Debugging information for ActiveMQ can be enabled with the following log4j configuration:</p> 
+   <p>Debugging information for ActiveMQ can be enabled with the following log4j configuration. This provides debugging information on the REST queries sent between the connector and ActiveMQ service:</p> 
   </div> 
   <div class="listingblock"> 
    <div class="content"> 
-    <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;AsyncLogger</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">"</span><span class="content">com.mulesoft.mq</span><span class="delimiter">"</span></span> <span class="attribute-name">level</span>=<span class="string"><span class="delimiter">"</span><span class="content">DEBUG</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span></code></pre> 
+    <pre class="CodeRay highlight"><code data-lang="xml">
+         
+      <table class="CodeRay"> 
+       <tbody> 
+        <tr> 
+         <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td> 
+         <td class="code"><pre> <span class="comment">&lt;!-- Mule classes --&gt;</span>
+    <span class="tag">&lt;logger</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">"</span><span class="content">org.mule</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
+        <span class="tag">&lt;level</span> <span class="attribute-name">value</span>=<span class="string"><span class="delimiter">"</span><span class="content">INFO</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;/logger&gt;</span>
+    <span class="tag">&lt;logger</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">"</span><span class="content">com.mulesoft</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
+        <span class="tag">&lt;level</span> <span class="attribute-name">value</span>=<span class="string"><span class="delimiter">"</span><span class="content">INFO</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;/logger&gt;</span></pre></td> 
+        </tr> 
+       </tbody> 
+      </table></code></pre> 
    </div> 
   </div> 
  </div> 

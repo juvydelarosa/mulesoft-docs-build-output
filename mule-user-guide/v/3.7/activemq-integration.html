@@ -1185,7 +1185,7 @@
 &nbsp;&nbsp;<span class="tag">&lt;jms:activemq-xa-connector</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">"</span><span class="content">jmsXAConnector</span><span class="delimiter">"</span></span>
 <span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="error">&nbsp;</span><span class="attribute-name">brokerURL</span>=<span class="string"><span class="delimiter">"</span><span class="content">tcp://localhost:61616</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
 &nbsp;
-...</pre></td> 
+   ...</pre></td> 
         </tr> 
        </tbody> 
       </table></code></pre> 
@@ -1194,61 +1194,61 @@
   <div class="paragraph"> 
    <p>Also copy the JAR files you need to the Mule lib directory (<code>$MULE_HOME/lib/user</code>) or your application lib directory.</p> 
   </div> 
-  <div class="admonitionblock warning"> 
-   <table> 
-    <tbody> 
-     <tr> 
-      <td class="icon"> <i class="fa icon-warning" title="Warning"></i> </td> 
-      <td class="content"> 
-       <div class="paragraph"> 
-        <p>The usage of&nbsp;<a href="https://repository.apache.org/content/repositories/releases/org/apache/activemq/activemq-all/">activemq-all-x.x.x.jar</a> creates conflicts with other dependencies, most notably with log4j, so please only add the jar files required by the deployment mode you have chosen for ActiveMQ:</p> 
-       </div> 
-       <div class="paragraph"> 
-        <p><strong>JARs for Embedded ActiveMQ</strong>:</p> 
-       </div> 
-       <div class="literalblock"> 
-        <div class="content"> 
-         <pre>apache-activemq-5.12.0/lib/activemq-broker-5.12.0.jar
+ </div> 
+</div> 
+<div class="sect1"> 
+ <h2 id="dependencies-conflict-with-jar-files"><a class="anchor" href="#dependencies-conflict-with-jar-files"></a>Dependencies Conflict With JAR Files</h2> 
+ <div class="sectionbody"> 
+  <div class="paragraph"> 
+   <p>The use of&nbsp;https://repository.apache.org/content/repositories/releases/org/apache/activemq/activemq-all/[activemq-all-x.x.x.jar] creates conflicts with other dependencies, most notably with log4j. Only add the JAR files required by the deployment mode you have chosen for ActiveMQ:</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p><strong>JARs for Embedded ActiveMQ</strong>:</p> 
+  </div> 
+  <div class="literalblock"> 
+   <div class="content"> 
+    <pre>apache-activemq-5.12.0/lib/activemq-broker-5.12.0.jar
 apache-activemq-5.12.0/lib/activemq-client-5.12.0.jar
 apache-activemq-5.12.0/lib/activemq-kahadb-store-5.12.0.jar
 apache-activemq-5.12.0/lib/activemq-openwire-legacy-5.12.0.jar
 apache-activemq-5.12.0/lib/activemq-protobuf-1.1.jar
 apache-activemq-5.12.0/lib/geronimo-j2ee-management_1.1_spec-1.0.1.jar
 apache-activemq-5.12.0/lib/hawtbuf-1.11.jar</pre> 
-        </div> 
-       </div> 
-       <div class="paragraph"> 
-        <p><strong>JARs for External ActiveMQ</strong>:</p> 
-       </div> 
-       <div class="literalblock"> 
-        <div class="content"> 
-         <pre>apache-activemq-5.12.0/lib/activemq-client-5.12.0.jar
-apache-activemq-5.12.0/lib/geronimo-j2ee-management_1.1_spec-1.0.1.jar
-apache-activemq-5.12.0/lib/hawtbuf-1.11.jar</pre> 
-        </div> 
-       </div> 
-       <div class="paragraph"> 
-        <p><strong>JARs for Failover ActiveMQ</strong>:</p> 
-       </div> 
-       <div class="literalblock"> 
-        <div class="content"> 
-         <pre>apache-activemq-5.12.0/lib/activemq-client-5.12.0.jar
-apache-activemq-5.12.0/lib/geronimo-j2ee-management_1.1_spec-1.0.1.jar
-apache-activemq-5.12.0/lib/hawtbuf-1.11.jar</pre> 
-        </div> 
-       </div> 
-       <div class="paragraph"> 
-        <p>To include these .jar files in your project, simply right-click on your project and select <strong>Build Path</strong> &gt; <strong>Add External Archives…​</strong></p> 
-       </div> </td> 
-     </tr> 
-    </tbody> 
-   </table> 
+   </div> 
   </div> 
+  <div class="paragraph"> 
+   <p><strong>JARs for External ActiveMQ</strong>:</p> 
+  </div> 
+  <div class="literalblock"> 
+   <div class="content"> 
+    <pre>apache-activemq-5.12.0/lib/activemq-client-5.12.0.jar
+apache-activemq-5.12.0/lib/geronimo-j2ee-management_1.1_spec-1.0.1.jar
+apache-activemq-5.12.0/lib/hawtbuf-1.11.jar</pre> 
+   </div> 
+  </div> 
+  <div class="paragraph"> 
+   <p><strong>JARs for Failover ActiveMQ</strong>:</p> 
+  </div> 
+  <div class="literalblock"> 
+   <div class="content"> 
+    <pre>apache-activemq-5.12.0/lib/activemq-client-5.12.0.jar
+apache-activemq-5.12.0/lib/geronimo-j2ee-management_1.1_spec-1.0.1.jar
+apache-activemq-5.12.0/lib/hawtbuf-1.11.jar</pre> 
+   </div> 
+  </div> 
+  <div class="paragraph"> 
+   <p>To include these .jar files in your project, simply right-click on your project and select <strong>Build Path</strong> &gt; <strong>Add External Archives…​</strong></p> 
+  </div> 
+ </div> 
+</div> 
+<div class="sect1"> 
+ <h2 id="activemq-failover-and-vm-initialization"><a class="anchor" href="#activemq-failover-and-vm-initialization"></a>ActiveMQ Failover and VM Initialization</h2> 
+ <div class="sectionbody"> 
   <div class="paragraph"> 
    <p>Mule initializes the ActiveMQ connector with the default instance of the ActiveMQ connection factory and establishes a TCP connection to the remote standalone broker running on local host and listening on port 61616.</p> 
   </div> 
   <div class="paragraph"> 
-   <p>Use the <code>failover://</code> protocol to connect to the cluster of brokers, and pass additional ActiveMQ options as URI parameters, for example:</p> 
+   <p>Use the <code>failover:</code> protocol to connect to the cluster of brokers, and pass additional ActiveMQ options as URI parameters, for example:</p> 
   </div> 
   <div class="listingblock"> 
    <div class="content"> 
@@ -1268,7 +1268,7 @@ apache-activemq-5.12.0/lib/hawtbuf-1.11.jar</pre>
    </div> 
   </div> 
   <div class="paragraph"> 
-   <p>To create an embedded instance of ActiveMQ broker, such as a broker running on the same Java VM as Mule, use the <code>vm://</code> protocol, for example:</p> 
+   <p>To create an embedded instance of ActiveMQ broker, such as a broker running on the same Java VM as Mule, use the <code>vm:</code> protocol, for example:</p> 
   </div> 
   <div class="listingblock"> 
    <div class="content"> 
@@ -1276,7 +1276,7 @@ apache-activemq-5.12.0/lib/hawtbuf-1.11.jar</pre>
    </div> 
   </div> 
   <div class="paragraph"> 
-   <p>You may also use additional connector attributes (See “Configuration Reference” for more details)</p> 
+   <p>You may also use additional connector attributes (See “Configuration Reference” for more details).</p> 
   </div> 
   <div class="paragraph"> 
    <p>Sometimes it might be necessary to explicitly configure an instance of ActiveMQ connection factory, for example, to set redelivery policy, or other ActiveMQ-specific features that are not exposed through Mule connector parameters. To create custom ActiveMQ connection factory instance, first configure it using Spring, for example:</p> 
@@ -1351,6 +1351,19 @@ apache-activemq-5.12.0/lib/hawtbuf-1.11.jar</pre>
      </tr> 
     </tbody> 
    </table> 
+  </div> 
+ </div> 
+</div> 
+<div class="sect1"> 
+ <h2 id="debugging-activemq"><a class="anchor" href="#debugging-activemq"></a>Debugging ActiveMQ</h2> 
+ <div class="sectionbody"> 
+  <div class="paragraph"> 
+   <p>Debugging information for ActiveMQ can be enabled with the following log4j2 configuration. This provides debugging information on the REST queries sent between the connector and ActiveMQ service:</p> 
+  </div> 
+  <div class="listingblock"> 
+   <div class="content"> 
+    <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;AsyncLogger</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">"</span><span class="content">com.mulesoft.mq</span><span class="delimiter">"</span></span> <span class="attribute-name">level</span>=<span class="string"><span class="delimiter">"</span><span class="content">DEBUG</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span></code></pre> 
+   </div> 
   </div> 
  </div> 
 </div> 
@@ -2082,7 +2095,7 @@ apache-activemq-5.12.0/lib/hawtbuf-1.11.jar</pre>
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#usage">Usage</a></li><li><a class="scroll-menu-link" href="#activemq-connector-reference">ActiveMQ Connector Reference</a></li><li><a class="scroll-menu-link" href="#activemq-xa-connector-reference">ActiveMQ XA Connector Reference</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#usage">Usage</a></li><li><a class="scroll-menu-link" href="#dependencies-conflict-with-jar-files">Dependencies Conflict With JAR Files</a></li><li><a class="scroll-menu-link" href="#activemq-failover-and-vm-initialization">ActiveMQ Failover and VM Initialization</a></li><li><a class="scroll-menu-link" href="#debugging-activemq">Debugging ActiveMQ</a></li><li><a class="scroll-menu-link" href="#activemq-connector-reference">ActiveMQ Connector Reference</a></li><li><a class="scroll-menu-link" href="#activemq-xa-connector-reference">ActiveMQ XA Connector Reference</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->
