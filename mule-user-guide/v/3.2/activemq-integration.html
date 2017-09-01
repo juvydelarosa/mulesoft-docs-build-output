@@ -1023,7 +1023,7 @@
  <h2 id="usage"><a class="anchor" href="#usage"></a>Usage</h2> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>To configure ActiveMQ connector with most common settings, use <code>&lt;jms:activemq-connector&gt;</code> or <code>&lt;jms:activemq-xa-connector&gt;</code> (for XA transaction support) element in your Mule configuration, e.g.:</p> 
+   <p>To configure ActiveMQ connector with most common settings, use <code>&lt;jms:activemq-connector&gt;</code> or <code>&lt;jms:activemq-xa-connector&gt;</code> (for XA transaction support) element in your Mule configuration, for example:</p> 
   </div> 
   <div class="listingblock"> 
    <div class="content"> 
@@ -1072,7 +1072,7 @@
    <p>Also copy the desired <a href="https://repository.apache.org/content/repositories/releases/org/apache/activemq/activemq-all/">ActiveMQ jar file</a> to Mule lib directory (<code>$MULE_HOME/lib/user</code>) or your application lib directory.</p> 
   </div> 
   <div class="paragraph"> 
-   <p>Mule will initialize the ActiveMQ connector with default instance of ActiveMQ connection factory and establish a TCP connection to the remote standalone broker running on local host and listening on port 61616.</p> 
+   <p>Mule initializes the ActiveMQ connector with a default instance of ActiveMQ connection factory and establishes a TCP connection to the remote standalone broker running on local host and listening on port 61616.</p> 
   </div> 
   <div class="paragraph"> 
    <p>Use <a href="http://activemq.apache.org/failover-transport-reference.html">failover://protocol</a> to connect to the cluster of brokers, and pass additional ActiveMQ options as URI parameters, e.g.:</p> 
@@ -1106,7 +1106,7 @@
    <p>You may also use additional connector attributes (See "Configuration Reference" for more details)</p> 
   </div> 
   <div class="paragraph"> 
-   <p>Sometimes it might be necessary to explicitly configure an instance of ActiveMQ connection factory, for example, to set redelivery policy, or other ActiveMQ-specific features that are not exposed through Mule connector parameters. To create custom ActiveMQ connection factory instance, first configure it using Spring, e.g.:</p> 
+   <p>Sometimes it might be necessary to explicitly configure an instance of ActiveMQ connection factory, for example, to set redelivery policy, or other ActiveMQ-specific features that are not exposed through Mule connector parameters. To create custom ActiveMQ connection factory instance, first configure it using Spring, for example:</p> 
   </div> 
   <div class="listingblock"> 
    <div class="content"> 
@@ -1156,11 +1156,24 @@
    </div> 
   </div> 
   <div class="paragraph"> 
-   <p>then reference this bean in <code>&lt;jms:activemq-connector&gt;</code>, e.g.:</p> 
+   <p>Then reference this bean in <code>&lt;jms:activemq-connector&gt;</code>, for example:</p> 
   </div> 
   <div class="listingblock"> 
    <div class="content"> 
     <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;jms:activemq-connector</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">"</span><span class="content">jmsConnector</span><span class="delimiter">"</span></span> <span class="attribute-name">connectionFactory-ref</span>=<span class="string"><span class="delimiter">"</span><span class="content">connectionFactory</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span></code></pre> 
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<div class="sect1"> 
+ <h2 id="debugging-activemq"><a class="anchor" href="#debugging-activemq"></a>Debugging ActiveMQ</h2> 
+ <div class="sectionbody"> 
+  <div class="paragraph"> 
+   <p>Debugging information for ActiveMQ can be enabled with the following log4j configuration:</p> 
+  </div> 
+  <div class="listingblock"> 
+   <div class="content"> 
+    <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;AsyncLogger</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">"</span><span class="content">com.mulesoft.mq</span><span class="delimiter">"</span></span> <span class="attribute-name">level</span>=<span class="string"><span class="delimiter">"</span><span class="content">DEBUG</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span></code></pre> 
    </div> 
   </div> 
  </div> 
@@ -1248,7 +1261,7 @@
      <td class="tableblock halign-left valign-top"> 
       <div> 
        <div class="paragraph"> 
-        <p>If set to true, a subscriber will not receive messages that were published by its own connection.</p> 
+        <p>If set to true, a subscriber does not receive messages that were published by its own connection.</p> 
        </div> 
        <div class="paragraph"> 
         <p><strong>Type</strong>: boolean<br> <strong>Required</strong>: no<br> <strong>Default</strong>: none</p> 
@@ -1260,7 +1273,7 @@
      <td class="tableblock halign-left valign-top"> 
       <div> 
        <div class="paragraph"> 
-        <p>If set to true, the JMS provider logs the message to stable storage as it is sent so that it can be recovered if delivery is unsuccessful. A client marks a message as persistent if it feels that the application will have problems if the message is lost in transit. A client marks a message as non-persistent if an occasional lost message is tolerable. Clients use delivery mode to tell a JMS provider how to balance message transport reliability/throughput. Delivery mode only covers the transport of the message to its destination. Retention of a message at the destination until its receipt is acknowledged is not guaranteed by a PERSISTENT delivery mode. Clients should assume that message retention policies are set administratively. Message retention policy governs the reliability of message delivery from destination to message consumer. For example, if a client’s message storage space is exhausted, some messages as defined by a site specific message retention policy may be dropped. A message is guaranteed to be delivered once-and-only-once by a JMS Provider if the delivery mode of the message is persistent and if the destination has a sufficient message retention policy.</p> 
+        <p>If set to true, the JMS provider logs the message to stable storage as it is sent so that it can be recovered if delivery is unsuccessful. A client marks a message as persistent if it feels that the application has problems if the message is lost in transit. A client marks a message as non-persistent if an occasional lost message is tolerable. Clients use delivery mode to tell a JMS provider how to balance message transport reliability/throughput. Delivery mode only covers the transport of the message to its destination. Retention of a message at the destination until its receipt is acknowledged is not guaranteed by a PERSISTENT delivery mode. Clients should assume that message retention policies are set administratively. Message retention policy governs the reliability of message delivery from destination to message consumer. For example, if a client’s message storage space is exhausted, some messages as defined by a site specific message retention policy may be dropped. A message is guaranteed to be delivered once-and-only-once by a JMS Provider if the delivery mode of the message is persistent and if the destination has a sufficient message retention policy.</p> 
        </div> 
        <div class="paragraph"> 
         <p><strong>Type</strong>: boolean<br> <strong>Required</strong>: no<br> <strong>Default</strong>: none</p> 
@@ -1356,7 +1369,7 @@
      <td class="tableblock halign-left valign-top"> 
       <div> 
        <div class="paragraph"> 
-        <p>The number of concurrent consumers that will be used to receive JMS messages. (Note: If you use this attribute, you should not configure the 'numberOfConcurrentTransactedReceivers', which has the same effect.)</p> 
+        <p>The number of concurrent consumers to use to receive JMS messages. (Note: If you use this attribute, you should not configure the 'numberOfConcurrentTransactedReceivers', which has the same effect.)</p> 
        </div> 
        <div class="paragraph"> 
         <p><strong>Type</strong>: integer<br> <strong>Required</strong>: no<br> <strong>Default</strong>: none</p> 
@@ -1428,7 +1441,7 @@
      <td class="tableblock halign-left valign-top"> 
       <div> 
        <div class="paragraph"> 
-        <p>If set to true, Mule fails when a topic or queue cannot be retrieved from JNDI. If set to false, Mule will create a topic or queue from the JMS session if the JNDI lookup fails.</p> 
+        <p>If set to true, Mule fails when a topic or queue cannot be retrieved from JNDI. If set to false, Mule creates a topic or queue from the JMS session if the JNDI lookup fails.</p> 
        </div> 
        <div class="paragraph"> 
         <p><strong>Type</strong>: boolean<br> <strong>Required</strong>: no<br> <strong>Default</strong>: none</p> 
@@ -1515,9 +1528,11 @@
     </tr> 
    </tbody> 
   </table> 
-  <div class="paragraph"> 
-   <p>Activemq xa connector</p> 
-  </div> 
+ </div> 
+</div> 
+<div class="sect1"> 
+ <h2 id="activemq-xa-connector"><a class="anchor" href="#activemq-xa-connector"></a>ActiveMQ XA Connector</h2> 
+ <div class="sectionbody"> 
   <div class="paragraph"> 
    <p>The activemq-xa-connector element configures an ActiveMQ version of the JMS connector with XA transaction support.</p> 
   </div> 
@@ -1874,7 +1889,7 @@
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#introduction">Introduction</a></li><li><a class="scroll-menu-link" href="#usage">Usage</a></li><li><a class="scroll-menu-link" href="#configuration-reference">Configuration Reference</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#introduction">Introduction</a></li><li><a class="scroll-menu-link" href="#usage">Usage</a></li><li><a class="scroll-menu-link" href="#debugging-activemq">Debugging ActiveMQ</a></li><li><a class="scroll-menu-link" href="#configuration-reference">Configuration Reference</a></li><li><a class="scroll-menu-link" href="#activemq-xa-connector">ActiveMQ XA Connector</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->

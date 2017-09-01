@@ -1530,7 +1530,7 @@
       <td class="tableblock halign-left valign-top"> 
        <div> 
         <div class="paragraph"> 
-         <p>Number of messages to prefetch.</p> 
+         <p>Number of messages to prefetch. <strong>†</strong></p> 
         </div> 
        </div></td> 
      </tr> 
@@ -1555,7 +1555,7 @@
     </tbody> 
    </table> 
    <div class="paragraph"> 
-    <p><strong>Note</strong>: For best performance, set <code>Fetch Size</code> to 10 (maximum value) and reduce <code>Frequency</code> to increase the polling time and the resulting dequeuing of transactions per second (TPS). You can increase <code>Fetch Timeout</code> if message processing is slow. For example, if processing takes 5 seconds, set the <code>Fetch Timeout</code> to at least double this time (10000 milliseconds).</p> 
+    <p><strong>†</strong> <strong>Note</strong>: For best performance, set <code>Fetch Size</code> to 10 (maximum value) and reduce <code>Frequency</code> to increase the polling time and the resulting dequeuing of transactions per second (TPS). You can increase <code>Fetch Timeout</code> if message processing is slow. For example, if processing takes 5 seconds, set the <code>Fetch Timeout</code> to at least double this time (10000 milliseconds). If Fetch Size is greater than 1, multiple messages are requested at the same time. This has the effect of launching separate messages though the Mule Flow, potentially concurrently, depending on the Mule worker thread configuration (see <a href="/mule-user-guide/v/3.8/tuning-performance">Tuning Performance</a>).</p> 
    </div> 
    <div class="paragraph"> 
     <p>Apart from these performance-related parameters, it is important to properly configure the <a href="#am">Acknowledgement Mode</a>.</p> 
