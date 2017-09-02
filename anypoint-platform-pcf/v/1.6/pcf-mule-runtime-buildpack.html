@@ -15,7 +15,7 @@
   <script src="/js/scripts.js?t=1498825733"></script>
 
   <link rel="canonical" href="https://docs.mulesoft.com/anypoint-platform-pcf/v/1.6/pcf-mule-runtime-buildpack" />
-  <meta name="description" content="The Mule runtime buildpack is a custom Pivotal Cloud Foundry buildpack that contains an image that includes the Mule Runtime and supporting compone..." />
+  <meta name="description" content="The Mule Runtime Buildpack is a custom Pivotal Cloud Foundry buildpack that contains an image that includes the Mule Runtime and supporting compone..." />
   <meta class="swiftype" name="title" data-type="string" content="To Install the Mule Runtime Buildpack" />
   <meta class="swiftype" name="version" data-type="enum" content="1.6" />
 </head>
@@ -196,7 +196,7 @@
       </div>
     </div>
     <div class="version-selector col-md-4 col-xs-12">
-      <label for="version-selector">Anypoint Platform for Pivotal Cloud Foundry Version</label><select onChange="window.location.href=this.value" id="version-selector"><option value="/anypoint-platform-pcf/v/1.6/pcf-mule-runtime-buildpack">1.6 (Latest)</option><option value="/anypoint-platform-pcf/v/1.5/pcf-mule-runtime-buildpack">1.5</option></select>
+      <label for="version-selector">Anypoint Platform for Pivotal Cloud Foundry Version</label><select onChange="window.location.href=this.value" id="version-selector"><option value="/anypoint-platform-pcf/v/1.6/pcf-mule-runtime-buildpack">1.6 (Active)</option><option value="/anypoint-platform-pcf/v/1.5/pcf-mule-runtime-buildpack">1.5 (Latest)</option></select>
 
     </div>
   </div>
@@ -1112,13 +1112,19 @@
     <!-- END older version notification -->
     <!-- START article content -->
     <div class="article-content col-md-7">
-      
+      <div class="older-version-notification col-md-9" data-swiftype-index='false'>You are viewing an older version of this section. Click <a href="/anypoint-platform-pcf/v/1.5/pcf-mule-runtime-buildpack">here</a> to navigate to the latest version.</div>
       <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">About Anypoint Platform for PCF</a>/<a href="pcf-workflow">Workflow: Install and Configure Anypoint Platform for PCF</a>/<a href="pcf-mule-runtime-buildpack" class="breadcrumb-active-link">To Install the Mule Runtime BuildPack</a></div>
       <h1>To Install the Mule Runtime Buildpack</h1>
       <div id="preamble"> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>The Mule runtime buildpack is a custom Pivotal Cloud Foundry buildpack that contains an image that includes the Mule Runtime and supporting components. You can use this buildpack to deploy Mule applications and API gateways.</p> 
+   <p>The Mule Runtime Buildpack is a custom Pivotal Cloud Foundry buildpack that contains an image that includes the Mule Runtime and supporting components.</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p>This current version of the MuleSoft Runtime buildpack is based on the Pivotal Cloud Foundry Java Buildpack, version 4.2. MuleSoft Runtime Buildpacks based on older version are still available. Compatibility is based on compatibility of the base version of the Java buildpack with the PCF version.</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p>You can use this buildpack to deploy Mule applications and API gateways.</p> 
   </div> 
   <div class="olist arabic"> 
    <ol class="arabic"> 
@@ -1178,6 +1184,7 @@
  <div class="sectionbody"> 
   <div class="ulist"> 
    <ul> 
+    <li> <p><a href="https://github.com/cloudfoundry/java-buildpack/releases">Java Buildpack Release Notes</a></p> </li> 
     <li> <p><a href="http://docs.pivotal.io/pivotalcf/1-8/buildpacks/java/index.html">Pivotal Java Buildpack</a></p> </li> 
     <li> <p><a href="pcf-buildpack-customize">To Customize the Mule Runtime Buildpack</a></p> </li> 
    </ul> 
