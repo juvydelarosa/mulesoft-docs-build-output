@@ -1197,7 +1197,7 @@
    <p>This port is supplied to the application through the Java property <code>${http.port}</code>. This is the only port on which your application receives inbound traffic. Additionally, applications can only provide a single HTTP listener component.</p> 
   </div> 
   <div class="paragraph"> 
-   <p>You must ensure that your application does not specify the <code>http.port</code> variable in the <code>mule-app.properties</code> file or configuration files loaded through Spring Properties Placeholders. Properties defined in these locations override the port supplied through PCF environment variables mechanims. This will prevent connectivity to your app after it is deployed.</p> 
+   <p>You must ensure that your application does not specify the <code>http.port</code> variable in the <code>mule-app.properties</code> file or configuration files loaded through Spring Properties Placeholders. Properties defined in these locations override the port supplied through PCF environment variables. This will prevent connectivity to your app after it is deployed.</p> 
   </div> 
  </div> 
 </div> 
@@ -1205,7 +1205,7 @@
  <h2 id="container-disk-size"><a class="anchor" href="#container-disk-size"></a>Container Disk Size</h2> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>Ensure that you allocate more disk space than memory to your application. This enables you to generate a JVM heap dump if requrested by the MuleSoft support team for diagnostics purposes.</p> 
+   <p>Ensure that you allocate more disk space than memory to your application. This enables you to generate a JVM heap dump if requested by the MuleSoft support team for diagnostics purposes.</p> 
   </div> 
  </div> 
 </div> 
@@ -1294,7 +1294,7 @@
     <p>The Mule runtime buildpack provides out-of-the-box integration with App Dynamics through the standard JavaBuildpack App Dynamics Extension. If the application has a bound custom service following <a href="https://github.com/cloudfoundry/java-buildpack/blob/master/docs/framework-app_dynamics_agent.md">naming conventions</a> and pointing to an App Dynamics instace, the JVM will start with the appropriate flags to connect to it.</p> 
    </div> 
    <div class="paragraph"> 
-    <p>See more details aboud App Dynamics integration <a href="https://github.com/cloudfoundry/java-buildpack/blob/master/docs/framework-app_dynamics_agent.md">here</a></p> 
+    <p>See more details about App Dynamics integration <a href="https://github.com/cloudfoundry/java-buildpack/blob/master/docs/framework-app_dynamics_agent.md">here</a></p> 
    </div> 
   </div> 
   <div class="sect2"> 
@@ -1324,7 +1324,7 @@
      <tbody> 
       <tr> 
        <td class="icon"> <i class="fa icon-important" title="Important"></i> </td> 
-       <td class="content"> <strong>Make sure your application always has more disk space allocated than memory, to be able to store the dumps on the container transient storage filesystem and upload to an external SFTP or SSH server.</strong> </td> 
+       <td class="content"> <strong>Make sure your application always has more disk space allocated than memory, to be able to store the dumps on the container transient storage file system and upload to an external SFTP or SSH server.</strong> </td> 
       </tr> 
      </tbody> 
     </table> 
