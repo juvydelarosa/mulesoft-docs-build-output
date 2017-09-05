@@ -1125,6 +1125,17 @@
  <div class="sectionbody"> 
   <div class="ulist"> 
    <div class="title"> 
+    <a href="#sco-connector-1.0.1">Salesforce Composite Connector 1.0.1 - September 5, 2017</a> 
+   </div> 
+   <ul> 
+    <li> <p><a href="#sco-connector-1.0.1-compatibility">Version 1.0.1 Compatibility</a></p> </li> 
+    <li> <p><a href="#sco-connector-1.0.1-features">Version 1.0.1 Features</a></p> </li> 
+    <li> <p><a href="#sco-connector-1.0.1-fixes">Version 1.0.1 Fixes</a></p> </li> 
+    <li> <p><a href="#sco-connector-1.0.1-known-issues">Version 1.0.1 Known Issues</a></p> </li> 
+   </ul> 
+  </div> 
+  <div class="ulist"> 
+   <div class="title"> 
     <a href="#sco-connector-1.0.0">Salesforce Composite Connector 1.0.0 - March 10, 2016</a> 
    </div> 
    <ul> 
@@ -1133,6 +1144,65 @@
     <li> <p><a href="#sco-connector-1.0.0-fixes">Version 1.0.0 Fixes</a></p> </li> 
     <li> <p><a href="#sco-connector-1.0.0-known-issues">Version 1.0.0 Known Issues</a></p> </li> 
    </ul> 
+  </div> 
+ </div> 
+</div> 
+<div class="sect1"> 
+ <h2 id="sco-connector-1.0.1"><a class="anchor" href="#sco-connector-1.0.1"></a>Version 1.0.1 - September 5, 2017</h2> 
+ <div class="sectionbody"> 
+  <div class="sect2"> 
+   <h3 id="sco-connector-1.0.1-compatibility"><a class="anchor" href="#sco-connector-1.0.1-compatibility"></a>Version 1.0.1 Compatibility</h3> 
+   <div class="paragraph"> 
+    <p>The Salesforce Composite 1.0.1 connector is compatible with:</p> 
+   </div> 
+   <table class="tableblock frame-all grid-all spread"> 
+    <colgroup> 
+     <col> 
+     <col> 
+    </colgroup> 
+    <thead> 
+     <tr> 
+      <th class="tableblock halign-left valign-top">Application/Service</th> 
+      <th class="tableblock halign-left valign-top">Version</th> 
+     </tr> 
+    </thead> 
+    <tbody> 
+     <tr> 
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Mule Runtime</p></td> 
+      <td class="tableblock halign-left valign-top"><p class="tableblock">3.7.5 or later</p></td> 
+     </tr> 
+     <tr> 
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Salesforce Rest API</p></td> 
+      <td class="tableblock halign-left valign-top"><p class="tableblock">v36.0</p></td> 
+     </tr> 
+    </tbody> 
+   </table> 
+  </div> 
+  <div class="sect2"> 
+   <h3 id="sco-connector-1.0.1-features"><a class="anchor" href="#sco-connector-1.0.1-features"></a>Version 1.0.1 Features</h3> 
+   <div class="ulist"> 
+    <ul> 
+     <li> <p><strong>Addition of Proxy Support</strong>: Starting with version 1.0.1 the Salesforce Composite Connector allows the connection using a PROXY.</p> </li> 
+    </ul> 
+   </div> 
+  </div> 
+  <div class="sect2"> 
+   <h3 id="sco-connector-1.0.1-fixes"><a class="anchor" href="#sco-connector-1.0.1-fixes"></a>Version 1.0.1 Fixes</h3> 
+   <div class="ulist"> 
+    <ul> 
+     <li> <p><strong>INVALID_SESSION_ID not triggering reconnection strategy:</strong> Previously, when the Invalid Session Id exception occurred the reconnection strategy did not kick in as expected. Now, when such an exception occurs the reconnection strategy is successfully started.</p> </li> 
+     <li> <p><strong>Propagate errors from Salesforce Composite connector</strong>: In previous versions, the exception handling for the Salesforce specific errors was hidden by the connector and no details about the error encountered was visible to the user. Now, error details such as status code and exception message are forwarded to the end user.</p> </li> 
+    </ul> 
+   </div> 
+  </div> 
+  <div class="sect2"> 
+   <h3 id="sco-connector-1.0.1-known-issues"><a class="anchor" href="#sco-connector-1.0.1-known-issues"></a>Version 1.0.1 Known Issues</h3> 
+   <div class="ulist"> 
+    <ul> 
+     <li> <p>Support for TLS1.0 is discontinued in Salesforce.</p> </li> 
+     <li> <p>If by default the application tries to use TLS1.0, then, when running it, the following VM argument should be added: -Dhttp.protocols=TLSv1.1,TLSv1.2 This will ensure the fact that TLS1.1 or TLS1.2 will be used for the communication with Salesforce.</p> </li> 
+    </ul> 
+   </div> 
   </div> 
  </div> 
 </div> 
@@ -1147,10 +1217,10 @@
    <div class="paragraph"> 
     <p>The Salesforce Composite connector is compatible with:</p> 
    </div> 
-   <table class="tableblock frame-topbot grid-all" style="width: 80%;"> 
+   <table class="tableblock frame-all grid-all spread"> 
     <colgroup> 
-     <col style="width: 50%;"> 
-     <col style="width: 50%;"> 
+     <col> 
+     <col> 
     </colgroup> 
     <thead> 
      <tr> 
@@ -1306,7 +1376,7 @@
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#contents">Contents</a></li><li><a class="scroll-menu-link" href="#sco-connector-1.0.0">Version 1.0.0 - March 10, 2016</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#contents">Contents</a></li><li><a class="scroll-menu-link" href="#sco-connector-1.0.1">Version 1.0.1 - September 5, 2017</a></li><li><a class="scroll-menu-link" href="#sco-connector-1.0.0">Version 1.0.0 - March 10, 2016</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->
