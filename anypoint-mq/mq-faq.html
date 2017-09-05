@@ -1194,7 +1194,7 @@
  <h2 id="are-retries-synchronous-or-asynchronous-relative-to-the-mule-flow"><a class="anchor" href="#are-retries-synchronous-or-asynchronous-relative-to-the-mule-flow"></a>Are retries synchronous or asynchronous relative to the Mule flow?</h2> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>The retries are synchronous, the client mode specifies how to establish the connection to the backend.</p> 
+   <p>Retries for sending messages to Anypoint MQ broker are always synchronous. By contrast, the client mode specifies how to establish the connection to the backend and does does not govern retries of message sending.</p> 
   </div> 
  </div> 
 </div> 
