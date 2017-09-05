@@ -1106,18 +1106,15 @@
   <div class="paragraph"> 
    <p>Outbound Quartz endpoints can delay otherwise imminent events. For example, you can prevent outgoing email from being sent as soon as it has completed processing in your Mule flow. Instead, you can use Quartz to delay sending it until the top of the next hour.</p> 
   </div> 
-  <table class="tableblock frame-all grid-all spread"> 
-   <colgroup> 
-    <col> 
-    <col> 
-   </colgroup> 
-   <thead> 
-    <tr> 
-     <th class="tableblock halign-left valign-top"><span class="image"><img src="./_images/information.png" alt="information"></span></th> 
-     <th class="tableblock halign-left valign-top"><strong>Polling</strong><br> Note that you also have the option to use a Poll scope at the beginning of a flow, which also supports Cron expressions and watermarks. Read more about the <a href="/mule-user-guide/v/3.6/poll-reference">Poll scope</a>.</th> 
-    </tr> 
-   </thead> 
-  </table> 
+  <div class="paragraph"> 
+   <p><strong>Polling</strong></p> 
+  </div> 
+  <div class="paragraph"> 
+   <p>Note that you also have the option to use a Poll scope at the beginning of a flow, which also supports Cron expressions and watermarks. Read more about the <a href="/mule-user-guide/v/3.6/poll-reference">Poll scope</a>.</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p>When running in an environment with multiple workers and nodes, a Quartz scheduler, by default, runs on each node whereas the Poll Scope is "smart" enough to only run on a single node. A Quartz scheduler can be configured to work the same as the Poll Scope, but requires configuration of a JDBC JobStore.</p> 
+  </div> 
  </div> 
 </div> 
 <div class="sect1"> 
