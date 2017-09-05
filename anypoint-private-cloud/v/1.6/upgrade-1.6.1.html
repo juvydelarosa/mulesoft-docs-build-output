@@ -1175,13 +1175,15 @@ $ kubectl</pre>
     <li> <p>Uncompress the installer archive.</p> 
      <div class="listingblock"> 
       <div class="content"> 
-       <pre>tar -xvf anypoint-1.6.0-installer.tar.gz</pre> 
+       <pre>mkdir anypoint-1.6.1
+tar -xzf anypoint-1.6.1-installer.tar.gz -C installer-1.6.1</pre> 
       </div> 
      </div> </li> 
     <li> <p>Navigate to the <code>anypoint-1.6.1</code> directory, then run the upload script.</p> 
      <div class="listingblock"> 
       <div class="content"> 
-       <pre>sudo ./upload</pre> 
+       <pre>cd anypoint-1.6.1
+sudo ./upload</pre> 
       </div> 
      </div> 
      <div class="paragraph"> 
@@ -1254,7 +1256,7 @@ new application anypoint 1.6.1 has been uploaded</pre>
      </div> 
      <div class="listingblock"> 
       <div class="content"> 
-       <pre>./manual_update+_161.sh start-update</pre> 
+       <pre>./manual_update_161.sh start-update</pre> 
       </div> 
      </div> 
      <div class="paragraph"> 
@@ -1276,7 +1278,7 @@ The update operation has been created in manual mode.</pre>
      </div> 
      <div class="listingblock"> 
       <div class="content"> 
-       <pre>./manual_update+_161.sh bootstrap-system</pre> 
+       <pre>./manual_update_161.sh bootstrap-system</pre> 
       </div> 
      </div> </li> 
     <li> <p>Peform the system update</p> 
@@ -1285,7 +1287,7 @@ The update operation has been created in manual mode.</pre>
      </div> 
      <div class="listingblock"> 
       <div class="content"> 
-       <pre>./manual_update+_161.sh update-system</pre> 
+       <pre>./manual_update_161.sh update-system</pre> 
       </div> 
      </div> 
      <div class="paragraph"> 
@@ -1314,7 +1316,7 @@ system successfully updated: changeset(id=108cfd7f-997e-4656-b425-21557c261d8a, 
      </div> 
      <div class="listingblock"> 
       <div class="content"> 
-       <pre>./manual_update+_161.sh bootstrap-rbac</pre> 
+       <pre>./manual_update_161.sh bootstrap-rbac</pre> 
       </div> 
      </div> </li> 
     <li> <p>Determine the name of each of your nodes using the following command:</p> 
@@ -1336,7 +1338,7 @@ kubectl get nodes</pre>
      </div> 
      <div class="listingblock"> 
       <div class="content"> 
-       <pre>./manual_update+_161.sh drain=&lt;node-name&gt;</pre> 
+       <pre>./manual_update_161.sh drain=&lt;node-name&gt;</pre> 
       </div> 
      </div> 
      <div class="paragraph"> 
@@ -1365,7 +1367,7 @@ pod "pithos-app-install-95fa7b-58flh" evicted
      </div> 
      <div class="listingblock"> 
       <div class="content"> 
-       <pre>./manual_update+_161.sh uncordon=&lt;node-name&gt;</pre> 
+       <pre>./manual_update_161.sh uncordon=&lt;node-name&gt;</pre> 
       </div> 
      </div> 
      <div class="paragraph"> 
@@ -1384,19 +1386,19 @@ of 'kubectl get nodes' from inside Gravity and wait the node to be 'Ready' again
     <li> <p>From the master node, initiate the application update</p> 
      <div class="listingblock"> 
       <div class="content"> 
-       <pre>./manual_update+_161.sh update-app</pre> 
+       <pre>./manual_update_161.sh update-app</pre> 
       </div> 
      </div> </li> 
     <li> <p>If you are upgrading a one node installation, fix the LDAP config directory permissions</p> 
      <div class="listingblock"> 
       <div class="content"> 
-       <pre>./manual_update+_161.sh fix-ldap</pre> 
+       <pre>./manual_update_161.sh fix-ldap</pre> 
       </div> 
      </div> </li> 
     <li> <p>Finalize and complete the update operation</p> 
      <div class="listingblock"> 
       <div class="content"> 
-       <pre>./manual_update+_161.sh finalize-update</pre> 
+       <pre>./manual_update_161.sh finalize-update</pre> 
       </div> 
      </div> </li> 
     <li> <p>Update the health check on the load balancer.</p> 
