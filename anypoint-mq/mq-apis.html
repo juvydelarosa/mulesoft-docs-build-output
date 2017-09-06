@@ -1131,13 +1131,16 @@
  </div> 
 </div> 
 <div class="sect1"> 
- <h2 id="getoeb"><a class="anchor" href="#getoeb"></a>To Get an Organization ID, Environment ID, and Bearer Token</h2> 
+ <h2 id="getoeb"><a class="anchor" href="#getoeb"></a>To Get an Organization ID, Environment ID, and Access Token</h2> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
    <p>Using <a href="/access-management/audit-logging#to-configure-anypoint-mq-audit-logging">MQ Audit Logging</a>, you can easily view the organization ID and environment ID in the <code>payload.txt</code> file that Anypoint Platform creates for any auditable action in MQ.</p> 
   </div> 
   <div class="paragraph"> 
-   <p>However, getting the bearer token requires using either a command like curl or an application like Postman. The example that follows uses curl. If you are a Windows user, you need to <a href="https://curl.haxx.se/download.html">download a curl command</a> before accessing the information.</p> 
+   <p>However, getting the access (bearer) token requires using either a command like curl or an application like Postman. The example that follows uses curl. If you are a Windows user, you need to <a href="https://curl.haxx.se/download.html">download a curl command</a> before accessing the information.</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p><strong>Note:</strong> The access token has a default time to live of 1 hour. It’s the same TTL that users get when they log into the Anypoint Platform. The TTL is set in the Access Management screen for an organization from the Default Session Timeout value.</p> 
   </div> 
   <div class="paragraph"> 
    <p>To get API access information:</p> 
@@ -1951,7 +1954,7 @@ class AnypointMQAdminClient {
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#getoeb">To Get an Organization ID, Environment ID, and Bearer Token</a></li><li><a class="scroll-menu-link" href="#about-an-api-s-workflow">About an API’s Workflow</a></li><li><a class="scroll-menu-link" href="#about-api-access-examples">About API Access Examples</a></li><li><a class="scroll-menu-link" href="#mqadminapi">About the Anypoint MQ Administration Portal</a></li><li><a class="scroll-menu-link" href="#to-create-a-fifo-queue-from-the-administration-portal">To Create a FIFO Queue From the Administration Portal</a></li><li><a class="scroll-menu-link" href="#mqbrokerapi">About the Anypoint MQ Broker Portal</a></li><li><a class="scroll-menu-link" href="#mqstatapi">About the Anypoint the MQ Statistics Portal</a></li><li><a class="scroll-menu-link" href="#about-a-scripting-example-to-create-queues-and-exchanges">About a Scripting Example to Create Queues and Exchanges</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#getoeb">To Get an Organization ID, Environment ID, and Access Token</a></li><li><a class="scroll-menu-link" href="#about-an-api-s-workflow">About an API’s Workflow</a></li><li><a class="scroll-menu-link" href="#about-api-access-examples">About API Access Examples</a></li><li><a class="scroll-menu-link" href="#mqadminapi">About the Anypoint MQ Administration Portal</a></li><li><a class="scroll-menu-link" href="#to-create-a-fifo-queue-from-the-administration-portal">To Create a FIFO Queue From the Administration Portal</a></li><li><a class="scroll-menu-link" href="#mqbrokerapi">About the Anypoint MQ Broker Portal</a></li><li><a class="scroll-menu-link" href="#mqstatapi">About the Anypoint the MQ Statistics Portal</a></li><li><a class="scroll-menu-link" href="#about-a-scripting-example-to-create-queues-and-exchanges">About a Scripting Example to Create Queues and Exchanges</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->
