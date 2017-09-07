@@ -1160,7 +1160,7 @@ $ kubectl</pre>
  <div class="sectionbody"> 
   <div class="olist arabic"> 
    <ol class="arabic"> 
-    <li> <p>Obtain the <code>anypoint-1.6.1-installer.tar.gz</code> archive from your customer support representative.</p> </li> 
+    <li> <p>Obtain the <code>anypoint-1.6.1-installer.tar.gz</code> archive from your customer success representative.</p> </li> 
     <li> <p>Determine the master node of your cluster.</p> 
      <div class="listingblock"> 
       <div class="content"> 
@@ -1176,7 +1176,7 @@ $ kubectl</pre>
      <div class="listingblock"> 
       <div class="content"> 
        <pre>mkdir anypoint-1.6.1
-tar -xzf anypoint-1.6.1-installer.tar.gz -C installer-1.6.1</pre> 
+tar -xzf anypoint-1.6.1-installer.tar.gz -C anypoint-1.6.1</pre> 
       </div> 
      </div> </li> 
     <li> <p>Navigate to the <code>anypoint-1.6.1</code> directory, then run the upload script.</p> 
@@ -1187,7 +1187,7 @@ sudo ./upload</pre>
       </div> 
      </div> 
      <div class="paragraph"> 
-      <p>This command updates the platform to the current version and restarts each pod in the cluster.</p> 
+      <p>This command uploads data to the master node and performs internal updates.</p> 
      </div> 
      <div class="listingblock"> 
       <div class="content"> 
