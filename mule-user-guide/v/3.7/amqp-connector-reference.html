@@ -1480,6 +1480,15 @@
         <p>Defines if the connector should only do active exchange and queue declarations, or if it should perform passive declarations to enforce the existence of the queue or exchange. If set to <code>false</code> and if the queue or exchange does not exist, the AMQP connector throws a ShutdownSignalException, a 404 error, and returns reply text starting with <code>NOT_FOUND</code>.</p> 
        </div> 
        <div class="paragraph"> 
+        <p>Although this attribute is normally not set (its default value is <code>false</code>), if you set activeDeclarationsOnly to <code>true</code>, AMQP applies active declarations as follows:</p> 
+       </div> 
+       <div class="ulist"> 
+        <ul> 
+         <li> <p>When declaring an exchange: When you set the exchangeType attribute.</p> </li> 
+         <li> <p>When declaring a queue: When you set any of the queueDurable, queueAutoDelete, or queueExclusive attributes. If any of these attributes are set, active declarations of queues and exchanges are applied.</p> </li> 
+        </ul> 
+       </div> 
+       <div class="paragraph"> 
         <p>For a discussion on active versus passive declarations, see <a href="http://bitingcode.blogspot.co.uk/2012/03/passive-or-active-queues.html">Passive or active queues?</a></p> 
        </div> 
        <div class="paragraph"> 
