@@ -1126,7 +1126,7 @@
    <p>The Object Store Connector lets you connect to the object storage facility in Mule and exposes convenient methods for exploiting the capabilities of <a href="/mule-user-guide/v/3.8/mule-object-stores">Mule Object Stores</a>. Internally, Mule uses object stores in various filters, routers, and other message processors that need to store state between messages.</p> 
   </div> 
   <div class="paragraph"> 
-   <p>Read through this user guide to understand how to set up and configure a basic flow using the connector. Read through the <a href="http://mulesoft.github.io/objectstore-connector/">Technical Reference</a> to understand how the connector operations interact with Mule Object Stores. You can also find <strong>demo applications</strong> here that illustrate how to use the connector operations. <a href="/release-notes/objectstore-connector-release-notes">Release Notes</a> are a good way to track feature additions, compatibility limitations, and API version updates with each release of the connector version.</p> 
+   <p>Read through this user guide to understand how to set up and configure a basic flow using the connector. Read through the <a href="http://mulesoft.github.io/objectstore-connector/">Technical Reference</a> to understand how the connector operations interact with Mule Object Stores. You can also find <strong>demo applications</strong> that illustrate how to use the connector operations. <a href="/release-notes/objectstore-connector-release-notes">Release Notes</a> are a good way to track feature additions, compatibility limitations, and API version updates with each release of the connector version.</p> 
   </div> 
   <div class="paragraph"> 
    <p>MuleSoft maintains this connector under the <a href="/mule-user-guide/v/3.8/anypoint-connectors#connector-categories"><em>Select</em></a> support policy.</p> 
@@ -1311,7 +1311,10 @@
     <p>The <code>_defaultUserObjectStore</code> spring bean instance ensures that an Object Store in a Runtime Manager application survives across redeployments. When you use this bean instance, data persists outside the Runtime Manager worker (but in the cloud), which is why the data is available after restarts.</p> 
    </div> 
    <div class="paragraph"> 
-    <p>Reference the spring bean instance using the Object Store Reference field.</p> 
+    <p><strong>Note:</strong> ObjectStore does not support TTL in its default configuration. See <a href="https://support.mulesoft.com/s/article/ka434000000TQFoAAO/Entries-in-Objectstore-expires-before-configured-entryTTL-value">Entries in Objectstore expires before configured entryTTL value</a> for a workaround.</p> 
+   </div> 
+   <div class="paragraph"> 
+    <p>Reference the Spring bean instance using the Object Store Reference field.</p> 
    </div> 
    <div class="paragraph"> 
     <p>For XML or standalone use, add the <code>objectStore-ref="_defaultUserObjectStore"</code> parameter, for example:</p> 
