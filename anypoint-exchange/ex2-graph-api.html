@@ -15,7 +15,7 @@
   <script src="/js/scripts.js?t=1498825733"></script>
 
   <link rel="canonical" href="https://docs.mulesoft.com/anypoint-exchange/ex2-graph-api" />
-  <meta name="description" content="The Exchange Graph API lets you search Exchange assets for a string value. You can specify what values to receive from each search. The Graph API r..." />
+  <meta name="description" content="The Exchange Graph API lets you search Exchange assets for a string value. You can specify what values to receive in each search. You can send inqu..." />
   <meta class="swiftype" name="title" data-type="string" content="To Query the Exchange Graph API" />
 </head>
 <body>
@@ -1120,20 +1120,20 @@
       <div id="preamble"> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>The Exchange Graph API lets you search Exchange assets for a string value. You can specify what values to receive from each search. The Graph API requires that you obtain an access token to conduct each inquiry.</p> 
+   <p>The Exchange Graph API lets you search Exchange assets for a string value. You can specify what values to receive in each search. You can send inquiries to the Graph API using the GraphiQL program provided by MuleSoft. Because the Graph API accesses Anypoint Exchange and Anypoint Platform, all inquiries must contain an access token.</p> 
   </div> 
  </div> 
 </div> 
 <div class="sect1"> 
  <h2 id="to-obtain-an-access-token"><a class="anchor" href="#to-obtain-an-access-token"></a>To Obtain an Access Token</h2> 
  <div class="sectionbody"> 
+  <div class="paragraph"> 
+   <p>You must be an organization owner to obtain an access token. Access tokens time out in approximately 5 minutes and must be renewed to continue use of the Graph API.</p> 
+  </div> 
   <div class="olist arabic"> 
    <ol class="arabic"> 
     <li> <p>Log into Anypoint Platform.</p> </li> 
     <li> <p>Obtain an access token with a curl command such as the following. You can also use Postman or another application for sending HTTP commands.</p> 
-     <div class="paragraph"> 
-      <p><strong>Note:</strong> The access token times out after approximately 5 minutes, so you may want to create a shell script to obtain the access token. The access token time to live is not set by an organization’s Default Session Timeout setting.</p> 
-     </div> 
      <div class="listingblock"> 
       <div class="content"> 
        <pre class="CodeRay highlight"><code data-lang="json">
@@ -1171,30 +1171,28 @@
   <div class="olist arabic"> 
    <ol class="arabic"> 
     <li> <p>Open GraphiQL program by browsing to <a href="https://anypoint.mulesoft.com/graph/api/v1/graphiql">https://anypoint.mulesoft.com/graph/api/v1/graphiql</a>.</p> </li> 
-    <li> <p>In GraphiQL, click Query Variables at the bottom of the screen and insert the access token as:</p> </li> 
-   </ol> 
-  </div> 
-  <div class="listingblock"> 
-   <div class="content"> 
-    <pre class="CodeRay highlight"><code data-lang="json">
-         
-      <table class="CodeRay"> 
-       <tbody> 
-        <tr> 
-         <td class="line-numbers"><pre>1
+    <li> <p>In GraphiQL, click Query Variables at the bottom of the screen and insert the access token as:</p> 
+     <div class="listingblock"> 
+      <div class="content"> 
+       <pre class="CodeRay highlight"><code data-lang="json">
+            
+         <table class="CodeRay"> 
+          <tbody> 
+           <tr> 
+            <td class="line-numbers"><pre>1
 2
 3
 </pre></td> 
-         <td class="code"><pre>{
+            <td class="code"><pre>{
   <span class="key"><span class="delimiter">"</span><span class="content">accessToken</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">ACCESS_TOKEN_VALUE</span><span class="delimiter">"</span></span>
 }</pre></td> 
-        </tr> 
-       </tbody> 
-      </table></code></pre> 
-   </div> 
-  </div> 
-  <div class="paragraph"> 
-   <p>+ . Get a new access token if your query session exceeds 5 minutes.</p> 
+           </tr> 
+          </tbody> 
+         </table></code></pre> 
+      </div> 
+     </div> </li> 
+    <li> <p>Get a new access token if your query session exceeds 5 minutes.</p> </li> 
+   </ol> 
   </div> 
   <div class="paragraph"> 
    <p>The GraphiQL program provides these controls:</p> 
@@ -1214,30 +1212,32 @@
    </thead> 
    <tbody> 
     <tr> 
-     <td class="tableblock halign-left valign-top"><p class="tableblock">image:ex2-graphiql-run.png</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./_images/ex2-graphiql-run.png" alt="ex2-graphiql-run"></span></p></td> 
      <td class="tableblock halign-left valign-top"><p class="tableblock">Run</p></td> 
      <td class="tableblock halign-left valign-top"><p class="tableblock">Send the query to the Exchange Graph API</p></td> 
     </tr> 
     <tr> 
-     <td class="tableblock halign-left valign-top"><p class="tableblock">image:ex2-graphiql-prettify.png</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./_images/ex2-graphiql-prettify.png" alt="ex2-graphiql-prettify"></span></p></td> 
      <td class="tableblock halign-left valign-top"><p class="tableblock">Prettify</p></td> 
      <td class="tableblock halign-left valign-top"><p class="tableblock">Strip out comments at the top of the file and collapse the JSON as much as possible. This is not a toggle. If you want to see the comments again, run GraphiQL in another browser or in an incognito window.</p></td> 
     </tr> 
     <tr> 
-     <td class="tableblock halign-left valign-top"><p class="tableblock">image:ex2-graphiql-history.png</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./_images/ex2-graphiql-history.png" alt="ex2-graphiql-history"></span></p></td> 
      <td class="tableblock halign-left valign-top"><p class="tableblock">History</p></td> 
      <td class="tableblock halign-left valign-top"><p class="tableblock">List previous queuries. To dismiss the History pane, click History again.</p></td> 
     </tr> 
     <tr> 
-     <td class="tableblock halign-left valign-top"><p class="tableblock">image:ex2-graphiql-docs.png</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./_images/ex2-graphiql-docs.png" alt="ex2-graphiql-docs"></span></p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Docs</p></td> 
      <td class="tableblock halign-left valign-top"><p class="tableblock">List a brief description about a parameter.</p></td> 
-     <td class="tableblock halign-left valign-top"><p class="tableblock">image:ex2-graphiql-query-vars.png</p></td> 
+    </tr> 
+    <tr> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./_images/ex2-graphiql-query-vars.png" alt="ex2-graphiql-query-vars"></span></p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Query Variables</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Specify the access token value and any other variables to use in a query.</p></td> 
     </tr> 
    </tbody> 
   </table> 
-  <div class="paragraph"> 
-   <p>When you</p> 
-  </div> 
  </div> 
 </div> 
 <div class="sect1"> 
@@ -1330,11 +1330,11 @@
      </div> 
      <div class="listingblock"> 
       <div class="content"> 
-       <pre class="CodeRay highlight"><code data-lang="xml">https://anypoint.mulesoft.com/exchange/42424242-42424242/product-api/1.0.0/</code></pre> 
+       <pre class="CodeRay highlight"><code data-lang="xml">https://anypoint.mulesoft.com/exchange/42424242/product-api/1.0.0/</code></pre> 
       </div> 
      </div> 
      <div class="paragraph"> 
-      <p><code>42424242-4424242424242</code> is the organization ID.</p> 
+      <p><code>42424242</code> is the organization ID.</p> 
      </div> </li> 
     <li> <p>Add the organization ID using the organizationIds field in GraphiQL:</p> 
      <div class="listingblock"> 
@@ -1361,7 +1361,7 @@
   <span class="error">a</span><span class="error">s</span><span class="error">s</span><span class="error">e</span><span class="error">t</span><span class="error">s</span><span class="error">(</span>
     <span class="error">q</span><span class="error">u</span><span class="error">e</span><span class="error">r</span><span class="error">y</span>: {
       <span class="error">s</span><span class="error">e</span><span class="error">a</span><span class="error">r</span><span class="error">c</span><span class="error">h</span><span class="error">T</span><span class="error">e</span><span class="error">r</span><span class="error">m</span>: <span class="string"><span class="delimiter">"</span><span class="content">product</span><span class="delimiter">"</span></span>,
-      <span class="error">o</span><span class="error">r</span><span class="error">g</span><span class="error">a</span><span class="error">n</span><span class="error">i</span><span class="error">z</span><span class="error">a</span><span class="error">t</span><span class="error">i</span><span class="error">o</span><span class="error">n</span><span class="error">I</span><span class="error">d</span><span class="error">s</span>: <span class="string"><span class="delimiter">"</span><span class="content">42424242-424242424242</span><span class="delimiter">"</span></span>
+      <span class="error">o</span><span class="error">r</span><span class="error">g</span><span class="error">a</span><span class="error">n</span><span class="error">i</span><span class="error">z</span><span class="error">a</span><span class="error">t</span><span class="error">i</span><span class="error">o</span><span class="error">n</span><span class="error">I</span><span class="error">d</span><span class="error">s</span>: <span class="string"><span class="delimiter">"</span><span class="content">42424242</span><span class="delimiter">"</span></span>
     },
     <span class="error">l</span><span class="error">a</span><span class="error">t</span><span class="error">e</span><span class="error">s</span><span class="error">t</span><span class="error">V</span><span class="error">e</span><span class="error">r</span><span class="error">s</span><span class="error">i</span><span class="error">o</span><span class="error">n</span><span class="error">s</span><span class="error">O</span><span class="error">n</span><span class="error">l</span><span class="error">y</span>: <span class="value">true</span>
   <span class="error">)</span> {
@@ -1448,10 +1448,6 @@
      <td class="tableblock halign-left valign-top"><p class="tableblock">Asset ID for each asset.</p></td> 
     </tr> 
     <tr> 
-     <td class="tableblock halign-left valign-top"><p class="tableblock">assetLink</p></td> 
-     <td class="tableblock halign-left valign-top"><p class="tableblock">URL of an asset (not supported).</p></td> 
-    </tr> 
-    <tr> 
      <td class="tableblock halign-left valign-top"><p class="tableblock">createdAt</p></td> 
      <td class="tableblock halign-left valign-top"><p class="tableblock">Date and time an asset was created, for example, 2017-08-11T04:48:20.585Z.</p></td> 
     </tr> 
@@ -1484,16 +1480,8 @@
      <td class="tableblock halign-left valign-top"><p class="tableblock">Organization ID for an asset.</p></td> 
     </tr> 
     <tr> 
-     <td class="tableblock halign-left valign-top"><p class="tableblock">productAPIVersion</p></td> 
-     <td class="tableblock halign-left valign-top"><p class="tableblock">Version of the Graph API (not supported).</p></td> 
-    </tr> 
-    <tr> 
      <td class="tableblock halign-left valign-top"><p class="tableblock">rating</p></td> 
      <td class="tableblock halign-left valign-top"><p class="tableblock">Star rating value for an asset.</p></td> 
-    </tr> 
-    <tr> 
-     <td class="tableblock halign-left valign-top"><p class="tableblock">related(relationshipType: OtherVersions) { groupId, assetId, version, name, type, runtimeVersion, productAPIVersion</p></td> 
-     <td class="tableblock halign-left valign-top"></td> 
     </tr> 
     <tr> 
      <td class="tableblock halign-left valign-top"><p class="tableblock">runtimeVersion</p></td> 
@@ -1501,7 +1489,7 @@
     </tr> 
     <tr> 
      <td class="tableblock halign-left valign-top"><p class="tableblock">tags { value, key, mutable }</p></td> 
-     <td class="tableblock halign-left valign-top"><p class="tableblock">Each tag for an asset, value is the tag type or version, key is the tag name or null, and mutable indicates whether or not a tag name can be changed.</p></td> 
+     <td class="tableblock halign-left valign-top"><p class="tableblock">Each tag for an asset, value is the tag type or version, key is the tag name or null, and mutable indicates whether or not a tag name can be changed. You can ignore the mutable value - its setting is arbitrary. Exchange tags cannot be set to immutable.</p></td> 
     </tr> 
     <tr> 
      <td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td> 
@@ -1517,6 +1505,9 @@
     </tr> 
    </tbody> 
   </table> 
+  <div class="paragraph"> 
+   <p>GraphiQL provides additional filter values that are not supported for use with the Graph API.</p> 
+  </div> 
   <div class="paragraph"> 
    <p>Example query:</p> 
   </div> 
@@ -1552,36 +1543,128 @@
 23
 24
 25
-26
-27
 </pre></td> 
          <td class="code"><pre>{
   <span class="error">a</span><span class="error">s</span><span class="error">s</span><span class="error">e</span><span class="error">t</span><span class="error">s</span><span class="error">(</span><span class="error">a</span><span class="error">s</span><span class="error">s</span><span class="error">e</span><span class="error">t</span>: {
-    <span class="error">g</span><span class="error">r</span><span class="error">o</span><span class="error">u</span><span class="error">p</span><span class="error">I</span><span class="error">d</span>: <span class="string"><span class="delimiter">"</span><span class="content">ORGANIZTION_ID</span><span class="delimiter">"</span></span>,
+    <span class="error">g</span><span class="error">r</span><span class="error">o</span><span class="error">u</span><span class="error">p</span><span class="error">I</span><span class="error">d</span>: <span class="string"><span class="delimiter">"</span><span class="content">ORGANIZATION_ID</span><span class="delimiter">"</span></span>,
     <span class="error">a</span><span class="error">s</span><span class="error">s</span><span class="error">e</span><span class="error">t</span><span class="error">I</span><span class="error">d</span>: <span class="string"><span class="delimiter">"</span><span class="content">product-api/</span><span class="delimiter">"</span></span>,
     <span class="error">v</span><span class="error">e</span><span class="error">r</span><span class="error">s</span><span class="error">i</span><span class="error">o</span><span class="error">n</span>: <span class="string"><span class="delimiter">"</span><span class="content">1.0.0</span><span class="delimiter">"</span></span>
   }<span class="error">)</span>
   {
-    <span class="error">g</span><span class="error">r</span><span class="error">o</span><span class="error">u</span><span class="error">p</span><span class="error">I</span><span class="error">d</span>,
     <span class="error">a</span><span class="error">s</span><span class="error">s</span><span class="error">e</span><span class="error">t</span><span class="error">I</span><span class="error">d</span>,
-    <span class="error">v</span><span class="error">e</span><span class="error">r</span><span class="error">s</span><span class="error">i</span><span class="error">o</span><span class="error">n</span>,
-    <span class="error">d</span><span class="error">e</span><span class="error">s</span><span class="error">c</span><span class="error">r</span><span class="error">i</span><span class="error">p</span><span class="error">t</span><span class="error">i</span><span class="error">o</span><span class="error">n</span>,
-    <span class="error">n</span><span class="error">a</span><span class="error">m</span><span class="error">e</span>,
-    <span class="error">t</span><span class="error">y</span><span class="error">p</span><span class="error">e</span>,
-    <span class="error">t</span><span class="error">a</span><span class="error">g</span><span class="error">s</span> { <span class="error">v</span><span class="error">a</span><span class="error">l</span><span class="error">u</span><span class="error">e</span>, <span class="error">k</span><span class="error">e</span><span class="error">y</span>, <span class="error">m</span><span class="error">u</span><span class="error">t</span><span class="error">a</span><span class="error">b</span><span class="error">l</span><span class="error">e</span> },
-    <span class="error">c</span><span class="error">r</span><span class="error">e</span><span class="error">a</span><span class="error">t</span><span class="error">e</span><span class="error">d</span><span class="error">B</span><span class="error">y</span> { <span class="error">i</span><span class="error">d</span>, <span class="error">u</span><span class="error">s</span><span class="error">e</span><span class="error">r</span><span class="error">N</span><span class="error">a</span><span class="error">m</span><span class="error">e</span>, <span class="error">f</span><span class="error">i</span><span class="error">r</span><span class="error">s</span><span class="error">t</span><span class="error">N</span><span class="error">a</span><span class="error">m</span><span class="error">e</span>, <span class="error">l</span><span class="error">a</span><span class="error">s</span><span class="error">t</span><span class="error">N</span><span class="error">a</span><span class="error">m</span><span class="error">e</span> },
-    <span class="error">f</span><span class="error">i</span><span class="error">l</span><span class="error">e</span><span class="error">s</span> { <span class="error">c</span><span class="error">l</span><span class="error">a</span><span class="error">s</span><span class="error">s</span><span class="error">i</span><span class="error">f</span><span class="error">i</span><span class="error">e</span><span class="error">r</span>, <span class="error">p</span><span class="error">a</span><span class="error">c</span><span class="error">k</span><span class="error">a</span><span class="error">g</span><span class="error">i</span><span class="error">n</span><span class="error">g</span>, <span class="error">e</span><span class="error">x</span><span class="error">t</span><span class="error">e</span><span class="error">r</span><span class="error">n</span><span class="error">a</span><span class="error">l</span><span class="error">L</span><span class="error">i</span><span class="error">n</span><span class="error">k</span>, <span class="error">m</span><span class="error">d</span><span class="integer">5</span> },
-    <span class="error">r</span><span class="error">a</span><span class="error">t</span><span class="error">i</span><span class="error">n</span><span class="error">g</span>,
-    <span class="error">n</span><span class="error">u</span><span class="error">m</span><span class="error">b</span><span class="error">e</span><span class="error">r</span><span class="error">O</span><span class="error">f</span><span class="error">R</span><span class="error">a</span><span class="error">t</span><span class="error">e</span><span class="error">s</span>,
-    <span class="error">c</span><span class="error">r</span><span class="error">e</span><span class="error">a</span><span class="error">t</span><span class="error">e</span><span class="error">d</span><span class="error">A</span><span class="error">t</span>,
-    <span class="error">o</span><span class="error">r</span><span class="error">g</span><span class="error">a</span><span class="error">n</span><span class="error">i</span><span class="error">z</span><span class="error">a</span><span class="error">t</span><span class="error">i</span><span class="error">o</span><span class="error">n</span><span class="error">I</span><span class="error">d</span>,
     <span class="error">a</span><span class="error">s</span><span class="error">s</span><span class="error">e</span><span class="error">t</span><span class="error">L</span><span class="error">i</span><span class="error">n</span><span class="error">k</span>,
-    <span class="error">r</span><span class="error">u</span><span class="error">n</span><span class="error">t</span><span class="error">i</span><span class="error">m</span><span class="error">e</span><span class="error">V</span><span class="error">e</span><span class="error">r</span><span class="error">s</span><span class="error">i</span><span class="error">o</span><span class="error">n</span>,
-    <span class="error">p</span><span class="error">r</span><span class="error">o</span><span class="error">d</span><span class="error">u</span><span class="error">c</span><span class="error">t</span><span class="error">A</span><span class="error">P</span><span class="error">I</span><span class="error">V</span><span class="error">e</span><span class="error">r</span><span class="error">s</span><span class="error">i</span><span class="error">o</span><span class="error">n</span>,
+    <span class="error">c</span><span class="error">r</span><span class="error">e</span><span class="error">a</span><span class="error">t</span><span class="error">e</span><span class="error">d</span><span class="error">A</span><span class="error">t</span>,
+    <span class="error">c</span><span class="error">r</span><span class="error">e</span><span class="error">a</span><span class="error">t</span><span class="error">e</span><span class="error">d</span><span class="error">B</span><span class="error">y</span> { <span class="error">i</span><span class="error">d</span>, <span class="error">u</span><span class="error">s</span><span class="error">e</span><span class="error">r</span><span class="error">N</span><span class="error">a</span><span class="error">m</span><span class="error">e</span>, <span class="error">f</span><span class="error">i</span><span class="error">r</span><span class="error">s</span><span class="error">t</span><span class="error">N</span><span class="error">a</span><span class="error">m</span><span class="error">e</span>, <span class="error">l</span><span class="error">a</span><span class="error">s</span><span class="error">t</span><span class="error">N</span><span class="error">a</span><span class="error">m</span><span class="error">e</span> },
     <span class="error">d</span><span class="error">e</span><span class="error">p</span><span class="error">e</span><span class="error">n</span><span class="error">d</span><span class="error">e</span><span class="error">n</span><span class="error">c</span><span class="error">i</span><span class="error">e</span><span class="error">s</span> { <span class="error">g</span><span class="error">r</span><span class="error">o</span><span class="error">u</span><span class="error">p</span><span class="error">I</span><span class="error">d</span>, <span class="error">a</span><span class="error">s</span><span class="error">s</span><span class="error">e</span><span class="error">t</span><span class="error">I</span><span class="error">d</span>, <span class="error">v</span><span class="error">e</span><span class="error">r</span><span class="error">s</span><span class="error">i</span><span class="error">o</span><span class="error">n</span>, <span class="error">n</span><span class="error">a</span><span class="error">m</span><span class="error">e</span>, <span class="error">t</span><span class="error">y</span><span class="error">p</span><span class="error">e</span> },
-    <span class="error">r</span><span class="error">e</span><span class="error">l</span><span class="error">a</span><span class="error">t</span><span class="error">e</span><span class="error">d</span><span class="error">(</span><span class="error">r</span><span class="error">e</span><span class="error">l</span><span class="error">a</span><span class="error">t</span><span class="error">i</span><span class="error">o</span><span class="error">n</span><span class="error">s</span><span class="error">h</span><span class="error">i</span><span class="error">p</span><span class="error">T</span><span class="error">y</span><span class="error">p</span><span class="error">e</span>: <span class="error">O</span><span class="error">t</span><span class="error">h</span><span class="error">e</span><span class="error">r</span><span class="error">V</span><span class="error">e</span><span class="error">r</span><span class="error">s</span><span class="error">i</span><span class="error">o</span><span class="error">n</span><span class="error">s</span><span class="error">)</span> { <span class="error">g</span><span class="error">r</span><span class="error">o</span><span class="error">u</span><span class="error">p</span><span class="error">I</span><span class="error">d</span>, <span class="error">a</span><span class="error">s</span><span class="error">s</span><span class="error">e</span><span class="error">t</span><span class="error">I</span><span class="error">d</span>, <span class="error">v</span><span class="error">e</span><span class="error">r</span><span class="error">s</span><span class="error">i</span><span class="error">o</span><span class="error">n</span>, <span class="error">n</span><span class="error">a</span><span class="error">m</span><span class="error">e</span>, <span class="error">t</span><span class="error">y</span><span class="error">p</span><span class="error">e</span>, <span class="error">r</span><span class="error">u</span><span class="error">n</span><span class="error">t</span><span class="error">i</span><span class="error">m</span><span class="error">e</span><span class="error">V</span><span class="error">e</span><span class="error">r</span><span class="error">s</span><span class="error">i</span><span class="error">o</span><span class="error">n</span>, <span class="error">p</span><span class="error">r</span><span class="error">o</span><span class="error">d</span><span class="error">u</span><span class="error">c</span><span class="error">t</span><span class="error">A</span><span class="error">P</span><span class="error">I</span><span class="error">V</span><span class="error">e</span><span class="error">r</span><span class="error">s</span><span class="error">i</span><span class="error">o</span><span class="error">n</span> }
+    <span class="error">d</span><span class="error">e</span><span class="error">s</span><span class="error">c</span><span class="error">r</span><span class="error">i</span><span class="error">p</span><span class="error">t</span><span class="error">i</span><span class="error">o</span><span class="error">n</span>,
+    <span class="error">f</span><span class="error">i</span><span class="error">l</span><span class="error">e</span><span class="error">s</span> { <span class="error">c</span><span class="error">l</span><span class="error">a</span><span class="error">s</span><span class="error">s</span><span class="error">i</span><span class="error">f</span><span class="error">i</span><span class="error">e</span><span class="error">r</span>, <span class="error">p</span><span class="error">a</span><span class="error">c</span><span class="error">k</span><span class="error">a</span><span class="error">g</span><span class="error">i</span><span class="error">n</span><span class="error">g</span>, <span class="error">e</span><span class="error">x</span><span class="error">t</span><span class="error">e</span><span class="error">r</span><span class="error">n</span><span class="error">a</span><span class="error">l</span><span class="error">L</span><span class="error">i</span><span class="error">n</span><span class="error">k</span>, <span class="error">m</span><span class="error">d</span><span class="integer">5</span> },
+    <span class="error">g</span><span class="error">r</span><span class="error">o</span><span class="error">u</span><span class="error">p</span><span class="error">I</span><span class="error">d</span>,
+    <span class="error">n</span><span class="error">a</span><span class="error">m</span><span class="error">e</span>,
+    <span class="error">n</span><span class="error">u</span><span class="error">m</span><span class="error">b</span><span class="error">e</span><span class="error">r</span><span class="error">O</span><span class="error">f</span><span class="error">R</span><span class="error">a</span><span class="error">t</span><span class="error">e</span><span class="error">s</span>,
+    <span class="error">o</span><span class="error">r</span><span class="error">g</span><span class="error">a</span><span class="error">n</span><span class="error">i</span><span class="error">z</span><span class="error">a</span><span class="error">t</span><span class="error">i</span><span class="error">o</span><span class="error">n</span><span class="error">I</span><span class="error">d</span>,
+    <span class="error">r</span><span class="error">a</span><span class="error">t</span><span class="error">i</span><span class="error">n</span><span class="error">g</span>,
+    <span class="error">r</span><span class="error">u</span><span class="error">n</span><span class="error">t</span><span class="error">i</span><span class="error">m</span><span class="error">e</span><span class="error">V</span><span class="error">e</span><span class="error">r</span><span class="error">s</span><span class="error">i</span><span class="error">o</span><span class="error">n</span>,
+    <span class="error">t</span><span class="error">a</span><span class="error">g</span><span class="error">s</span> { <span class="error">v</span><span class="error">a</span><span class="error">l</span><span class="error">u</span><span class="error">e</span>, <span class="error">k</span><span class="error">e</span><span class="error">y</span> },
+    <span class="error">t</span><span class="error">y</span><span class="error">p</span><span class="error">e</span>,
+    <span class="error">v</span><span class="error">e</span><span class="error">r</span><span class="error">s</span><span class="error">i</span><span class="error">o</span><span class="error">n</span>
   }
 }</pre></td> 
+        </tr> 
+       </tbody> 
+      </table></code></pre> 
+   </div> 
+  </div> 
+  <div class="paragraph"> 
+   <p>Output from this command:</p> 
+  </div> 
+  <div class="listingblock"> 
+   <div class="content"> 
+    <pre class="CodeRay highlight"><code data-lang="json">
+         
+      <table class="CodeRay"> 
+       <tbody> 
+        <tr> 
+         <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+</pre></td> 
+         <td class="code"><pre>{
+  <span class="key"><span class="delimiter">"</span><span class="content">data</span><span class="delimiter">"</span></span>: {
+    <span class="key"><span class="delimiter">"</span><span class="content">assets</span><span class="delimiter">"</span></span>: [
+      {
+        <span class="key"><span class="delimiter">"</span><span class="content">assetId</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">mule-module-ms-dynamics-crm</span><span class="delimiter">"</span></span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">assetLink</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="delimiter">"</span></span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">createdAt</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">2017-09-12T19:36:42.746Z</span><span class="delimiter">"</span></span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">createdBy</span><span class="delimiter">"</span></span>: {
+          <span class="key"><span class="delimiter">"</span><span class="content">id</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">ORG_ID</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">userName</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">connectivity</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">firstName</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">MuleSoft</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">lastName</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Organization</span><span class="delimiter">"</span></span>
+        },
+        <span class="key"><span class="delimiter">"</span><span class="content">dependencies</span><span class="delimiter">"</span></span>: [],
+        <span class="key"><span class="delimiter">"</span><span class="content">description</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Description for Microsoft Dynamics CRM Connector</span><span class="delimiter">"</span></span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">files</span><span class="delimiter">"</span></span>: [
+          {
+            <span class="key"><span class="delimiter">"</span><span class="content">classifier</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">studio-plugin</span><span class="delimiter">"</span></span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">packaging</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">zip</span><span class="delimiter">"</span></span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">externalLink</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">https://exchange2-asset-manager-kprod...</span><span class="delimiter">"</span></span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">md5</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">ASSETS_MD5</span><span class="delimiter">"</span></span>
+          },
+          {
+            <span class="key"><span class="delimiter">"</span><span class="content">classifier</span><span class="delimiter">"</span></span>: <span class="value">null</span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">packaging</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">pom</span><span class="delimiter">"</span></span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">externalLink</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">https://exchange2-asset-manager-kprod...</span><span class="delimiter">"</span></span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">md5</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">ASSETS_MD5</span><span class="delimiter">"</span></span>
+          },
+          {
+            <span class="key"><span class="delimiter">"</span><span class="content">classifier</span><span class="delimiter">"</span></span>: <span class="value">null</span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">packaging</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">jar</span><span class="delimiter">"</span></span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">externalLink</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">https://exchange2-asset-manager-kprod..., </span><span class="delimiter">"</span></span><span class="error">m</span><span class="error">d</span><span class="integer">5</span><span class="string"><span class="delimiter">"</span><span class="content">: </span><span class="delimiter">"</span></span><span class="error">A</span><span class="error">S</span><span class="error">S</span><span class="error">E</span><span class="error">T</span><span class="error">S</span><span class="error">_</span><span class="error">M</span><span class="error">D</span><span class="integer">5</span><span class="string"><span class="delimiter">"</span><span class="content"> } ], </span><span class="delimiter">"</span></span><span class="error">g</span><span class="error">r</span><span class="error">o</span><span class="error">u</span><span class="error">p</span><span class="error">I</span><span class="error">d</span><span class="string"><span class="delimiter">"</span><span class="content">: </span><span class="delimiter">"</span></span><span class="error">o</span><span class="error">r</span><span class="error">g</span><span class="error">.</span><span class="error">m</span><span class="error">u</span><span class="error">l</span><span class="error">e</span><span class="error">.</span><span class="error">m</span><span class="error">o</span><span class="error">d</span><span class="error">u</span><span class="error">l</span><span class="error">e</span><span class="error">s</span><span class="string"><span class="delimiter">"</span><span class="content">, </span><span class="delimiter">"</span></span><span class="error">n</span><span class="error">a</span><span class="error">m</span><span class="error">e</span><span class="string"><span class="delimiter">"</span><span class="content">: </span><span class="delimiter">"</span></span><span class="error">M</span><span class="error">i</span><span class="error">c</span><span class="error">r</span><span class="error">o</span><span class="error">s</span><span class="error">o</span><span class="error">f</span><span class="error">t</span> <span class="error">D</span><span class="error">y</span><span class="error">n</span><span class="error">a</span><span class="error">m</span><span class="error">i</span><span class="error">c</span><span class="error">s</span> <span class="error">C</span><span class="error">R</span><span class="error">M</span> <span class="error">C</span><span class="error">o</span><span class="error">n</span><span class="error">n</span><span class="error">e</span><span class="error">c</span><span class="error">t</span><span class="error">o</span><span class="error">r</span><span class="string"><span class="delimiter">"</span><span class="content">, </span><span class="delimiter">"</span></span><span class="error">n</span><span class="error">u</span><span class="error">m</span><span class="error">b</span><span class="error">e</span><span class="error">r</span><span class="error">O</span><span class="error">f</span><span class="error">R</span><span class="error">a</span><span class="error">t</span><span class="error">e</span><span class="error">s</span><span class="string"><span class="delimiter">"</span><span class="content">: 0, </span><span class="delimiter">"</span></span><span class="error">o</span><span class="error">r</span><span class="error">g</span><span class="error">a</span><span class="error">n</span><span class="error">i</span><span class="error">z</span><span class="error">a</span><span class="error">t</span><span class="error">i</span><span class="error">o</span><span class="error">n</span><span class="error">I</span><span class="error">d</span><span class="string"><span class="delimiter">"</span><span class="content">: </span><span class="delimiter">"</span></span><span class="error">O</span><span class="error">R</span><span class="error">G</span><span class="error">_</span><span class="error">I</span><span class="error">D</span><span class="string"><span class="delimiter">"</span><span class="content">, </span><span class="delimiter">"</span></span><span class="error">r</span><span class="error">a</span><span class="error">t</span><span class="error">i</span><span class="error">n</span><span class="error">g</span><span class="string"><span class="delimiter">"</span><span class="content">: 0, </span><span class="delimiter">"</span></span><span class="error">r</span><span class="error">u</span><span class="error">n</span><span class="error">t</span><span class="error">i</span><span class="error">m</span><span class="error">e</span><span class="error">V</span><span class="error">e</span><span class="error">r</span><span class="error">s</span><span class="error">i</span><span class="error">o</span><span class="error">n</span><span class="string"><span class="delimiter">"</span><span class="content">: </span><span class="delimiter">"</span></span><span class="float">3.7</span><span class="error">.</span><span class="integer">0</span><span class="string"><span class="delimiter">"</span><span class="content">, </span><span class="delimiter">"</span></span><span class="error">t</span><span class="error">a</span><span class="error">g</span><span class="error">s</span><span class="string"><span class="delimiter">"</span><span class="content">: [ { </span><span class="delimiter">"</span></span><span class="error">v</span><span class="error">a</span><span class="error">l</span><span class="error">u</span><span class="error">e</span><span class="string"><span class="delimiter">"</span><span class="content">: </span><span class="delimiter">"</span></span><span class="float">2.9</span><span class="error">.</span><span class="float">1.201709121536</span><span class="string"><span class="delimiter">"</span><span class="content">, </span><span class="delimiter">"</span></span><span class="error">k</span><span class="error">e</span><span class="error">y</span><span class="string"><span class="delimiter">"</span><span class="content">: </span><span class="delimiter">"</span></span><span class="error">f</span><span class="error">u</span><span class="error">l</span><span class="error">l</span><span class="error">-</span><span class="error">v</span><span class="error">e</span><span class="error">r</span><span class="error">s</span><span class="error">i</span><span class="error">o</span><span class="error">n</span><span class="string"><span class="delimiter">"</span><span class="content">, </span><span class="delimiter">"</span></span><span class="error">m</span><span class="error">u</span><span class="error">t</span><span class="error">a</span><span class="error">b</span><span class="error">l</span><span class="error">e</span><span class="string"><span class="delimiter">"</span><span class="content">: false }, ...</span></span></pre></td> 
         </tr> 
        </tbody> 
       </table></code></pre> 
@@ -1595,7 +1678,7 @@
   <div class="ulist"> 
    <ul> 
     <li> <p><a href="https://www.anypoint.mulesoft.com/exchange/">Anypoint Exchange</a></p> </li> 
-    <li> <p><a href="/anypoint-exchange/">Exchange Documentation</a> *</p> </li> 
+    <li> <p><a href="/anypoint-exchange/">Exchange Documentation</a></p> </li> 
    </ul> 
   </div> 
  </div> 
