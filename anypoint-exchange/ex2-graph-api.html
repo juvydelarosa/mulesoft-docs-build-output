@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>To Query the Exchange Graph API // MuleSoft Documentation </title>
   <link rel="shortcut icon" href="/favicon.ico"/>
-  <link rel="stylesheet" type="text/css" href="/css/vendor.min.css?t=1498825733">
-  <link rel="stylesheet" type="text/css" href="/css/mulesoft.min.css?t=1498825733">
+  <link rel="stylesheet" type="text/css" href="/css/vendor.min.css?t=1505334364">
+  <link rel="stylesheet" type="text/css" href="/css/mulesoft.min.css?t=1505334364">
   <script src="/js/jquery-1.11.2.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   <script src="/js/jquery.fancybox.pack.js"></script>
   <script src="/js/last-campaign.min.js"></script>
   <script src="/js/trafficSource.js"></script>
-  <script src="/js/scripts.js?t=1498825733"></script>
+  <script src="/js/scripts.js?t=1505334364"></script>
 
   <link rel="canonical" href="https://docs.mulesoft.com/anypoint-exchange/ex2-graph-api" />
   <meta name="description" content="The Exchange Graph API lets you search Exchange assets for a string value. You can specify what values to receive in each search. You can send inqu..." />
@@ -1120,48 +1120,10 @@
       <div id="preamble"> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>The Exchange Graph API lets you search Exchange assets for a string value. You can specify what values to receive in each search. You can send inquiries to the Graph API using the GraphiQL program provided by MuleSoft. Because the Graph API accesses Anypoint Exchange and Anypoint Platform, all inquiries must contain an access token.</p> 
+   <p>The Exchange Graph API lets you search Exchange assets for a string value. You can specify what values to receive in each search. You can send inquiries to the Graph API using the GraphiQL program provided by MuleSoft.</p> 
   </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="to-obtain-an-access-token"><a class="anchor" href="#to-obtain-an-access-token"></a>To Obtain an Access Token</h2> 
- <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>Access tokens time out in approximately 5 minutes and must be renewed to continue use of the Graph API.</p> 
-  </div> 
-  <div class="olist arabic"> 
-   <ol class="arabic"> 
-    <li> <p>Log into Anypoint Platform.</p> </li> 
-    <li> <p>Obtain an access token with a curl command such as the following. You can also use Postman or another application for sending HTTP commands.</p> 
-     <div class="listingblock"> 
-      <div class="content"> 
-       <pre class="CodeRay highlight"><code data-lang="json">
-            
-         <table class="CodeRay"> 
-          <tbody> 
-           <tr> 
-            <td class="line-numbers"><pre>1
-2
-3
-4
-5
-6
-7
-</pre></td> 
-            <td class="code"><pre><span class="error">c</span><span class="error">u</span><span class="error">r</span><span class="error">l</span> <span class="error">-</span><span class="error">X</span> <span class="error">P</span><span class="error">O</span><span class="error">S</span><span class="error">T</span> <span class="error">\</span>
-  <span class="error">h</span><span class="error">t</span><span class="error">t</span><span class="error">p</span><span class="error">s</span>:<span class="error">/</span><span class="error">/</span><span class="error">a</span><span class="error">n</span><span class="error">y</span><span class="error">p</span><span class="error">o</span><span class="error">i</span><span class="error">n</span><span class="error">t</span><span class="error">.</span><span class="error">m</span><span class="error">u</span><span class="error">l</span><span class="error">e</span><span class="error">s</span><span class="error">o</span><span class="error">f</span><span class="error">t</span><span class="error">.</span><span class="error">c</span><span class="error">o</span><span class="error">m</span><span class="error">/</span><span class="error">a</span><span class="error">c</span><span class="error">c</span><span class="error">o</span><span class="error">u</span><span class="error">n</span><span class="error">t</span><span class="error">s</span><span class="error">/</span><span class="error">l</span><span class="error">o</span><span class="error">g</span><span class="error">i</span><span class="error">n</span> <span class="error">\</span>
-  <span class="error">-</span><span class="error">H</span> <span class="error">'</span><span class="error">c</span><span class="error">o</span><span class="error">n</span><span class="error">t</span><span class="error">e</span><span class="error">n</span><span class="error">t</span><span class="error">-</span><span class="error">t</span><span class="error">y</span><span class="error">p</span><span class="error">e</span>: <span class="error">a</span><span class="error">p</span><span class="error">p</span><span class="error">l</span><span class="error">i</span><span class="error">c</span><span class="error">a</span><span class="error">t</span><span class="error">i</span><span class="error">o</span><span class="error">n</span><span class="error">/</span><span class="error">j</span><span class="error">s</span><span class="error">o</span><span class="error">n</span><span class="error">'</span> <span class="error">\</span>
-  <span class="error">-</span><span class="error">d</span> <span class="error">'</span>{
-  <span class="key"><span class="delimiter">"</span><span class="content">username</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">YOUR_ANYPOINT_PLATFORM_USER_NAME</span><span class="delimiter">"</span></span>,
-  <span class="key"><span class="delimiter">"</span><span class="content">password</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">YOUR_ANYPOINT_PLATFORM_PASSWORD</span><span class="delimiter">"</span></span>
-}<span class="error">'</span></pre></td> 
-           </tr> 
-          </tbody> 
-         </table></code></pre> 
-      </div> 
-     </div> </li> 
-   </ol> 
+   <p>Because the Graph API accesses Anypoint Exchange and Anypoint Platform, inquiries should have an access token if you want to access assets not created by MuleSoft. If you only search for MuleSoft assets, you don’t need an asset token.</p> 
   </div> 
  </div> 
 </div> 
@@ -1171,27 +1133,7 @@
   <div class="olist arabic"> 
    <ol class="arabic"> 
     <li> <p>Open GraphiQL program by browsing to <a href="https://anypoint.mulesoft.com/graph/api/v1/graphiql">https://anypoint.mulesoft.com/graph/api/v1/graphiql</a>.</p> </li> 
-    <li> <p>In GraphiQL, click Query Variables at the bottom of the screen and insert the access token as:</p> 
-     <div class="listingblock"> 
-      <div class="content"> 
-       <pre class="CodeRay highlight"><code data-lang="json">
-            
-         <table class="CodeRay"> 
-          <tbody> 
-           <tr> 
-            <td class="line-numbers"><pre>1
-2
-3
-</pre></td> 
-            <td class="code"><pre>{
-  <span class="key"><span class="delimiter">"</span><span class="content">accessToken</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">ACCESS_TOKEN_VALUE</span><span class="delimiter">"</span></span>
-}</pre></td> 
-           </tr> 
-          </tbody> 
-         </table></code></pre> 
-      </div> 
-     </div> </li> 
-    <li> <p>Get a new access token if your query session exceeds 5 minutes.</p> </li> 
+    <li> <p>If you are searching for non-MuleSoft, you need to get an access token. Access tokens expire approximately every 5 minutes, so you may need to get a new token.</p> </li> 
    </ol> 
   </div> 
   <div class="paragraph"> 
@@ -1238,6 +1180,70 @@
     </tr> 
    </tbody> 
   </table> 
+ </div> 
+</div> 
+<div class="sect1"> 
+ <h2 id="to-obtain-an-access-token"><a class="anchor" href="#to-obtain-an-access-token"></a>To Obtain an Access Token</h2> 
+ <div class="sectionbody"> 
+  <div class="paragraph"> 
+   <p>You only need an access token if you are searching for assets that are not created by MuleSoft.</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p>Access tokens time out in approximately 5 minutes and must be renewed to continue use of the Graph API.</p> 
+  </div> 
+  <div class="olist arabic"> 
+   <ol class="arabic"> 
+    <li> <p>Log into Anypoint Platform.</p> </li> 
+    <li> <p>Obtain an access token with a curl command such as the following. You can also use Postman or another application for sending HTTP commands.</p> 
+     <div class="listingblock"> 
+      <div class="content"> 
+       <pre class="CodeRay highlight"><code data-lang="json">
+            
+         <table class="CodeRay"> 
+          <tbody> 
+           <tr> 
+            <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td> 
+            <td class="code"><pre><span class="error">c</span><span class="error">u</span><span class="error">r</span><span class="error">l</span> <span class="error">-</span><span class="error">X</span> <span class="error">P</span><span class="error">O</span><span class="error">S</span><span class="error">T</span> <span class="error">\</span>
+  <span class="error">h</span><span class="error">t</span><span class="error">t</span><span class="error">p</span><span class="error">s</span>:<span class="error">/</span><span class="error">/</span><span class="error">a</span><span class="error">n</span><span class="error">y</span><span class="error">p</span><span class="error">o</span><span class="error">i</span><span class="error">n</span><span class="error">t</span><span class="error">.</span><span class="error">m</span><span class="error">u</span><span class="error">l</span><span class="error">e</span><span class="error">s</span><span class="error">o</span><span class="error">f</span><span class="error">t</span><span class="error">.</span><span class="error">c</span><span class="error">o</span><span class="error">m</span><span class="error">/</span><span class="error">a</span><span class="error">c</span><span class="error">c</span><span class="error">o</span><span class="error">u</span><span class="error">n</span><span class="error">t</span><span class="error">s</span><span class="error">/</span><span class="error">l</span><span class="error">o</span><span class="error">g</span><span class="error">i</span><span class="error">n</span> <span class="error">\</span>
+  <span class="error">-</span><span class="error">H</span> <span class="error">'</span><span class="error">c</span><span class="error">o</span><span class="error">n</span><span class="error">t</span><span class="error">e</span><span class="error">n</span><span class="error">t</span><span class="error">-</span><span class="error">t</span><span class="error">y</span><span class="error">p</span><span class="error">e</span>: <span class="error">a</span><span class="error">p</span><span class="error">p</span><span class="error">l</span><span class="error">i</span><span class="error">c</span><span class="error">a</span><span class="error">t</span><span class="error">i</span><span class="error">o</span><span class="error">n</span><span class="error">/</span><span class="error">j</span><span class="error">s</span><span class="error">o</span><span class="error">n</span><span class="error">'</span> <span class="error">\</span>
+  <span class="error">-</span><span class="error">d</span> <span class="error">'</span>{
+  <span class="key"><span class="delimiter">"</span><span class="content">username</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">YOUR_ANYPOINT_PLATFORM_USER_NAME</span><span class="delimiter">"</span></span>,
+  <span class="key"><span class="delimiter">"</span><span class="content">password</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">YOUR_ANYPOINT_PLATFORM_PASSWORD</span><span class="delimiter">"</span></span>
+}<span class="error">'</span></pre></td> 
+           </tr> 
+          </tbody> 
+         </table></code></pre> 
+      </div> 
+     </div> </li> 
+    <li> <p>In GraphiQL, click Query Variables at the bottom of the screen and insert the access token as:</p> 
+     <div class="listingblock"> 
+      <div class="content"> 
+       <pre class="CodeRay highlight"><code data-lang="json">
+            
+         <table class="CodeRay"> 
+          <tbody> 
+           <tr> 
+            <td class="line-numbers"><pre>1
+2
+3
+</pre></td> 
+            <td class="code"><pre>{
+  <span class="key"><span class="delimiter">"</span><span class="content">accessToken</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">ACCESS_TOKEN_VALUE</span><span class="delimiter">"</span></span>
+}</pre></td> 
+           </tr> 
+          </tbody> 
+         </table></code></pre> 
+      </div> 
+     </div> </li> 
+   </ol> 
+  </div> 
  </div> 
 </div> 
 <div class="sect1"> 
@@ -1687,7 +1693,7 @@
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#to-obtain-an-access-token">To Obtain an Access Token</a></li><li><a class="scroll-menu-link" href="#to-run-graphiql-to-send-a-query-to-exchange">To Run GraphiQL to Send a Query to Exchange</a></li><li><a class="scroll-menu-link" href="#to-search-assets-for-a-search-term">To Search Assets for a Search Term</a></li><li><a class="scroll-menu-link" href="#to-limits-searches-to-a-private-exchange">To Limits Searches to a Private Exchange</a></li><li><a class="scroll-menu-link" href="#reference-query-filter-parameters">Reference: Query Filter Parameters</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#to-run-graphiql-to-send-a-query-to-exchange">To Run GraphiQL to Send a Query to Exchange</a></li><li><a class="scroll-menu-link" href="#to-obtain-an-access-token">To Obtain an Access Token</a></li><li><a class="scroll-menu-link" href="#to-search-assets-for-a-search-term">To Search Assets for a Search Term</a></li><li><a class="scroll-menu-link" href="#to-limits-searches-to-a-private-exchange">To Limits Searches to a Private Exchange</a></li><li><a class="scroll-menu-link" href="#reference-query-filter-parameters">Reference: Query Filter Parameters</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->
@@ -1715,7 +1721,7 @@
           <li class="footer__menu-item"><a href="http://blogs.mulesoft.com/">Blog</a></li>
         </ul>
         <div class="footer__tac">
-          MuleSoft provides the most widely used integration platform for connecting <a href = "https://www.mulesoft.com/platform/saas">SaaS</a> and enterprise applications in the cloud and on-premise. Delivered as a packaged integration experience, <a href= "https://www.mulesoft.com/platform/saas/cloudhub-ipaas-cloud-based-integration">CloudHub™</a> and Mule ESB™ (<a href = "https://www.mulesoft.com/platform/soa/mule-esb-open-source-esb">Enterprise Service Bus</a>) are built on proven open source technology for the fastest, most reliable on-premise and cloud integration without vendor lock-in.
+          MuleSoft provides the most widely used integration platform for connecting <a href = "https://www.mulesoft.com/platform/saas">SaaS</a> and enterprise applications in the cloud and on-premises. Delivered as a packaged integration experience, <a href= "https://www.mulesoft.com/platform/saas/cloudhub-ipaas-cloud-based-integration">CloudHub™</a> and Mule ESB™ (<a href = "https://www.mulesoft.com/platform/soa/mule-esb-open-source-esb">Enterprise Service Bus</a>) are built on proven open source technology for the fastest, most reliable on-premises and cloud integration without vendor lock-in.
         </div>
       </div>
     </div>
@@ -1877,6 +1883,6 @@
     document.getElementsByTagName('head')[0].appendChild(s);
   })();
 </script>
-<script src="/js/header-menu.js?t=1498825733"></script>
+<script src="/js/header-menu.js?t=1505334364"></script>
 </body>
 </html>
