@@ -1133,7 +1133,7 @@
   <div class="olist arabic"> 
    <ol class="arabic"> 
     <li> <p>Open GraphiQL program by browsing to <a href="https://anypoint.mulesoft.com/graph/api/v1/graphiql">https://anypoint.mulesoft.com/graph/api/v1/graphiql</a>.</p> </li> 
-    <li> <p>If you are searching for non-MuleSoft, you need to get an access token. Access tokens expire approximately every 5 minutes, so you may need to get a new token.</p> </li> 
+    <li> <p>If you are searching for non-MuleSoft assets, you need to get an access token. Access tokens expire approximately every 5 minutes, so you may need to get a new token while doing searches.</p> </li> 
    </ol> 
   </div> 
   <div class="paragraph"> 
@@ -1243,6 +1243,74 @@
       </div> 
      </div> </li> 
    </ol> 
+  </div> 
+ </div> 
+</div> 
+<div class="sect1"> 
+ <h2 id="to-indicate-how-many-items-to-display"><a class="anchor" href="#to-indicate-how-many-items-to-display"></a>To Indicate How Many Items to Display</h2> 
+ <div class="sectionbody"> 
+  <div class="paragraph"> 
+   <p>By default, GraphiQL lists up to 23 items in a search. You can indicate a higher number as well as an offset into the list of results with the <code>query: {limit:n, offset:n|</code> command.</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p>For example, to list all MuleSoft assets containing Salesforce:</p> 
+  </div> 
+  <div class="listingblock"> 
+   <div class="content"> 
+    <pre class="CodeRay highlight"><code data-lang="json">
+         
+      <table class="CodeRay"> 
+       <tbody> 
+        <tr> 
+         <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td> 
+         <td class="code"><pre>{
+  <span class="error">a</span><span class="error">s</span><span class="error">s</span><span class="error">e</span><span class="error">t</span><span class="error">s</span><span class="error">(</span><span class="error">q</span><span class="error">u</span><span class="error">e</span><span class="error">r</span><span class="error">y</span>: {<span class="error">l</span><span class="error">i</span><span class="error">m</span><span class="error">i</span><span class="error">t</span>: <span class="integer">20</span>, <span class="error">o</span><span class="error">f</span><span class="error">f</span><span class="error">s</span><span class="error">e</span><span class="error">t</span>:<span class="integer">0</span>, <span class="error">s</span><span class="error">e</span><span class="error">a</span><span class="error">r</span><span class="error">c</span><span class="error">h</span><span class="error">T</span><span class="error">e</span><span class="error">r</span><span class="error">m</span>: <span class="string"><span class="delimiter">"</span><span class="content">salesforce</span><span class="delimiter">"</span></span>}<span class="error">)</span> {
+    <span class="error">g</span><span class="error">r</span><span class="error">o</span><span class="error">u</span><span class="error">p</span><span class="error">I</span><span class="error">d</span>
+    <span class="error">a</span><span class="error">s</span><span class="error">s</span><span class="error">e</span><span class="error">t</span><span class="error">I</span><span class="error">d</span>
+    <span class="error">v</span><span class="error">e</span><span class="error">r</span><span class="error">s</span><span class="error">i</span><span class="error">o</span><span class="error">n</span>
+  }
+}</pre></td> 
+        </tr> 
+       </tbody> 
+      </table></code></pre> 
+   </div> 
+  </div> 
+  <div class="paragraph"> 
+   <p>Or to list the first 20 assets in Exchange:</p> 
+  </div> 
+  <div class="listingblock"> 
+   <div class="content"> 
+    <pre class="CodeRay highlight"><code data-lang="json">
+         
+      <table class="CodeRay"> 
+       <tbody> 
+        <tr> 
+         <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td> 
+         <td class="code"><pre>{
+  <span class="error">a</span><span class="error">s</span><span class="error">s</span><span class="error">e</span><span class="error">t</span><span class="error">s</span><span class="error">(</span><span class="error">q</span><span class="error">u</span><span class="error">e</span><span class="error">r</span><span class="error">y</span>: {<span class="error">l</span><span class="error">i</span><span class="error">m</span><span class="error">i</span><span class="error">t</span>: <span class="integer">20</span>, <span class="error">o</span><span class="error">f</span><span class="error">f</span><span class="error">s</span><span class="error">e</span><span class="error">t</span>:<span class="integer">0</span>}<span class="error">)</span> {
+    <span class="error">g</span><span class="error">r</span><span class="error">o</span><span class="error">u</span><span class="error">p</span><span class="error">I</span><span class="error">d</span>
+    <span class="error">a</span><span class="error">s</span><span class="error">s</span><span class="error">e</span><span class="error">t</span><span class="error">I</span><span class="error">d</span>
+    <span class="error">v</span><span class="error">e</span><span class="error">r</span><span class="error">s</span><span class="error">i</span><span class="error">o</span><span class="error">n</span>
+  }
+}</pre></td> 
+        </tr> 
+       </tbody> 
+      </table></code></pre> 
+   </div> 
   </div> 
  </div> 
 </div> 
@@ -1693,7 +1761,7 @@
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#to-run-graphiql-to-send-a-query-to-exchange">To Run GraphiQL to Send a Query to Exchange</a></li><li><a class="scroll-menu-link" href="#to-obtain-an-access-token">To Obtain an Access Token</a></li><li><a class="scroll-menu-link" href="#to-search-assets-for-a-search-term">To Search Assets for a Search Term</a></li><li><a class="scroll-menu-link" href="#to-limits-searches-to-a-private-exchange">To Limits Searches to a Private Exchange</a></li><li><a class="scroll-menu-link" href="#reference-query-filter-parameters">Reference: Query Filter Parameters</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#to-run-graphiql-to-send-a-query-to-exchange">To Run GraphiQL to Send a Query to Exchange</a></li><li><a class="scroll-menu-link" href="#to-obtain-an-access-token">To Obtain an Access Token</a></li><li><a class="scroll-menu-link" href="#to-indicate-how-many-items-to-display">To Indicate How Many Items to Display</a></li><li><a class="scroll-menu-link" href="#to-search-assets-for-a-search-term">To Search Assets for a Search Term</a></li><li><a class="scroll-menu-link" href="#to-limits-searches-to-a-private-exchange">To Limits Searches to a Private Exchange</a></li><li><a class="scroll-menu-link" href="#reference-query-filter-parameters">Reference: Query Filter Parameters</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->
