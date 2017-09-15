@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>To Retrieve RAML Code // MuleSoft Documentation </title>
+  <title>To Retrieve RAML Resources (APIkit 3.7.x) // MuleSoft Documentation </title>
   <link rel="shortcut icon" href="/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="/css/vendor.min.css?t=1505334364">
   <link rel="stylesheet" type="text/css" href="/css/mulesoft.min.css?t=1505334364">
@@ -15,8 +15,8 @@
   <script src="/js/scripts.js?t=1505334364"></script>
 
   <link rel="canonical" href="https://docs.mulesoft.com/apikit/apikit-retrieve-raml-task" />
-  <meta name="description" content="When configuring an HTTP request after deployment, if the API is accessible, not blocked by a policy for example, you can use an HTTP client, such ..." />
-  <meta class="swiftype" name="title" data-type="string" content="To Retrieve RAML Code" />
+  <meta name="description" content="The following procedure describes how to retrieve the RAML definition of an API generated APIkit 3.7.x and earlier. The API must be accessible, not..." />
+  <meta class="swiftype" name="title" data-type="string" content="To Retrieve RAML Resources (APIkit 3.7.x)" />
 </head>
 <body>
 <!-- START Swiftype -->
@@ -879,7 +879,11 @@
 <i></i>
 <a href="/apikit/apikit-for-soap">Workflow: Implement a SOAP Interface</a><ul>
 <li><i></i><a href="/apikit/apikit-soap-prerequisites-task">To Meet Prerequisites for Using APIkit for SOAP</a></li><li><i></i><a href="/apikit/apikit-soap-project-task">To Create an APIkit for SOAP Project</a></li><li><i></i><a href="/apikit/apikit-soap-fault-task">To Generate a SOAP Fault</a></li><li><i></i><a href="/apikit/apikit-prevent-fault-task">To Prevent the SOAP Fault</a></li><li><i></i><a href="/apikit/apikit-soap-headers-task">To Work with SOAP Headers</a></li><li><i></i><a href="/apikit/apikit-display-fault-task">To Display a Typed Fault</a></li><li><i></i><a href="/apikit/apikit-get-header-task">To Get a SOAP Header</a></li><li><i></i><a href="/apikit/apikit-set-header-task">To Set a SOAP Header</a></li></ul></li>
-<li><i></i><a href="/apikit/apikit-add-wsdl-task">To Add APIkit to an Existing WSDL Design</a></li><li><i></i><a href="/apikit/apikit-configure-show-console-task">To Configure API Console to Open Automatically</a></li><li><i></i><a href="/apikit/apikit-console-expose-recommend-task">To Expose API Console (Recommended)</a></li><li><i></i><a href="/apikit/apikit-console-expose-deprecate-task">To Expose, Enable, and Disable API Console (Deprecated)</a></li><li><i></i><a href="/apikit/apikit-add-console">To Host an Additional API Console</a></li><li class="active"><i></i><a href="/apikit/apikit-retrieve-raml-task">To Retrieve RAML Code</a></li><li><i></i><a href="/apikit/apikit-for-soap">SOAP Tutorial</a></li><li><i></i><a href="/apikit/creating-an-odata-api-with-apikit">Creating an OData API</a></li><li><i></i><a href="/apikit/creating-an-apikit-project-with-maven">Creating an APIkit Project with Maven</a></li><li><i></i><a href="/apikit/apikit-odata-extension-reference">APIkit OData Reference</a></li><li><i></i><a href="/apikit/apikit-using">Naming the Application Reference</a></li><li><i></i><a href="/apikit/apikit-basic-anatomy">APIkit Anatomy Reference</a></li><li><i></i><a href="/apikit/apikit-reference">APIkit XML Reference</a></li><li><i></i><a href="/apikit/apikit-console-concept">About API Console</a></li><li><i></i><a href="/apikit/apikit-limitations-concept">About APIkit and APIkit Console Limitations</a></li></ul></li>
+<li><i></i><a href="/apikit/apikit-add-wsdl-task">To Add APIkit to an Existing WSDL Design</a></li><li><i></i><a href="/apikit/apikit-configure-show-console-task">To Configure API Console to Open Automatically</a></li><li><i></i><a href="/apikit/apikit-console-expose-recommend-task">To Expose API Console (Recommended)</a></li><li><i></i><a href="/apikit/apikit-console-expose-deprecate-task">To Expose, Enable, and Disable API Console (Deprecated)</a></li><li><i></i><a href="/apikit/apikit-add-console">To Host an Additional API Console</a></li><li class="active"><i></i><a href="/apikit/apikit-retrieve-raml-task">To Retrieve RAML Resources (APIkit 3.7)</a></li><li><i></i><a href="/apikit/apikit-retrieve-raml-38-task">To Retrieve RAML Resources (APIkit 3.8.x)</a></li><li><i></i><a href="/apikit/apikit-for-soap">SOAP Tutorial</a></li><li><i></i><a href="/apikit/creating-an-odata-api-with-apikit">Creating an OData API</a></li><li><i></i><a href="/apikit/creating-an-apikit-project-with-maven">Creating an APIkit Project with Maven</a></li><li>
+<i></i>
+<a href="/apikit/apikit-reference-topics">APIkit Reference Topics</a><ul>
+<li><i></i><a href="/apikit/apikit-odata-extension-reference">APIkit OData Reference</a></li><li><i></i><a href="/apikit/apikit-using">Naming the Application Reference</a></li><li><i></i><a href="/apikit/apikit-basic-anatomy">APIkit Anatomy Reference</a></li><li><i></i><a href="/apikit/apikit-reference">APIkit XML Reference</a></li></ul></li>
+<li><i></i><a href="/apikit/apikit-console-concept">About API Console</a></li><li><i></i><a href="/apikit/apikit-limitations-concept">About APIkit and APIkit Console Limitations</a></li></ul></li>
 <li>
 <i></i>
 <a href="/healthcare-toolkit/v/3.0/">Healthcare Toolkit</a><ul>
@@ -1115,33 +1119,47 @@
     <!-- START article content -->
     <div class="article-content col-md-7">
       
-      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">APIkit</a>/<a href="apikit-retrieve-raml-task" class="breadcrumb-active-link">To Retrieve RAML Code</a></div>
-      <h1>To Retrieve RAML Code</h1>
-      <div class="paragraph"> 
- <p>When configuring an HTTP request after deployment, if the API is accessible, not blocked by a policy for example, you can use an HTTP client, such as Postman, to obtain the RAML definition of the APIkit API.</p> 
+      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">APIkit</a>/<a href="apikit-retrieve-raml-task" class="breadcrumb-active-link">To Retrieve RAML Resources (APIkit 3.7)</a></div>
+      <h1>To Retrieve RAML Resources (APIkit 3.7.x)</h1>
+      <div id="preamble"> 
+ <div class="sectionbody"> 
+  <div class="paragraph"> 
+   <p>The following procedure describes how to retrieve the RAML definition of an API generated APIkit 3.7.x and earlier. The API must be accessible, not blocked by a policy for example. You can use an HTTP client, such as Postman, to obtain the RAML definition.</p> 
+  </div> 
+  <div class="olist arabic"> 
+   <ol class="arabic"> 
+    <li> <p>Set up a GET request.</p> </li> 
+    <li> <p>Use the following syntax to construct the URL:</p> 
+     <div class="paragraph"> 
+      <p><code>&lt;baseURL&gt;/console/api/?raml</code></p> 
+     </div> </li> 
+    <li> <p>Set a Headers key to Accept and the value to <code>application/raml+yaml</code>.</p> </li> 
+    <li> <p>Send the request.</p> 
+     <div class="paragraph"> 
+      <p>The RAML code and any included files appears in the Body section.</p> 
+     </div> 
+     <div class="imageblock"> 
+      <div class="content"> 
+       <img src="./_images/apikit-using-adf02.png" alt="apikit-using-adf02" width="633" height="602"> 
+      </div> 
+     </div> </li> 
+   </ol> 
+  </div> 
+ </div> 
 </div> 
-<div class="olist arabic"> 
- <ol class="arabic"> 
-  <li> <p>Set up a GET request.</p> </li> 
-  <li> <p>Use the following syntax to construct the URL:</p> 
-   <div class="paragraph"> 
-    <p><code>&lt;baseURL&gt;/console/api/?raml</code></p> 
-   </div> </li> 
-  <li> <p>Set a Headers key to Accept and the value to <code>application/raml+yaml</code>.</p> </li> 
-  <li> <p>Send the request.</p> 
-   <div class="paragraph"> 
-    <p>The RAML code for the API appears in the Body section.</p> 
-   </div> 
-   <div class="imageblock"> 
-    <div class="content"> 
-     <img src="./_images/apikit-using-adf02.png" alt="apikit-using-adf02" width="633" height="602"> 
-    </div> 
-   </div> </li> 
- </ol> 
+<div class="sect1"> 
+ <h2 id="see-also"><a class="anchor" href="#see-also"></a>See Also</h2> 
+ <div class="sectionbody"> 
+  <div class="paragraph"> 
+   <p><a href="/apikit/apikit-retrieve-raml-38-task">To Retrieve RAML Resources (APIkit 3.8.x)</a></p> 
+  </div> 
+ </div> 
 </div>
     </div>
     <!-- END article-content -->
-    
+    <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
+                <h4>In this topic:</h4>
+                <ul><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->
