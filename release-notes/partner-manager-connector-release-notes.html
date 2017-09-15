@@ -1122,7 +1122,7 @@
       <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Release Notes</a>/<a href="anypoint-b2b-release-notes">Anypoint B2B Release Notes</a>/<a href="partner-manager-connector-release-notes" class="breadcrumb-active-link">Partner Manager Connector Release Notes</a></div>
       <h1>Partner Manager Connector Release Notes</h1>
       <div class="sect1"> 
- <h2 id="version-6-3-1-11-august-2017"><a class="anchor" href="#version-6-3-1-11-august-2017"></a>Version 6.3.1 - 11 August, 2017</h2> 
+ <h2 id="version-6-4-1-14-september-2017"><a class="anchor" href="#version-6-4-1-14-september-2017"></a>Version 6.4.1 - 14 September, 2017</h2> 
  <div class="sectionbody"> 
   <div class="sect2"> 
    <h3 id="compatibility"><a class="anchor" href="#compatibility"></a>Compatibility</h3> 
@@ -1132,6 +1132,60 @@
   </div> 
   <div class="sect2"> 
    <h3 id="fixed-issues"><a class="anchor" href="#fixed-issues"></a>Fixed Issues</h3> 
+   <div class="ulist"> 
+    <ul> 
+     <li> <p>Changing content encoding to UTF-8.</p> </li> 
+    </ul> 
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<div class="sect1"> 
+ <h2 id="version-6-4-0-8-september-2017"><a class="anchor" href="#version-6-4-0-8-september-2017"></a>Version 6.4.0 - 8 September, 2017</h2> 
+ <div class="sectionbody"> 
+  <div class="sect2"> 
+   <h3 id="compatibility-2"><a class="anchor" href="#compatibility-2"></a>Compatibility</h3> 
+   <div class="paragraph"> 
+    <p>Supported Mule Runtime Versions: 3.5.2, 3.7.2, 3.7.3</p> 
+   </div> 
+  </div> 
+  <div class="sect2"> 
+   <h3 id="new-features-and-functionality"><a class="anchor" href="#new-features-and-functionality"></a>New Features and Functionality</h3> 
+   <div class="ulist"> 
+    <ul> 
+     <li> <p>Added optional <em>queueName</em> attribute to connector config.</p> </li> 
+     <li> <p>Added <em>numberOfThreads</em> attribute to connector config.</p> </li> 
+    </ul> 
+   </div> 
+  </div> 
+  <div class="sect2"> 
+   <h3 id="fixed-issues-2"><a class="anchor" href="#fixed-issues-2"></a>Fixed Issues</h3> 
+   <div class="ulist"> 
+    <ul> 
+     <li> <p>Preventing runaway cache refresh thread after connector is stopped.</p> </li> 
+     <li> <p>Fixed bug where the wrong environments ID is used when having multiple connector cache-enabled instances.</p> </li> 
+     <li> <p>Fixed deserialization/serialization errors when a persistent queue manager is used for asynchronous mode.</p> </li> 
+     <li> <p>Improved asynchronous mode performance.</p> </li> 
+     <li> <p>Eliminated possible mutations to original Mule event when in asynchronous mode.</p> </li> 
+     <li> <p>Supporting multiple configurations when <strong>asynchronousMode</strong> is enabled.</p> </li> 
+     <li> <p>Fixed locking issue across cache instances while refreshing.</p> </li> 
+     <li> <p>Improved caching performance.</p> </li> 
+    </ul> 
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<div class="sect1"> 
+ <h2 id="version-6-3-1-9-august-2017"><a class="anchor" href="#version-6-3-1-9-august-2017"></a>Version 6.3.1 - 9 August, 2017</h2> 
+ <div class="sectionbody"> 
+  <div class="sect2"> 
+   <h3 id="compatibility-3"><a class="anchor" href="#compatibility-3"></a>Compatibility</h3> 
+   <div class="paragraph"> 
+    <p>Supported Mule Runtime Versions: 3.5.2, 3.7.2, 3.7.3</p> 
+   </div> 
+  </div> 
+  <div class="sect2"> 
+   <h3 id="fixed-issues-3"><a class="anchor" href="#fixed-issues-3"></a>Fixed Issues</h3> 
    <div class="ulist"> 
     <ul> 
      <li> <p>Calculating correct route status when caching is enabled.</p> </li> 
@@ -1152,13 +1206,13 @@
  <h2 id="version-6-3-0-4-august-2017"><a class="anchor" href="#version-6-3-0-4-august-2017"></a>Version 6.3.0 - 4 August, 2017</h2> 
  <div class="sectionbody"> 
   <div class="sect2"> 
-   <h3 id="compatibility-2"><a class="anchor" href="#compatibility-2"></a>Compatibility</h3> 
+   <h3 id="compatibility-4"><a class="anchor" href="#compatibility-4"></a>Compatibility</h3> 
    <div class="paragraph"> 
     <p>Supported Mule Runtime Versions: 3.5.2, 3.7.2, 3.7.3</p> 
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="new-features-and-functionality"><a class="anchor" href="#new-features-and-functionality"></a>New Features and Functionality</h3> 
+   <h3 id="new-features-and-functionality-2"><a class="anchor" href="#new-features-and-functionality-2"></a>New Features and Functionality</h3> 
    <div class="ulist"> 
     <ul> 
      <li> <p>Added <em>routeStatus</em> attribute to <em>evaluate-transaction-release-status</em> operation.</p> </li> 
@@ -1166,7 +1220,7 @@
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="fixed-issues-2"><a class="anchor" href="#fixed-issues-2"></a>Fixed Issues</h3> 
+   <h3 id="fixed-issues-4"><a class="anchor" href="#fixed-issues-4"></a>Fixed Issues</h3> 
    <div class="ulist"> 
     <ul> 
      <li> <p>Fixed inconsistent behavior and <em>NoClassDefFoundError</em> exception when caching is enabled.</p> </li> 
@@ -1187,13 +1241,13 @@
  <h2 id="version-6-2-0-24-july-2017"><a class="anchor" href="#version-6-2-0-24-july-2017"></a>Version 6.2.0 - 24 July, 2017</h2> 
  <div class="sectionbody"> 
   <div class="sect2"> 
-   <h3 id="compatibility-3"><a class="anchor" href="#compatibility-3"></a>Compatibility</h3> 
+   <h3 id="compatibility-5"><a class="anchor" href="#compatibility-5"></a>Compatibility</h3> 
    <div class="paragraph"> 
     <p>Supported Mule Runtime Versions: 3.5.2, 3.7.2, 3.7.3</p> 
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="new-features-and-functionality-2"><a class="anchor" href="#new-features-and-functionality-2"></a>New Features and Functionality</h3> 
+   <h3 id="new-features-and-functionality-3"><a class="anchor" href="#new-features-and-functionality-3"></a>New Features and Functionality</h3> 
    <div class="ulist"> 
     <ul> 
      <li> <p>Added support for retries.</p> </li> 
@@ -1202,7 +1256,7 @@
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="fixed-issues-3"><a class="anchor" href="#fixed-issues-3"></a>Fixed Issues</h3> 
+   <h3 id="fixed-issues-5"><a class="anchor" href="#fixed-issues-5"></a>Fixed Issues</h3> 
    <div class="ulist"> 
     <ul> 
      <li> <p>Fixed caching issue where a result with multiple items could lead to missing nested objects if the nested objects have the same ID.</p> </li> 
@@ -1224,13 +1278,13 @@
  <h2 id="version-6-1-2-12-july-2017"><a class="anchor" href="#version-6-1-2-12-july-2017"></a>Version 6.1.2 - 12 July, 2017</h2> 
  <div class="sectionbody"> 
   <div class="sect2"> 
-   <h3 id="compatibility-4"><a class="anchor" href="#compatibility-4"></a>Compatibility</h3> 
+   <h3 id="compatibility-6"><a class="anchor" href="#compatibility-6"></a>Compatibility</h3> 
    <div class="paragraph"> 
     <p>Supported Mule Runtime Versions: 3.5.2, 3.7.2, 3.7.3</p> 
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="fixed-issues-4"><a class="anchor" href="#fixed-issues-4"></a>Fixed Issues</h3> 
+   <h3 id="fixed-issues-6"><a class="anchor" href="#fixed-issues-6"></a>Fixed Issues</h3> 
    <div class="ulist"> 
     <ul> 
      <li> <p>Fixed race condition which allowed duplicate refresh threads.</p> </li> 
@@ -1255,13 +1309,13 @@
  <h2 id="version-6-1-1-19-june-2017"><a class="anchor" href="#version-6-1-1-19-june-2017"></a>Version 6.1.1 - 19 June, 2017</h2> 
  <div class="sectionbody"> 
   <div class="sect2"> 
-   <h3 id="compatibility-5"><a class="anchor" href="#compatibility-5"></a>Compatibility</h3> 
+   <h3 id="compatibility-7"><a class="anchor" href="#compatibility-7"></a>Compatibility</h3> 
    <div class="paragraph"> 
     <p>Supported Mule Runtime Versions: 3.5.2, 3.7.2, 3.7.3</p> 
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="fixed-issues-5"><a class="anchor" href="#fixed-issues-5"></a>Fixed Issues</h3> 
+   <h3 id="fixed-issues-7"><a class="anchor" href="#fixed-issues-7"></a>Fixed Issues</h3> 
    <div class="ulist"> 
     <ul> 
      <li> <p>Improved cache performance.</p> </li> 
@@ -1283,13 +1337,13 @@
  <h2 id="version-6-1-0-may-25-2017"><a class="anchor" href="#version-6-1-0-may-25-2017"></a>Version 6.1.0 - May 25, 2017</h2> 
  <div class="sectionbody"> 
   <div class="sect2"> 
-   <h3 id="compatibility-6"><a class="anchor" href="#compatibility-6"></a>Compatibility</h3> 
+   <h3 id="compatibility-8"><a class="anchor" href="#compatibility-8"></a>Compatibility</h3> 
    <div class="paragraph"> 
     <p>Supported Mule Runtime Versions: 3.5.2, 3.7.2, 3.7.3</p> 
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="new-features-and-functionality-3"><a class="anchor" href="#new-features-and-functionality-3"></a>New Features and Functionality</h3> 
+   <h3 id="new-features-and-functionality-4"><a class="anchor" href="#new-features-and-functionality-4"></a>New Features and Functionality</h3> 
    <div class="ulist"> 
     <ul> 
      <li> <p>Added <strong>cacheMaxExportTries</strong> option to connector config.</p> </li> 
@@ -1297,7 +1351,7 @@
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="fixed-issues-6"><a class="anchor" href="#fixed-issues-6"></a>Fixed Issues</h3> 
+   <h3 id="fixed-issues-8"><a class="anchor" href="#fixed-issues-8"></a>Fixed Issues</h3> 
    <div class="ulist"> 
     <ul> 
      <li> <p>Fixed broken behavior in unique control number enforcement of EDIFACT and X12 documents.</p> </li> 
@@ -1320,13 +1374,13 @@
  <h2 id="version-6-0-1-may-11-2017"><a class="anchor" href="#version-6-0-1-may-11-2017"></a>Version 6.0.1 - May 11, 2017</h2> 
  <div class="sectionbody"> 
   <div class="sect2"> 
-   <h3 id="compatibility-7"><a class="anchor" href="#compatibility-7"></a>Compatibility</h3> 
+   <h3 id="compatibility-9"><a class="anchor" href="#compatibility-9"></a>Compatibility</h3> 
    <div class="paragraph"> 
     <p>Supported Mule Runtime Versions: 3.5.2, 3.7.2, 3.7.3</p> 
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="fixed-issues-7"><a class="anchor" href="#fixed-issues-7"></a>Fixed Issues</h3> 
+   <h3 id="fixed-issues-9"><a class="anchor" href="#fixed-issues-9"></a>Fixed Issues</h3> 
    <div class="ulist"> 
     <ul> 
      <li> <p>Turned on TLS hostname verification in <strong>retrieve-payload</strong>.</p> </li> 
@@ -1349,13 +1403,13 @@
  <h2 id="version-6-0-0-may-4-2017"><a class="anchor" href="#version-6-0-0-may-4-2017"></a>Version 6.0.0 - May 4, 2017</h2> 
  <div class="sectionbody"> 
   <div class="sect2"> 
-   <h3 id="compatibility-8"><a class="anchor" href="#compatibility-8"></a>Compatibility</h3> 
+   <h3 id="compatibility-10"><a class="anchor" href="#compatibility-10"></a>Compatibility</h3> 
    <div class="paragraph"> 
     <p>Supported Mule Runtime Versions: 3.5.2, 3.7.2, 3.7.3</p> 
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="new-features-and-functionality-4"><a class="anchor" href="#new-features-and-functionality-4"></a>New Features and Functionality</h3> 
+   <h3 id="new-features-and-functionality-5"><a class="anchor" href="#new-features-and-functionality-5"></a>New Features and Functionality</h3> 
    <div class="ulist"> 
     <ul> 
      <li> <p>Re-written support for caching and exposed it as connector config option.</p> </li> 
@@ -1386,13 +1440,13 @@
  <h2 id="version-5-3-0-april-10-2017"><a class="anchor" href="#version-5-3-0-april-10-2017"></a>Version 5.3.0 - April 10, 2017</h2> 
  <div class="sectionbody"> 
   <div class="sect2"> 
-   <h3 id="compatibility-9"><a class="anchor" href="#compatibility-9"></a>Compatibility</h3> 
+   <h3 id="compatibility-11"><a class="anchor" href="#compatibility-11"></a>Compatibility</h3> 
    <div class="paragraph"> 
     <p>Supported Mule Runtime Versions: 3.5.2, 3.7.2, 3.7.3</p> 
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="new-features-and-functionality-5"><a class="anchor" href="#new-features-and-functionality-5"></a>New Features and Functionality</h3> 
+   <h3 id="new-features-and-functionality-6"><a class="anchor" href="#new-features-and-functionality-6"></a>New Features and Functionality</h3> 
    <div class="paragraph"> 
     <p>Added operations to:</p> 
    </div> 
@@ -1420,13 +1474,13 @@
  <h2 id="version-5-2-0-march-22-2017"><a class="anchor" href="#version-5-2-0-march-22-2017"></a>Version 5.2.0 - March 22, 2017</h2> 
  <div class="sectionbody"> 
   <div class="sect2"> 
-   <h3 id="compatibility-10"><a class="anchor" href="#compatibility-10"></a>Compatibility</h3> 
+   <h3 id="compatibility-12"><a class="anchor" href="#compatibility-12"></a>Compatibility</h3> 
    <div class="paragraph"> 
     <p>Supported Mule Runtime Versions: 3.5.2, 3.7.2, 3.7.3</p> 
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="new-features-and-functionality-6"><a class="anchor" href="#new-features-and-functionality-6"></a>New Features and Functionality</h3> 
+   <h3 id="new-features-and-functionality-7"><a class="anchor" href="#new-features-and-functionality-7"></a>New Features and Functionality</h3> 
    <div class="paragraph"> 
     <p>Added:</p> 
    </div> 
@@ -1447,7 +1501,7 @@
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="fixed-issues-8"><a class="anchor" href="#fixed-issues-8"></a>Fixed Issues</h3> 
+   <h3 id="fixed-issues-10"><a class="anchor" href="#fixed-issues-10"></a>Fixed Issues</h3> 
    <div class="paragraph"> 
     <p>Improved <strong>asynchronousMode</strong> performance.</p> 
    </div> 
@@ -1466,19 +1520,19 @@
  <h2 id="version-5-1-0-march-1-2017"><a class="anchor" href="#version-5-1-0-march-1-2017"></a>Version 5.1.0 - March 1, 2017</h2> 
  <div class="sectionbody"> 
   <div class="sect2"> 
-   <h3 id="compatibility-11"><a class="anchor" href="#compatibility-11"></a>Compatibility</h3> 
+   <h3 id="compatibility-13"><a class="anchor" href="#compatibility-13"></a>Compatibility</h3> 
    <div class="paragraph"> 
     <p>Supported Mule Runtime Versions: 3.5.2, 3.6.1, 3.7.2, 3.7.3</p> 
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="new-features-and-functionality-7"><a class="anchor" href="#new-features-and-functionality-7"></a>New Features and Functionality</h3> 
+   <h3 id="new-features-and-functionality-8"><a class="anchor" href="#new-features-and-functionality-8"></a>New Features and Functionality</h3> 
    <div class="paragraph"> 
     <p><strong>harvest-document-properties</strong> operation.</p> 
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="fixed-issues-9"><a class="anchor" href="#fixed-issues-9"></a>Fixed Issues</h3> 
+   <h3 id="fixed-issues-11"><a class="anchor" href="#fixed-issues-11"></a>Fixed Issues</h3> 
    <div class="paragraph"> 
     <p><strong>ClassCastException</strong> no longer happens when attempting to read an XML document from <strong>java.io.InputStream</strong>.</p> 
    </div> 
@@ -1497,13 +1551,13 @@
  <h2 id="version-5-0-0-february-23-2017"><a class="anchor" href="#version-5-0-0-february-23-2017"></a>Version 5.0.0 - February 23, 2017</h2> 
  <div class="sectionbody"> 
   <div class="sect2"> 
-   <h3 id="compatibility-12"><a class="anchor" href="#compatibility-12"></a>Compatibility</h3> 
+   <h3 id="compatibility-14"><a class="anchor" href="#compatibility-14"></a>Compatibility</h3> 
    <div class="paragraph"> 
     <p>Supported Mule Runtime Versions: 3.5.2, 3.6.1, 3.7.2, 3.7.3</p> 
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="new-features-and-functionality-8"><a class="anchor" href="#new-features-and-functionality-8"></a>New Features and Functionality</h3> 
+   <h3 id="new-features-and-functionality-9"><a class="anchor" href="#new-features-and-functionality-9"></a>New Features and Functionality</h3> 
    <div class="ulist"> 
     <ul> 
      <li> <p>Added support for asynchronous tracking.</p> </li> 
@@ -1537,13 +1591,13 @@
  <h2 id="version-4-0-1-april-6-2017"><a class="anchor" href="#version-4-0-1-april-6-2017"></a>Version 4.0.1 - April 6, 2017</h2> 
  <div class="sectionbody"> 
   <div class="sect2"> 
-   <h3 id="compatibility-13"><a class="anchor" href="#compatibility-13"></a>Compatibility</h3> 
+   <h3 id="compatibility-15"><a class="anchor" href="#compatibility-15"></a>Compatibility</h3> 
    <div class="paragraph"> 
     <p>Supported Mule Runtime Versions: 3.5.2, 3.6.1, 3.7.2, 3.7.3</p> 
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="fixed-issues-10"><a class="anchor" href="#fixed-issues-10"></a>Fixed Issues</h3> 
+   <h3 id="fixed-issues-12"><a class="anchor" href="#fixed-issues-12"></a>Fixed Issues</h3> 
    <div class="ulist"> 
     <ul> 
      <li> <p>Fixed SE-5706.</p> </li> 
@@ -1556,13 +1610,13 @@
  <h2 id="version-4-0-0-december-13-2016"><a class="anchor" href="#version-4-0-0-december-13-2016"></a>Version 4.0.0 - December 13, 2016</h2> 
  <div class="sectionbody"> 
   <div class="sect2"> 
-   <h3 id="compatibility-14"><a class="anchor" href="#compatibility-14"></a>Compatibility</h3> 
+   <h3 id="compatibility-16"><a class="anchor" href="#compatibility-16"></a>Compatibility</h3> 
    <div class="paragraph"> 
     <p>Supported Mule Runtime Versions: 3.5.2, 3.6.1, 3.7.2, 3.7.3</p> 
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="new-features-and-functionality-9"><a class="anchor" href="#new-features-and-functionality-9"></a>New Features and Functionality</h3> 
+   <h3 id="new-features-and-functionality-10"><a class="anchor" href="#new-features-and-functionality-10"></a>New Features and Functionality</h3> 
    <div class="ulist"> 
     <ul> 
      <li> <p>Added <strong>update-transaction-status</strong> operation.</p> </li> 
@@ -1588,13 +1642,13 @@
  <h2 id="version-3-1-0-november-11-2016"><a class="anchor" href="#version-3-1-0-november-11-2016"></a>Version 3.1.0 - November 11, 2016</h2> 
  <div class="sectionbody"> 
   <div class="sect2"> 
-   <h3 id="compatibility-15"><a class="anchor" href="#compatibility-15"></a>Compatibility</h3> 
+   <h3 id="compatibility-17"><a class="anchor" href="#compatibility-17"></a>Compatibility</h3> 
    <div class="paragraph"> 
     <p>Supported Mule Runtime Versions: 3.5.2, 3.6.1, 3.7.2, 3.7.3</p> 
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="new-features-and-functionality-10"><a class="anchor" href="#new-features-and-functionality-10"></a>New Features and Functionality</h3> 
+   <h3 id="new-features-and-functionality-11"><a class="anchor" href="#new-features-and-functionality-11"></a>New Features and Functionality</h3> 
    <div class="ulist"> 
     <ul> 
      <li> <p>Added support for RosettaNet.</p> </li> 
@@ -1603,12 +1657,12 @@
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="fixed-issues-11"><a class="anchor" href="#fixed-issues-11"></a>Fixed Issues</h3> 
+   <h3 id="fixed-issues-13"><a class="anchor" href="#fixed-issues-13"></a>Fixed Issues</h3> 
    <div class="ulist"> 
     <ul> 
-     <li> <p>Fixed NullPointerException happening when <strong>config-file-storage-custom</strong> is used with EDIFACT or X12 module.</p> </li> 
+     <li> <p>Fixed NullPointerException happening when. <strong>config-file-storage-custom</strong> is used with EDIFACT or X12 module.</p> </li> 
      <li> <p>Permitting <strong>partnerIdentifier</strong> in <strong>track-document</strong> operation to override party identifiers in EDI documents.</p> </li> 
-     <li> <p>Optimised caching.</p> </li> 
+     <li> <p>Optimized caching.</p> </li> 
     </ul> 
    </div> 
   </div> 
@@ -1618,7 +1672,7 @@
  <h2 id="version-3-0-0-september-22-2016"><a class="anchor" href="#version-3-0-0-september-22-2016"></a>Version 3.0.0 - September 22, 2016</h2> 
  <div class="sectionbody"> 
   <div class="sect2"> 
-   <h3 id="compatibility-16"><a class="anchor" href="#compatibility-16"></a>Compatibility</h3> 
+   <h3 id="compatibility-18"><a class="anchor" href="#compatibility-18"></a>Compatibility</h3> 
    <div class="paragraph"> 
     <p>Supported Mule Runtime Versions: 3.5.2, 3.6.1, 3.7.2, 3.7.3</p> 
    </div> 
@@ -1634,7 +1688,7 @@
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="new-features-and-functionality-11"><a class="anchor" href="#new-features-and-functionality-11"></a>New Features and Functionality</h3> 
+   <h3 id="new-features-and-functionality-12"><a class="anchor" href="#new-features-and-functionality-12"></a>New Features and Functionality</h3> 
    <div class="ulist"> 
     <ul> 
      <li> <p>Added document definition to list of resources that can be searched.</p> </li> 
@@ -1644,7 +1698,7 @@
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="fixed-issues-12"><a class="anchor" href="#fixed-issues-12"></a>Fixed Issues</h3> 
+   <h3 id="fixed-issues-14"><a class="anchor" href="#fixed-issues-14"></a>Fixed Issues</h3> 
    <div class="ulist"> 
     <ul> 
      <li> <p>Fixed issue where maps representing X12 and EDIFACT documents cannot be processed.</p> </li> 
@@ -1662,13 +1716,13 @@
  <h2 id="version-2-0-0-july-8-2016"><a class="anchor" href="#version-2-0-0-july-8-2016"></a>Version 2.0.0 - July 8, 2016</h2> 
  <div class="sectionbody"> 
   <div class="sect2"> 
-   <h3 id="compatibility-17"><a class="anchor" href="#compatibility-17"></a>Compatibility</h3> 
+   <h3 id="compatibility-19"><a class="anchor" href="#compatibility-19"></a>Compatibility</h3> 
    <div class="paragraph"> 
     <p>Supported Mule Runtime Versions: 3.5.2, 3.6.1, 3.7.2, 3.7.3</p> 
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="new-features-and-functionality-12"><a class="anchor" href="#new-features-and-functionality-12"></a>New Features and Functionality</h3> 
+   <h3 id="new-features-and-functionality-13"><a class="anchor" href="#new-features-and-functionality-13"></a>New Features and Functionality</h3> 
    <div class="ulist"> 
     <ul> 
      <li> <p>Renamed <strong>executionId</strong> in <strong>b2bTransmissionSession</strong> to <strong>transactionId</strong>.</p> </li> 
@@ -1690,13 +1744,13 @@
  <h2 id="version-1-0-0-december-22-2015"><a class="anchor" href="#version-1-0-0-december-22-2015"></a>Version 1.0.0 - December 22, 2015</h2> 
  <div class="sectionbody"> 
   <div class="sect2"> 
-   <h3 id="compatibility-18"><a class="anchor" href="#compatibility-18"></a>Compatibility</h3> 
+   <h3 id="compatibility-20"><a class="anchor" href="#compatibility-20"></a>Compatibility</h3> 
    <div class="paragraph"> 
     <p>Supported Mule Runtime Versions: 3.5.2, 3.6.1, 3.7.2, 3.7.3</p> 
    </div> 
   </div> 
   <div class="sect2"> 
-   <h3 id="new-features-and-functionality-13"><a class="anchor" href="#new-features-and-functionality-13"></a>New Features and Functionality</h3> 
+   <h3 id="new-features-and-functionality-14"><a class="anchor" href="#new-features-and-functionality-14"></a>New Features and Functionality</h3> 
    <div class="ulist"> 
     <ul> 
      <li> <p>Added facility to test connection.</p> </li> 
@@ -1712,7 +1766,7 @@
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#version-6-3-1-11-august-2017">Version 6.3.1 - 11 August, 2017</a></li><li><a class="scroll-menu-link" href="#version-6-3-0-4-august-2017">Version 6.3.0 - 4 August, 2017</a></li><li><a class="scroll-menu-link" href="#version-6-2-0-24-july-2017">Version 6.2.0 - 24 July, 2017</a></li><li><a class="scroll-menu-link" href="#version-6-1-2-12-july-2017">Version 6.1.2 - 12 July, 2017</a></li><li><a class="scroll-menu-link" href="#version-6-1-1-19-june-2017">Version 6.1.1 - 19 June, 2017</a></li><li><a class="scroll-menu-link" href="#version-6-1-0-may-25-2017">Version 6.1.0 - May 25, 2017</a></li><li><a class="scroll-menu-link" href="#version-6-0-1-may-11-2017">Version 6.0.1 - May 11, 2017</a></li><li><a class="scroll-menu-link" href="#version-6-0-0-may-4-2017">Version 6.0.0 - May 4, 2017</a></li><li><a class="scroll-menu-link" href="#version-5-3-0-april-10-2017">Version 5.3.0 - April 10, 2017</a></li><li><a class="scroll-menu-link" href="#version-5-2-0-march-22-2017">Version 5.2.0 - March 22, 2017</a></li><li><a class="scroll-menu-link" href="#version-5-1-0-march-1-2017">Version 5.1.0 - March 1, 2017</a></li><li><a class="scroll-menu-link" href="#version-5-0-0-february-23-2017">Version 5.0.0 - February 23, 2017</a></li><li><a class="scroll-menu-link" href="#version-4-0-1-april-6-2017">Version 4.0.1 - April 6, 2017</a></li><li><a class="scroll-menu-link" href="#version-4-0-0-december-13-2016">Version 4.0.0 - December 13, 2016</a></li><li><a class="scroll-menu-link" href="#version-3-1-0-november-11-2016">Version 3.1.0 - November 11, 2016</a></li><li><a class="scroll-menu-link" href="#version-3-0-0-september-22-2016">Version 3.0.0 - September 22, 2016</a></li><li><a class="scroll-menu-link" href="#version-2-0-0-july-8-2016">Version 2.0.0 - July 8, 2016</a></li><li><a class="scroll-menu-link" href="#version-1-0-0-december-22-2015">Version 1.0.0 - December 22, 2015</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#version-6-4-1-14-september-2017">Version 6.4.1 - 14 September, 2017</a></li><li><a class="scroll-menu-link" href="#version-6-4-0-8-september-2017">Version 6.4.0 - 8 September, 2017</a></li><li><a class="scroll-menu-link" href="#version-6-3-1-9-august-2017">Version 6.3.1 - 9 August, 2017</a></li><li><a class="scroll-menu-link" href="#version-6-3-0-4-august-2017">Version 6.3.0 - 4 August, 2017</a></li><li><a class="scroll-menu-link" href="#version-6-2-0-24-july-2017">Version 6.2.0 - 24 July, 2017</a></li><li><a class="scroll-menu-link" href="#version-6-1-2-12-july-2017">Version 6.1.2 - 12 July, 2017</a></li><li><a class="scroll-menu-link" href="#version-6-1-1-19-june-2017">Version 6.1.1 - 19 June, 2017</a></li><li><a class="scroll-menu-link" href="#version-6-1-0-may-25-2017">Version 6.1.0 - May 25, 2017</a></li><li><a class="scroll-menu-link" href="#version-6-0-1-may-11-2017">Version 6.0.1 - May 11, 2017</a></li><li><a class="scroll-menu-link" href="#version-6-0-0-may-4-2017">Version 6.0.0 - May 4, 2017</a></li><li><a class="scroll-menu-link" href="#version-5-3-0-april-10-2017">Version 5.3.0 - April 10, 2017</a></li><li><a class="scroll-menu-link" href="#version-5-2-0-march-22-2017">Version 5.2.0 - March 22, 2017</a></li><li><a class="scroll-menu-link" href="#version-5-1-0-march-1-2017">Version 5.1.0 - March 1, 2017</a></li><li><a class="scroll-menu-link" href="#version-5-0-0-february-23-2017">Version 5.0.0 - February 23, 2017</a></li><li><a class="scroll-menu-link" href="#version-4-0-1-april-6-2017">Version 4.0.1 - April 6, 2017</a></li><li><a class="scroll-menu-link" href="#version-4-0-0-december-13-2016">Version 4.0.0 - December 13, 2016</a></li><li><a class="scroll-menu-link" href="#version-3-1-0-november-11-2016">Version 3.1.0 - November 11, 2016</a></li><li><a class="scroll-menu-link" href="#version-3-0-0-september-22-2016">Version 3.0.0 - September 22, 2016</a></li><li><a class="scroll-menu-link" href="#version-2-0-0-july-8-2016">Version 2.0.0 - July 8, 2016</a></li><li><a class="scroll-menu-link" href="#version-1-0-0-december-22-2015">Version 1.0.0 - December 22, 2015</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->
