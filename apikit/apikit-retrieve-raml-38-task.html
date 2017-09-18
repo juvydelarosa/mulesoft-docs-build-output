@@ -1132,12 +1132,26 @@
  <h2 id="to-retrieve-raml-0-8"><a class="anchor" href="#to-retrieve-raml-0-8"></a>To Retrieve RAML 0.8</h2> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>If the API has a RAML 0.8 definition, you can get the root RAML file and all included files in one call. You send a header and the URL in a GET request as follows:</p> 
+   <p>If the API has a RAML 0.8 definition, you can get the root RAML file and all included files in one call. For backward compatibility, you can use either of the following methods to retrieve the RAML code:</p> 
+  </div> 
+  <div class="ulist"> 
+   <ul> 
+    <li> <p>Retrieve code from APIkit router</p> </li> 
+    <li> <p>Retrieve code from API Console</p> </li> 
+   </ul> 
+  </div> 
+ </div> 
+</div> 
+<div class="sect1"> 
+ <h2 id="retrieve-raml-0-8-from-apikit-router"><a class="anchor" href="#retrieve-raml-0-8-from-apikit-router"></a>Retrieve RAML 0.8 from APIkit Router</h2> 
+ <div class="sectionbody"> 
+  <div class="paragraph"> 
+   <p>This method involves using a header and a URL ending with <code>/api</code>. You send a header and the URL in a GET request as follows:</p> 
   </div> 
   <div class="ulist"> 
    <ul> 
     <li> <p>Header: <strong>Accept: application/raml+yaml</strong></p> </li> 
-    <li> <p>URL: <code>{scheme}://{host}:{port}/{console path}</code></p> </li> 
+    <li> <p>URL: <code>{scheme}://{host}:{port}/api</code></p> </li> 
    </ul> 
   </div> 
   <div class="paragraph"> 
@@ -1145,16 +1159,49 @@
   </div> 
   <div class="olist arabic"> 
    <ol class="arabic"> 
-    <li> <p>Set up a GET Request using the URL ending in the console path. For example:</p> 
+    <li> <p>Set up a GET request using the URL ending in the console path. For example:</p> 
      <div class="paragraph"> 
-      <p><code>http://localhost:8081/console</code></p> 
+      <p><code>http://localhost:8081/api</code></p> 
      </div> </li> 
-    <li> <p>Set a Headers key to Accept and the value to <code>application/raml+yaml</code>.</p> </li> 
+    <li> <p>Set a headers key to Accept and the value to <code>application/raml+yaml</code>. For example:</p> 
+     <div class="imageblock"> 
+      <div class="content"> 
+       <img src="./_images/retrieve-raml.png" alt="retrieve raml"> 
+      </div> 
+     </div> </li> 
     <li> <p>Send the request.</p> </li> 
    </ol> 
   </div> 
   <div class="paragraph"> 
    <p>The RAML code and any included files for the API appears in the Body section.</p> 
+  </div> 
+ </div> 
+</div> 
+<div class="sect1"> 
+ <h2 id="retrieve-raml-0-8-from-api-console"><a class="anchor" href="#retrieve-raml-0-8-from-api-console"></a>Retrieve RAML 0.8 from API Console</h2> 
+ <div class="sectionbody"> 
+  <div class="paragraph"> 
+   <p>This method requires no headers, just a URL in the following format:</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p><code>{scheme}://{host}:{port}/console/api/?raml</code></p> 
+  </div> 
+  <div class="olist arabic"> 
+   <ol class="arabic"> 
+    <li> <p>Set up a GET request using the URL ending in the console path. For example:</p> 
+     <div class="paragraph"> 
+      <p><code>http://localhost:8081/console/api/?raml</code></p> 
+     </div> 
+     <div class="imageblock"> 
+      <div class="content"> 
+       <img src="./_images/retrieve-raml2.png" alt="retrieve raml2"> 
+      </div> 
+     </div> </li> 
+    <li> <p>Send the request.</p> 
+     <div class="paragraph"> 
+      <p>The RAML code and any included files for the API appears in the Body section.</p> 
+     </div> </li> 
+   </ol> 
   </div> 
  </div> 
 </div> 
@@ -1256,7 +1303,7 @@ version: "v1"
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#to-retrieve-raml-0-8">To Retrieve RAML 0.8</a></li><li><a class="scroll-menu-link" href="#to-retrieve-raml-1-0">To Retrieve RAML 1.0</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#to-retrieve-raml-0-8">To Retrieve RAML 0.8</a></li><li><a class="scroll-menu-link" href="#retrieve-raml-0-8-from-apikit-router">Retrieve RAML 0.8 from APIkit Router</a></li><li><a class="scroll-menu-link" href="#retrieve-raml-0-8-from-api-console">Retrieve RAML 0.8 from API Console</a></li><li><a class="scroll-menu-link" href="#to-retrieve-raml-1-0">To Retrieve RAML 1.0</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->
