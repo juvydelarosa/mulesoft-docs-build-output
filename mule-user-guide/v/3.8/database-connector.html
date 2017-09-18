@@ -2832,7 +2832,7 @@
  </div> 
 </div> 
 <div class="sect1"> 
- <h2 id="automatically-adding-a-parameter-for-mysql-database-connections"><a class="anchor" href="#automatically-adding-a-parameter-for-mysql-database-connections"></a>Automatically Adding A Parameter For Mysql Database Connections</h2> 
+ <h2 id="automatically-adding-a-parameter-for-mysql-database-connections"><a class="anchor" href="#automatically-adding-a-parameter-for-mysql-database-connections"></a>Automatically Adding a Parameter for MySQL Database Connections</h2> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
    <p>In this release of Mule, be aware that the global database connector element for MySQL automatically adds a parameter to the connection details to facilitate DataSense’s ability to extract information about the data structure and format. The parameter is: &nbsp;<strong>generateSimpleParameterMetadata = true</strong>&nbsp;This driver returns "<strong>string</strong>" as the type for each input parameter (such as could not be the real parameter type).</p> 
@@ -2840,7 +2840,7 @@
  </div> 
 </div> 
 <div class="sect1"> 
- <h2 id="avoiding-complex-mel-expressions-in-sql-statements"><a class="anchor" href="#avoiding-complex-mel-expressions-in-sql-statements"></a>Avoiding Complex Mel Expressions In Sql Statements&nbsp;</h2> 
+ <h2 id="avoiding-complex-mel-expressions-in-sql-statements"><a class="anchor" href="#avoiding-complex-mel-expressions-in-sql-statements"></a>Avoiding Complex MEL Expressions in SQL Statements&nbsp;</h2> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
    <p>Because DataSense infers data structure based upon the query statement in a Database Connector, avoid using complex MEL expressions in the query statement, such as MEL expressions that involve functions. DataSense is only able to detect data structure from simple MEL expressions such as&nbsp;<strong>#[payload.BillingCity]</strong>, not&nbsp;<strong>#[payload.get(0)]</strong>.&nbsp; If the latter, DataSense can only indicate to DataWeave that the structure of the data it is to receive or send is "unknown".</p> 
@@ -2848,7 +2848,7 @@
  </div> 
 </div> 
 <div class="sect1"> 
- <h2 id="enclosing-named-variables-in-quotes"><a class="anchor" href="#enclosing-named-variables-in-quotes"></a>Enclosing Named Variables In Quotes</h2> 
+ <h2 id="enclosing-named-variables-in-quotes"><a class="anchor" href="#enclosing-named-variables-in-quotes"></a>Enclosing Named Variables in Quotes</h2> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
    <p>Variables in parameterized query statements should&nbsp;<em>not</em>&nbsp;be enclosed in quotes. For example, a user should specify:&nbsp;</p> 
@@ -2861,7 +2861,7 @@
  </div> 
 </div> 
 <div class="sect1"> 
- <h2 id="streaming-with-the-database-connector"><a class="anchor" href="#streaming-with-the-database-connector"></a>Streaming With The Database Connector</h2> 
+ <h2 id="streaming-with-the-database-connector"><a class="anchor" href="#streaming-with-the-database-connector"></a>Streaming With the Database Connector</h2> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
    <p>When you enable streaming on your Database connector, you leave the connection, statement, and result set open after execution. Mule closes these resources when either of the following occurs:</p> 
@@ -3037,7 +3037,8 @@
  <div class="sectionbody"> 
   <div class="ulist"> 
    <ul> 
-    <li> <p><a href="/mule-user-guide/v/3.8/database-connector-reference">Database Connector Reference</a>. *<a href="#fields-that-support-mel-expressions">Fields That Support MEL Expressions</a>.</p> </li> 
+    <li> <p><a href="/mule-user-guide/v/3.8/database-connector-reference">Database Connector Reference</a>.</p> </li> 
+    <li> <p><a href="#fields-that-support-mel-expressions">Fields That Support MEL Expressions</a>.</p> </li> 
    </ul> 
   </div> 
  </div> 
@@ -3046,7 +3047,7 @@
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#prerequisites">Prerequisites</a></li><li><a class="scroll-menu-link" href="#basic-setup-steps">Basic Setup Steps</a></li><li><a class="scroll-menu-link" href="#supported-operations">Supported Operations</a></li><li><a class="scroll-menu-link" href="#configuring-database-connector">Configuring Database Connector</a></li><li><a class="scroll-menu-link" href="#optional-attributes">Optional Attributes</a></li><li><a class="scroll-menu-link" href="#setting-up-database-connector-operation">Setting up Database Connector Operation</a></li><li><a class="scroll-menu-link" href="#fields-that-support-mel-expressions">Fields That Support MEL Expressions</a></li><li><a class="scroll-menu-link" href="#about-installing-the-database-driver">About Installing the Database Driver</a></li><li><a class="scroll-menu-link" href="#inserting-data-drawn-from-a-saas-provider-into-a-database">Inserting Data Drawn From A Saas Provider Into A Database</a></li><li><a class="scroll-menu-link" href="#automatically-adding-a-parameter-for-mysql-database-connections">Automatically Adding A Parameter For Mysql Database Connections</a></li><li><a class="scroll-menu-link" href="#avoiding-complex-mel-expressions-in-sql-statements">Avoiding Complex Mel Expressions In Sql Statements </a></li><li><a class="scroll-menu-link" href="#enclosing-named-variables-in-quotes">Enclosing Named Variables In Quotes</a></li><li><a class="scroll-menu-link" href="#streaming-with-the-database-connector">Streaming With The Database Connector</a></li><li><a class="scroll-menu-link" href="#jdbc-user-defined-data-types">JDBC User-Defined Data Types</a></li><li><a class="scroll-menu-link" href="#example-mel-expression-for-database-url">Example MEL Expression for Database URL</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#prerequisites">Prerequisites</a></li><li><a class="scroll-menu-link" href="#basic-setup-steps">Basic Setup Steps</a></li><li><a class="scroll-menu-link" href="#supported-operations">Supported Operations</a></li><li><a class="scroll-menu-link" href="#configuring-database-connector">Configuring Database Connector</a></li><li><a class="scroll-menu-link" href="#optional-attributes">Optional Attributes</a></li><li><a class="scroll-menu-link" href="#setting-up-database-connector-operation">Setting up Database Connector Operation</a></li><li><a class="scroll-menu-link" href="#fields-that-support-mel-expressions">Fields That Support MEL Expressions</a></li><li><a class="scroll-menu-link" href="#about-installing-the-database-driver">About Installing the Database Driver</a></li><li><a class="scroll-menu-link" href="#inserting-data-drawn-from-a-saas-provider-into-a-database">Inserting Data Drawn From A Saas Provider Into A Database</a></li><li><a class="scroll-menu-link" href="#automatically-adding-a-parameter-for-mysql-database-connections">Automatically Adding a Parameter for MySQL Database Connections</a></li><li><a class="scroll-menu-link" href="#avoiding-complex-mel-expressions-in-sql-statements">Avoiding Complex MEL Expressions in SQL Statements </a></li><li><a class="scroll-menu-link" href="#enclosing-named-variables-in-quotes">Enclosing Named Variables in Quotes</a></li><li><a class="scroll-menu-link" href="#streaming-with-the-database-connector">Streaming With the Database Connector</a></li><li><a class="scroll-menu-link" href="#jdbc-user-defined-data-types">JDBC User-Defined Data Types</a></li><li><a class="scroll-menu-link" href="#example-mel-expression-for-database-url">Example MEL Expression for Database URL</a></li><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->
