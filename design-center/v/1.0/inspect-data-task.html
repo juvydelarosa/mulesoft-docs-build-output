@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>To Use Conditions (Design Center) // MuleSoft Documentation </title>
+  <title>To Inspect Input and Output (Design Center) // MuleSoft Documentation </title>
   <link rel="shortcut icon" href="/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="/css/vendor.min.css?t=1505334364">
   <link rel="stylesheet" type="text/css" href="/css/mulesoft.min.css?t=1505334364">
@@ -14,9 +14,9 @@
   <script src="/js/trafficSource.js"></script>
   <script src="/js/scripts.js?t=1505334364"></script>
 
-  <link rel="canonical" href="https://docs.mulesoft.com/design-center/v/1.0/conditional-logic-task-design-center" />
-  <meta name="description" content="You can use conditions to make a flow branch to different paths. This is similar to using if/else statements in most programming languages. You ach..." />
-  <meta class="swiftype" name="title" data-type="string" content="To Use Conditions (Design Center)" />
+  <link rel="canonical" href="https://docs.mulesoft.com/design-center/v/1.0/inspect-data-task" />
+  <meta name="description" content="In this procedure, you inspect input and output payloads and attributes from previous procedures to create a basic Mule app and to add an expressio..." />
+  <meta class="swiftype" name="title" data-type="string" content="To Inspect Input and Output (Design Center)" />
   <meta class="swiftype" name="version" data-type="enum" content="1.0" />
 </head>
 <body>
@@ -161,7 +161,7 @@
         <a href="#" class="tree-icon glyphicon glyphicon-th-list"><span>Nav</span></a>
       </div>
       <div class="toolbar-dropdown edit-github">
-        <a href="https://github.com/mulesoft/mulesoft-docs/blob/master/design-center/v/1.0/conditional-logic-task-design-center.adoc" target="_blank"><span>Edit on GitHub</span></a>
+        <a href="https://github.com/mulesoft/mulesoft-docs/blob/master/design-center/v/1.0/inspect-data-task.adoc" target="_blank"><span>Edit on GitHub</span></a>
       </div>
       <div class="toolbar-dropdown helpful">
         <div class="btn btn-default dropdown-toggle" id="dropdown-helpful">
@@ -196,7 +196,7 @@
       </div>
     </div>
     <div class="version-selector col-md-4 col-xs-12">
-      <label for="version-selector">Design Center Version</label><select onChange="window.location.href=this.value" id="version-selector"><option value="/design-center/v/1.0/conditional-logic-task-design-center">1.0 (Latest)</option></select>
+      <label for="version-selector">Design Center Version</label><select onChange="window.location.href=this.value" id="version-selector"><option value="/design-center/v/1.0/inspect-data-task">1.0 (Latest)</option></select>
 
     </div>
   </div>
@@ -578,30 +578,42 @@
 <li><i></i><a href="/anypoint-studio/v/6/including-the-datamapper-plugin">Including the DataMapper Plugin</a></li></ul></li>
 </ul></li>
 </ul></li>
+<li class="expanded">
+<i></i>
+<a href="/design-center/v/1.0/">Design Center</a><ul style="display: block;">
+<li class="expanded">
+<i></i>
+<a href="/design-center/v/1.0/about-designing-a-mule-application">About Designing a Mule App</a><ul style="display: block;">
+<li class="expanded">
+<i></i>
+<a href="/design-center/v/1.0/flow-design-basic-tasks">Flow Design Basics</a><ul style="display: block;">
+<li><i></i><a href="/design-center/v/1.0/to-create-a-new-project">To Create a Basic Mule App</a></li><li><i></i><a href="/design-center/v/1.0/design-dynamic-request-task">To Dynamically Change the URL of a Request</a></li><li class="active"><i></i><a href="/design-center/v/1.0/inspect-data-task">To Inspect Input and Output</a></li><li><i></i><a href="/design-center/v/1.0/design-filter-task">To Transform from a Full Set of Data to a Subset</a></li><li><i></i><a href="/design-center/v/1.0/for-each-task-design-center">To Drill Down into JSON</a></li></ul></li>
 <li>
 <i></i>
-<a href="/design-center/v/1.0/">Design Center</a><ul>
+<a href="/design-center/v/1.0/key-flow-design-tasks">Key Flow Design Tasks</a><ul>
+<li><i></i><a href="/design-center/v/1.0/to-create-and-populate-a-variable">To Create and Populate a Variable</a></li><li><i></i><a href="/design-center/v/1.0/manage-dependency-versions-design-center">To Update Components of the Flow</a></li><li><i></i><a href="/design-center/v/1.0/promote-app-prod-env-design-center">To Promote an Application to an Environment</a></li><li><i></i><a href="/design-center/v/1.0/to-create-a-mule-application-project">To Clone a Mule App Project</a></li><li><i></i><a href="/design-center/v/1.0/export-studio-design-center">To Export a Project to Anypoint Studio</a></li><li><i></i><a href="/design-center/v/1.0/flow-datatype-task">To Set Data Types for a Flow</a></li></ul></li>
 <li>
 <i></i>
-<a href="/design-center/v/1.0/about-designing-a-mule-application">About Designing a Mule Application</a><ul>
-<li><i></i><a href="/design-center/v/1.0/to-manage-mule-flows">To Manage Mule Flows</a></li><li>
-<i></i>
-<a href="/design-center/v/1.0/workflow-create-and-run-a-mule-project">Workflow:Create and Deploy a Mule Project</a><ul>
-<li><i></i><a href="/design-center/v/1.0/to-create-a-new-project">To Create a Mule Application Project</a></li><li><i></i><a href="/design-center/v/1.0/arrange-cards-flow-design-center">To Arrange Cards Into a Flow</a></li><li><i></i><a href="/design-center/v/1.0/provide-values-fields-design-center">To Provide Values for Fields</a></li><li><i></i><a href="/design-center/v/1.0/to-set-up-connector-configurations">To Set Up Connector Configurations</a></li><li><i></i><a href="/design-center/v/1.0/run-app-design-env-design-center">To Run an Application in a Design Environment</a></li><li><i></i><a href="/design-center/v/1.0/to-debug-a-mule-project">To Debug a Mule Project</a></li><li><i></i><a href="/design-center/v/1.0/promote-app-prod-env-design-center">To Promote an Application to a Production Environment</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/to-manage-data-types">To Manage Data Types</a></li><li><i></i><a href="/design-center/v/1.0/to-create-and-populate-a-variable">To Create and Populate a Variable</a></li><li>
-<i></i>
-<a href="/design-center/v/1.0/transform-message-component-concept-design-center">About Transform Component</a><ul>
+<a href="/design-center/v/1.0/general-tasks">General Flow Design Tasks</a><ul>
+<li><i></i><a href="/design-center/v/1.0/logger-task-design-center">To Log Data</a></li><li><i></i><a href="/design-center/v/1.0/reference-flow-task-design-center">To Reference One Flow from Another</a></li><li><i></i><a href="/design-center/v/1.0/change-target-output-transformation-design-center-task">To Change the Target Output of a Transformation</a></li><li><i></i><a href="/design-center/v/1.0/error-handling-task-design-center">To Handle Errors</a></li></ul></li>
 <li>
 <i></i>
-<a href="/design-center/v/1.0/workflow-create-mapping-ui-design-center">Workflow: Create a Mapping</a><ul>
-<li><i></i><a href="/design-center/v/1.0/input-output-structure-transformation-design-center-task">To Define Input and Output Structure of a Transformation</a></li><li><i></i><a href="/design-center/v/1.0/graphically-construct-mapping-design-center-task">To Graphically Construct a Mapping</a></li><li><i></i><a href="/design-center/v/1.0/preview-transformation-output-design-center-task">To Preview the Output of a Transformation</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/tips-transform-message-ui-design-center">Tips on the Transform Component UI</a></li><li><i></i><a href="/design-center/v/1.0/change-target-output-transformation-design-center-task">To Change the Target Output of a Transformation</a></li><li><i></i><a href="/design-center/v/1.0/add-another-output-transform-design-center-task">To Add Another Transformation</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/reference-deployment-status-messages">Reference: Deployment Status Messages</a></li><li><i></i><a href="/design-center/v/1.0/about-data-types">About Data Types</a></li><li><i></i><a href="/design-center/v/1.0/logger-task-design-center">To Log Data</a></li><li><i></i><a href="/design-center/v/1.0/for-each-task-design-center">To Use For Each over a Collection</a></li><li><i></i><a href="/design-center/v/1.0/error-handling-task-design-center">To Handle Errors With Try Scopes</a></li><li><i></i><a href="/design-center/v/1.0/reference-flow-task-design-center">To Reference Another Flow</a></li><li><i></i><a href="/design-center/v/1.0/manage-dependency-versions-design-center">Manage Dependency Versions</a></li><li><i></i><a href="/design-center/v/1.0/export-studio-design-center">Export a Project to Anypoint Studio</a></li></ul></li>
+<a href="/design-center/v/1.0/flow-design-reference">Flow Design Reference</a><ul>
+<li><i></i><a href="/design-center/v/1.0/to-manage-mule-flows">Building and Managing Flows Reference</a></li><li><i></i><a href="/design-center/v/1.0/run-app-design-env-design-center">Running an App Reference</a></li><li><i></i><a href="/design-center/v/1.0/reference-deployment-status-messages">Deployment Status Reference</a></li><li><i></i><a href="/design-center/v/1.0/input-output-structure-transformation-design-center-task">Transform Utility Reference</a></li></ul></li>
+<li><i></i><a href="/design-center/v/1.0/about-data-types">About Data Types</a></li></ul></li>
 <li>
 <i></i>
 <a href="/design-center/v/1.0/designing-api-about">About Designing a RAML-based API</a><ul>
-<li><i></i><a href="/design-center/v/1.0/design-raml-api-task">To Design a RAML API Specification</a></li><li><i></i><a href="/design-center/v/1.0/create-reuse-part-task">To Create and Publish an API Fragment</a></li><li><i></i><a href="/design-center/v/1.0/publish-project-exchange-task">To Publish an API Design Project</a></li><li><i></i><a href="/design-center/v/1.0/add-dependencies-task">To Add a Fragment to an API</a></li><li><i></i><a href="/design-center/v/1.0/design-update-remove-dep-task">To Remove or Update a Dependency</a></li><li><i></i><a href="/design-center/v/1.0/simulate-api-task">To Simulate Calling a RAML API</a></li><li><i></i><a href="/design-center/v/1.0/design-import-oas-task">To Import an OAS</a></li><li><i></i><a href="/design-center/v/1.0/design-import-raml-task">To Import a RAML</a></li><li><i></i><a href="/design-center/v/1.0/upload-raml-task">To Upload an Existing RAML File to Exchange</a></li><li><i></i><a href="/design-center/v/1.0/design-manage-revisions-task">To Manage API Revisions Using Branches</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/design-api-ui-reference">Designing an API Reference</a></li><li><i></i><a href="/design-center/v/1.0/designing-api-reference">OAS/RAML Importing and Exporting Reference</a></li><li><i></i><a href="/design-center/v/1.0/design-api-frag-revisions-concept">About API Fragments</a></li><li><i></i><a href="/design-center/v/1.0/design-branch-filelock-concept">About Sharing Branches and Migration</a></li><li><i></i><a href="/design-center/v/1.0/user-access-to-design-center">User Access to Design Center</a></li><li><i></i><a href="/design-center/v/1.0/faq-design-center">FAQ: Design Center</a></li></ul></li>
+<li>
+<i></i>
+<a href="/design-center/v/1.0/design-api-basics-tasks">API Design Basics</a><ul>
+<li><i></i><a href="/design-center/v/1.0/design-raml-api-task">To Design a RAML API Specification</a></li><li><i></i><a href="/design-center/v/1.0/simulate-api-task">To Simulate Calling a RAML API</a></li><li><i></i><a href="/design-center/v/1.0/publish-project-exchange-task">To Publish an API Design Project</a></li><li><i></i><a href="/design-center/v/1.0/design-import-oas-task">To Import an OAS</a></li></ul></li>
+<li>
+<i></i>
+<a href="/design-center/v/1.0/design-api-key-tasks">Key API Design Tasks</a><ul>
+<li><i></i><a href="/design-center/v/1.0/create-reuse-part-task">To Create and Publish an API Fragment</a></li><li><i></i><a href="/design-center/v/1.0/add-dependencies-task">To Add a Fragment to an API</a></li><li><i></i><a href="/design-center/v/1.0/design-update-remove-dep-task">To Remove or Update a Dependency</a></li><li><i></i><a href="/design-center/v/1.0/design-import-raml-task">To Import a RAML</a></li><li><i></i><a href="/design-center/v/1.0/upload-raml-task">To Upload an Existing RAML File to Exchange</a></li><li><i></i><a href="/design-center/v/1.0/design-manage-revisions-task">To Manage API Revisions Using Branches</a></li></ul></li>
+<li><i></i><a href="/design-center/v/1.0/design-api-ui-reference">Designing an API Reference</a></li><li><i></i><a href="/design-center/v/1.0/designing-api-reference">OAS/RAML Importing and Exporting Reference</a></li><li><i></i><a href="/design-center/v/1.0/design-api-frag-revisions-concept">About API Fragments</a></li><li><i></i><a href="/design-center/v/1.0/design-branch-filelock-concept">About Sharing Branches and Migration</a></li></ul></li>
+<li><i></i><a href="/design-center/v/1.0/user-access-to-design-center">About Accessing Design Center</a></li><li><i></i><a href="/design-center/v/1.0/faq-design-center">FAQ: Design Center</a></li></ul></li>
 <li>
 <i></i>
 <a href="/api-manager/">API Manager</a><ul>
@@ -1121,59 +1133,102 @@
     <!-- START article content -->
     <div class="article-content col-md-7">
       
-      
-      <h1>To Use Conditions (Design Center)</h1>
+      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Design Center</a>/<a href="about-designing-a-mule-application">About Designing a Mule App</a>/<a href="flow-design-basic-tasks">Flow Design Basics</a>/<a href="inspect-data-task" class="breadcrumb-active-link">To Inspect Input and Output</a></div>
+      <h1>To Inspect Input and Output (Design Center)</h1>
       <div id="preamble"> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>You can use conditions to make a flow branch to different paths. This is similar to using if/else statements in most programming languages.</p> 
+   <p>In this procedure, you inspect input and output payloads and attributes from previous procedures to create a basic Mule app and to add an expression to make dynamic requests. You can also inspect variables and errors.</p> 
   </div> 
   <div class="paragraph"> 
-   <p>You achieve this by placing components on the different branches of a Choice component. Each branch follows a condition, conditions are evaluated from top to bottom. The branch of the first condition to be evaluated to true is used, all others are ignored.</p> 
+   <p>Input and output data remains until one of the following actions:</p> 
   </div> 
-  <div class="olist arabic"> 
-   <ol class="arabic"> 
-    <li> <p>In Design Center add a Choice component to your flow.</p> </li> 
-    <li> <p>Click the If card and set Expression to a condition that can evaluate to true or false. For example : <strong>attributes.queryParams.lang == "es"</strong>.</p> 
-     <div class="paragraph"> 
-      <p>This expression is true only when an incoming HTTP request includes a query parameter <code>lang=es</code>.</p> 
+  <div class="ulist"> 
+   <ul> 
+    <li> <p>Closing and opening a Design Center project</p> </li> 
+    <li> <p>Reloading the Design Center browser</p> </li> 
+    <li> <p>Making changes to a deployed app</p> 
+     <div class="olist arabic"> 
+      <ol class="arabic"> 
+       <li> <p>Open HTTP Request, In Input, in Show, select Attributes. In History, select an execution time. Attributes appear. For example:</p> 
+        <div class="listingblock"> 
+         <div class="content"> 
+          <pre>{
+  "listenerPath": "/getpath",
+  "relativePath": "/getpath",
+  "version": "HTTP/1.1",
+  "scheme": "http",
+  "method": "GET",
+  "requestUri": "/getpath?path=users",
+  "queryString": "path=users",
+  "remoteAddress": "/54.89.250.13:34894",
+  "queryParams": {
+    "path": "users"
+  },
+  "uriParams": {},
+  "requestPath": "/getpath",
+  "headers": {
+    "host": "myproject-trod.stgx.cloudhub.io",
+    "x-forwarded-port": "80",
+    "accept-language": "en-US,en;q=0.8",
+    "x-real-ip": "172.1.61.20",
+    "accept-encoding": "gzip, deflate",
+    "x-forwarded-for": "172.1.61.20",
+    "upgrade-insecure-requests": "1",
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36",
+    "x-forwarded-proto": "http",
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8"
+  }
+}
+...</pre> 
+         </div> 
+        </div> </li> 
+       <li> <p>Select Output. The response attributes appear. For example:</p> 
+        <div class="listingblock"> 
+         <div class="content"> 
+          <pre>{
+  "statusCode": 200,
+  "reasonPhrase": "OK",
+  "headers": {
+    "set-cookie": "__cfduid=d2af63d4b5612974bb61977f6eacaefbb1504465208; expires=Mon, 03-Sep-18 19:00:08 GMT; path=/; domain=.typicode.com; HttpOnly",
+    "x-content-type-options": "nosniff",
+    "pragma": "no-cache",
+    "connection": "keep-alive",
+    "transfer-encoding": "chunked",
+    "access-control-allow-credentials": "true",
+    "via": "1.1 vegur",
+    "expires": "Sun, 03 Sep 2017 23:00:08 GMT",
+    "server": "cloudflare-nginx",
+    "content-type": "application/json; charset=utf-8",
+    "cache-control": "public, max-age=14400",
+    "cf-ray": "398af342a6be0f33-IAD",
+    "cf-cache-status": "HIT",
+    "x-powered-by": "Express",
+    "vary": "Origin, Accept-Encoding",
+    "etag": "W/\"160d-1eMSsxeJRfnVLRBmYJSbCiJZ1qQ\"",
+    "date": "Sun, 03 Sep 2017 19:00:08 GMT"
+  }
+}</pre> 
+         </div> 
+        </div> </li> 
+       <li> <p>In Show, select Payload. The todos list appears for the one execution and the users and posts lists appears for the other executions.</p> </li> 
+      </ol> 
      </div> </li> 
-    <li> <p>For more clarity, write something in Display Name field to give the If card a friendly name.</p> </li> 
-    <li> <p>Click the plus sign next to the If card and place one or more components.</p> 
-     <div class="paragraph"> 
-      <p>These are used only when the expression in the If card is true.</p> 
-     </div> </li> 
-    <li> <p>Click the plus icon <span class="image"><img src="./_images/conditional-logic-task-design-center-5c567.png" alt="conditional logic task design center 5c567"></span> next to the card labeled Default and place one or more components.</p> 
-     <div class="paragraph"> 
-      <p>These are used only when the expressions on all If cards are false.</p> 
-     </div> </li> 
-   </ol> 
+   </ul> 
+  </div> 
+  <div class="paragraph"> 
+   <p>Now, you are ready to generate DataWeave code to filter consumed data.</p> 
   </div> 
  </div> 
 </div> 
 <div class="sect1"> 
- <h2 id="adding-more-conditions"><a class="anchor" href="#adding-more-conditions"></a>Adding More Conditions</h2> 
- <div class="sectionbody"> 
-  <div class="olist arabic"> 
-   <ol class="arabic"> 
-    <li> <p>In an Choice component, open an If card and click the Options menu <span class="image"><img src="./_images/error-handling-task-design-center-018a5.png" alt="error handling task design center 018a5"></span> and select Add Below to add another choice path.</p> 
-     <div class="paragraph"> 
-      <p>Conditions are matched from top to bottom, and only the first match is considered.</p> 
-     </div> </li> 
-    <li> <p>In the newly created If card, set Expression to a condition that can evaluate to true or false.</p> </li> 
-    <li> <p>Click the plus sign next to this new If card and place one or more components.</p> </li> 
-   </ol> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="see-also"><a class="anchor" href="#see-also"></a>See also</h2> 
+ <h2 id="see-also"><a class="anchor" href="#see-also"></a>See Also</h2> 
  <div class="sectionbody"> 
   <div class="ulist"> 
    <ul> 
-    <li> <p><a href="https://mule4-docs.mulesoft.com/mule-user-guide/v/4.0/choice-router-concept">About Choice Router</a></p> </li> 
-    <li> <p><a href="https://mule4-docs.mulesoft.com/mule-user-guide/v/4.0/dataweave-cookbook-extract-data">DataWeave CookBook: To Extract Data</a></p> </li> 
-    <li> <p><a href="https://mule4-docs.mulesoft.com/connectors/http-about-http-request">About HTTP Requests</a></p> </li> 
+    <li> <p><a href="/design-center/v/1.0/to-create-a-new-project">To Create a Basic Mule App</a></p> </li> 
+    <li> <p><a href="/design-center/v/1.0/design-dynamic-request-task">To Dynamically Change the URL of a Request</a></p> </li> 
+    <li> <p><a href="/design-center/v/1.0/design-filter-task">To Transform a Full Set of Data to a Subset</a></p> </li> 
    </ul> 
   </div> 
  </div> 
@@ -1182,7 +1237,7 @@
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#adding-more-conditions">Adding More Conditions</a></li><li><a class="scroll-menu-link" href="#see-also">See also</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#see-also">See Also</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->

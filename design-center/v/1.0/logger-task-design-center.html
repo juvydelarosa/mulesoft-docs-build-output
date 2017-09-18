@@ -15,7 +15,7 @@
   <script src="/js/scripts.js?t=1505334364"></script>
 
   <link rel="canonical" href="https://docs.mulesoft.com/design-center/v/1.0/logger-task-design-center" />
-  <meta name="description" content="To log data from the execution of a Mule application: By changing the mode to Function you can provide something dynamic, instead of static text.  ..." />
+  <meta name="description" content="You add one or more Logger utilities to a flow to log information from the Mule event or static messages that you specify in the log. Logging infor..." />
   <meta class="swiftype" name="title" data-type="string" content="To Log Data (Design Center)" />
   <meta class="swiftype" name="version" data-type="enum" content="1.0" />
 </head>
@@ -583,25 +583,37 @@
 <a href="/design-center/v/1.0/">Design Center</a><ul style="display: block;">
 <li class="expanded">
 <i></i>
-<a href="/design-center/v/1.0/about-designing-a-mule-application">About Designing a Mule Application</a><ul style="display: block;">
-<li><i></i><a href="/design-center/v/1.0/to-manage-mule-flows">To Manage Mule Flows</a></li><li>
-<i></i>
-<a href="/design-center/v/1.0/workflow-create-and-run-a-mule-project">Workflow:Create and Deploy a Mule Project</a><ul>
-<li><i></i><a href="/design-center/v/1.0/to-create-a-new-project">To Create a Mule Application Project</a></li><li><i></i><a href="/design-center/v/1.0/arrange-cards-flow-design-center">To Arrange Cards Into a Flow</a></li><li><i></i><a href="/design-center/v/1.0/provide-values-fields-design-center">To Provide Values for Fields</a></li><li><i></i><a href="/design-center/v/1.0/to-set-up-connector-configurations">To Set Up Connector Configurations</a></li><li><i></i><a href="/design-center/v/1.0/run-app-design-env-design-center">To Run an Application in a Design Environment</a></li><li><i></i><a href="/design-center/v/1.0/to-debug-a-mule-project">To Debug a Mule Project</a></li><li><i></i><a href="/design-center/v/1.0/promote-app-prod-env-design-center">To Promote an Application to a Production Environment</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/to-manage-data-types">To Manage Data Types</a></li><li><i></i><a href="/design-center/v/1.0/to-create-and-populate-a-variable">To Create and Populate a Variable</a></li><li>
-<i></i>
-<a href="/design-center/v/1.0/transform-message-component-concept-design-center">About Transform Component</a><ul>
+<a href="/design-center/v/1.0/about-designing-a-mule-application">About Designing a Mule App</a><ul style="display: block;">
 <li>
 <i></i>
-<a href="/design-center/v/1.0/workflow-create-mapping-ui-design-center">Workflow: Create a Mapping</a><ul>
-<li><i></i><a href="/design-center/v/1.0/input-output-structure-transformation-design-center-task">To Define Input and Output Structure of a Transformation</a></li><li><i></i><a href="/design-center/v/1.0/graphically-construct-mapping-design-center-task">To Graphically Construct a Mapping</a></li><li><i></i><a href="/design-center/v/1.0/preview-transformation-output-design-center-task">To Preview the Output of a Transformation</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/tips-transform-message-ui-design-center">Tips on the Transform Component UI</a></li><li><i></i><a href="/design-center/v/1.0/change-target-output-transformation-design-center-task">To Change the Target Output of a Transformation</a></li><li><i></i><a href="/design-center/v/1.0/add-another-output-transform-design-center-task">To Add Another Transformation</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/reference-deployment-status-messages">Reference: Deployment Status Messages</a></li><li><i></i><a href="/design-center/v/1.0/about-data-types">About Data Types</a></li><li class="active"><i></i><a href="/design-center/v/1.0/logger-task-design-center">To Log Data</a></li><li><i></i><a href="/design-center/v/1.0/for-each-task-design-center">To Use For Each over a Collection</a></li><li><i></i><a href="/design-center/v/1.0/error-handling-task-design-center">To Handle Errors With Try Scopes</a></li><li><i></i><a href="/design-center/v/1.0/reference-flow-task-design-center">To Reference Another Flow</a></li><li><i></i><a href="/design-center/v/1.0/manage-dependency-versions-design-center">Manage Dependency Versions</a></li><li><i></i><a href="/design-center/v/1.0/export-studio-design-center">Export a Project to Anypoint Studio</a></li></ul></li>
+<a href="/design-center/v/1.0/flow-design-basic-tasks">Flow Design Basics</a><ul>
+<li><i></i><a href="/design-center/v/1.0/to-create-a-new-project">To Create a Basic Mule App</a></li><li><i></i><a href="/design-center/v/1.0/design-dynamic-request-task">To Dynamically Change the URL of a Request</a></li><li><i></i><a href="/design-center/v/1.0/inspect-data-task">To Inspect Input and Output</a></li><li><i></i><a href="/design-center/v/1.0/design-filter-task">To Transform from a Full Set of Data to a Subset</a></li><li><i></i><a href="/design-center/v/1.0/for-each-task-design-center">To Drill Down into JSON</a></li></ul></li>
+<li>
+<i></i>
+<a href="/design-center/v/1.0/key-flow-design-tasks">Key Flow Design Tasks</a><ul>
+<li><i></i><a href="/design-center/v/1.0/to-create-and-populate-a-variable">To Create and Populate a Variable</a></li><li><i></i><a href="/design-center/v/1.0/manage-dependency-versions-design-center">To Update Components of the Flow</a></li><li><i></i><a href="/design-center/v/1.0/promote-app-prod-env-design-center">To Promote an Application to an Environment</a></li><li><i></i><a href="/design-center/v/1.0/to-create-a-mule-application-project">To Clone a Mule App Project</a></li><li><i></i><a href="/design-center/v/1.0/export-studio-design-center">To Export a Project to Anypoint Studio</a></li><li><i></i><a href="/design-center/v/1.0/flow-datatype-task">To Set Data Types for a Flow</a></li></ul></li>
+<li class="expanded">
+<i></i>
+<a href="/design-center/v/1.0/general-tasks">General Flow Design Tasks</a><ul style="display: block;">
+<li class="active"><i></i><a href="/design-center/v/1.0/logger-task-design-center">To Log Data</a></li><li><i></i><a href="/design-center/v/1.0/reference-flow-task-design-center">To Reference One Flow from Another</a></li><li><i></i><a href="/design-center/v/1.0/change-target-output-transformation-design-center-task">To Change the Target Output of a Transformation</a></li><li><i></i><a href="/design-center/v/1.0/error-handling-task-design-center">To Handle Errors</a></li></ul></li>
+<li>
+<i></i>
+<a href="/design-center/v/1.0/flow-design-reference">Flow Design Reference</a><ul>
+<li><i></i><a href="/design-center/v/1.0/to-manage-mule-flows">Building and Managing Flows Reference</a></li><li><i></i><a href="/design-center/v/1.0/run-app-design-env-design-center">Running an App Reference</a></li><li><i></i><a href="/design-center/v/1.0/reference-deployment-status-messages">Deployment Status Reference</a></li><li><i></i><a href="/design-center/v/1.0/input-output-structure-transformation-design-center-task">Transform Utility Reference</a></li></ul></li>
+<li><i></i><a href="/design-center/v/1.0/about-data-types">About Data Types</a></li></ul></li>
 <li>
 <i></i>
 <a href="/design-center/v/1.0/designing-api-about">About Designing a RAML-based API</a><ul>
-<li><i></i><a href="/design-center/v/1.0/design-raml-api-task">To Design a RAML API Specification</a></li><li><i></i><a href="/design-center/v/1.0/create-reuse-part-task">To Create and Publish an API Fragment</a></li><li><i></i><a href="/design-center/v/1.0/publish-project-exchange-task">To Publish an API Design Project</a></li><li><i></i><a href="/design-center/v/1.0/add-dependencies-task">To Add a Fragment to an API</a></li><li><i></i><a href="/design-center/v/1.0/design-update-remove-dep-task">To Remove or Update a Dependency</a></li><li><i></i><a href="/design-center/v/1.0/simulate-api-task">To Simulate Calling a RAML API</a></li><li><i></i><a href="/design-center/v/1.0/design-import-oas-task">To Import an OAS</a></li><li><i></i><a href="/design-center/v/1.0/design-import-raml-task">To Import a RAML</a></li><li><i></i><a href="/design-center/v/1.0/upload-raml-task">To Upload an Existing RAML File to Exchange</a></li><li><i></i><a href="/design-center/v/1.0/design-manage-revisions-task">To Manage API Revisions Using Branches</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/design-api-ui-reference">Designing an API Reference</a></li><li><i></i><a href="/design-center/v/1.0/designing-api-reference">OAS/RAML Importing and Exporting Reference</a></li><li><i></i><a href="/design-center/v/1.0/design-api-frag-revisions-concept">About API Fragments</a></li><li><i></i><a href="/design-center/v/1.0/design-branch-filelock-concept">About Sharing Branches and Migration</a></li><li><i></i><a href="/design-center/v/1.0/user-access-to-design-center">User Access to Design Center</a></li><li><i></i><a href="/design-center/v/1.0/faq-design-center">FAQ: Design Center</a></li></ul></li>
+<li>
+<i></i>
+<a href="/design-center/v/1.0/design-api-basics-tasks">API Design Basics</a><ul>
+<li><i></i><a href="/design-center/v/1.0/design-raml-api-task">To Design a RAML API Specification</a></li><li><i></i><a href="/design-center/v/1.0/simulate-api-task">To Simulate Calling a RAML API</a></li><li><i></i><a href="/design-center/v/1.0/publish-project-exchange-task">To Publish an API Design Project</a></li><li><i></i><a href="/design-center/v/1.0/design-import-oas-task">To Import an OAS</a></li></ul></li>
+<li>
+<i></i>
+<a href="/design-center/v/1.0/design-api-key-tasks">Key API Design Tasks</a><ul>
+<li><i></i><a href="/design-center/v/1.0/create-reuse-part-task">To Create and Publish an API Fragment</a></li><li><i></i><a href="/design-center/v/1.0/add-dependencies-task">To Add a Fragment to an API</a></li><li><i></i><a href="/design-center/v/1.0/design-update-remove-dep-task">To Remove or Update a Dependency</a></li><li><i></i><a href="/design-center/v/1.0/design-import-raml-task">To Import a RAML</a></li><li><i></i><a href="/design-center/v/1.0/upload-raml-task">To Upload an Existing RAML File to Exchange</a></li><li><i></i><a href="/design-center/v/1.0/design-manage-revisions-task">To Manage API Revisions Using Branches</a></li></ul></li>
+<li><i></i><a href="/design-center/v/1.0/design-api-ui-reference">Designing an API Reference</a></li><li><i></i><a href="/design-center/v/1.0/designing-api-reference">OAS/RAML Importing and Exporting Reference</a></li><li><i></i><a href="/design-center/v/1.0/design-api-frag-revisions-concept">About API Fragments</a></li><li><i></i><a href="/design-center/v/1.0/design-branch-filelock-concept">About Sharing Branches and Migration</a></li></ul></li>
+<li><i></i><a href="/design-center/v/1.0/user-access-to-design-center">About Accessing Design Center</a></li><li><i></i><a href="/design-center/v/1.0/faq-design-center">FAQ: Design Center</a></li></ul></li>
 <li>
 <i></i>
 <a href="/api-manager/">API Manager</a><ul>
@@ -1121,53 +1133,15 @@
     <!-- START article content -->
     <div class="article-content col-md-7">
       
-      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Design Center</a>/<a href="about-designing-a-mule-application">About Designing a Mule Application</a>/<a href="logger-task-design-center" class="breadcrumb-active-link">To Log Data</a></div>
+      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Design Center</a>/<a href="about-designing-a-mule-application">About Designing a Mule App</a>/<a href="general-tasks">General Flow Design Tasks</a>/<a href="logger-task-design-center" class="breadcrumb-active-link">To Log Data</a></div>
       <h1>To Log Data (Design Center)</h1>
       <div id="preamble"> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>To log data from the execution of a Mule application:</p> 
-  </div> 
-  <div class="olist arabic"> 
-   <ol class="arabic"> 
-    <li> <p>In Design Center add a Logger to your flow.</p> </li> 
-    <li> <p>Click the Function button next to the Message field <span class="image"><img src="./_images/logger-task-design-center-0a147.png" alt="logger task design center 0a147"></span></p> 
-     <div class="paragraph"> 
-      <p>By changing the mode to Function you can provide something dynamic, instead of static text.</p> 
-     </div> </li> 
-    <li> <p>Write a DataWeave expression in the Message field. You expression can include references to parts of the input and functions. For example, write <code>payload</code> to log the contents of the Mule message payload.</p> </li> 
-    <li> <p>Leave the Level as INFO, unless you want to tag the recorded information differently when logged.</p> </li> 
-    <li> <p>Click the Deploy button to deploy your application to a Design environment.</p> </li> 
-    <li> <p>Trigger the flow by sending a mock request to it.</p> </li> 
-    <li> <p>Expand the <strong>Logs</strong> tab at the bottom of the screen.</p> 
-     <div class="paragraph"> 
-      <p><span class="image"><img src="./_images/to-debug-a-flow-designer-project-30b5a.png" alt="to debug a flow designer project 30b5a"></span></p> 
-     </div> 
-     <div class="paragraph"> 
-      <p>This tab displays the logs produced by the Logger components in your project, along with messages related to the deploying and running of the app.</p> 
-     </div> </li> 
-   </ol> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="expressions-for-logging-dynamic-messages"><a class="anchor" href="#expressions-for-logging-dynamic-messages"></a>Expressions for Logging Dynamic Messages</h2> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>Below are some examples of expressions you can write in the Message field of the Logger.</p> 
+   <p>You add one or more Logger utilities to a flow to log information from the Mule event or static messages that you specify in the log. Logging information is helpful for troubleshooting and taking a quick look at the output at some point in the flow. You can use expresssions to create the log message. For example:</p> 
   </div> 
   <div class="paragraph"> 
-   <p>Note that you must click the Function button <span class="image"><img src="./_images/logger-task-design-center-0a147.png" alt="logger task design center 0a147"></span> before writing any of these.</p> 
-  </div> 
-  <div class="admonitionblock tip"> 
-   <table> 
-    <tbody> 
-     <tr> 
-      <td class="icon"> <i class="fa icon-tip" title="Tip"></i> </td> 
-      <td class="content"> Without clicking the Function button, what you enter is considered static text unless you wrap your expression in <code><mark>[]</mark></code>. Wrapping your text in <code>[]</code> is equivalent to clicking the Function button. </td> 
-     </tr> 
-    </tbody> 
-   </table> 
+   <p>IS THE DEFAULT LOG LEVEL CHANGING TO DEBUG?</p> 
   </div> 
   <table class="tableblock frame-all grid-all spread"> 
    <colgroup> 
@@ -1207,6 +1181,29 @@
     </tr> 
    </tbody> 
   </table> 
+  <div class="olist arabic"> 
+   <ol class="arabic"> 
+    <li> <p>In Design Center add a Logger to your flow.</p> </li> 
+    <li> <p>In Message, click Function <span class="image"><img src="./_images/logger-task-design-center-0a147.png" alt="logger task design center 0a147"></span> to use an expression.</p> 
+     <div class="paragraph"> 
+      <p>If you just want to log static text, do not click Function. Just type the text.</p> 
+     </div> </li> 
+    <li> <p>Type an expression. For example:</p> 
+     <div class="paragraph"> 
+      <p><strong>payload</strong></p> 
+     </div> </li> 
+    <li> <p>Accept the default log level DEBUG or choose another setting to log less information. For example, choose INFO.</p> </li> 
+    <li> <p>Click the Deploy button to deploy your application to a Design environment.</p> </li> 
+    <li> <p>Trigger the flow by sending a mock request.</p> </li> 
+    <li> <p>Expand the <strong>Logs</strong> tab at the bottom of the screen.</p> 
+     <div class="paragraph"> 
+      <p><span class="image"><img src="./_images/to-debug-a-flow-designer-project-30b5a.png" alt="to debug a flow designer project 30b5a"></span></p> 
+     </div> 
+     <div class="paragraph"> 
+      <p>The contents of the Mule message payload appear after Info along with .logs produced by the Logger components in your project and messages related to the deploying and running of the app.</p> 
+     </div> </li> 
+   </ol> 
+  </div> 
  </div> 
 </div> 
 <div class="sect1"> 
@@ -1214,11 +1211,8 @@
  <div class="sectionbody"> 
   <div class="ulist"> 
    <ul> 
-    <li> <p><a href="/design-center/v/1.0/to-debug-a-mule-project">To Debug a Mule Project</a></p> </li> 
     <li> <p><a href="/design-center/v/1.0/about-data-types">About Data Types</a></p> </li> 
-    <li> <p><a href="/design-center/v/1.0/run-app-design-env-design-center">To Run an Application in Design Center</a></p> </li> 
     <li> <p><a href="/design-center/v/1.0/error-handling-task-design-center">To Handle Errors</a></p> </li> 
-    <li> <p><a href="https://mule4-docs.mulesoft.com/mule-user-guide/v/4.0/dataweave">DataWeave language</a></p> </li> 
    </ul> 
   </div> 
  </div> 
@@ -1227,7 +1221,7 @@
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#expressions-for-logging-dynamic-messages">Expressions for Logging Dynamic Messages</a></li><li><a class="scroll-menu-link" href="#see-also">See also</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#see-also">See also</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->

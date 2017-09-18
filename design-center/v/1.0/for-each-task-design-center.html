@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>To Use For Each Over a Collection (Design Center) // MuleSoft Documentation </title>
+  <title>To Drill Down into JSON (Design Center) // MuleSoft Documentation </title>
   <link rel="shortcut icon" href="/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="/css/vendor.min.css?t=1505334364">
   <link rel="stylesheet" type="text/css" href="/css/mulesoft.min.css?t=1505334364">
@@ -15,8 +15,8 @@
   <script src="/js/scripts.js?t=1505334364"></script>
 
   <link rel="canonical" href="https://docs.mulesoft.com/design-center/v/1.0/for-each-task-design-center" />
-  <meta name="description" content="If you’re sending data as a collection (a list, an array, or a map) through your flow, you can process each element in the collection separately. T..." />
-  <meta class="swiftype" name="title" data-type="string" content="To Use For Each Over a Collection (Design Center)" />
+  <meta name="description" content="This procedure describes how to use For Each to access nested JSON elements in an object. For Each iterates over and processes each element separat..." />
+  <meta class="swiftype" name="title" data-type="string" content="To Drill Down into JSON (Design Center)" />
   <meta class="swiftype" name="version" data-type="enum" content="1.0" />
 </head>
 <body>
@@ -583,25 +583,37 @@
 <a href="/design-center/v/1.0/">Design Center</a><ul style="display: block;">
 <li class="expanded">
 <i></i>
-<a href="/design-center/v/1.0/about-designing-a-mule-application">About Designing a Mule Application</a><ul style="display: block;">
-<li><i></i><a href="/design-center/v/1.0/to-manage-mule-flows">To Manage Mule Flows</a></li><li>
+<a href="/design-center/v/1.0/about-designing-a-mule-application">About Designing a Mule App</a><ul style="display: block;">
+<li class="expanded">
 <i></i>
-<a href="/design-center/v/1.0/workflow-create-and-run-a-mule-project">Workflow:Create and Deploy a Mule Project</a><ul>
-<li><i></i><a href="/design-center/v/1.0/to-create-a-new-project">To Create a Mule Application Project</a></li><li><i></i><a href="/design-center/v/1.0/arrange-cards-flow-design-center">To Arrange Cards Into a Flow</a></li><li><i></i><a href="/design-center/v/1.0/provide-values-fields-design-center">To Provide Values for Fields</a></li><li><i></i><a href="/design-center/v/1.0/to-set-up-connector-configurations">To Set Up Connector Configurations</a></li><li><i></i><a href="/design-center/v/1.0/run-app-design-env-design-center">To Run an Application in a Design Environment</a></li><li><i></i><a href="/design-center/v/1.0/to-debug-a-mule-project">To Debug a Mule Project</a></li><li><i></i><a href="/design-center/v/1.0/promote-app-prod-env-design-center">To Promote an Application to a Production Environment</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/to-manage-data-types">To Manage Data Types</a></li><li><i></i><a href="/design-center/v/1.0/to-create-and-populate-a-variable">To Create and Populate a Variable</a></li><li>
-<i></i>
-<a href="/design-center/v/1.0/transform-message-component-concept-design-center">About Transform Component</a><ul>
+<a href="/design-center/v/1.0/flow-design-basic-tasks">Flow Design Basics</a><ul style="display: block;">
+<li><i></i><a href="/design-center/v/1.0/to-create-a-new-project">To Create a Basic Mule App</a></li><li><i></i><a href="/design-center/v/1.0/design-dynamic-request-task">To Dynamically Change the URL of a Request</a></li><li><i></i><a href="/design-center/v/1.0/inspect-data-task">To Inspect Input and Output</a></li><li><i></i><a href="/design-center/v/1.0/design-filter-task">To Transform from a Full Set of Data to a Subset</a></li><li class="active"><i></i><a href="/design-center/v/1.0/for-each-task-design-center">To Drill Down into JSON</a></li></ul></li>
 <li>
 <i></i>
-<a href="/design-center/v/1.0/workflow-create-mapping-ui-design-center">Workflow: Create a Mapping</a><ul>
-<li><i></i><a href="/design-center/v/1.0/input-output-structure-transformation-design-center-task">To Define Input and Output Structure of a Transformation</a></li><li><i></i><a href="/design-center/v/1.0/graphically-construct-mapping-design-center-task">To Graphically Construct a Mapping</a></li><li><i></i><a href="/design-center/v/1.0/preview-transformation-output-design-center-task">To Preview the Output of a Transformation</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/tips-transform-message-ui-design-center">Tips on the Transform Component UI</a></li><li><i></i><a href="/design-center/v/1.0/change-target-output-transformation-design-center-task">To Change the Target Output of a Transformation</a></li><li><i></i><a href="/design-center/v/1.0/add-another-output-transform-design-center-task">To Add Another Transformation</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/reference-deployment-status-messages">Reference: Deployment Status Messages</a></li><li><i></i><a href="/design-center/v/1.0/about-data-types">About Data Types</a></li><li><i></i><a href="/design-center/v/1.0/logger-task-design-center">To Log Data</a></li><li class="active"><i></i><a href="/design-center/v/1.0/for-each-task-design-center">To Use For Each over a Collection</a></li><li><i></i><a href="/design-center/v/1.0/error-handling-task-design-center">To Handle Errors With Try Scopes</a></li><li><i></i><a href="/design-center/v/1.0/reference-flow-task-design-center">To Reference Another Flow</a></li><li><i></i><a href="/design-center/v/1.0/manage-dependency-versions-design-center">Manage Dependency Versions</a></li><li><i></i><a href="/design-center/v/1.0/export-studio-design-center">Export a Project to Anypoint Studio</a></li></ul></li>
+<a href="/design-center/v/1.0/key-flow-design-tasks">Key Flow Design Tasks</a><ul>
+<li><i></i><a href="/design-center/v/1.0/to-create-and-populate-a-variable">To Create and Populate a Variable</a></li><li><i></i><a href="/design-center/v/1.0/manage-dependency-versions-design-center">To Update Components of the Flow</a></li><li><i></i><a href="/design-center/v/1.0/promote-app-prod-env-design-center">To Promote an Application to an Environment</a></li><li><i></i><a href="/design-center/v/1.0/to-create-a-mule-application-project">To Clone a Mule App Project</a></li><li><i></i><a href="/design-center/v/1.0/export-studio-design-center">To Export a Project to Anypoint Studio</a></li><li><i></i><a href="/design-center/v/1.0/flow-datatype-task">To Set Data Types for a Flow</a></li></ul></li>
+<li>
+<i></i>
+<a href="/design-center/v/1.0/general-tasks">General Flow Design Tasks</a><ul>
+<li><i></i><a href="/design-center/v/1.0/logger-task-design-center">To Log Data</a></li><li><i></i><a href="/design-center/v/1.0/reference-flow-task-design-center">To Reference One Flow from Another</a></li><li><i></i><a href="/design-center/v/1.0/change-target-output-transformation-design-center-task">To Change the Target Output of a Transformation</a></li><li><i></i><a href="/design-center/v/1.0/error-handling-task-design-center">To Handle Errors</a></li></ul></li>
+<li>
+<i></i>
+<a href="/design-center/v/1.0/flow-design-reference">Flow Design Reference</a><ul>
+<li><i></i><a href="/design-center/v/1.0/to-manage-mule-flows">Building and Managing Flows Reference</a></li><li><i></i><a href="/design-center/v/1.0/run-app-design-env-design-center">Running an App Reference</a></li><li><i></i><a href="/design-center/v/1.0/reference-deployment-status-messages">Deployment Status Reference</a></li><li><i></i><a href="/design-center/v/1.0/input-output-structure-transformation-design-center-task">Transform Utility Reference</a></li></ul></li>
+<li><i></i><a href="/design-center/v/1.0/about-data-types">About Data Types</a></li></ul></li>
 <li>
 <i></i>
 <a href="/design-center/v/1.0/designing-api-about">About Designing a RAML-based API</a><ul>
-<li><i></i><a href="/design-center/v/1.0/design-raml-api-task">To Design a RAML API Specification</a></li><li><i></i><a href="/design-center/v/1.0/create-reuse-part-task">To Create and Publish an API Fragment</a></li><li><i></i><a href="/design-center/v/1.0/publish-project-exchange-task">To Publish an API Design Project</a></li><li><i></i><a href="/design-center/v/1.0/add-dependencies-task">To Add a Fragment to an API</a></li><li><i></i><a href="/design-center/v/1.0/design-update-remove-dep-task">To Remove or Update a Dependency</a></li><li><i></i><a href="/design-center/v/1.0/simulate-api-task">To Simulate Calling a RAML API</a></li><li><i></i><a href="/design-center/v/1.0/design-import-oas-task">To Import an OAS</a></li><li><i></i><a href="/design-center/v/1.0/design-import-raml-task">To Import a RAML</a></li><li><i></i><a href="/design-center/v/1.0/upload-raml-task">To Upload an Existing RAML File to Exchange</a></li><li><i></i><a href="/design-center/v/1.0/design-manage-revisions-task">To Manage API Revisions Using Branches</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/design-api-ui-reference">Designing an API Reference</a></li><li><i></i><a href="/design-center/v/1.0/designing-api-reference">OAS/RAML Importing and Exporting Reference</a></li><li><i></i><a href="/design-center/v/1.0/design-api-frag-revisions-concept">About API Fragments</a></li><li><i></i><a href="/design-center/v/1.0/design-branch-filelock-concept">About Sharing Branches and Migration</a></li><li><i></i><a href="/design-center/v/1.0/user-access-to-design-center">User Access to Design Center</a></li><li><i></i><a href="/design-center/v/1.0/faq-design-center">FAQ: Design Center</a></li></ul></li>
+<li>
+<i></i>
+<a href="/design-center/v/1.0/design-api-basics-tasks">API Design Basics</a><ul>
+<li><i></i><a href="/design-center/v/1.0/design-raml-api-task">To Design a RAML API Specification</a></li><li><i></i><a href="/design-center/v/1.0/simulate-api-task">To Simulate Calling a RAML API</a></li><li><i></i><a href="/design-center/v/1.0/publish-project-exchange-task">To Publish an API Design Project</a></li><li><i></i><a href="/design-center/v/1.0/design-import-oas-task">To Import an OAS</a></li></ul></li>
+<li>
+<i></i>
+<a href="/design-center/v/1.0/design-api-key-tasks">Key API Design Tasks</a><ul>
+<li><i></i><a href="/design-center/v/1.0/create-reuse-part-task">To Create and Publish an API Fragment</a></li><li><i></i><a href="/design-center/v/1.0/add-dependencies-task">To Add a Fragment to an API</a></li><li><i></i><a href="/design-center/v/1.0/design-update-remove-dep-task">To Remove or Update a Dependency</a></li><li><i></i><a href="/design-center/v/1.0/design-import-raml-task">To Import a RAML</a></li><li><i></i><a href="/design-center/v/1.0/upload-raml-task">To Upload an Existing RAML File to Exchange</a></li><li><i></i><a href="/design-center/v/1.0/design-manage-revisions-task">To Manage API Revisions Using Branches</a></li></ul></li>
+<li><i></i><a href="/design-center/v/1.0/design-api-ui-reference">Designing an API Reference</a></li><li><i></i><a href="/design-center/v/1.0/designing-api-reference">OAS/RAML Importing and Exporting Reference</a></li><li><i></i><a href="/design-center/v/1.0/design-api-frag-revisions-concept">About API Fragments</a></li><li><i></i><a href="/design-center/v/1.0/design-branch-filelock-concept">About Sharing Branches and Migration</a></li></ul></li>
+<li><i></i><a href="/design-center/v/1.0/user-access-to-design-center">About Accessing Design Center</a></li><li><i></i><a href="/design-center/v/1.0/faq-design-center">FAQ: Design Center</a></li></ul></li>
 <li>
 <i></i>
 <a href="/api-manager/">API Manager</a><ul>
@@ -1121,55 +1133,24 @@
     <!-- START article content -->
     <div class="article-content col-md-7">
       
-      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Design Center</a>/<a href="about-designing-a-mule-application">About Designing a Mule Application</a>/<a href="for-each-task-design-center" class="breadcrumb-active-link">To Use For Each over a Collection</a></div>
-      <h1>To Use For Each Over a Collection (Design Center)</h1>
+      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Design Center</a>/<a href="about-designing-a-mule-application">About Designing a Mule App</a>/<a href="flow-design-basic-tasks">Flow Design Basics</a>/<a href="for-each-task-design-center" class="breadcrumb-active-link">To Drill Down into JSON</a></div>
+      <h1>To Drill Down into JSON (Design Center)</h1>
       <div id="preamble"> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>If you’re sending data as a collection (a list, an array, or a map) through your flow, you can process each element in the collection separately. This is similar to using a For Each statement in most programming languages.</p> 
+   <p>This procedure describes how to use For Each to access nested JSON elements in an object. For Each iterates over and processes each element separately. For example purposes, each time the process repeats, you log the value of the element and the counter. In a real-world situation, instead of a simple log operation, you might insert each element in a database for analysis or perform other operations.</p> 
   </div> 
   <div class="paragraph"> 
-   <p>You achieve this by placing components inside a For Each scope. When a Mule message containing a collection flows through a For Each scope, it is split into a series of separate Mule messages. The elements in the scope process these separate Mule messages one at a time. Once the messages have all gone through what’s in the scope, they are merged back as a collection into a single Mule message.</p> 
+   <p>To configure For Each, you use dot notation in the expression to specify the path to the JSON element of interest. For example, to apply some processing to <em>bs</em> in the <em>company</em> object, you set the Collection field to payload.*company.bs. The asterisk prefix accesses all members of <em>company</em>.</p> 
   </div> 
-  <div class="olist arabic"> 
-   <ol class="arabic"> 
-    <li> <p>In Design Center add a For Each scope to your flow.</p> </li> 
-    <li> <p>Keep the default settings and close the settings panel.</p> 
-     <div class="paragraph"> 
-      <p>Default settings expect the payload to be a collection of elements. Each one of these collection elements is used separately inside the scope.</p> 
-     </div> </li> 
-    <li> <p>Within the For Each scope, click on the plus sign and add one or more components.</p> 
-     <div class="paragraph"> 
-      <p><span class="image"><img src="./_images/for-each-task-design-center-afce9.png" alt="for each task design center afce9"></span></p> 
-     </div> 
-     <div class="paragraph"> 
-      <p>These components receive separate elements of the collection as their input.</p> 
-     </div> </li> 
-   </ol> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="going-over-a-nested-collection"><a class="anchor" href="#going-over-a-nested-collection"></a>Going Over a Nested Collection</h2> 
- <div class="sectionbody"> 
-  <div class="paragraph"> 
-   <p>If the collection you want to go over is nested in a data structure, you can tell the For Each scope where to find the collection to use. After the scope is done going over each element in the collection, it rebuilds the original data structure it received besides the collection it worked with.</p> 
-  </div> 
-  <div class="olist arabic"> 
-   <ol class="arabic"> 
-    <li> <p>Open a For Each card to edit its properties.</p> </li> 
-    <li> <p>Change the Collection field to point to the collection you want to iterate over.</p> 
-     <div class="paragraph"> 
-      <p>For example, in the object below, if you want to go over the collection nested in <code>field3</code>, you must set the Collection field to <code>payload.myobject.field3</code>.</p> 
-     </div> 
-     <div class="listingblock"> 
-      <div class="content"> 
-       <pre class="CodeRay highlight"><code data-lang="JSON">
-            
-         <table class="CodeRay"> 
-          <tbody> 
-           <tr> 
-            <td class="line-numbers"><pre>1
+  <div class="listingblock"> 
+   <div class="content"> 
+    <pre class="CodeRay highlight"><code data-lang="JSON">
+         
+      <table class="CodeRay"> 
+       <tbody> 
+        <tr> 
+         <td class="line-numbers"><pre>1
 2
 3
 4
@@ -1181,22 +1162,113 @@
 10
 11
 12
+13
+14
+15
+16
+17
+18
+19
 </pre></td> 
-            <td class="code"><pre>{
-  <span class="key"><span class="delimiter">"</span><span class="content">myobject</span><span class="delimiter">"</span></span>: {
-     <span class="key"><span class="delimiter">"</span><span class="content">field1</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">some-value</span><span class="delimiter">"</span></span>,
-     <span class="key"><span class="delimiter">"</span><span class="content">field2</span><span class="delimiter">"</span></span>: <span class="integer">42</span>,
-     <span class="key"><span class="delimiter">"</span><span class="content">field3</span><span class="delimiter">"</span></span>: [
-       { <span class="key"><span class="delimiter">"</span><span class="content">element1</span><span class="delimiter">"</span></span>: {<span class="key"><span class="delimiter">"</span><span class="content">a</span><span class="delimiter">"</span></span>: <span class="integer">1</span>, <span class="key"><span class="delimiter">"</span><span class="content">b</span><span class="delimiter">"</span></span>:<span class="integer">2</span>}},
-       { <span class="key"><span class="delimiter">"</span><span class="content">element2</span><span class="delimiter">"</span></span>: {<span class="key"><span class="delimiter">"</span><span class="content">a</span><span class="delimiter">"</span></span>: <span class="integer">3</span>, <span class="key"><span class="delimiter">"</span><span class="content">b</span><span class="delimiter">"</span></span>:<span class="integer">4</span>}},
-       { <span class="key"><span class="delimiter">"</span><span class="content">element3</span><span class="delimiter">"</span></span>: {<span class="key"><span class="delimiter">"</span><span class="content">a</span><span class="delimiter">"</span></span>: <span class="integer">5</span>, <span class="key"><span class="delimiter">"</span><span class="content">b</span><span class="delimiter">"</span></span>:<span class="integer">6</span>}},
-       { <span class="key"><span class="delimiter">"</span><span class="content">element4</span><span class="delimiter">"</span></span>: {<span class="key"><span class="delimiter">"</span><span class="content">a</span><span class="delimiter">"</span></span>: <span class="integer">7</span>, <span class="key"><span class="delimiter">"</span><span class="content">b</span><span class="delimiter">"</span></span>:<span class="integer">8</span>}}
-     ]
-   }
-}</pre></td> 
-           </tr> 
-          </tbody> 
-         </table></code></pre> 
+         <td class="code"><pre>[
+  {
+    <span class="key"><span class="delimiter">"</span><span class="content">id</span><span class="delimiter">"</span></span>: <span class="integer">1</span>,
+    <span class="key"><span class="delimiter">"</span><span class="content">name</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Leanne Graham</span><span class="delimiter">"</span></span>,
+    <span class="key"><span class="delimiter">"</span><span class="content">username</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Bret</span><span class="delimiter">"</span></span>,
+     <span class="error">.</span><span class="error">.</span><span class="error">.</span>
+      }
+    },
+    <span class="key"><span class="delimiter">"</span><span class="content">phone</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">1-770-736-8031 x56442</span><span class="delimiter">"</span></span>,
+    <span class="key"><span class="delimiter">"</span><span class="content">website</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">hildegard.org</span><span class="delimiter">"</span></span>,
+    <span class="key"><span class="delimiter">"</span><span class="content">company</span><span class="delimiter">"</span></span>: {
+      <span class="key"><span class="delimiter">"</span><span class="content">name</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Romaguera-Crona</span><span class="delimiter">"</span></span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">catchPhrase</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Multi-layered client-server neural-net</span><span class="delimiter">"</span></span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">bs</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">harness real-time e-markets</span><span class="delimiter">"</span></span>
+    }
+  },
+  <span class="error">.</span><span class="error">.</span><span class="error">.</span>
+  }
+]</pre></td> 
+        </tr> 
+       </tbody> 
+      </table></code></pre> 
+   </div> 
+  </div> 
+  <div class="paragraph"> 
+   <p>In the configuration, you use a default batch size of one because the example data you use consists of only 10 objects. If you have 200 objects and a batch size of 50, the app iterates over 50 objects at a time, returning four separate results, one for each batch.</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p>This procedure builds on the procedures to create a basic Mule app and to add an expression to make dynamic requests. After performing these procedures, you have HTTP listener and HTTP request in the Consume API flow, and you can perform the following steps to add For Each to the flow.</p> 
+  </div> 
+  <div class="olist arabic"> 
+   <ol class="arabic"> 
+    <li> <p>Proceed to the next step if the app is running. Otherwise, click Deploy. Execute the flow as follows:</p> 
+     <div class="ulist"> 
+      <ul> 
+       <li> <p>Click Copy Link.</p> </li> 
+       <li> <p>Paste the link in a browser or client, and type <strong>/getpath?path=users</strong> at the end.</p> 
+        <div class="paragraph"> 
+         <p>The HTTP Listener hears the request, and starts the app. The JSON Placeholder profiles of all users appear in the browser.</p> 
+        </div> </li> 
+      </ul> 
+     </div> </li> 
+    <li> <p>In Design Center, add and configure For Each:</p> 
+     <div class="ulist"> 
+      <ul> 
+       <li> <p>Click <span class="image"><img src="./_images/arrange-cards-flow-design-center-e256e.png" alt="add For Each"></span> after HTTP Request.</p> </li> 
+       <li> <p>Select For Each.</p> </li> 
+       <li> <p>Configure For Each as follows:</p> 
+        <div class="ulist"> 
+         <ul> 
+          <li> <p>In Collection, type the expression, using dot expression, to access the list, array, or map you want to iterate over . For example, type the following expression to access the <em>bs</em> element in <em>company</em>: <strong>payload.*company.bs</strong></p> </li> 
+          <li> <p>In Batch Size, accept the default 1.</p> </li> 
+          <li> <p>In Root Message Variable Name, accept the default.</p> </li> 
+          <li> <p>In Counter Variable Name, change the default to drillcounter just for example purposes.</p> 
+           <div class="imageblock"> 
+            <div class="content"> 
+             <img src="./_images/foreach-configuration.png" alt="foreach configuration"> 
+            </div> 
+           </div> </li> 
+         </ul> 
+        </div> </li> 
+       <li> <p>Close For Each.</p> </li> 
+      </ul> 
+     </div> </li> 
+    <li> <p>Within For Each, click <span class="image"><img src="./_images/arrange-cards-flow-design-center-e256e.png" alt="add Logger"></span> and select Logger. Configure Logger as follows:</p> 
+     <div class="ulist"> 
+      <ul> 
+       <li> <p>In Message, click <span class="image"><img src="./_images/graphically-construct-mapping-design-center-task-8a822.png" alt="graphically construct mapping design center task 8a822"></span>.</p> </li> 
+       <li> <p>Type the following expression:</p> 
+        <div class="paragraph"> 
+         <p><strong>payload " count is: " variables.drillcounter</strong></p> 
+        </div> </li> 
+       <li> <p>Close the Logger.</p> </li> 
+      </ul> 
+     </div> </li> 
+    <li> <p>To the right of and outside of For Each, add another Logger. Configure Logger as follows:</p> 
+     <div class="ulist"> 
+      <ul> 
+       <li> <p>In Message, click <span class="image"><img src="./_images/graphically-construct-mapping-design-center-task-8a822.png" alt="graphically construct mapping design center task 8a822"></span>.</p> </li> 
+       <li> <p>Type the following expression:</p> 
+        <div class="paragraph"> 
+         <p><strong>payload</strong></p> 
+        </div> </li> 
+      </ul> 
+     </div> </li> 
+    <li> <p>Click Deploy, and run the app as described in step 1. Check the logs to see 10 messages, one for each iteration followed by the last message that contains the original input to the flow.</p> 
+     <div class="listingblock"> 
+      <div class="content"> 
+       <pre>INFO15:34:35harness real-time e-markets count is: 1
+INFO15:34:35synergize scalable supply-chains count is: 2
+INFO15:34:35e-enable strategic applications count is: 3
+INFO15:34:35transition cutting-edge web services count is: 4
+INFO15:34:35revolutionize end-to-end systems count is: 5
+INFO15:34:35e-enable innovative applications count is: 6
+INFO15:34:35generate enterprise e-tailers count is: 7
+INFO15:34:35e-enable extensible e-tailers count is: 8
+INFO15:34:35aggregate real-time technologies count is: 9
+INFO15:34:35target end-to-end models count is: 10
+INFO15:34:35[{id=1, name=Leanne Graham, username=Bret, email=Sincere@april.biz, address={street=Kulas Light, ...</pre> 
       </div> 
      </div> </li> 
    </ol> 
@@ -1208,9 +1280,8 @@
  <div class="sectionbody"> 
   <div class="ulist"> 
    <ul> 
-    <li> <p><a href="https://mule4-docs.mulesoft.com/mule-user-guide/v/4.0/for-each-scope-concept">For Each Scope Concept</a></p> </li> 
-    <li> <p><a href="https://mule4-docs.mulesoft.com/mule-user-guide/v/4.0/about-flows">About Flows</a></p> </li> 
-    <li> <p><a href="https://mule4-docs.mulesoft.com/mule-user-guide/v/4.0/about-mule-event">About Mule Event</a></p> </li> 
+    <li> <p><a href="/design-center/v/1.0/to-create-a-new-project">To Create a Basic Mule App</a></p> </li> 
+    <li> <p><a href="/design-center/v/1.0/design-dynamic-request-task">To Dynamically Change the URL of a Request</a></p> </li> 
    </ul> 
   </div> 
  </div> 
@@ -1219,7 +1290,7 @@
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#going-over-a-nested-collection">Going Over a Nested Collection</a></li><li><a class="scroll-menu-link" href="#see-also">See also</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#see-also">See also</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->

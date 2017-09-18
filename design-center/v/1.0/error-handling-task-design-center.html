@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>To Handle Errors With Try Scopes (Design Center) // MuleSoft Documentation </title>
+  <title>To Handle Errors (Design Center) // MuleSoft Documentation </title>
   <link rel="shortcut icon" href="/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="/css/vendor.min.css?t=1505334364">
   <link rel="stylesheet" type="text/css" href="/css/mulesoft.min.css?t=1505334364">
@@ -15,8 +15,8 @@
   <script src="/js/scripts.js?t=1505334364"></script>
 
   <link rel="canonical" href="https://docs.mulesoft.com/design-center/v/1.0/error-handling-task-design-center" />
-  <meta name="description" content="You can put specific parts of a flow that are prone to errors inside a Try Scope. If an attempt to use this part of the flow fails, the scope can c..." />
-  <meta class="swiftype" name="title" data-type="string" content="To Handle Errors With Try Scopes (Design Center)" />
+  <meta name="description" content="You can put specific parts of a flow that are prone to errors inside Try. If an attempt to use the part of the flow in Try fails, Try can catch the..." />
+  <meta class="swiftype" name="title" data-type="string" content="To Handle Errors (Design Center)" />
   <meta class="swiftype" name="version" data-type="enum" content="1.0" />
 </head>
 <body>
@@ -583,25 +583,37 @@
 <a href="/design-center/v/1.0/">Design Center</a><ul style="display: block;">
 <li class="expanded">
 <i></i>
-<a href="/design-center/v/1.0/about-designing-a-mule-application">About Designing a Mule Application</a><ul style="display: block;">
-<li><i></i><a href="/design-center/v/1.0/to-manage-mule-flows">To Manage Mule Flows</a></li><li>
-<i></i>
-<a href="/design-center/v/1.0/workflow-create-and-run-a-mule-project">Workflow:Create and Deploy a Mule Project</a><ul>
-<li><i></i><a href="/design-center/v/1.0/to-create-a-new-project">To Create a Mule Application Project</a></li><li><i></i><a href="/design-center/v/1.0/arrange-cards-flow-design-center">To Arrange Cards Into a Flow</a></li><li><i></i><a href="/design-center/v/1.0/provide-values-fields-design-center">To Provide Values for Fields</a></li><li><i></i><a href="/design-center/v/1.0/to-set-up-connector-configurations">To Set Up Connector Configurations</a></li><li><i></i><a href="/design-center/v/1.0/run-app-design-env-design-center">To Run an Application in a Design Environment</a></li><li><i></i><a href="/design-center/v/1.0/to-debug-a-mule-project">To Debug a Mule Project</a></li><li><i></i><a href="/design-center/v/1.0/promote-app-prod-env-design-center">To Promote an Application to a Production Environment</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/to-manage-data-types">To Manage Data Types</a></li><li><i></i><a href="/design-center/v/1.0/to-create-and-populate-a-variable">To Create and Populate a Variable</a></li><li>
-<i></i>
-<a href="/design-center/v/1.0/transform-message-component-concept-design-center">About Transform Component</a><ul>
+<a href="/design-center/v/1.0/about-designing-a-mule-application">About Designing a Mule App</a><ul style="display: block;">
 <li>
 <i></i>
-<a href="/design-center/v/1.0/workflow-create-mapping-ui-design-center">Workflow: Create a Mapping</a><ul>
-<li><i></i><a href="/design-center/v/1.0/input-output-structure-transformation-design-center-task">To Define Input and Output Structure of a Transformation</a></li><li><i></i><a href="/design-center/v/1.0/graphically-construct-mapping-design-center-task">To Graphically Construct a Mapping</a></li><li><i></i><a href="/design-center/v/1.0/preview-transformation-output-design-center-task">To Preview the Output of a Transformation</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/tips-transform-message-ui-design-center">Tips on the Transform Component UI</a></li><li><i></i><a href="/design-center/v/1.0/change-target-output-transformation-design-center-task">To Change the Target Output of a Transformation</a></li><li><i></i><a href="/design-center/v/1.0/add-another-output-transform-design-center-task">To Add Another Transformation</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/reference-deployment-status-messages">Reference: Deployment Status Messages</a></li><li><i></i><a href="/design-center/v/1.0/about-data-types">About Data Types</a></li><li><i></i><a href="/design-center/v/1.0/logger-task-design-center">To Log Data</a></li><li><i></i><a href="/design-center/v/1.0/for-each-task-design-center">To Use For Each over a Collection</a></li><li class="active"><i></i><a href="/design-center/v/1.0/error-handling-task-design-center">To Handle Errors With Try Scopes</a></li><li><i></i><a href="/design-center/v/1.0/reference-flow-task-design-center">To Reference Another Flow</a></li><li><i></i><a href="/design-center/v/1.0/manage-dependency-versions-design-center">Manage Dependency Versions</a></li><li><i></i><a href="/design-center/v/1.0/export-studio-design-center">Export a Project to Anypoint Studio</a></li></ul></li>
+<a href="/design-center/v/1.0/flow-design-basic-tasks">Flow Design Basics</a><ul>
+<li><i></i><a href="/design-center/v/1.0/to-create-a-new-project">To Create a Basic Mule App</a></li><li><i></i><a href="/design-center/v/1.0/design-dynamic-request-task">To Dynamically Change the URL of a Request</a></li><li><i></i><a href="/design-center/v/1.0/inspect-data-task">To Inspect Input and Output</a></li><li><i></i><a href="/design-center/v/1.0/design-filter-task">To Transform from a Full Set of Data to a Subset</a></li><li><i></i><a href="/design-center/v/1.0/for-each-task-design-center">To Drill Down into JSON</a></li></ul></li>
+<li>
+<i></i>
+<a href="/design-center/v/1.0/key-flow-design-tasks">Key Flow Design Tasks</a><ul>
+<li><i></i><a href="/design-center/v/1.0/to-create-and-populate-a-variable">To Create and Populate a Variable</a></li><li><i></i><a href="/design-center/v/1.0/manage-dependency-versions-design-center">To Update Components of the Flow</a></li><li><i></i><a href="/design-center/v/1.0/promote-app-prod-env-design-center">To Promote an Application to an Environment</a></li><li><i></i><a href="/design-center/v/1.0/to-create-a-mule-application-project">To Clone a Mule App Project</a></li><li><i></i><a href="/design-center/v/1.0/export-studio-design-center">To Export a Project to Anypoint Studio</a></li><li><i></i><a href="/design-center/v/1.0/flow-datatype-task">To Set Data Types for a Flow</a></li></ul></li>
+<li class="expanded">
+<i></i>
+<a href="/design-center/v/1.0/general-tasks">General Flow Design Tasks</a><ul style="display: block;">
+<li><i></i><a href="/design-center/v/1.0/logger-task-design-center">To Log Data</a></li><li><i></i><a href="/design-center/v/1.0/reference-flow-task-design-center">To Reference One Flow from Another</a></li><li><i></i><a href="/design-center/v/1.0/change-target-output-transformation-design-center-task">To Change the Target Output of a Transformation</a></li><li class="active"><i></i><a href="/design-center/v/1.0/error-handling-task-design-center">To Handle Errors</a></li></ul></li>
+<li>
+<i></i>
+<a href="/design-center/v/1.0/flow-design-reference">Flow Design Reference</a><ul>
+<li><i></i><a href="/design-center/v/1.0/to-manage-mule-flows">Building and Managing Flows Reference</a></li><li><i></i><a href="/design-center/v/1.0/run-app-design-env-design-center">Running an App Reference</a></li><li><i></i><a href="/design-center/v/1.0/reference-deployment-status-messages">Deployment Status Reference</a></li><li><i></i><a href="/design-center/v/1.0/input-output-structure-transformation-design-center-task">Transform Utility Reference</a></li></ul></li>
+<li><i></i><a href="/design-center/v/1.0/about-data-types">About Data Types</a></li></ul></li>
 <li>
 <i></i>
 <a href="/design-center/v/1.0/designing-api-about">About Designing a RAML-based API</a><ul>
-<li><i></i><a href="/design-center/v/1.0/design-raml-api-task">To Design a RAML API Specification</a></li><li><i></i><a href="/design-center/v/1.0/create-reuse-part-task">To Create and Publish an API Fragment</a></li><li><i></i><a href="/design-center/v/1.0/publish-project-exchange-task">To Publish an API Design Project</a></li><li><i></i><a href="/design-center/v/1.0/add-dependencies-task">To Add a Fragment to an API</a></li><li><i></i><a href="/design-center/v/1.0/design-update-remove-dep-task">To Remove or Update a Dependency</a></li><li><i></i><a href="/design-center/v/1.0/simulate-api-task">To Simulate Calling a RAML API</a></li><li><i></i><a href="/design-center/v/1.0/design-import-oas-task">To Import an OAS</a></li><li><i></i><a href="/design-center/v/1.0/design-import-raml-task">To Import a RAML</a></li><li><i></i><a href="/design-center/v/1.0/upload-raml-task">To Upload an Existing RAML File to Exchange</a></li><li><i></i><a href="/design-center/v/1.0/design-manage-revisions-task">To Manage API Revisions Using Branches</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/design-api-ui-reference">Designing an API Reference</a></li><li><i></i><a href="/design-center/v/1.0/designing-api-reference">OAS/RAML Importing and Exporting Reference</a></li><li><i></i><a href="/design-center/v/1.0/design-api-frag-revisions-concept">About API Fragments</a></li><li><i></i><a href="/design-center/v/1.0/design-branch-filelock-concept">About Sharing Branches and Migration</a></li><li><i></i><a href="/design-center/v/1.0/user-access-to-design-center">User Access to Design Center</a></li><li><i></i><a href="/design-center/v/1.0/faq-design-center">FAQ: Design Center</a></li></ul></li>
+<li>
+<i></i>
+<a href="/design-center/v/1.0/design-api-basics-tasks">API Design Basics</a><ul>
+<li><i></i><a href="/design-center/v/1.0/design-raml-api-task">To Design a RAML API Specification</a></li><li><i></i><a href="/design-center/v/1.0/simulate-api-task">To Simulate Calling a RAML API</a></li><li><i></i><a href="/design-center/v/1.0/publish-project-exchange-task">To Publish an API Design Project</a></li><li><i></i><a href="/design-center/v/1.0/design-import-oas-task">To Import an OAS</a></li></ul></li>
+<li>
+<i></i>
+<a href="/design-center/v/1.0/design-api-key-tasks">Key API Design Tasks</a><ul>
+<li><i></i><a href="/design-center/v/1.0/create-reuse-part-task">To Create and Publish an API Fragment</a></li><li><i></i><a href="/design-center/v/1.0/add-dependencies-task">To Add a Fragment to an API</a></li><li><i></i><a href="/design-center/v/1.0/design-update-remove-dep-task">To Remove or Update a Dependency</a></li><li><i></i><a href="/design-center/v/1.0/design-import-raml-task">To Import a RAML</a></li><li><i></i><a href="/design-center/v/1.0/upload-raml-task">To Upload an Existing RAML File to Exchange</a></li><li><i></i><a href="/design-center/v/1.0/design-manage-revisions-task">To Manage API Revisions Using Branches</a></li></ul></li>
+<li><i></i><a href="/design-center/v/1.0/design-api-ui-reference">Designing an API Reference</a></li><li><i></i><a href="/design-center/v/1.0/designing-api-reference">OAS/RAML Importing and Exporting Reference</a></li><li><i></i><a href="/design-center/v/1.0/design-api-frag-revisions-concept">About API Fragments</a></li><li><i></i><a href="/design-center/v/1.0/design-branch-filelock-concept">About Sharing Branches and Migration</a></li></ul></li>
+<li><i></i><a href="/design-center/v/1.0/user-access-to-design-center">About Accessing Design Center</a></li><li><i></i><a href="/design-center/v/1.0/faq-design-center">FAQ: Design Center</a></li></ul></li>
 <li>
 <i></i>
 <a href="/api-manager/">API Manager</a><ul>
@@ -1121,29 +1133,26 @@
     <!-- START article content -->
     <div class="article-content col-md-7">
       
-      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Design Center</a>/<a href="about-designing-a-mule-application">About Designing a Mule Application</a>/<a href="error-handling-task-design-center" class="breadcrumb-active-link">To Handle Errors With Try Scopes</a></div>
-      <h1>To Handle Errors With Try Scopes (Design Center)</h1>
+      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Design Center</a>/<a href="about-designing-a-mule-application">About Designing a Mule App</a>/<a href="general-tasks">General Flow Design Tasks</a>/<a href="error-handling-task-design-center" class="breadcrumb-active-link">To Handle Errors</a></div>
+      <h1>To Handle Errors (Design Center)</h1>
       <div id="preamble"> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>You can put specific parts of a flow that are prone to errors inside a Try Scope. If an attempt to use this part of the flow fails, the scope can catch the errors and apply a fix or an alternative. Different types of errors can be handled differently within the same scope.</p> 
+   <p>You can put specific parts of a flow that are prone to errors inside Try. If an attempt to use the part of the flow in Try fails, Try can catch the errors and apply a fix or an alternative. Different types of errors can be handled differently.</p> 
   </div> 
   <div class="paragraph"> 
-   <p>When you place a connector component inside a Try scope, you control what happens if an error occurs: send an error message, make corrections, or anything else that you can do in a flow.</p> 
+   <p>When you place a connector component inside Try, you control what happens if an error occurs: send an error message, make corrections, or anything else that you can do in a flow.</p> 
   </div> 
   <div class="olist arabic"> 
    <ol class="arabic"> 
-    <li> <p>Add a Try Scope to your flow.</p> </li> 
-    <li> <p>Click the plus sign that’s next to the Try block.</p> 
+    <li> <p>Add Try to a flow.</p> 
      <div class="paragraph"> 
       <p><span class="image"><img src="./_images/error-handling-task-design-center-eff90.png" alt="error handling task design center eff90"></span></p> 
      </div> </li> 
-    <li> <p>Add and configure components, for example a Database Insert operation. You can add as many components as you want following it.</p> 
-     <div class="paragraph"> 
-      <p>These components are used normally as part of the flow. If an error occurs while using these components, the Try Scope catches these errors and allows you to handle these errors.</p> 
-     </div> </li> 
-    <li> <p>In the bottom-left section of the scope, open the card and provide a value for Type. You can either type in a value or select from a list of all possible errors that can occur on the components that you added above.</p> </li> 
-    <li> <p>Click the plus sign to the right of the error type to add components. The Try scope executes these components if the specific error is thrown.</p> </li> 
+    <li> <p>Click <span class="image"><img src="./_images/arrange-cards-flow-design-center-e256e.png" alt="add to Try"></span> within Try.</p> </li> 
+    <li> <p>Add and configure components, for example a Database Insert operation and more if you want.</p> </li> 
+    <li> <p>Provide a value for Type. Type a value or select from a list of all possible errors that can occur on the components within Try.</p> </li> 
+    <li> <p>To the right of the error type, click <span class="image"><img src="./_images/arrange-cards-flow-design-center-e256e.png" alt="add to Try"></span> and add components. Execution of these components occurs if the specific error is thrown.</p> </li> 
    </ol> 
   </div> 
  </div> 
@@ -1153,12 +1162,17 @@
  <div class="sectionbody"> 
   <div class="olist arabic"> 
    <ol class="arabic"> 
-    <li> <p>In an existing Try Scope, open the card and click the Options icon <span class="image"><img src="./_images/error-handling-task-design-center-018a5.png" alt="error handling task design center 018a5"></span>.</p> </li> 
+    <li> <p>In an existing Try Scope, click Options.</p> </li> 
     <li> <p>To add a new error type, select Add Above or Add Below.</p> 
+     <div class="imageblock"> 
+      <div class="content"> 
+       <img src="./_images/try-options.png" alt="try options"> 
+      </div> 
+     </div> 
      <div class="paragraph"> 
-      <p>Error conditions are matched from top to bottom, and only the first match is considered. If you add an error of type <code>ANY</code>, make sure that the error is listed last.</p> 
+      <p>Error conditions are matched from top to bottom, and only the first match is considered. If you add an error of type <code>ANY</code>, make sure that the error is listed last.</p> 
      </div> </li> 
-    <li> <p>Add an error type to the new card and add the components that should be used in case of an error.</p> </li> 
+    <li> <p>Add an error type and add the components to try.</p> </li> 
    </ol> 
   </div> 
  </div> 

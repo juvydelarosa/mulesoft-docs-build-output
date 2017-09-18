@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>To Manage Mule Flows (Design Center) // MuleSoft Documentation </title>
+  <title>Building and Managing Flows Reference (Design Center) // MuleSoft Documentation </title>
   <link rel="shortcut icon" href="/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="/css/vendor.min.css?t=1505334364">
   <link rel="stylesheet" type="text/css" href="/css/mulesoft.min.css?t=1505334364">
@@ -15,8 +15,8 @@
   <script src="/js/scripts.js?t=1505334364"></script>
 
   <link rel="canonical" href="https://docs.mulesoft.com/design-center/v/1.0/to-manage-mule-flows" />
-  <meta name="description" content="Every flow has a trigger and the trigger executes the flow. The trigger can either be an operation that is externally called, or a Scheduler which ..." />
-  <meta class="swiftype" name="title" data-type="string" content="To Manage Mule Flows (Design Center)" />
+  <meta name="description" content="Every flow has a trigger that executes the flow. After creating a new Mule Application Design Center project, you’re prompted to select the trigger..." />
+  <meta class="swiftype" name="title" data-type="string" content="Building and Managing Flows Reference (Design Center)" />
   <meta class="swiftype" name="version" data-type="enum" content="1.0" />
 </head>
 <body>
@@ -583,25 +583,37 @@
 <a href="/design-center/v/1.0/">Design Center</a><ul style="display: block;">
 <li class="expanded">
 <i></i>
-<a href="/design-center/v/1.0/about-designing-a-mule-application">About Designing a Mule Application</a><ul style="display: block;">
-<li class="active"><i></i><a href="/design-center/v/1.0/to-manage-mule-flows">To Manage Mule Flows</a></li><li>
-<i></i>
-<a href="/design-center/v/1.0/workflow-create-and-run-a-mule-project">Workflow:Create and Deploy a Mule Project</a><ul>
-<li><i></i><a href="/design-center/v/1.0/to-create-a-new-project">To Create a Mule Application Project</a></li><li><i></i><a href="/design-center/v/1.0/arrange-cards-flow-design-center">To Arrange Cards Into a Flow</a></li><li><i></i><a href="/design-center/v/1.0/provide-values-fields-design-center">To Provide Values for Fields</a></li><li><i></i><a href="/design-center/v/1.0/to-set-up-connector-configurations">To Set Up Connector Configurations</a></li><li><i></i><a href="/design-center/v/1.0/run-app-design-env-design-center">To Run an Application in a Design Environment</a></li><li><i></i><a href="/design-center/v/1.0/to-debug-a-mule-project">To Debug a Mule Project</a></li><li><i></i><a href="/design-center/v/1.0/promote-app-prod-env-design-center">To Promote an Application to a Production Environment</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/to-manage-data-types">To Manage Data Types</a></li><li><i></i><a href="/design-center/v/1.0/to-create-and-populate-a-variable">To Create and Populate a Variable</a></li><li>
-<i></i>
-<a href="/design-center/v/1.0/transform-message-component-concept-design-center">About Transform Component</a><ul>
+<a href="/design-center/v/1.0/about-designing-a-mule-application">About Designing a Mule App</a><ul style="display: block;">
 <li>
 <i></i>
-<a href="/design-center/v/1.0/workflow-create-mapping-ui-design-center">Workflow: Create a Mapping</a><ul>
-<li><i></i><a href="/design-center/v/1.0/input-output-structure-transformation-design-center-task">To Define Input and Output Structure of a Transformation</a></li><li><i></i><a href="/design-center/v/1.0/graphically-construct-mapping-design-center-task">To Graphically Construct a Mapping</a></li><li><i></i><a href="/design-center/v/1.0/preview-transformation-output-design-center-task">To Preview the Output of a Transformation</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/tips-transform-message-ui-design-center">Tips on the Transform Component UI</a></li><li><i></i><a href="/design-center/v/1.0/change-target-output-transformation-design-center-task">To Change the Target Output of a Transformation</a></li><li><i></i><a href="/design-center/v/1.0/add-another-output-transform-design-center-task">To Add Another Transformation</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/reference-deployment-status-messages">Reference: Deployment Status Messages</a></li><li><i></i><a href="/design-center/v/1.0/about-data-types">About Data Types</a></li><li><i></i><a href="/design-center/v/1.0/logger-task-design-center">To Log Data</a></li><li><i></i><a href="/design-center/v/1.0/for-each-task-design-center">To Use For Each over a Collection</a></li><li><i></i><a href="/design-center/v/1.0/error-handling-task-design-center">To Handle Errors With Try Scopes</a></li><li><i></i><a href="/design-center/v/1.0/reference-flow-task-design-center">To Reference Another Flow</a></li><li><i></i><a href="/design-center/v/1.0/manage-dependency-versions-design-center">Manage Dependency Versions</a></li><li><i></i><a href="/design-center/v/1.0/export-studio-design-center">Export a Project to Anypoint Studio</a></li></ul></li>
+<a href="/design-center/v/1.0/flow-design-basic-tasks">Flow Design Basics</a><ul>
+<li><i></i><a href="/design-center/v/1.0/to-create-a-new-project">To Create a Basic Mule App</a></li><li><i></i><a href="/design-center/v/1.0/design-dynamic-request-task">To Dynamically Change the URL of a Request</a></li><li><i></i><a href="/design-center/v/1.0/inspect-data-task">To Inspect Input and Output</a></li><li><i></i><a href="/design-center/v/1.0/design-filter-task">To Transform from a Full Set of Data to a Subset</a></li><li><i></i><a href="/design-center/v/1.0/for-each-task-design-center">To Drill Down into JSON</a></li></ul></li>
+<li>
+<i></i>
+<a href="/design-center/v/1.0/key-flow-design-tasks">Key Flow Design Tasks</a><ul>
+<li><i></i><a href="/design-center/v/1.0/to-create-and-populate-a-variable">To Create and Populate a Variable</a></li><li><i></i><a href="/design-center/v/1.0/manage-dependency-versions-design-center">To Update Components of the Flow</a></li><li><i></i><a href="/design-center/v/1.0/promote-app-prod-env-design-center">To Promote an Application to an Environment</a></li><li><i></i><a href="/design-center/v/1.0/to-create-a-mule-application-project">To Clone a Mule App Project</a></li><li><i></i><a href="/design-center/v/1.0/export-studio-design-center">To Export a Project to Anypoint Studio</a></li><li><i></i><a href="/design-center/v/1.0/flow-datatype-task">To Set Data Types for a Flow</a></li></ul></li>
+<li>
+<i></i>
+<a href="/design-center/v/1.0/general-tasks">General Flow Design Tasks</a><ul>
+<li><i></i><a href="/design-center/v/1.0/logger-task-design-center">To Log Data</a></li><li><i></i><a href="/design-center/v/1.0/reference-flow-task-design-center">To Reference One Flow from Another</a></li><li><i></i><a href="/design-center/v/1.0/change-target-output-transformation-design-center-task">To Change the Target Output of a Transformation</a></li><li><i></i><a href="/design-center/v/1.0/error-handling-task-design-center">To Handle Errors</a></li></ul></li>
+<li class="expanded">
+<i></i>
+<a href="/design-center/v/1.0/flow-design-reference">Flow Design Reference</a><ul style="display: block;">
+<li class="active"><i></i><a href="/design-center/v/1.0/to-manage-mule-flows">Building and Managing Flows Reference</a></li><li><i></i><a href="/design-center/v/1.0/run-app-design-env-design-center">Running an App Reference</a></li><li><i></i><a href="/design-center/v/1.0/reference-deployment-status-messages">Deployment Status Reference</a></li><li><i></i><a href="/design-center/v/1.0/input-output-structure-transformation-design-center-task">Transform Utility Reference</a></li></ul></li>
+<li><i></i><a href="/design-center/v/1.0/about-data-types">About Data Types</a></li></ul></li>
 <li>
 <i></i>
 <a href="/design-center/v/1.0/designing-api-about">About Designing a RAML-based API</a><ul>
-<li><i></i><a href="/design-center/v/1.0/design-raml-api-task">To Design a RAML API Specification</a></li><li><i></i><a href="/design-center/v/1.0/create-reuse-part-task">To Create and Publish an API Fragment</a></li><li><i></i><a href="/design-center/v/1.0/publish-project-exchange-task">To Publish an API Design Project</a></li><li><i></i><a href="/design-center/v/1.0/add-dependencies-task">To Add a Fragment to an API</a></li><li><i></i><a href="/design-center/v/1.0/design-update-remove-dep-task">To Remove or Update a Dependency</a></li><li><i></i><a href="/design-center/v/1.0/simulate-api-task">To Simulate Calling a RAML API</a></li><li><i></i><a href="/design-center/v/1.0/design-import-oas-task">To Import an OAS</a></li><li><i></i><a href="/design-center/v/1.0/design-import-raml-task">To Import a RAML</a></li><li><i></i><a href="/design-center/v/1.0/upload-raml-task">To Upload an Existing RAML File to Exchange</a></li><li><i></i><a href="/design-center/v/1.0/design-manage-revisions-task">To Manage API Revisions Using Branches</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/design-api-ui-reference">Designing an API Reference</a></li><li><i></i><a href="/design-center/v/1.0/designing-api-reference">OAS/RAML Importing and Exporting Reference</a></li><li><i></i><a href="/design-center/v/1.0/design-api-frag-revisions-concept">About API Fragments</a></li><li><i></i><a href="/design-center/v/1.0/design-branch-filelock-concept">About Sharing Branches and Migration</a></li><li><i></i><a href="/design-center/v/1.0/user-access-to-design-center">User Access to Design Center</a></li><li><i></i><a href="/design-center/v/1.0/faq-design-center">FAQ: Design Center</a></li></ul></li>
+<li>
+<i></i>
+<a href="/design-center/v/1.0/design-api-basics-tasks">API Design Basics</a><ul>
+<li><i></i><a href="/design-center/v/1.0/design-raml-api-task">To Design a RAML API Specification</a></li><li><i></i><a href="/design-center/v/1.0/simulate-api-task">To Simulate Calling a RAML API</a></li><li><i></i><a href="/design-center/v/1.0/publish-project-exchange-task">To Publish an API Design Project</a></li><li><i></i><a href="/design-center/v/1.0/design-import-oas-task">To Import an OAS</a></li></ul></li>
+<li>
+<i></i>
+<a href="/design-center/v/1.0/design-api-key-tasks">Key API Design Tasks</a><ul>
+<li><i></i><a href="/design-center/v/1.0/create-reuse-part-task">To Create and Publish an API Fragment</a></li><li><i></i><a href="/design-center/v/1.0/add-dependencies-task">To Add a Fragment to an API</a></li><li><i></i><a href="/design-center/v/1.0/design-update-remove-dep-task">To Remove or Update a Dependency</a></li><li><i></i><a href="/design-center/v/1.0/design-import-raml-task">To Import a RAML</a></li><li><i></i><a href="/design-center/v/1.0/upload-raml-task">To Upload an Existing RAML File to Exchange</a></li><li><i></i><a href="/design-center/v/1.0/design-manage-revisions-task">To Manage API Revisions Using Branches</a></li></ul></li>
+<li><i></i><a href="/design-center/v/1.0/design-api-ui-reference">Designing an API Reference</a></li><li><i></i><a href="/design-center/v/1.0/designing-api-reference">OAS/RAML Importing and Exporting Reference</a></li><li><i></i><a href="/design-center/v/1.0/design-api-frag-revisions-concept">About API Fragments</a></li><li><i></i><a href="/design-center/v/1.0/design-branch-filelock-concept">About Sharing Branches and Migration</a></li></ul></li>
+<li><i></i><a href="/design-center/v/1.0/user-access-to-design-center">About Accessing Design Center</a></li><li><i></i><a href="/design-center/v/1.0/faq-design-center">FAQ: Design Center</a></li></ul></li>
 <li>
 <i></i>
 <a href="/api-manager/">API Manager</a><ul>
@@ -1121,89 +1133,39 @@
     <!-- START article content -->
     <div class="article-content col-md-7">
       
-      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Design Center</a>/<a href="about-designing-a-mule-application">About Designing a Mule Application</a>/<a href="to-manage-mule-flows" class="breadcrumb-active-link">To Manage Mule Flows</a></div>
-      <h1>To Manage Mule Flows (Design Center)</h1>
-      <div class="sect1"> 
- <h2 id="to-set-up-a-flow"><a class="anchor" href="#to-set-up-a-flow"></a>To Set Up a Flow</h2> 
+      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Design Center</a>/<a href="about-designing-a-mule-application">About Designing a Mule App</a>/<a href="flow-design-reference">Flow Design Reference</a>/<a href="to-manage-mule-flows" class="breadcrumb-active-link">Building and Managing Flows Reference</a></div>
+      <h1>Building and Managing Flows Reference (Design Center)</h1>
+      <div id="preamble"> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>Every flow has a trigger and the trigger executes the flow. The trigger can either be an operation that is externally called, or a Scheduler which executes your flow at a given moment or time interval.</p> 
+   <p>Every flow has a trigger that executes the flow. After creating a new Mule Application Design Center project, you’re prompted to select the trigger from a list.</p> 
   </div> 
-  <div class="olist arabic"> 
-   <ol class="arabic"> 
-    <li> <p>After creating a new Mule Application Design Center project, you’re immediately prompted to select the trigger for your first flow. In this list you’re only presented components that are capable of functioning as a trigger. Select one.</p> 
-     <div class="paragraph"> 
-      <p><span class="image"><img src="./_images/to-manage-mule-flows-1ceb9.png" alt="to manage mule flows 1ceb9"></span></p> 
-     </div> </li> 
-    <li> <p>Add another component to be executed after the first is triggered. To do so, click the plus <span class="icon"><i class="fa fa- image:flow-designer-c760b.png"></i></span></p> 
-     <div class="admonitionblock tip"> 
-      <table> 
-       <tbody> 
-        <tr> 
-         <td class="icon"> <i class="fa icon-tip" title="Tip"></i> </td> 
-         <td class="content"> To add a new card in between two existing cards, hover over the arrow that joins them to reveal the clickable plus icon. </td> 
-        </tr> 
-       </tbody> 
-      </table> 
-     </div> </li> 
-    <li> <p>A list of eligible components is shown, from which you can pick which to add.</p> </li> 
-    <li> <p>Most cards have required fields that need to be set up. Click on a card to open its settings panel. There, you’ll find specific settings that pertain to that instance of that element.</p> 
-     <div class="paragraph"> 
-      <p><span class="image"><img src="./_images/flow-designer-2765a.png" alt="flow designer 2765a"></span></p> 
-     </div> </li> 
-    <li> <p>Many components also require that you reference configuration elements, see <a href="/design-center/v/1.0/to-set-up-connector-configurations">To Set Up Connector Configurations</a>.</p> </li> 
-   </ol> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="create-multiple-flows"><a class="anchor" href="#create-multiple-flows"></a>Create Multiple Flows</h2> 
- <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>You can have several flows in a single project. Each flow is executed independently of each other. To add a new flow:</p> 
+   <p><span class="image"><img src="./_images/to-manage-mule-flows-1ceb9.png" alt="triggers" width="378" height="337"></span></p> 
   </div> 
-  <div class="olist arabic"> 
-   <ol class="arabic"> 
-    <li> <p>Click the plus sign at the top of the left bar:</p> 
-     <div class="paragraph"> 
-      <p><span class="image"><img src="./_images/flow-designer-05528.png" alt="flow designer 05528"></span></p> 
-     </div> </li> 
-    <li> <p>Select <strong>New Flow</strong></p> </li> 
-   </ol> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="rename-a-flow"><a class="anchor" href="#rename-a-flow"></a>Rename a Flow</h2> 
- <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>You can rename an existing flow in your project. To do so:</p> 
+   <p>To add another component to be executed after the first is triggered, you click Plus <span class="image"><img src="./_images/flow-designer-c760b.png" alt="flow designer c760b"></span></p> 
   </div> 
-  <div class="olist arabic"> 
-   <ol class="arabic"> 
-    <li> <p>Select the flow you wish to rename on the left panel and click the options icon next to it:</p> 
-     <div class="paragraph"> 
-      <p><span class="image"><img src="./_images/flow-designer-d095a.png" alt="flow designer d095a"></span></p> 
-     </div> </li> 
-    <li> <p>Select <strong>Rename</strong> and provide a new name</p> </li> 
-   </ol> 
-  </div> 
- </div> 
-</div> 
-<div class="sect1"> 
- <h2 id="delete-a-flow"><a class="anchor" href="#delete-a-flow"></a>Delete a Flow</h2> 
- <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>You can delete a flow from your project. To do so:</p> 
+   <p>To add a component between two existing ones, hover over the arrow that joins them to reveal the Plus. A list of eligible components is shown. Select one.</p> 
   </div> 
-  <div class="olist arabic"> 
-   <ol class="arabic"> 
-    <li> <p>Select the flow you wish to delete on the left panel and click the options icon next to it:</p> 
-     <div class="paragraph"> 
-      <p><span class="image"><img src="./_images/flow-designer-d095a.png" alt="flow designer d095a"></span></p> 
-     </div> </li> 
-    <li> <p>Select <strong>Delete</strong></p> </li> 
-   </ol> 
+  <div class="paragraph"> 
+   <p>You need to configure some things you add to a flow.</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p><span class="image"><img src="./_images/flow-designer-2765a.png" alt="flow designer 2765a"></span></p> 
+  </div> 
+  <div class="paragraph"> 
+   <p>You can have multiple flows in a single project. Each flow is executed independently of each other. To add a new flow, click Plus:</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p><span class="image"><img src="./_images/flow-designer-05528.png" alt="flow designer 05528"></span></p> 
+  </div> 
+  <div class="paragraph"> 
+   <p>Select Edit Types to add a variable or to edit data types for the payload and attributes of the input and output of a flow. Select Rename or Delete to assign a different name to or to delete the flow.</p> 
+  </div> 
+  <div class="paragraph"> 
+   <p><span class="image"><img src="./_images/flow-designer-d095a.png" alt="flow designer d095a"></span></p> 
   </div> 
  </div> 
 </div> 
@@ -1212,9 +1174,7 @@
  <div class="sectionbody"> 
   <div class="ulist"> 
    <ul> 
-    <li> <p>Refer to <a href="https://mule4-docs.mulesoft.com/mule-user-guide/v/4.0/mule-concepts">Mule Key Concepts</a> for an overview of basic Mule Runtime concepts.</p> </li> 
-    <li> <p>To view the metadata that describes the information that transitions each component in your flows, see <a href="/design-center/v/1.0/about-data-types">About Data Types</a>.</p> </li> 
-    <li> <p>See <a href="/design-center/v/1.0/provide-values-fields-design-center">To Provide Values for Fields</a> for details on how the Design Center UI can make this easier.</p> </li> 
+    <li> <p><a href="/design-center/v/1.0/about-data-types">About Data Types</a></p> </li> 
    </ul> 
   </div> 
  </div> 
@@ -1223,7 +1183,7 @@
     <!-- END article-content -->
     <!-- scroll-menu --><div class="col-md-2 scroll-menu-container" data-swiftype-index='false'><div class="scroll-menu">
                 <h4>In this topic:</h4>
-                <ul><li><a class="scroll-menu-link" href="#to-set-up-a-flow">To Set Up a Flow</a></li><li><a class="scroll-menu-link" href="#create-multiple-flows">Create Multiple Flows</a></li><li><a class="scroll-menu-link" href="#rename-a-flow">Rename a Flow</a></li><li><a class="scroll-menu-link" href="#delete-a-flow">Delete a Flow</a></li><li><a class="scroll-menu-link" href="#see-also">See also</a></li></ul></div></div><!-- /scroll-menu -->
+                <ul><li><a class="scroll-menu-link" href="#see-also">See also</a></li></ul></div></div><!-- /scroll-menu -->
   </div>
 </div>
 <!-- START footer -->

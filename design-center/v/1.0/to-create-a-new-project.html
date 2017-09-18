@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>To Create a New Mule Project (Design Center) // MuleSoft Documentation </title>
+  <title>To Create a Basic Mule App (Design Center) // MuleSoft Documentation </title>
   <link rel="shortcut icon" href="/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="/css/vendor.min.css?t=1505334364">
   <link rel="stylesheet" type="text/css" href="/css/mulesoft.min.css?t=1505334364">
@@ -15,8 +15,8 @@
   <script src="/js/scripts.js?t=1505334364"></script>
 
   <link rel="canonical" href="https://docs.mulesoft.com/design-center/v/1.0/to-create-a-new-project" />
-  <meta name="description" content="To create a new Mule project in Design Center:  Once your application is ready, you can promote it to any production or sandbox environment. ..." />
-  <meta class="swiftype" name="title" data-type="string" content="To Create a New Mule Project (Design Center)" />
+  <meta name="description" content="This procedure shows you how to create, deploy, and start an app that consumes a REST service. You might want to access a web service, such as JSON..." />
+  <meta class="swiftype" name="title" data-type="string" content="To Create a Basic Mule App (Design Center)" />
   <meta class="swiftype" name="version" data-type="enum" content="1.0" />
 </head>
 <body>
@@ -583,25 +583,37 @@
 <a href="/design-center/v/1.0/">Design Center</a><ul style="display: block;">
 <li class="expanded">
 <i></i>
-<a href="/design-center/v/1.0/about-designing-a-mule-application">About Designing a Mule Application</a><ul style="display: block;">
-<li><i></i><a href="/design-center/v/1.0/to-manage-mule-flows">To Manage Mule Flows</a></li><li class="expanded">
+<a href="/design-center/v/1.0/about-designing-a-mule-application">About Designing a Mule App</a><ul style="display: block;">
+<li class="expanded">
 <i></i>
-<a href="/design-center/v/1.0/workflow-create-and-run-a-mule-project">Workflow:Create and Deploy a Mule Project</a><ul style="display: block;">
-<li class="active"><i></i><a href="/design-center/v/1.0/to-create-a-new-project">To Create a Mule Application Project</a></li><li><i></i><a href="/design-center/v/1.0/arrange-cards-flow-design-center">To Arrange Cards Into a Flow</a></li><li><i></i><a href="/design-center/v/1.0/provide-values-fields-design-center">To Provide Values for Fields</a></li><li><i></i><a href="/design-center/v/1.0/to-set-up-connector-configurations">To Set Up Connector Configurations</a></li><li><i></i><a href="/design-center/v/1.0/run-app-design-env-design-center">To Run an Application in a Design Environment</a></li><li><i></i><a href="/design-center/v/1.0/to-debug-a-mule-project">To Debug a Mule Project</a></li><li><i></i><a href="/design-center/v/1.0/promote-app-prod-env-design-center">To Promote an Application to a Production Environment</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/to-manage-data-types">To Manage Data Types</a></li><li><i></i><a href="/design-center/v/1.0/to-create-and-populate-a-variable">To Create and Populate a Variable</a></li><li>
-<i></i>
-<a href="/design-center/v/1.0/transform-message-component-concept-design-center">About Transform Component</a><ul>
+<a href="/design-center/v/1.0/flow-design-basic-tasks">Flow Design Basics</a><ul style="display: block;">
+<li class="active"><i></i><a href="/design-center/v/1.0/to-create-a-new-project">To Create a Basic Mule App</a></li><li><i></i><a href="/design-center/v/1.0/design-dynamic-request-task">To Dynamically Change the URL of a Request</a></li><li><i></i><a href="/design-center/v/1.0/inspect-data-task">To Inspect Input and Output</a></li><li><i></i><a href="/design-center/v/1.0/design-filter-task">To Transform from a Full Set of Data to a Subset</a></li><li><i></i><a href="/design-center/v/1.0/for-each-task-design-center">To Drill Down into JSON</a></li></ul></li>
 <li>
 <i></i>
-<a href="/design-center/v/1.0/workflow-create-mapping-ui-design-center">Workflow: Create a Mapping</a><ul>
-<li><i></i><a href="/design-center/v/1.0/input-output-structure-transformation-design-center-task">To Define Input and Output Structure of a Transformation</a></li><li><i></i><a href="/design-center/v/1.0/graphically-construct-mapping-design-center-task">To Graphically Construct a Mapping</a></li><li><i></i><a href="/design-center/v/1.0/preview-transformation-output-design-center-task">To Preview the Output of a Transformation</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/tips-transform-message-ui-design-center">Tips on the Transform Component UI</a></li><li><i></i><a href="/design-center/v/1.0/change-target-output-transformation-design-center-task">To Change the Target Output of a Transformation</a></li><li><i></i><a href="/design-center/v/1.0/add-another-output-transform-design-center-task">To Add Another Transformation</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/reference-deployment-status-messages">Reference: Deployment Status Messages</a></li><li><i></i><a href="/design-center/v/1.0/about-data-types">About Data Types</a></li><li><i></i><a href="/design-center/v/1.0/logger-task-design-center">To Log Data</a></li><li><i></i><a href="/design-center/v/1.0/for-each-task-design-center">To Use For Each over a Collection</a></li><li><i></i><a href="/design-center/v/1.0/error-handling-task-design-center">To Handle Errors With Try Scopes</a></li><li><i></i><a href="/design-center/v/1.0/reference-flow-task-design-center">To Reference Another Flow</a></li><li><i></i><a href="/design-center/v/1.0/manage-dependency-versions-design-center">Manage Dependency Versions</a></li><li><i></i><a href="/design-center/v/1.0/export-studio-design-center">Export a Project to Anypoint Studio</a></li></ul></li>
+<a href="/design-center/v/1.0/key-flow-design-tasks">Key Flow Design Tasks</a><ul>
+<li><i></i><a href="/design-center/v/1.0/to-create-and-populate-a-variable">To Create and Populate a Variable</a></li><li><i></i><a href="/design-center/v/1.0/manage-dependency-versions-design-center">To Update Components of the Flow</a></li><li><i></i><a href="/design-center/v/1.0/promote-app-prod-env-design-center">To Promote an Application to an Environment</a></li><li><i></i><a href="/design-center/v/1.0/to-create-a-mule-application-project">To Clone a Mule App Project</a></li><li><i></i><a href="/design-center/v/1.0/export-studio-design-center">To Export a Project to Anypoint Studio</a></li><li><i></i><a href="/design-center/v/1.0/flow-datatype-task">To Set Data Types for a Flow</a></li></ul></li>
+<li>
+<i></i>
+<a href="/design-center/v/1.0/general-tasks">General Flow Design Tasks</a><ul>
+<li><i></i><a href="/design-center/v/1.0/logger-task-design-center">To Log Data</a></li><li><i></i><a href="/design-center/v/1.0/reference-flow-task-design-center">To Reference One Flow from Another</a></li><li><i></i><a href="/design-center/v/1.0/change-target-output-transformation-design-center-task">To Change the Target Output of a Transformation</a></li><li><i></i><a href="/design-center/v/1.0/error-handling-task-design-center">To Handle Errors</a></li></ul></li>
+<li>
+<i></i>
+<a href="/design-center/v/1.0/flow-design-reference">Flow Design Reference</a><ul>
+<li><i></i><a href="/design-center/v/1.0/to-manage-mule-flows">Building and Managing Flows Reference</a></li><li><i></i><a href="/design-center/v/1.0/run-app-design-env-design-center">Running an App Reference</a></li><li><i></i><a href="/design-center/v/1.0/reference-deployment-status-messages">Deployment Status Reference</a></li><li><i></i><a href="/design-center/v/1.0/input-output-structure-transformation-design-center-task">Transform Utility Reference</a></li></ul></li>
+<li><i></i><a href="/design-center/v/1.0/about-data-types">About Data Types</a></li></ul></li>
 <li>
 <i></i>
 <a href="/design-center/v/1.0/designing-api-about">About Designing a RAML-based API</a><ul>
-<li><i></i><a href="/design-center/v/1.0/design-raml-api-task">To Design a RAML API Specification</a></li><li><i></i><a href="/design-center/v/1.0/create-reuse-part-task">To Create and Publish an API Fragment</a></li><li><i></i><a href="/design-center/v/1.0/publish-project-exchange-task">To Publish an API Design Project</a></li><li><i></i><a href="/design-center/v/1.0/add-dependencies-task">To Add a Fragment to an API</a></li><li><i></i><a href="/design-center/v/1.0/design-update-remove-dep-task">To Remove or Update a Dependency</a></li><li><i></i><a href="/design-center/v/1.0/simulate-api-task">To Simulate Calling a RAML API</a></li><li><i></i><a href="/design-center/v/1.0/design-import-oas-task">To Import an OAS</a></li><li><i></i><a href="/design-center/v/1.0/design-import-raml-task">To Import a RAML</a></li><li><i></i><a href="/design-center/v/1.0/upload-raml-task">To Upload an Existing RAML File to Exchange</a></li><li><i></i><a href="/design-center/v/1.0/design-manage-revisions-task">To Manage API Revisions Using Branches</a></li></ul></li>
-<li><i></i><a href="/design-center/v/1.0/design-api-ui-reference">Designing an API Reference</a></li><li><i></i><a href="/design-center/v/1.0/designing-api-reference">OAS/RAML Importing and Exporting Reference</a></li><li><i></i><a href="/design-center/v/1.0/design-api-frag-revisions-concept">About API Fragments</a></li><li><i></i><a href="/design-center/v/1.0/design-branch-filelock-concept">About Sharing Branches and Migration</a></li><li><i></i><a href="/design-center/v/1.0/user-access-to-design-center">User Access to Design Center</a></li><li><i></i><a href="/design-center/v/1.0/faq-design-center">FAQ: Design Center</a></li></ul></li>
+<li>
+<i></i>
+<a href="/design-center/v/1.0/design-api-basics-tasks">API Design Basics</a><ul>
+<li><i></i><a href="/design-center/v/1.0/design-raml-api-task">To Design a RAML API Specification</a></li><li><i></i><a href="/design-center/v/1.0/simulate-api-task">To Simulate Calling a RAML API</a></li><li><i></i><a href="/design-center/v/1.0/publish-project-exchange-task">To Publish an API Design Project</a></li><li><i></i><a href="/design-center/v/1.0/design-import-oas-task">To Import an OAS</a></li></ul></li>
+<li>
+<i></i>
+<a href="/design-center/v/1.0/design-api-key-tasks">Key API Design Tasks</a><ul>
+<li><i></i><a href="/design-center/v/1.0/create-reuse-part-task">To Create and Publish an API Fragment</a></li><li><i></i><a href="/design-center/v/1.0/add-dependencies-task">To Add a Fragment to an API</a></li><li><i></i><a href="/design-center/v/1.0/design-update-remove-dep-task">To Remove or Update a Dependency</a></li><li><i></i><a href="/design-center/v/1.0/design-import-raml-task">To Import a RAML</a></li><li><i></i><a href="/design-center/v/1.0/upload-raml-task">To Upload an Existing RAML File to Exchange</a></li><li><i></i><a href="/design-center/v/1.0/design-manage-revisions-task">To Manage API Revisions Using Branches</a></li></ul></li>
+<li><i></i><a href="/design-center/v/1.0/design-api-ui-reference">Designing an API Reference</a></li><li><i></i><a href="/design-center/v/1.0/designing-api-reference">OAS/RAML Importing and Exporting Reference</a></li><li><i></i><a href="/design-center/v/1.0/design-api-frag-revisions-concept">About API Fragments</a></li><li><i></i><a href="/design-center/v/1.0/design-branch-filelock-concept">About Sharing Branches and Migration</a></li></ul></li>
+<li><i></i><a href="/design-center/v/1.0/user-access-to-design-center">About Accessing Design Center</a></li><li><i></i><a href="/design-center/v/1.0/faq-design-center">FAQ: Design Center</a></li></ul></li>
 <li>
 <i></i>
 <a href="/api-manager/">API Manager</a><ul>
@@ -1121,46 +1133,99 @@
     <!-- START article content -->
     <div class="article-content col-md-7">
       
-      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Design Center</a>/<a href="about-designing-a-mule-application">About Designing a Mule Application</a>/<a href="workflow-create-and-run-a-mule-project">Workflow:Create and Deploy a Mule Project</a>/<a href="to-create-a-new-project" class="breadcrumb-active-link">To Create a Mule Application Project</a></div>
-      <h1>To Create a New Mule Project (Design Center)</h1>
+      <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Design Center</a>/<a href="about-designing-a-mule-application">About Designing a Mule App</a>/<a href="flow-design-basic-tasks">Flow Design Basics</a>/<a href="to-create-a-new-project" class="breadcrumb-active-link">To Create a Basic Mule App</a></div>
+      <h1>To Create a Basic Mule App (Design Center)</h1>
       <div id="preamble"> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p>To create a new Mule project in Design Center:</p> 
+   <p>This procedure shows you how to create, deploy, and start an app that consumes a REST service. You might want to access a web service, such as JSON Placeholder, to get information provided by the service. Creating a Mule app in Design Center to consume the service, you can access the information and do things with it. For example, you can filter the data to isolate email addresses and send email to users through the email connector. You can store the data from the service in a database and change, explore, and analyze the data using SQL. This procedure covers only the basics, not all these possibilities.</p> 
   </div> 
   <div class="olist arabic"> 
    <ol class="arabic"> 
-    <li> <p>Click the <strong>Create</strong> button:</p> 
-     <div class="paragraph"> 
-      <p><span class="image"><img src="./_images/index-eccb7.png" alt="index eccb7"></span></p> 
+    <li> <p>Create a project:</p> 
+     <div class="ulist"> 
+      <ul> 
+       <li> <p>Click Create <span class="image"><img src="./_images/plus-create.png" alt="create button" width="64" height="25"></span>.</p> </li> 
+       <li> <p>Select Mule Application.</p> </li> 
+       <li> <p>Name the project carefully in a real-world situation. You cannot make project name changes later. In this case, name the project myproject.</p> </li> 
+       <li> <p>Select Design Environment for designing and debugging the application.</p> 
+        <div class="paragraph"> 
+         <p>The design view opens.</p> 
+        </div> </li> 
+      </ul> 
      </div> </li> 
-    <li> <p>Select <strong>Mule Application</strong>.</p> </li> 
-    <li> <p>Name your project</p> 
-     <div class="admonitionblock note"> 
-      <table> 
-       <tbody> 
-        <tr> 
-         <td class="icon"> <i class="fa icon-note" title="Note"></i> </td> 
-         <td class="content"> A known issue exists that prevents you from renaming an existing project in the project list. Name changes do not persist. </td> 
-        </tr> 
-       </tbody> 
-      </table> 
+    <li> <p>Click Flows - Plus.</p> 
+     <div class="imageblock"> 
+      <div class="content"> 
+       <img src="./_images/flows-plus.png" alt="add flow" width="237" height="34"> 
+      </div> 
      </div> </li> 
-    <li> <p>Select the Design Environment for designing and debugging the application.</p> 
+    <li> <p>Select Rename, and rename the flow to Consume API.</p> 
+     <div class="imageblock"> 
+      <div class="content"> 
+       <img src="./_images/rename-flow.png" alt="rename flow"> 
+      </div> 
+     </div> </li> 
+    <li> <p>Click Trigger, and then select HTTP Listener from the list of triggers.</p> </li> 
+    <li> <p>In HTTP Listener Configuration, in General, enter the following value for the required path:</p> 
      <div class="paragraph"> 
-      <p>Once your application is ready, you can promote it to any production or sandbox environment.</p> 
+      <p><strong>/getpath</strong></p> 
+     </div> </li> 
+    <li> <p>In Advanced, enter the following allowed method:</p> 
+     <div class="paragraph"> 
+      <p><strong>GET</strong></p> 
      </div> 
-     <div class="admonitionblock tip"> 
-      <table> 
-       <tbody> 
-        <tr> 
-         <td class="icon"> <i class="fa icon-tip" title="Tip"></i> </td> 
-         <td class="content"> Through the use of multiple environments, you can keep your works-in-progress safely away from the public eye until they’re ready to be promoted to production. </td> 
-        </tr> 
-       </tbody> 
-      </table> 
+     <div class="paragraph"> 
+      <p>By default, all methods are allowed. It’s a best practice for security to limit the methods to the one or more that are necessary.</p> 
+     </div> 
+     <div class="paragraph"> 
+      <p>By default, CloudHub HTTP listens on a CloudHub server for an event to start the app. CloudHub HTTP appears in Connectors &amp; Modules. Connectors &amp; Modules lists connector configurations you can reuse.</p> 
+     </div> 
+     <div class="imageblock"> 
+      <div class="content"> 
+       <img src="./_images/cloudhub-http.png" alt="cloudhub http connector in modules and connectors" width="257" height="195"> 
+      </div> 
+     </div> </li> 
+    <li> <p>Add another HTTP connector:</p> 
+     <div class="ulist"> 
+      <ul> 
+       <li> <p>Click <span class="image"><img src="./_images/arrange-cards-flow-design-center-e256e.png" alt="add HTTP"></span> and select HTTP Request.</p> </li> 
+       <li> <p>In HTTP Request, click Edit.</p> 
+        <div class="imageblock"> 
+         <div class="content"> 
+          <img src="./_images/change-http-request-config.png" alt="change http request configuration"> 
+         </div> 
+        </div> </li> 
+       <li> <p>Configure HTTP Request as follows:</p> 
+        <div class="ulist"> 
+         <ul> 
+          <li> <p>host: jsonplaceholder.typicode.com</p> </li> 
+          <li> <p>port: 80</p> </li> 
+          <li> <p>Accept the other defaults.</p> </li> 
+         </ul> 
+        </div> </li> 
+       <li> <p>Click Save.</p> </li> 
+      </ul> 
+     </div> </li> 
+    <li> <p>In General, in Path or URL, type the following path:</p> 
+     <div class="paragraph"> 
+      <p><strong>/users</strong></p> 
+     </div> </li> 
+    <li> <p>Click Deploy, and execute the flow:</p> 
+     <div class="ulist"> 
+      <ul> 
+       <li> <p>Click Options <span class="image"><img src="./_images/run-app-design-env-design-center-2428b.png" alt="run app design env design center 2428b"></span>.</p> </li> 
+       <li> <p>Select Copy Link.</p> </li> 
+       <li> <p>Paste the link in a browser or client, and type <strong>/getpath</strong> at the end.</p> 
+        <div class="paragraph"> 
+         <p>The HTTP Listener hears the request, and starts the app. The list of JSON Placeholder users appears in the browser. The green status indicator appears in all parts of the flow.</p> 
+        </div> </li> 
+      </ul> 
      </div> </li> 
    </ol> 
+  </div> 
+  <div class="paragraph"> 
+   <p>Now, you can adapt this flow to dynamically change the URL of a request.</p> 
   </div> 
  </div> 
 </div> 
@@ -1169,8 +1234,8 @@
  <div class="sectionbody"> 
   <div class="ulist"> 
    <ul> 
-    <li> <p><a href="/design-center/v/1.0/workflow-create-and-run-a-mule-project">Workflow: Create and Run a Mule Project</a></p> </li> 
-    <li> <p><a href="https://docs.mulesoft.com/access-management/environments">CloudHub Environments</a></p> </li> 
+    <li> <p><a href="/design-center/v/1.0/design-dynamic-request-task">To Dynamically Change the URL of a Request</a></p> </li> 
+    <li> <p><a href="/access-management/environments">CloudHub Environments</a></p> </li> 
    </ul> 
   </div> 
  </div> 
