@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Sending Data from Runtime Manager to External Analytics Software // MuleSoft Documentation </title>
+  <title>To Export Data to External Analytics Tools (Hybrid) // MuleSoft Documentation </title>
   <link rel="shortcut icon" href="/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="/css/vendor.min.css?t=1505334364">
   <link rel="stylesheet" type="text/css" href="/css/mulesoft.min.css?t=1505334364">
@@ -15,8 +15,8 @@
   <script src="/js/scripts.js?t=1505334364"></script>
 
   <link rel="canonical" href="https://docs.mulesoft.com/runtime-manager/sending-data-from-arm-to-external-analytics-software" />
-  <meta name="description" content=" By simply configuring a few settings on the Runtime Manager (both on the cloud-based and on the Private Cloud Edition), the event notifications pr..." />
-  <meta class="swiftype" name="title" data-type="string" content="Sending Data from Runtime Manager to External Analytics Software" />
+  <meta name="description" content="This topic describes how to configure Runtime Manager to export data to external analytics tools. This enables you to send the event notifications ..." />
+  <meta class="swiftype" name="title" data-type="string" content="To Export Data to External Analytics Tools (Hybrid)" />
 </head>
 <body>
 <!-- START Swiftype -->
@@ -1132,52 +1132,14 @@
     <div class="article-content col-md-7">
       
       <div class="breadcrumb-section" data-swiftype-index='false'><a href="./">Runtime Manager</a>/<a href="troubleshooting">Troubleshooting</a>/<a href="sending-data-from-arm-to-external-analytics-software" class="breadcrumb-active-link">Sending data from Runtime Manager to External Analytics Software</a></div>
-      <h1>Sending Data from Runtime Manager to External Analytics Software</h1>
+      <h1>To Export Data to External Analytics Tools (Hybrid)</h1>
       <div id="preamble"> 
  <div class="sectionbody"> 
   <div class="paragraph"> 
-   <p><span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-cloud-disabled.png" alt="logo cloud disabled" title="CloudHub"></a></span> <span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-hybrid-active.png" alt="logo hybrid active" title="Hybrid Deployment"></a></span> <span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-server-active.png" alt="logo server active" title="Anypoint Platform Private Cloud Edition"></a></span> <span class="image"><a class="image" href="/runtime-manager/deployment-strategies"><img src="./_images/logo-pcf-disabled.png" alt="logo pcf disabled" title="Pivotal Cloud Foundry"></a></span></p> 
+   <p>This topic describes how to configure Runtime Manager to export data to external analytics tools. This enables you to send the event notifications of your Mule Applications to 3rd part tool such as Splunk and ELK.</p> 
   </div> 
   <div class="paragraph"> 
-   <p>By simply configuring a few settings on the Runtime Manager (both on the cloud-based and on the Private Cloud Edition), the event notifications produced by your running Mule Applications can be easily sent out to your existing monitoring and analytics third party software.</p> 
-  </div> 
-  <div class="admonitionblock note"> 
-   <table> 
-    <tbody> 
-     <tr> 
-      <td class="icon"> <i class="fa icon-note" title="Note"></i> </td> 
-      <td class="content"> 
-       <div class="paragraph"> 
-        <p>Sending data to third party software is a feature that is currently only available for applications deployed to local servers. It is not available for applications that you deploy via the Runtime Manager to <a href="/runtime-manager/cloudhub">CloudHub</a>. See <a href="/runtime-manager/deployment-strategies">Deployment Strategies</a> for more details.</p> 
-       </div> 
-       <div class="paragraph"> 
-        <p>It’s not available either for applications deployed to PCF.</p> 
-       </div> </td> 
-     </tr> 
-    </tbody> 
-   </table> 
-  </div> 
-  <div class="paragraph"> 
-   <p>You can currently send data out to any of the following:</p> 
-  </div> 
-  <div class="ulist"> 
-   <ul> 
-    <li> <p>Splunk</p> </li> 
-    <li> <p>ELK (as an example for anything that consumes system Logs)</p> </li> 
-   </ul> 
-  </div> 
-  <div class="paragraph"> 
-   <p>The goal of this document to enable you to integrate Runtime Manager with a third party tool such as Splunk or ELK.</p> 
-  </div> 
-  <div class="admonitionblock tip"> 
-   <table> 
-    <tbody> 
-     <tr> 
-      <td class="icon"> <i class="fa icon-tip" title="Tip"></i> </td> 
-      <td class="content"> Whether you’re using the <a href="https://anypoint.mulesoft.com">cloud based</a> or the on-premise edition of the Anypoint Platform, the features described in this page work identically in both. If you’re interested in requesting the Anypoint Platform on-Premises Edition, please contact your sales representative. </td> 
-     </tr> 
-    </tbody> 
-   </table> 
+   <p>This functionality is only available in hybrid deployment scenarios. It is not available for applications deployed to CloudHub.</p> 
   </div> 
  </div> 
 </div> 
